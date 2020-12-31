@@ -1,0 +1,23 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demo of carbonplan theme and components",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write '{components,pages}/**/*.js'"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "theme-ui": "^0.3.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
