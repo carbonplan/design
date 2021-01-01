@@ -13,7 +13,7 @@ const Footer = () => {
         mb: [4, 4, 4],
       }}
     >
-      <Grid columns={[1, 1, 3]} sx={{ mb: [4] }}>
+      <Grid columns={[1, 1, 3]} sx={{ mb: [3] }}>
         <Box>
           <Text sx={{ fontFamily: 'heading', letterSpacing: 'wide', mb: [2] }}>
             EMAIL
@@ -89,8 +89,8 @@ const Footer = () => {
             </Text>
           </Box>
         </Box>
-        <Box>
-          <Monogram />
+        <Box sx={{mt: [3]}}>
+          <Monogram sx={{mb: ['-12px']}}/>
         </Box>
       </Grid>
     </Box>

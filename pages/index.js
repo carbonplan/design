@@ -5,7 +5,7 @@ function Index() {
   return (
     <Layout>
       <Container sx={{ px: [3, 3, 4] }}>
-        <Box sx={{ maxWidth: '750px' }}>
+        <Box sx={{ maxWidth: '700px' }}>
           <Styled.h1>CarbonPlan Design</Styled.h1>
           <Styled.p>
             This site describes the primary components of our design system. The
@@ -212,12 +212,60 @@ function Index() {
           </Styled.p>
           <Styled.p>
             Without either header or footer, the layout is essentially a Flexbox
-            with Meta tags from the Seo component, so you may also choose to
-            skip it entirely, but then remember to include the Seo component if
+            with tags from the Meta component, so you may also choose to
+            skip it entirely, but then remember to include the Meta component if
             needed.
           </Styled.p>
           <Styled.h2>Color</Styled.h2>
+          <Styled.p>
+            Our primary colors are Carbon and Chalk. The core design is built
+            around Chalk on Carbon, but changing the theme reverts it
+            to be Carbon on Chalk. You can use the theme switching button to 
+            change the theme, which in the default layout is also placed
+            in the lower right. Here it is.
+          </Styled.p>
           <Switch />
+          <Styled.p>
+            Here are the core colors at a few sizes and fonts.
+          </Styled.p>
+          <Text sx={{fontSize: [4]}}>
+            Primary
+          </Text>
+          <Text
+            sx={{
+              fontSize: [2],
+              fontFamily: 'monospace',
+              letterSpacing: 'monospace',
+            }}
+          >
+            PRIMARY
+          </Text>
+          <Text sx={{fontSize: [4], color: 'secondary'}}>
+            Secondary
+          </Text>
+          <Text
+            sx={{
+              fontSize: [2],
+              fontFamily: 'monospace',
+              letterSpacing: 'monospace',
+              color: 'secondary'
+            }}
+          >
+            SECONDARY
+          </Text>
+          <Text sx={{fontSize: [4], color: 'muted'}}>
+            Muted
+          </Text>
+          <Text
+            sx={{
+              fontSize: [2],
+              fontFamily: 'monospace',
+              letterSpacing: 'monospace',
+              color: 'muted'
+            }}
+          >
+            MUTED
+          </Text>
           <Styled.h2>Controls</Styled.h2>
         </Box>
       </Container>

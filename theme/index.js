@@ -31,9 +31,9 @@ module.exports = {
   colors: {
     text: '#ebebec',
     background: '#1b1e23',
-    primary: '#e4e4e4',
-    secondary: '#808080',
-    muted: '#363a3e',
+    primary: '#ebebec',
+    secondary: '#7e7d80',
+    muted: '#393a3d',
     red: '#f07071',
     orange: '#ea9755',
     yellow: '#d4c05e',
@@ -45,11 +45,11 @@ module.exports = {
     grey: '#a9b4c4',
     modes: {
       light: {
-        text: '#333333',
+        text: '#1b1e23',
         background: '#ebebec',
-        primary: '#484848',
-        secondary: '#b0b0b0',
-        muted: 'rgb(200,200,200)',
+        primary: '#1b1e23',
+        secondary: '#6c6b6e',
+        muted: '#b0afb1',
         red: '#f07071',
         orange: '#ea9755',
         yellow: '#d4c05e',
