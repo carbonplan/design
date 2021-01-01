@@ -1,7 +1,7 @@
-import { IconButton, useColorMode } from 'theme-ui'
+import { Box, IconButton, useColorMode } from 'theme-ui'
 import { useCallback } from 'react'
 
-const Switch = () => {
+const Switch = ({ sx }) => {
   const [colorMode, setColorMode] = useColorMode()
 
   const toggle = useCallback(() => {
@@ -13,26 +13,19 @@ const Switch = () => {
       aria-label='Toggle dark mode'
       onClick={toggle}
       sx={{
-        position: 'fixed',
-        right: 17,
-        bottom: 17,
-        zIndex: 500,
+        width: 32,
+        height: 32,
+        display: 'inline-block',
         cursor: 'pointer',
         stroke: 'secondary',
         transition: 'stroke 0.15s',
         '&:hover': {
           stroke: 'primary',
         },
+        ...sx,
       }}
     >
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 24 24'
-        width='24'
-        height='24'
-        strokeWidth='2'
-        fill='none'
-      >
+      <svg version='1.1' viewBox='0 0 24 24' strokeWidth='2' fill='none'>
         <circle cx='12' cy='12' r='4.77' />
         <line x1='12' x2='12' y2='4.06' />
         <line x1='12' y1='19.94' x2='12' y2='24' />

@@ -31,6 +31,7 @@ const Footer = () => {
           </Text>
           <Link
             href='https://twitter.com/carbonplanorg'
+            target='_blank'
             sx={{ textDecoration: 'none' }}
           >
             @carbonplanorg
@@ -80,10 +81,10 @@ const Footer = () => {
             }}
           >
             <Text>
-              <NextLink href='/terms'>
-                <a>
+              <NextLink href='/terms' passHref>
+                <Link sx={{ textDecoration: 'none' }}>
                   <Text sx={{ color: 'secondary' }}>READ OUR TERMS</Text>
-                </a>
+                </Link>
               </NextLink>
             </Text>
           </Box>

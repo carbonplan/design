@@ -1,5 +1,5 @@
 import { Container, Flex, Box, Text } from 'theme-ui'
-import Seo from './seo'
+import Meta from './meta'
 import Header from './header'
 import Footer from './footer'
 import Switch from './switch'
@@ -9,7 +9,7 @@ const Layout = ({ footer, header, title, description, card, children }) => {
   header = header == null ? true : header
   return (
     <>
-      <Seo card={card} description={description} title={title} />
+      <Meta card={card} description={description} title={title} />
       <Flex
         sx={{
           flexDirection: 'column',
@@ -67,7 +67,15 @@ const Layout = ({ footer, header, title, description, card, children }) => {
             </Container>
           </Box>
         )}
-        <Switch />
+        <Box
+          sx={{
+            position: 'fixed',
+            right: 17,
+            bottom: 17,
+          }}
+        >
+          <Switch />
+        </Box>
       </Flex>
     </>
   )

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const Seo = ({ title, description, card }) => {
+const Meta = ({ title, description, card }) => {
   title = title ? title : 'carbonplan'
   description = description
     ? description
@@ -39,4 +39,4 @@ const Seo = ({ title, description, card }) => {
   )
 }
 
-export default Seo
+export default Meta

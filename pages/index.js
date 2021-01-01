@@ -217,6 +217,7 @@ function Index() {
             needed.
           </Styled.p>
           <Styled.h2>Color</Styled.h2>
+          <Switch />
           <Styled.h2>Controls</Styled.h2>
         </Box>
       </Container>

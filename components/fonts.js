@@ -2,18 +2,10 @@ import React from 'react'
 
 const prefix = 'https://carbonplan-assets.s3.amazonaws.com/fonts/relative/'
 
-const Style = () => {
+const Fonts = () => {
   return (
     <style jsx global>
       {`
-        body {
-          overscroll-behavior: none;
-        }
-
-        a {
-          text-decoration: none;
-        }
-
         sup,
         sub {
           vertical-align: baseline;
@@ -24,13 +16,6 @@ const Style = () => {
         sub {
           top: 0.4em;
           font-size: small;
-        }
-
-        .no-focus-outline a:focus,
-        .no-focus-outline button:focus,
-        .no-focus-outline input:focus,
-        .no-focus-outline select:focus {
-          outline: none !important;
         }
 
         @font-face {
@@ -85,4 +70,4 @@ const Style = () => {
   )
 }
 
-export default Style
+export default Fonts

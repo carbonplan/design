@@ -2,7 +2,7 @@ import React from 'react'
 
 export const GA_TRACKING_ID = 'UA-165985850-1'
 
-const Head = () => {
+const Tracking = () => {
   return (
     <>
       <script
@@ -25,4 +25,4 @@ const Head = () => {
   )
 }
 
-export default Head
+export default Tracking
