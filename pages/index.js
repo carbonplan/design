@@ -13,12 +13,21 @@ import {
 } from '@carbonplan/components'
 
 const { Check, Question, Info } = Icons
+const colors = [
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'teal',
+  'blue',
+  'purple',
+  'pink',
+  'grey',
+]
 
 function Index() {
   const [tag, setTag] = useState(true)
-  const [toggle1, setToggle1] = useState(true)
-  const [toggle2, setToggle2] = useState(true)
-  const [toggle3, setToggle3] = useState(true)
+  const [toggle, setToggle] = useState(true)
   const [expander, setExpander] = useState(false)
 
   return (
@@ -337,31 +346,29 @@ function Index() {
             <Tag label={'Always off'} value={false} />
           </Box>
           <Box>
-            <Tag label={'red'} sx={{ color: 'red' }} />
-            <Tag label={'orange'} sx={{ color: 'orange' }} />
-            <Tag label={'yellow'} sx={{ color: 'yellow' }} />
-            <Tag label={'green'} sx={{ color: 'green' }} />
-            <Tag label={'teal'} sx={{ color: 'teal' }} />
-            <Tag label={'blue'} sx={{ color: 'blue' }} />
-            <Tag label={'purple'} sx={{ color: 'purple' }} />
-            <Tag label={'pink'} sx={{ color: 'pink' }} />
-            <Tag label={'grey'} sx={{ color: 'grey' }} />
+            {colors.map((color, i) => (
+              <Tag key={i} label={color} sx={{ color: color }} />
+            ))}
           </Box>
           <Styled.h3>Toggles</Styled.h3>
           <Styled.p>
-            Used for binary options, and can be specified in different colors.
+            Used for binary options. Can be disabled, and specified in different
+            colors.
           </Styled.p>
-          <Toggle value={toggle1} onClick={() => setToggle1(!toggle1)} />
-          <Toggle
-            value={toggle2}
-            onClick={() => setToggle2(!toggle2)}
-            sx={{ ml: [2], color: 'pink' }}
-          />
-          <Toggle
-            value={toggle3}
-            onClick={() => setToggle3(!toggle3)}
-            sx={{ ml: [2], color: 'teal' }}
-          />
+          <Box>
+            <Toggle value={toggle} onClick={() => setToggle(!toggle)} />
+            <Toggle value={false} sx={{ cursor: 'default', ml: [2] }} />
+          </Box>
+          <Box sx={{ mt: [2] }}>
+            {colors.map((color, i) => (
+              <Toggle
+                key={i}
+                value={toggle}
+                onClick={() => setToggle(!toggle)}
+                sx={{ mr: [2], color: color }}
+              />
+            ))}
+          </Box>
           <Styled.h3>Expander</Styled.h3>
           <Styled.p>Used to expand panels and such.</Styled.p>
           <Box>
@@ -406,15 +413,9 @@ function Index() {
             <Badge value={'100k'} sx={{ color: 'secondary' }} />
           </Box>
           <Box sx={{ mt: [2] }}>
-            <Badge value={1} sx={{ color: 'red' }} />
-            <Badge value={2} sx={{ color: 'orange' }} />
-            <Badge value={3} sx={{ color: 'yellow' }} />
-            <Badge value={4} sx={{ color: 'green' }} />
-            <Badge value={5} sx={{ color: 'teal' }} />
-            <Badge value={6} sx={{ color: 'blue' }} />
-            <Badge value={4} sx={{ color: 'purple' }} />
-            <Badge value={5} sx={{ color: 'pink' }} />
-            <Badge value={6} sx={{ color: 'grey' }} />
+            {colors.map((color, i) => (
+              <Badge key={i} value={i} sx={{ color: color }} />
+            ))}
           </Box>
           <Styled.h3>Icons</Styled.h3>
           <Styled.p>
