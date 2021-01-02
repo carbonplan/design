@@ -14,7 +14,7 @@
 [github-badge]: https://flat.badgen.net/badge/-/github?icon=github&label
 [mit license]: https://flat.badgen.net/badge/license/MIT/blue
 
-This website demos our [`theme`](https://github.com/carbonplan/theme) and [`components`](https://github.com/carbonplan/components) library. It's useful for exploring the design system and also serves as a "test suite" for testing and optimizing the system itself.
+This website demos our [`theme`](https://github.com/carbonplan/theme) and [`components`](https://github.com/carbonplan/components) packages, which together form our design system. It's useful for exploring the design system and also serves as a "test suite" for testing and optimizing the components.
 
 ## usage
 
