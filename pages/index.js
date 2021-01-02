@@ -369,35 +369,6 @@ function Index() {
               />
             ))}
           </Box>
-          <Styled.h3>Expander</Styled.h3>
-          <Styled.p>Used to expand panels and such.</Styled.p>
-          <Box>
-            <Box
-              sx={{
-                borderStyle: 'solid',
-                borderColor: 'muted',
-                borderWidth: '1px',
-                borderRadius: '6px',
-                p: [3],
-                height: 'fit-content',
-                width: '210px',
-              }}
-            >
-              <Text sx={{ display: 'inline-block', mr: [2], fontSize: [3] }}>
-                Click to expand
-              </Text>
-              <Expander
-                value={expander}
-                onClick={() => setExpander(!expander)}
-                sx={{ position: 'relative', top: ['3px'] }}
-              />
-              {expander && (
-                <Text sx={{ mt: [2], fontSize: [3] }}>
-                  This is extra content
-                </Text>
-              )}
-            </Box>
-          </Box>
           <Styled.h3>Badges</Styled.h3>
           <Styled.p>
             Used for numbers and counters with lots of color options.
@@ -450,6 +421,35 @@ function Index() {
               closed={true}
               sx={{ mr: [2], width: '48px', height: '48px' }}
             />
+          </Box>
+          <Styled.h3>Expander</Styled.h3>
+          <Styled.p>Used to expand panels and such.</Styled.p>
+          <Box>
+            <Box
+              sx={{
+                borderStyle: 'solid',
+                borderColor: 'muted',
+                borderWidth: '1px',
+                borderRadius: '6px',
+                p: [3],
+                height: 'fit-content',
+                width: '210px',
+              }}
+            >
+              <Text sx={{ display: 'inline-block', mr: [2], fontSize: [3] }}>
+                Click to expand
+              </Text>
+              <Expander
+                value={expander}
+                onClick={() => setExpander(!expander)}
+                sx={{ position: 'relative', top: ['3px'] }}
+              />
+              {expander && (
+                <Text sx={{ mt: [2], fontSize: [3] }}>
+                  This is extra content
+                </Text>
+              )}
+            </Box>
           </Box>
           <Styled.h2>Demos</Styled.h2>
           <Styled.p>
