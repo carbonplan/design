@@ -10,7 +10,7 @@ import {
   Expander,
   Badge,
   Icons,
-} from '../components'
+} from '@carbonplan/components'
 
 const { Check, Question, Info } = Icons
 
@@ -19,7 +19,7 @@ function Index() {
   const [toggle1, setToggle1] = useState(true)
   const [toggle2, setToggle2] = useState(true)
   const [toggle3, setToggle3] = useState(true)
-  const [expander, setExpander] = useState(true)
+  const [expander, setExpander] = useState(false)
 
   return (
     <Layout>
@@ -55,8 +55,8 @@ function Index() {
             <Text
               sx={{
                 fontSize: [2],
-                fontFamily: 'monospace',
-                letterSpacing: 'monospace',
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
               }}
             >
               150 px
@@ -67,8 +67,8 @@ function Index() {
             <Text
               sx={{
                 fontSize: [2],
-                fontFamily: 'monospace',
-                letterSpacing: 'monospace',
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
               }}
             >
               200 px
@@ -79,8 +79,8 @@ function Index() {
             <Text
               sx={{
                 fontSize: [2],
-                fontFamily: 'monospace',
-                letterSpacing: 'monospace',
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
               }}
             >
               300 px
@@ -98,8 +98,8 @@ function Index() {
             <Text
               sx={{
                 fontSize: [2],
-                fontFamily: 'monospace',
-                letterSpacing: 'monospace',
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
               }}
             >
               40 px
@@ -110,8 +110,8 @@ function Index() {
             <Text
               sx={{
                 fontSize: [2],
-                fontFamily: 'monospace',
-                letterSpacing: 'monospace',
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
               }}
             >
               80 px
@@ -122,8 +122,8 @@ function Index() {
             <Text
               sx={{
                 fontSize: [2],
-                fontFamily: 'monospace',
-                letterSpacing: 'monospace',
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
               }}
             >
               120 px
@@ -167,8 +167,8 @@ function Index() {
           <Text
             sx={{
               fontSize: [6],
-              fontFamily: 'monospace',
-              letterSpacing: 'monospace',
+              fontFamily: 'mono',
+              letterSpacing: 'mono',
               letterSpacing: '0em',
             }}
           >
@@ -182,7 +182,7 @@ function Index() {
             generally only be used for numbers (e.g. in dashboards), axis labels
             on charts, and in small caps. Faux can be used as a complement to
             the others to add diversity to a composition (e.g. in tables, maps,
-            infographics). Both Mono and Faux should always be used with
+            infographics). Both Mono and Faux should almost always be used with
             significantly increased tracking, especially if in all caps.
           </Styled.p>
           <Text
@@ -208,8 +208,8 @@ function Index() {
           <Text
             sx={{
               fontSize: [2],
-              fontFamily: 'monospace',
-              letterSpacing: 'monospace',
+              fontFamily: 'mono',
+              letterSpacing: 'mono',
               mb: [2],
             }}
           >
@@ -254,8 +254,8 @@ function Index() {
           <Text
             sx={{
               fontSize: [2],
-              fontFamily: 'monospace',
-              letterSpacing: 'monospace',
+              fontFamily: 'mono',
+              letterSpacing: 'mono',
             }}
           >
             PRIMARY
@@ -264,8 +264,8 @@ function Index() {
           <Text
             sx={{
               fontSize: [2],
-              fontFamily: 'monospace',
-              letterSpacing: 'monospace',
+              fontFamily: 'mono',
+              letterSpacing: 'mono',
               color: 'secondary',
             }}
           >
@@ -275,8 +275,8 @@ function Index() {
           <Text
             sx={{
               fontSize: [2],
-              fontFamily: 'monospace',
-              letterSpacing: 'monospace',
+              fontFamily: 'mono',
+              letterSpacing: 'mono',
               color: 'muted',
             }}
           >
@@ -289,7 +289,7 @@ function Index() {
             mineralization. Although semantic consistency is not strictly
             required, within a given context, colors should be chosen for
             semantic purposes, or purely aesthetic purposes, but never both! For
-            example, we should never use orange to represent one CDR category in
+            example, we should never use orange to represent one CDR category on
             one site, and a different CDR category on another site. But picking
             a subset of colors purely for aesthetic purposes in an isolated
             setting may be acceptable.
@@ -471,8 +471,8 @@ function ColorSample({ color, hex, label, border }) {
         sx={{
           mt: [2],
           color: label ? 'primary' : color,
-          fontFamily: 'monospace',
-          letterSpacing: 'monospace',
+          fontFamily: 'mono',
+          letterSpacing: 'mono',
           textTransform: 'uppercase',
         }}
       >
@@ -481,8 +481,8 @@ function ColorSample({ color, hex, label, border }) {
       <Text
         sx={{
           mt: [0],
-          fontFamily: 'monospace',
-          letterSpacing: 'monospace',
+          fontFamily: 'mono',
+          letterSpacing: 'mono',
           textTransform: 'uppercase',
         }}
       >

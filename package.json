@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "@carbonplan/design",
   "version": "1.0.0",
   "description": "demo of carbonplan theme and components",
   "main": "index.js",
@@ -9,9 +9,11 @@
     "start": "next start",
     "format": "prettier --write '{components,pages}/**/*.js'"
   },
-  "author": "",
+  "author": "freeman-lab",
   "license": "MIT",
   "dependencies": {
+    "@carbonplan/components": "2.0.0",
+    "@carbonplan/theme": "2.0.0",
     "@theme-ui/color": "^0.3.5",
     "next": "^10.0.4",
     "react": "^16.13.1",
