@@ -51,7 +51,7 @@ function Index() {
             </Link>
             . This website and its{' '}
             <Link
-              href='https://github.com/carbonplan/design'
+              href='https://github.com/carbonplan/design/blob/main/pages/index.js'
               target='_blank'
               rel='noreferrer'
             >
