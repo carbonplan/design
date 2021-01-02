@@ -18,6 +18,14 @@ const Globals = () => {
         .no-focus-outline select:focus {
           outline: none !important;
         }
+
+        ::selection {
+          background: rgb(128, 128, 128, 0.99);
+        }
+
+        ::-moz-selection {
+          background: rgb(128, 128, 128, 0.99);
+        }
       `}
     </style>
   )

@@ -14,12 +14,25 @@ const Meta = ({ title, description, card }) => {
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link rel='canonical' content='https://carbonplan.org/' />
       <link
+        rel='manifest'
+        href='https://carbonplan-assets.s3.amazonaws.com/images/manifest.json'
+      />
+      <meta name='theme-color' content='#1b1e23' />
+      <link
         rel='icon'
+        sizes='any'
+        type='image/svg+xml'
         href='https://carbonplan-assets.s3.amazonaws.com/images/favicon.svg'
       />
       <link
+        rel='mask-icon'
+        href='https://carbonplan-assets.s3.amazonaws.com/images/favicon.svg'
+        color='#000000'
+      />
+      <link
         rel='apple-touch-icon'
-        href='https://carbonplan-assets.s3.amazonaws.com/images/favicon.png'
+        sizes='180x180'
+        href='https://carbonplan-assets.s3.amazonaws.com/images/favicon-180.png'
       />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />

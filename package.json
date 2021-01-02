@@ -4,7 +4,7 @@
   "description": "demo of carbonplan theme and components",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write '{components,pages}/**/*.js'"
@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@theme-ui/color": "^0.3.5",
     "next": "^10.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

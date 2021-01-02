@@ -13,9 +13,9 @@ const Footer = () => {
         mb: [4, 4, 4],
       }}
     >
-      <Grid columns={[1, 1, 3]} sx={{ mb: [3] }}>
+      <Grid columns={[1, 1, '35% 31% 30%']} sx={{ mb: [3] }}>
         <Box>
-          <Text sx={{ fontFamily: 'heading', letterSpacing: 'wide', mb: [2] }}>
+          <Text sx={{ fontFamily: 'heading', letterSpacing: 'mono', mb: [2] }}>
             EMAIL
           </Text>
           <Link
@@ -26,7 +26,7 @@ const Footer = () => {
           </Link>
         </Box>
         <Box>
-          <Text sx={{ fontFamily: 'heading', letterSpacing: 'wide', mb: [2] }}>
+          <Text sx={{ fontFamily: 'heading', letterSpacing: 'mono', mb: [2] }}>
             FOLLOW
           </Text>
           <Link
@@ -37,18 +37,19 @@ const Footer = () => {
             @carbonplanorg
           </Link>
         </Box>
-        <Box sx={{ fontFamily: 'body', letterSpacing: 'body' }}>
+        <Box sx={{ fontFamily: 'body' }}>
           <Text sx={{ color: 'secondary', maxWidth: '90%' }}>
             CarbonPlan is a registered non-profit public benefit corporation in
             California with 501(3)(c) status.
           </Text>
         </Box>
       </Grid>
-      <Grid columns={[1, 1, 3]} sx={{ mb: ['2px'] }}>
+      <Grid columns={[1, 1, '35% 31% 30%']} sx={{ mb: ['2px'] }}>
         <Box sx={{ position: 'relative' }}>
           <Box
             sx={{
-              fontFamily: 'monospace',
+              fontFamily: 'mono',
+              letterSpacing: 'mono',
               position: 'absolute',
               bottom: '0px',
               borderStyle: 'solid',
@@ -67,7 +68,8 @@ const Footer = () => {
         <Box sx={{ position: 'relative' }}>
           <Box
             sx={{
-              fontFamily: 'monospace',
+              fontFamily: 'mono',
+              letterSpacing: 'mono',
               position: 'absolute',
               bottom: '0px',
               borderStyle: 'solid',
@@ -89,8 +91,8 @@ const Footer = () => {
             </Text>
           </Box>
         </Box>
-        <Box sx={{mt: [3]}}>
-          <Monogram sx={{mb: ['-12px']}}/>
+        <Box sx={{ mt: [3] }}>
+          <Monogram sx={{ mb: ['-12px'] }} />
         </Box>
       </Grid>
     </Box>
