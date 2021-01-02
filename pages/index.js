@@ -30,8 +30,8 @@ function Index() {
             This site describes the primary components of our design system. The
             core concepts were developed with{' '}
             <Link href='https://ot.studio'>Oridnary Things</Link> in Spring
-            2020, and it has evolved somewhat since then. Most components of the
-            system can be used from our javascript packages:{' '}
+            2020, and the system has evolved since. Most components of the
+            system can be used from our javascript packages{' '}
             <Link href='https://github.com/carbonplan/theme'>
               @carbonplan/theme
             </Link>{' '}
