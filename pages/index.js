@@ -29,18 +29,34 @@ function Index() {
           <Styled.p>
             This site describes the primary components of our design system. The
             core concepts were developed with{' '}
-            <Link href='https://ot.studio'>Oridnary Things</Link> in Spring
-            2020, and the system has evolved since. Most components of the
-            system can be used from our javascript packages{' '}
-            <Link href='https://github.com/carbonplan/theme'>
+            <Link href='https://ot.studio' target='_blank' rel='noreferrer'>
+              Oridnary Things
+            </Link>{' '}
+            in Spring 2020, and the system has evolved since. Most components of
+            the system can be used from our javascript packages{' '}
+            <Link
+              href='https://github.com/carbonplan/theme'
+              target='_blank'
+              rel='noreferrer'
+            >
               @carbonplan/theme
             </Link>{' '}
             and{' '}
-            <Link href='https://github.com/carbonplan/theme'>
+            <Link
+              href='https://github.com/carbonplan/components'
+              target='_blank'
+              rel='noreferrer'
+            >
               @carbonplan/components
             </Link>
             . This website and its{' '}
-            <Link href='https://github.com/carbonplan/design'>source code</Link>{' '}
+            <Link
+              href='https://github.com/carbonplan/design'
+              target='_blank'
+              rel='noreferrer'
+            >
+              source code
+            </Link>{' '}
             are good examples of how to use the system.
           </Styled.p>
           <Styled.h2>Logo</Styled.h2>
