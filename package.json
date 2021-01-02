@@ -9,14 +9,14 @@
     "start": "next start",
     "format": "prettier --write '{components,pages}/**/*.js'"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/carbonplan/design.git"
   },
   "author": "freeman-lab",
   "license": "MIT",
   "dependencies": {
-    "@carbonplan/components": "2.0.3",
+    "@carbonplan/components": "2.0.5",
     "@carbonplan/theme": "2.0.0",
     "@theme-ui/color": "^0.3.5",
     "next": "^10.0.4",

@@ -32,7 +32,7 @@ function Index() {
 
   return (
     <Layout>
-      <Container sx={{ px: [3, 3, 4] }}>
+      <Container sx={{ px: [3, 4, 4] }}>
         <Box sx={{ maxWidth: '700px', mb: [6] }}>
           <Styled.h1>CarbonPlan Design</Styled.h1>
           <Styled.p>
