@@ -35,13 +35,14 @@ function Index() {
       <Box sx={{ maxWidth: '700px', mb: [6] }}>
         <Styled.h1>CarbonPlan Design</Styled.h1>
         <Styled.p>
-          This site describes the primary components of our design system. The
-          core concepts were developed with{' '}
+          This site demos the components of our design system. The core elements
+          were developed with{' '}
           <Link href='https://ot.studio' target='_blank' rel='noreferrer'>
             Oridnary Things
           </Link>{' '}
-          in Spring 2020, and the system has evolved since. Most components of
-          the system can be used from our javascript packages{' '}
+          in Spring 2020, and the system has evolved since. (They are amazing,
+          by the way. Definitely talk to them about your next project.) Most
+          components of the system can be used from our javascript packages{' '}
           <Link
             href='https://github.com/carbonplan/theme'
             target='_blank'
@@ -155,7 +156,15 @@ function Index() {
         </Box>
         <Styled.h2>Typography</Styled.h2>
         <Styled.p>
-          Our design system is built around four fonts from the family Relative.
+          Our design system is built around four fonts from the family
+          <Link
+            href='https://www.colophon-foundry.org/typefaces/relative/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Relative
+          </Link>
+          .
         </Styled.p>
         <Text
           sx={{
