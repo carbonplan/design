@@ -13,6 +13,7 @@ import {
 } from '@carbonplan/components'
 
 const { Check, Question, Info } = Icons
+
 const colors = [
   'red',
   'orange',
