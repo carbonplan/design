@@ -371,7 +371,7 @@ function Index() {
               key={i}
               value={toggle}
               onClick={() => setToggle(!toggle)}
-              sx={{ mr: [2], color: color }}
+              sx={{ mr: [2], mb: [2], color: color }}
             />
           ))}
         </Box>
