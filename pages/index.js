@@ -34,7 +34,7 @@ function Index() {
   return (
     <Layout>
       <Box sx={{ maxWidth: '700px', mb: [6] }}>
-        <Styled.h1>CarbonPlan Design</Styled.h1>
+        <Text as='h1' variant='styles.h1' sx={{mt: [4, 5, 5]}}>CarbonPlan Design</Text>
         <Styled.p>
           This site demos the components of our design system. The core elements
           were developed with{' '}
