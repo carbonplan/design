@@ -16,12 +16,11 @@
   "author": "freeman-lab",
   "license": "MIT",
   "dependencies": {
-    "@carbonplan/components": "^2.2.1",
-    "@carbonplan/theme": "^2.3.0",
-    "@theme-ui/color": "^0.3.5",
+    "@carbonplan/components": "^2.3.10",
+    "@carbonplan/theme": "^2.3.1",
     "next": "^10.0.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "theme-ui": "^0.3.5"
   },
   "devDependencies": {
