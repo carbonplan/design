@@ -4,7 +4,7 @@ import {
   Layout,
   Logo,
   Monogram,
-  Switch,
+  Dimmer,
   Tag,
   Toggle,
   Expander,
@@ -34,7 +34,9 @@ function Index() {
   return (
     <Layout>
       <Box sx={{ maxWidth: '700px', mb: [6] }}>
-        <Text as='h1' variant='styles.h1' sx={{mt: [4, 5, 5]}}>CarbonPlan Design</Text>
+        <Text as='h1' variant='styles.h1' sx={{ mt: [4, 5, 5] }}>
+          CarbonPlan Design
+        </Text>
         <Styled.p>
           This site demos the components of our design system. The core elements
           were developed with{' '}
@@ -275,11 +277,11 @@ function Index() {
         </Box>
         <Styled.p>
           The core design is built around Chalk on Carbon, but changing the
-          theme reverts it to Carbon on Chalk. You can use the light switch to
+          theme reverts it to Carbon on Chalk. You can use the light dimmer to
           change the theme. In the default layout it's in the lower right. You
           can also embed it elsewhere, like here:
         </Styled.p>
-        <Switch />
+        <Dimmer />
         <Styled.p>
           Here are the core colors in three shades at a few sizes and fonts.
         </Styled.p>
@@ -348,13 +350,21 @@ function Index() {
           toggle method. There are useful for filters on lists, map layers, etc.
         </Styled.p>
         <Box>
-          <Tag label={'Click me'} value={tag} onClick={() => setTag(!tag)} />
-          <Tag label={'Always on'} value={true} />
-          <Tag label={'Always off'} value={false} />
+          <Tag label={'Click me'} value={tag} onClick={() => setTag(!tag)}>
+            Click me
+          </Tag>
+          <Tag label={'Always on'} value={true}>
+            Always on
+          </Tag>
+          <Tag label={'Always off'} value={false}>
+            Always off
+          </Tag>
         </Box>
         <Box>
           {colors.map((color, i) => (
-            <Tag key={i} label={color} sx={{ color: color }} />
+            <Tag key={i} label={color} sx={{ color: color }}>
+              {color}
+            </Tag>
           ))}
         </Box>
         <Styled.h3>Toggles</Styled.h3>
@@ -381,18 +391,20 @@ function Index() {
           Used for numbers and counters with lots of color options.
         </Styled.p>
         <Box>
-          <Badge value={200} />
-          <Badge value={10} />
-          <Badge value={'100k'} />
+          <Badge>200</Badge>
+          <Badge>10</Badge>
+          <Badge>100k</Badge>
         </Box>
         <Box sx={{ mt: [2] }}>
-          <Badge value={200} sx={{ color: 'secondary' }} />
-          <Badge value={10} sx={{ color: 'secondary' }} />
-          <Badge value={'100k'} sx={{ color: 'secondary' }} />
+          <Badge sx={{ color: 'secondary' }}>200</Badge>
+          <Badge sx={{ color: 'secondary' }}>10</Badge>
+          <Badge sx={{ color: 'secondary' }}>100k</Badge>
         </Box>
         <Box sx={{ mt: [2] }}>
           {colors.map((color, i) => (
-            <Badge key={i} value={i} sx={{ color: color }} />
+            <Badge key={i} sx={{ color: color }}>
+              {i}
+            </Badge>
           ))}
         </Box>
         <Styled.h3>Icons</Styled.h3>
