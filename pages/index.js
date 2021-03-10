@@ -33,7 +33,7 @@ function Index() {
 
   return (
     <Layout>
-      <Box sx={{ maxWidth: '700px', mb: [6] }}>
+      <Box sx={{ maxWidth: ['100%', '100%', '64%'], mb: [6] }}>
         <Text as='h1' variant='styles.h1' sx={{ mt: [4, 5, 5] }}>
           CarbonPlan Design
         </Text>
@@ -159,7 +159,7 @@ function Index() {
         </Box>
         <Styled.h2>Typography</Styled.h2>
         <Styled.p>
-          Our design system is built around four fonts from the family
+          Our design system is built around four fonts from the family{' '}
           <Link
             href='https://www.colophon-foundry.org/typefaces/relative/'
             target='_blank'
@@ -276,8 +276,8 @@ function Index() {
           <ColorSample color='#ebebec' hex='ebebec' label='chalk' border />
         </Box>
         <Styled.p>
-          The core design is built around Chalk on Carbon, but changing the
-          theme reverts it to Carbon on Chalk. You can use the light dimmer to
+          The core design is built around Chalk on Carbon. Changing the
+          theme to light mode reverts it to Carbon on White (we use pure White rather than Chalk in light mode for improved contrast). You can use the light dimmer to
           change the theme. In the default layout it's in the lower right. You
           can also embed it elsewhere, like here:
         </Styled.p>
@@ -422,7 +422,17 @@ function Index() {
           <Question closed={true} sx={{ mr: [2] }} />
           <Info closed={true} sx={{ mr: [2] }} />
         </Box>
-        <Box>
+        <Text
+          sx={{
+            mt: [1],
+            fontSize: [2],
+            fontFamily: 'mono',
+            letterSpacing: 'mono',
+          }}
+        >
+          24 px
+        </Text>
+        <Box sx={{mt: [2]}}>
           <Check sx={{ mr: [2], width: '48px', height: '48px' }} />
           <Question sx={{ mr: [2], width: '48px', height: '48px' }} />
           <Info sx={{ mr: [2], width: '48px', height: '48px' }} />
@@ -438,6 +448,16 @@ function Index() {
           />
           <Info closed={true} sx={{ mr: [2], width: '48px', height: '48px' }} />
         </Box>
+        <Text
+          sx={{
+            fontSize: [2],
+            mt: [1],
+            fontFamily: 'mono',
+            letterSpacing: 'mono',
+          }}
+        >
+          48 px
+        </Text>
         <Styled.h3>Expander</Styled.h3>
         <Styled.p>Used to expand panels and such.</Styled.p>
         <Box>
@@ -447,7 +467,9 @@ function Index() {
               borderColor: 'muted',
               borderWidth: '1px',
               borderRadius: '6px',
-              p: [3],
+              px: [3],
+              pt: ['12px'],
+              pb: [3],
               height: 'fit-content',
               width: '210px',
             }}
