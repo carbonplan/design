@@ -20,7 +20,7 @@ const Guide = () => {
   useEffect(() => {
     function handler(event) {
       const { key, keyCode, metaKey } = event
-      if (keyCode === 186 && metaKey) {
+      if (key === ';' && metaKey) {
         setDisplay((prev) => !prev)
       }
     }
