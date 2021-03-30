@@ -141,4 +141,5 @@ module.exports = {
   breakpoints: [
     '40em', '64em', '102em',
   ],
+  useColorSchemeMediaQuery: false,
 }
