@@ -6,13 +6,21 @@ const About = () => {
   return (
     <Layout title='about / carbonplan'>
       <Guide />
-      <Row sx={{mt: [5, 6, 7, 8], mb: [4, 5, 6, 7]}}>
+      <Row sx={{ mt: [5, 6, 7, 8], mb: [4, 5, 6, 7] }}>
         <Column start={[1, 2]} width={[6, 6]}>
-          <Box as='h1' variant='styles.h1' sx={{my: [0, 0, 0], mb: [4, 5, 5, 6]}}>About</Box>
-          <Box as='h2' variant='styles.h2' sx={{my: [0, 0, 0]}}>Mission</Box>
+          <Box
+            as='h1'
+            variant='styles.h1'
+            sx={{ my: [0, 0, 0], mb: [4, 5, 5, 6] }}
+          >
+            About
+          </Box>
+          <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
+            Mission
+          </Box>
         </Column>
       </Row>
-      <Row sx={{mb: [5, 6, 7, 8]}}>
+      <Row sx={{ mb: [5, 6, 7, 8] }}>
         <Column start={[1, 3]} width={[6, 4, 6, 6]}>
           <Box sx={{ maxWidth: '750px', display: 'inline-block' }}>
             <Text as='p' variant='styles.p' sx={{ mt: [0] }}>
@@ -33,11 +41,15 @@ const About = () => {
             </Text>
           </Box>
         </Column>
-        <Column start={[1, 10]} width={[2, 1]} sx={{display: ['none', 'none', 'initial'],}}>
+        <Column
+          start={[1, 10]}
+          width={[2, 1]}
+          sx={{ display: ['none', 'none', 'initial'] }}
+        >
           <Box
             sx={{
               display: 'flex',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}
           >
             <Arrow />
@@ -49,12 +61,14 @@ const About = () => {
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
-      <Row sx={{mt: [4, 5, 6, 7]}}>
+      <Row sx={{ mt: [4, 5, 6, 7] }}>
         <Column start={[1, 2]} width={[6, 3]}>
-        <Box as='h2' variant='styles.h2' sx={{my: [0, 0, 0]}}>Our work</Box>
+          <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
+            Our work
+          </Box>
         </Column>
       </Row>
-      <Row sx={{mt: [4, 5, 6, 7], mb: [5, 6, 7, 8]}}>
+      <Row sx={{ mt: [4, 5, 6, 7], mb: [5, 6, 7, 8] }}>
         <Column start={[1, 3]} width={[6, 4, 3, 3]}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
@@ -68,9 +82,9 @@ const About = () => {
               RESEARCH
             </Box>
             <Box as='p'>
-              We collaborate with researchers to build open source data and tools.
-              Through this work we produce datasets and models that directly
-              inform decision making across a range of sectors.
+              We collaborate with researchers to build open source data and
+              tools. Through this work we produce datasets and models that
+              directly inform decision making across a range of sectors.
             </Box>
           </Box>
         </Column>
@@ -106,9 +120,9 @@ const About = () => {
               ENGAGEMENT
             </Box>
             <Box>
-              We work with companies, non-profits, and government organizations to
-              help analyze climate programs. We focus on transparency
-              and quality, bringing rigorous science to complex problems.
+              We work with companies, non-profits, and government organizations
+              to help analyze climate programs. We focus on transparency and
+              quality, bringing rigorous science to complex problems.
             </Box>
           </Box>
         </Column>
@@ -118,7 +132,7 @@ const About = () => {
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
-      <Row sx={{mt: [4, 5, 6, 7], mb: [5, 6, 7, 8]}}>
+      <Row sx={{ mt: [4, 5, 6, 7], mb: [5, 6, 7, 8] }}>
         <Column start={[1, 1, 2, 2]} width={[6, 3, 5, 5]}>
           <Box
             sx={{
@@ -134,7 +148,7 @@ const About = () => {
           </Box>
         </Column>
         <Column start={[1, 4, 7, 7]} width={[6, 3, 5, 5]}>
-          <Box sx={{ fontSize: [6]}}>
+          <Box sx={{ fontSize: [6] }}>
             <ArrowLink
               big={true}
               href={
@@ -142,7 +156,9 @@ const About = () => {
               }
               color={'yellow'}
             >
-              Download 2020<br />annual report
+              Download 2020
+              <br />
+              annual report
             </ArrowLink>
           </Box>
         </Column>
@@ -152,7 +168,7 @@ const About = () => {
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
-      <Row sx={{my: [5, 6, 7, 8]}}>
+      <Row sx={{ my: [5, 6, 7, 8] }}>
         <Column start={[1, 3]} width={[3, 3]}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
@@ -167,7 +183,9 @@ const About = () => {
             </Box>
             <ArrowLink href='/research/cdr-database'>CDR Database</ArrowLink>
             <ArrowLink href='https://cdrprimer.org/'>CDR Primer</ArrowLink>
-            <ArrowLink href='/research/dac-calculator'>DAC Calculator</ArrowLink>
+            <ArrowLink href='/research/dac-calculator'>
+              DAC Calculator
+            </ArrowLink>
             <ArrowLink href='/research/permanence-calculator'>
               Permanence Calculator
             </ArrowLink>
@@ -205,39 +223,44 @@ const About = () => {
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
-      <Row sx={{mt: [4, 5, 6, 7]}}>
+      <Row sx={{ mt: [4, 5, 6, 7] }}>
         <Column start={[1, 2]} width={[6, 10]}>
-          <Box as='h2' variant='styles.h2' sx={{my: [0, 0, 0]}}>Learn more</Box>
+          <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
+            Learn more
+          </Box>
         </Column>
       </Row>
-      <Row sx={{mt: [4, 4, 5, 6], mb: [5, 6, 7, 8]}}>
+      <Row sx={{ mt: [4, 4, 5, 6], mb: [5, 6, 7, 8] }}>
         <Column start={[1, 3]} width={[2, 2]}>
-        <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-          <LearnMoreLink internal={true} label={'TEAM'} href='/team'>
-            Read about our team and collaborators
-          </LearnMoreLink>
-        </Box>
+          <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
+            <LearnMoreLink internal={true} label={'TEAM'} href='/team'>
+              Read about our team and collaborators
+            </LearnMoreLink>
+          </Box>
         </Column>
         <Column start={[4, 5]} width={[2, 2]}>
-        <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-          <LearnMoreLink internal={true} label={'PRESS'} href='/press'>
-            View a list of press about our work
-          </LearnMoreLink>
-        </Box>
+          <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
+            <LearnMoreLink internal={true} label={'PRESS'} href='/press'>
+              View a list of press about our work
+            </LearnMoreLink>
+          </Box>
         </Column>
         <Column start={[1, 7]} width={[2, 2]}>
-        <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-          <LearnMoreLink label={'GITHUB'} href='https://github.com/carbonplan'>
-            Check out our open source code
-          </LearnMoreLink>
-        </Box>
+          <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
+            <LearnMoreLink
+              label={'GITHUB'}
+              href='https://github.com/carbonplan'
+            >
+              Check out our open source code
+            </LearnMoreLink>
+          </Box>
         </Column>
         <Column start={[4, 9]} width={[2, 2]}>
-        <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-          <LearnMoreLink internal={true} label={'FUNDING'} href='/funding'>
-            View our sources of funding
-          </LearnMoreLink>
-        </Box>
+          <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
+            <LearnMoreLink internal={true} label={'FUNDING'} href='/funding'>
+              View our sources of funding
+            </LearnMoreLink>
+          </Box>
         </Column>
       </Row>
     </Layout>
@@ -280,9 +303,7 @@ function LearnMoreLink({ label, href, children, internal = false }) {
       }}
     >
       <Wrapper href={href}>
-        <Box sx={{ transition: '0.15s', pb: [2] }}>
-          {children}
-        </Box>
+        <Box sx={{ transition: '0.15s', pb: [2] }}>{children}</Box>
         <Box
           sx={{
             transition: '0.15s',

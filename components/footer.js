@@ -28,9 +28,9 @@ const Footer = () => {
             </Box>
             <Link
               href='mailto:hello@carbonplan.org'
-              sx={{ 
+              sx={{
                 textDecoration: 'none',
-                fontSize: [2, 2, 2, 3] 
+                fontSize: [2, 2, 2, 3],
               }}
             >
               hello@carbonplan.org
@@ -51,9 +51,9 @@ const Footer = () => {
             </Box>
             <Link
               href='https://twitter.com/carbonplanorg'
-              sx={{ 
+              sx={{
                 textDecoration: 'none',
-                fontSize: [2, 2, 2, 3]  ,
+                fontSize: [2, 2, 2, 3],
               }}
             >
               @carbonplanorg

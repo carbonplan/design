@@ -1,7 +1,6 @@
 import { Grid } from 'theme-ui'
 
 const Row = ({ children, sx, columns, gap, ...props }) => {
-
   const makeArray = (input) => {
     if (!Array.isArray(input)) {
       input = [input, input, input, input]
