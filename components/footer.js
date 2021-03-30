@@ -21,7 +21,7 @@ const Footer = () => {
                 fontSize: [2, 2, 2, 3],
                 fontFamily: 'heading',
                 letterSpacing: 'mono',
-                mb: [3],
+                mb: [2],
               }}
             >
               EMAIL
@@ -44,7 +44,7 @@ const Footer = () => {
                 fontSize: [2, 2, 2, 3],
                 fontFamily: 'heading',
                 letterSpacing: 'mono',
-                mb: [3],
+                mb: [2],
               }}
             >
               FOLLOW
@@ -67,7 +67,6 @@ const Footer = () => {
                 fontSize: [2, 2, 2, 3],
                 fontFamily: 'body',
                 color: 'secondary',
-                maxWidth: '90%',
               }}
             >
               CarbonPlan is a registered non-profit public benefit corporation
