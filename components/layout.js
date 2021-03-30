@@ -81,8 +81,8 @@ const Layout = ({
           <Box
             sx={{
               position: 'fixed',
-              right: 13,
-              bottom: 15,
+              right: [13],
+              bottom: [17, 17, 15, 15],
             }}
           >
             <Dimmer />
