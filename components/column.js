@@ -1,40 +1,34 @@
 import { Box } from 'theme-ui'
 
 const Column = ({ start, width, dl, dr, children, sx, ...props }) => {
-  if (!start) {
-    start = ['auto']
+  start = start || 'auto'
+  width = width || 'auto'
+
+  const makeArray = (input) => {
+    if (input && !Array.isArray(input)) {
+      input = [input]
+    }
+
+    if (![1, 2, 4].includes(input.length)) {
+      throw new Error('Array length must be 1, 2, or 4')
+    }
+
+    if (Array.isArray(input) && input.length == 1) {
+      input = input.map((d) => [d, d, d, d]).flat()
+    } else if (Array.isArray(input) && input.length == 2) {
+      input = input.map((d) => [d, d]).flat()
+    }
+
+    return input
   }
 
-  if (start && !Array.isArray(start)) {
-    start = [start]
-  }
+  start = makeArray(start)
+  width = makeArray(width)
 
-  if (![1, 2, 4].includes(start.length)) {
-    throw new Error('Array length must be 1, 2, or 4')
-  }
-
-  if (width && !Array.isArray(width)) {
-    width = [width]
-  }
-
-  if (width && ![1, 2, 4].includes(width.length)) {
-    throw new Error('Array length must be 1, 2, or 4')
-  }
-
-  if (Array.isArray(start) && start.length == 2) {
-    start = start.map((d) => [d, d]).flat()
-  }
-
-  if (Array.isArray(width) && width.length == 2) {
-    width = width.map((d) => [d, d]).flat()
-  }
-
-  let end
-  if (width) {
-    end = start.map((d, i) => d + width[i])
-  } else {
-    end = start.map((_) => 'auto')
-  }
+  const end = start.map((d, i) => {
+    if (d == 'auto') return 'auto'
+    return d + width[i]
+  })
 
   let ml, mr
 

@@ -22,7 +22,7 @@ const About = () => {
       </Row>
       <Row sx={{ mb: [5, 6, 7, 8] }}>
         <Column start={[1, 3]} width={[6, 4, 6, 6]}>
-          <Box sx={{ maxWidth: '750px', display: 'inline-block' }}>
+          <Box sx={{ display: 'inline-block' }}>
             <Text as='p' variant='styles.p' sx={{ mt: [0] }}>
               Addressing the climate crisis requires action on several fronts.
               We need critical reductions in emissions. We also need large-scale
@@ -42,9 +42,9 @@ const About = () => {
           </Box>
         </Column>
         <Column
-          start={[1, 10]}
-          width={[2, 1]}
-          sx={{ display: ['none', 'none', 'initial'] }}
+          start={[1, 6, 10, 10]}
+          width={[1]}
+          sx={{ display: ['none', 'initial', 'initial', 'initial'] }}
         >
           <Box
             sx={{
