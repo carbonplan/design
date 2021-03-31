@@ -11,12 +11,12 @@ const About = () => {
           <Box
             as='h1'
             variant='styles.h1'
-            sx={{ my: [0, 0, 0], mb: [4, 5, 5, 6] }}
+            sx={{ my: [0, 0, 0], mb: [5, 6, 7, 8] }}
           >
             About
           </Box>
           <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
-            Mission
+            Our mission
           </Box>
         </Column>
       </Row>
@@ -169,7 +169,7 @@ const About = () => {
         </Column>
       </Row>
       <Row sx={{ my: [5, 6, 7, 8] }}>
-        <Column start={[1, 3]} width={[6, 3]}>
+        <Column start={[1, 3]} width={[3, 3]}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -191,7 +191,7 @@ const About = () => {
             </ArrowLink>
           </Box>
         </Column>
-        <Column start={[1, 8]} width={[6, 3]}>
+        <Column start={[1, 8]} width={[3, 3]}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -231,21 +231,21 @@ const About = () => {
         </Column>
       </Row>
       <Row sx={{ mt: [4, 4, 5, 6], mb: [5, 6, 7, 8] }}>
-        <Column start={[1, 3]} width={[3, 2]}>
+        <Column start={[1, 3]} width={[2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink internal={true} label={'TEAM'} href='/team'>
               Read about our team and collaborators
             </LearnMoreLink>
           </Box>
         </Column>
-        <Column start={[4, 5]} width={[3, 2]}>
+        <Column start={[4, 5]} width={[2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink internal={true} label={'PRESS'} href='/press'>
               View a list of press about our work
             </LearnMoreLink>
           </Box>
         </Column>
-        <Column start={[1, 7]} width={[3, 2]}>
+        <Column start={[1, 7]} width={[2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink
               label={'GITHUB'}
@@ -255,7 +255,7 @@ const About = () => {
             </LearnMoreLink>
           </Box>
         </Column>
-        <Column start={[4, 9]} width={[3, 2]}>
+        <Column start={[4, 9]} width={[2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink internal={true} label={'FUNDING'} href='/funding'>
               View our sources of funding

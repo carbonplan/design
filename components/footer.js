@@ -14,7 +14,7 @@ const Footer = () => {
       }}
     >
       <Row sx={{ mb: [0, 0, 4, 5] }}>
-        <Column start={[1, 2]} width={[6, 4]}>
+        <Column start={[1, 2]} width={[3, 4]}>
           <Box>
             <Box
               sx={{
@@ -37,7 +37,7 @@ const Footer = () => {
             </Link>
           </Box>
         </Column>
-        <Column start={[1, 6]} width={[6, 3]}>
+        <Column start={[4, 6]} width={[3, 3]}>
           <Box>
             <Box
               sx={{
@@ -60,7 +60,7 @@ const Footer = () => {
             </Link>
           </Box>
         </Column>
-        <Column start={[1, 9]} width={[4, 3]}>
+        <Column start={[1, 9]} width={[6, 3, 3, 3]} sx={{ my: [3, 3, 0] }}>
           <Box>
             <Box
               sx={{
@@ -75,18 +75,23 @@ const Footer = () => {
           </Box>
         </Column>
       </Row>
-      <Row sx={{ mb: ['2px'] }}>
-        <Column start={[1, 2]} width={[6, 4]} sx={{ position: 'relative' }}>
+      <Row sx={{ mb: ['2px'], mt: [5, 5, 4] }}>
+        <Column
+          start={[1, 2]}
+          width={[3, 4]}
+          sx={{
+            display: 'flex',
+            alignItems: ['flex-start', 'flex-start', 'flex-end'],
+          }}
+        >
           <Box
             sx={{
-              position: 'absolute',
               bottom: '0px',
               borderStyle: 'solid',
               borderColor: 'muted',
               borderWidth: '0px',
               borderTopWidth: '1px',
-              display: ['none', 'none', 'initial'],
-              pt: [3],
+              pt: [2],
             }}
           >
             <Box
@@ -101,18 +106,22 @@ const Footer = () => {
             </Box>
           </Box>
         </Column>
-        <Column start={[1, 6]} width={[6, 3]} sx={{ position: 'relative' }}>
+        <Column
+          start={[4, 6]}
+          width={[3, 3]}
+          sx={{
+            display: 'flex',
+            alignItems: ['flex-start', 'flex-start', 'flex-end'],
+          }}
+        >
           <Box
-            as='span'
             sx={{
-              position: 'absolute',
               bottom: '0px',
               borderStyle: 'solid',
               borderColor: 'muted',
               borderWidth: '0px',
               borderTopWidth: '1px',
-              display: ['none', 'none', 'initial'],
-              pt: ['5px'],
+              pt: '5px',
             }}
           >
             <NextLink href='/terms' passHref>
@@ -130,8 +139,8 @@ const Footer = () => {
             </NextLink>
           </Box>
         </Column>
-        <Column start={[1, 9]} width={[6, 3]} sx={{}}>
-          <Monogram sx={{ mt: [0, 0, 4, 5], mb: ['-12px'] }} />
+        <Column start={[1, 9]} width={[3, 3]} sx={{}}>
+          <Monogram sx={{ mt: [3, 3, 4, 5], mb: ['-12px'] }} />
         </Column>
       </Row>
     </Box>
