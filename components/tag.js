@@ -10,7 +10,7 @@ const Tag = ({ label, value, sx, children, ...props }) => {
       aria-label={label}
       sx={{
         display: 'inline-block',
-        fontSize: [1],
+        fontSize: [1, 1, 1, 2],
         fontFamily: 'mono',
         letterSpacing: 'mono',
         cursor:

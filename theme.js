@@ -9,7 +9,7 @@ module.exports = {
       'relative-medium-pro, Roboto, system-ui, -apple-system, BlinkMacSystemFont',
     mono: 'relative-mono-11-pitch-pro, Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 18, 24, 34, 48, 64, 80, 96],
+  fontSizes: [12, 14, 16, 18, 24, 34, 48, 64, 80, 96, 128],
   letterSpacings: {
     body: '0.01em',
     mono: '0.07em',

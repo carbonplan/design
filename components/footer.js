@@ -60,7 +60,11 @@ const Footer = () => {
             </Link>
           </Box>
         </Column>
-        <Column start={[1, 9]} width={[6, 3, 3, 3]} sx={{ my: [3, 3, 0] }}>
+        <Column
+          start={[1, 9]}
+          width={[6, 3, 3, 3]}
+          sx={{ mt: [6, 6, 0], mb: [3, 3, 0] }}
+        >
           <Box>
             <Box
               sx={{
@@ -140,7 +144,7 @@ const Footer = () => {
           </Box>
         </Column>
         <Column start={[1, 9]} width={[3, 3]} sx={{}}>
-          <Monogram sx={{ mt: [3, 3, 4, 5], mb: ['-12px'] }} />
+          <Monogram sx={{ mt: [5, 6, 4, 5], mb: ['-12px'] }} />
         </Column>
       </Row>
     </Box>

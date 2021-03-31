@@ -1,6 +1,6 @@
 import { Box, Themed, Divider, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Row, Column, Layout, Guide } from '../../components'
+import { Row, Column, Layout, Guide } from '@carbonplan/components'
 
 const About = () => {
   return (

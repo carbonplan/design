@@ -24,7 +24,7 @@ const Row = ({ children, sx, columns, gap, ...props }) => {
     rowGap = gap
   } else {
     columnGap = [4, 5, 5, 6]
-    rowGap = [4, 5, 5, 6]
+    rowGap = [0, 0, 0, 0]
   }
 
   if (Number.isInteger(columns) || Array.isArray(columns)) {
