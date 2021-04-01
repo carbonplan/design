@@ -31,7 +31,7 @@ const Tool = ({ title, description, meta, children }) => {
             start={[1, 1]}
             width={[2]}
             dr={1}
-            sx={{ mb: [-3, -4, 0, 0], mt: [4, 5, '104px', '140px'] }}
+            sx={{ mb: [-2, -4, 0, 0], mt: [3, 4, '104px', '140px'] }}
           >
             <BackLink />
           </Column>
