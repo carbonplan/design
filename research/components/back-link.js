@@ -23,9 +23,11 @@ const BackLink = () => {
               fontFamily: 'body',
               letterSpacing: 'body',
               transition: '0.15s',
-              '&:hover': {
-                color: 'primary',
-              },
+              '@media (hover: hover) and (pointer: fine)': {
+                '&:hover': {
+                  color: 'primary',
+                },
+              }
             }}
           >
             <Box

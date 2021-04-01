@@ -84,13 +84,15 @@ const Entry = ({ info, final }) => {
                           display: ['block', 'block', 'inline-block'],
                           float: ['left', 'left', 'initial'],
                           clear: ['left', 'left', 'initial'],
-                          '&:hover': {
-                            color: 'text',
-                          },
-                          '&:hover > #container > #arrow': {
-                            transform: 'rotate(45deg)',
-                            color: 'text',
-                          },
+                          '@media (hover: hover) and (pointer: fine)': {
+                            '&:hover': {
+                              color: 'text',
+                            },
+                            '&:hover > #container > #arrow': {
+                              transform: 'rotate(45deg)',
+                              color: 'text',
+                            },
+                          }
                         }}
                       >
                         <Box as='span' id='label' sx={{ transition: '0.15s' }}>
