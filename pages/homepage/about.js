@@ -69,7 +69,7 @@ const About = () => {
         </Column>
       </Row>
       <Row sx={{ mt: [4, 5, 6, 7], mb: [5, 6, 7, 8] }}>
-        <Column start={[1, 3]} width={[6, 4, 3, 3]}>
+        <Column start={[1, 3]} width={[6, 4, 3, 3]} sx={{ mb: [4, 5, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -88,7 +88,7 @@ const About = () => {
             </Box>
           </Box>
         </Column>
-        <Column start={[1, 6]} width={[6, 4, 3, 3]}>
+        <Column start={[1, 6]} width={[6, 4, 3, 3]} sx={{ mb: [4, 5, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -133,7 +133,11 @@ const About = () => {
         </Column>
       </Row>
       <Row sx={{ mt: [4, 5, 6, 7], mb: [5, 6, 7, 8] }}>
-        <Column start={[1, 1, 2, 2]} width={[6, 3, 5, 5]}>
+        <Column
+          start={[1, 1, 2, 2]}
+          width={[6, 3, 5, 5]}
+          sx={{ mb: [3, 0, 0, 0] }}
+        >
           <Box
             sx={{
               fontSize: [6],
@@ -169,7 +173,11 @@ const About = () => {
         </Column>
       </Row>
       <Row sx={{ my: [5, 6, 7, 8] }}>
-        <Column start={[1, 1, 3, 3]} width={[6, 3, 3, 3]}>
+        <Column
+          start={[1, 1, 3, 3]}
+          width={[6, 3, 3, 3]}
+          sx={{ mb: [5, 0, 0, 0] }}
+        >
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -230,8 +238,8 @@ const About = () => {
           </Box>
         </Column>
       </Row>
-      <Row sx={{ mt: [4, 4, 5, 6], mb: [5, 6, 7, 8] }}>
-        <Column start={[1, 3]} width={[3, 2]}>
+      <Row sx={{ mt: [4, 4, 5, 6], mb: [3, 5, 7, 8] }}>
+        <Column start={[1, 3]} width={[3, 2]} sx={{ mb: [3, 0, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink internal={true} label={'TEAM'} href='/team'>
               Read about our team and collaborators

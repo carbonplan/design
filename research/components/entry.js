@@ -92,7 +92,7 @@ const Entry = ({ info, final }) => {
                               transform: 'rotate(45deg)',
                               color: 'text',
                             },
-                          }
+                          },
                         }}
                       >
                         <Box as='span' id='label' sx={{ transition: '0.15s' }}>

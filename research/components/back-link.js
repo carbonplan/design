@@ -27,7 +27,7 @@ const BackLink = () => {
                 '&:hover': {
                   color: 'primary',
                 },
-              }
+              },
             }}
           >
             <Box
