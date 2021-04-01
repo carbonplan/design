@@ -17,7 +17,7 @@ const Tool = ({ title, description, meta, children }) => {
     >
       <Guide />
       <Row sx={{ mb: [3, 4, 5, 6] }}>
-        <Box sx={{ display: ['initial', 'initial', 'none', 'none'] }}>
+        <Box sx={{ display: ['none', 'none', 'none', 'none'] }}>
           <Column
             start={[1, 1]}
             width={[2]}
@@ -26,19 +26,19 @@ const Tool = ({ title, description, meta, children }) => {
             <BackArrow />
           </Column>
         </Box>
-        <Box sx={{ display: ['none', 'none', 'initial', 'initial'] }}>
+        <Box sx={{ display: ['initial', 'initial', 'initial', 'initial'] }}>
           <Column
             start={[1, 1]}
             width={[2]}
             dr={1}
-            sx={{ mt: [0, 0, '104px', '140px'] }}
+            sx={{ mb: [-3, -4, 0, 0], mt: [4, 5, '104px', '140px'] }}
           >
             <BackLink />
           </Column>
         </Box>
         <Column start={[1, 2]} width={[6, 4, 6, 6]}>
           <Box sx={{}}>
-            <Box as='h1' variant='styles.h1' sx={{ mt: [5, 6, 7, 8] }}>
+            <Box as='h1' variant='styles.h1' sx={{ mt: [5, 7, 7, 8] }}>
               {title}
             </Box>
             <Box sx={{ mb: [0, 0, 4], mt: [0, 0, 7, 8] }}>

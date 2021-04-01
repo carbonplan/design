@@ -107,21 +107,21 @@ const Article = ({ children, meta }) => {
         }}
       >
         <Row>
-          <Box sx={{ display: ['initial', 'initial', 'none', 'none'] }}>
+          <Box sx={{ display: ['none', 'none', 'none', 'none'] }}>
             <Column
               start={[1, 1]}
               width={[2]}
-              sx={{ mb: [-5, -7, 0, 0], mt: [3, 3, 0, 0] }}
+              sx={{ mb: [-5, -7, 0, 0], mt: [3, 3, 6, 7] }}
             >
               <BackArrow />
             </Column>
           </Box>
-          <Box sx={{ display: ['none', 'none', 'initial', 'initial'] }}>
+          <Box sx={{ display: ['initial', 'initial', 'initial', 'initial'] }}>
             <Column
               start={[1, 1]}
               width={[2]}
               dr={1}
-              sx={{ mt: [0, 0, '104px'] }}
+              sx={{ mb: [-3, -4, 0, 0], mt: [4, 5, '104px', '104px'] }}
             >
               <BackLink />
             </Column>
