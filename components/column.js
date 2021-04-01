@@ -54,6 +54,7 @@ const Column = ({ start, width, dl, dr, children, sx, ...props }) => {
     if (dr === 1) {
       mr = [-4, -5, -5, -6]
     }
+    console.log(mr)
   }
 
   return (

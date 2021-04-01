@@ -77,6 +77,7 @@ const Entry = ({ info, final }) => {
                         sx={{
                           color: 'secondary',
                           mr: [5, 5, 5, 6],
+                          pr: [0, 0, 2, 0],
                           mb: [pad ? 2 : 0, pad ? 2 : 0, 0],
                           mt: [0, 0, 1],
                           cursor: 'pointer',

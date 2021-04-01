@@ -65,7 +65,7 @@ const Team = () => {
         </Column>
       </Row>
       <Row sx={{ mb: [4, 5, 6, 7] }}>
-        <Column start={[1, 3]} width={[6, 4, 8, 8]}>
+        <Column start={[1, 3]} width={[6, 6, 8, 8]}>
           <Box sx={{ pt: [2, 0, 0], pb: [1] }}>
             <Box variant='styles.p' sx={{ mb: [4, 5, 6, 7] }}>
               Interested in joining our team? Check out our{' '}
@@ -75,7 +75,7 @@ const Team = () => {
               .
             </Box>
             <Grid
-              columns={[1, 1, 2, 2]}
+              columns={[1, 2, 2, 2]}
               sx={{
                 gridColumnGap: [4, 5, 5, 6],
                 gridRowGap: [4, 5, 5, 6],

@@ -1,13 +1,12 @@
 import { Box, Link, Text } from 'theme-ui'
-import { useThemeUI } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 
-const BackArrow = () => {
+const BackArrow = ({ color }) => {
   return (
     <Box
       sx={{
         mt: ['-17px', '-17px', '-17px', '-44px'],
-        ml: ['-5px', '-5px', '-5px', '-12px'],
+        ml: ['-2px', '-3px', '-5px', '-12px'],
       }}
     >
       <NextLink href='/research' passHref>
@@ -22,7 +21,7 @@ const BackArrow = () => {
               color: 'text',
               display: 'inline-block',
               mr: [3],
-              fontSize: [8, 8, 9, 10],
+              fontSize: [7, 8, 9, 10],
               transition: '0.1s',
               cursor: 'pointer',
               '&:hover': {

@@ -27,7 +27,7 @@ const Reference = ({ color, data }) => {
 
   return (
     <Box as='span' sx={{ userSelect: 'none' }}>
-      <Text
+      <Box
         as='span'
         onMouseOver={toggleOn}
         onMouseOut={toggleOff}
@@ -45,9 +45,9 @@ const Reference = ({ color, data }) => {
         }}
       >
         <sup>{data.number}</sup>
-      </Text>
+      </Box>
       <Wrapper url={data.url}>
-        <Text
+        <Box
           as='span'
           onMouseOver={toggleOn}
           onMouseOut={toggleOff}
@@ -77,7 +77,7 @@ const Reference = ({ color, data }) => {
             ],
           }}
         >
-          <Text
+          <Box
             as='span'
             sx={{
               fontFamily: 'body',
@@ -90,7 +90,7 @@ const Reference = ({ color, data }) => {
               transition: 'opacity 0.2s ease-in-out',
             }}
           >
-            <Text
+            <Box
               as='span'
               sx={{
                 ml: ['-12px'],
@@ -100,8 +100,8 @@ const Reference = ({ color, data }) => {
               }}
             >
               {data.number}
-            </Text>
-            <Text
+            </Box>
+            <Box
               as='span'
               sx={{
                 ml: [0, 0, '7px'],
@@ -114,9 +114,9 @@ const Reference = ({ color, data }) => {
               {data.authors} {data.year ? `(${data.year})` : ''} {data.title}{' '}
               <i>{data.journal}</i>{' '}
               {data.editors ? `edited by ${data.editors}` : ''}
-            </Text>
-          </Text>
-        </Text>
+            </Box>
+          </Box>
+        </Box>
       </Wrapper>
     </Box>
   )

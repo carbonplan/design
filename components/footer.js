@@ -82,7 +82,7 @@ const Footer = () => {
       <Row sx={{ mb: ['2px'], mt: [5, 5, 4] }}>
         <Column
           start={[1, 2]}
-          width={[3, 4]}
+          width={[6, 4]}
           sx={{
             display: 'flex',
             alignItems: ['flex-start', 'flex-start', 'flex-end'],
@@ -111,11 +111,12 @@ const Footer = () => {
           </Box>
         </Column>
         <Column
-          start={[4, 6]}
+          start={[1, 6]}
           width={[3, 3]}
           sx={{
             display: 'flex',
             alignItems: ['flex-start', 'flex-start', 'flex-end'],
+            mt: [4, 5, 0, 0],
           }}
         >
           <Box

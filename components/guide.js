@@ -7,8 +7,8 @@ const sx = {
   guideColumn: {
     borderStyle: 'solid',
     borderWidth: '0px',
-    borderLeftWidth: '1px',
-    borderRightWidth: '1px',
+    borderLeftWidth: '0px',
+    borderRightWidth: '0px',
     borderColor: 'rgb(124,236,238)',
     opacity: 0.4,
   },

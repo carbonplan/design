@@ -23,9 +23,13 @@
     "@theme-ui/color": "^0.6.0",
     "next": "^10.0.6",
     "react": "^16.14.0",
+    "react-animate-height": "^2.0.23",
     "react-dom": "^16.14.0",
+    "react-vega": "^7.4.2",
     "rehype-slug": "^4.0.1",
-    "theme-ui": "^0.6.0"
+    "theme-ui": "^0.6.0",
+    "vega": "^5.20.2",
+    "vega-lite": "^5.0.0"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
