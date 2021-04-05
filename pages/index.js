@@ -38,7 +38,7 @@ function Index() {
     <Layout title='design / carbonplan'>
       <Guide />
       <Row sx={{ mb: [4, 5, 6, 7] }}>
-        <Column start={[1, 2]} width={[6, 7]}>
+        <Column start={[1, 3]} width={[6, 7]}>
           <Box as='h1' variant='styles.h1' sx={{ mt: [5, 6, 7, 8] }}>
             CarbonPlan Design
           </Box>
