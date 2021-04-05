@@ -13,7 +13,7 @@ import {
   Row,
   Column,
   Guide,
-} from '../components'
+} from '@carbonplan/components'
 
 const { Check, Question, Info } = Icons
 

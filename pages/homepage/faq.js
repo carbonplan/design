@@ -1,23 +1,14 @@
 import { Box, Themed, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { Layout, Row, Column, Guide } from '@carbonplan/components'
+import Heading from '../../homepage/components/heading'
 
 const FAQ = () => {
   return (
     <Layout links={'homepage'} title={'faq / carbonplan'}>
       <Guide />
       <Box sx={{ mb: [5, 6, 7, 8] }}>
-        <Row sx={{ mt: [5, 6, 7, 8], mb: [5, 6, 7, 8] }}>
-          <Column start={[1, 2]} width={[6, 6]}>
-            <Box
-              as='h1'
-              variant='styles.h1'
-              sx={{ mt: [0, 0, 0, 0], mb: [0, 0, 0, 0] }}
-            >
-              FAQ
-            </Box>
-          </Column>
-        </Row>
+        <Heading>FAQ</Heading>
         <Question first>Are you a nonprofit?</Question>
         <Answer>
           Yes. We are a registered non-profit public benefit corporation in

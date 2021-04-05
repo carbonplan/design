@@ -21,7 +21,7 @@ const Tool = ({ title, description, meta, children }) => {
           <Column
             start={[1, 1]}
             width={[2]}
-            sx={{ mb: [-5, -6, 0, 0], mt: [3, 3, 0, 0] }}
+            sx={{ mb: [-5, -6, 0, 0], mt: [3, 3, 6, 7] }}
           >
             <BackArrow />
           </Column>

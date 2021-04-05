@@ -1,3 +1,7 @@
 .DS_Store
 .next
 node_modules
+
+theme.js
+fonts.css
+globals.css

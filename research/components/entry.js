@@ -34,12 +34,23 @@ const Entry = ({ info, final }) => {
           borderStyle: 'solid',
           borderColor: 'muted',
           borderWidth: '0px',
-          borderBottomWidth: final ? '0px' : '1px',
+          borderBottomWidth: [final ? '0px' : '1px', '0px', '0px'],
           color: 'text',
         }}
       >
-        <Row id='grid' columns={[6]}>
-          <Column start={[1]} width={[6, 4, 4, 4]}>
+        <Row id='grid' columns={[7]}>
+          <Column
+            start={[1, 1, 2, 2]}
+            width={[6, 4, 4, 4]}
+            sx={{
+              borderStyle: 'solid',
+              borderColor: 'muted',
+              borderWidth: '0px',
+              borderLeftWidth: ['0px', '0px', '1px'],
+              pl: [0, 0, 5, 6],
+              ml: [0, 0, -5, -6],
+            }}
+          >
             <Box
               sx={{
                 color: 'secondary',
@@ -125,7 +136,7 @@ const Entry = ({ info, final }) => {
             </Box>
           </Column>
           <Column
-            start={[1, 5, 5, 5]}
+            start={[1, 6, 6, 6]}
             width={[4, 2, 2, 2]}
             sx={{ display: ['none', 'block', 'block'] }}
           >

@@ -1,5 +1,6 @@
-import { Box, Divider, Styled, Text, Heading, Link, Grid } from 'theme-ui'
+import { Box, Divider, Styled, Text, Link, Grid } from 'theme-ui'
 import { Layout, Row, Column, Guide } from '@carbonplan/components'
+import Heading from '../../homepage/components/heading'
 
 const data = [
   {
@@ -50,16 +51,14 @@ const Team = () => {
   return (
     <Layout links={'homepage'} title={'team / carbonplan'}>
       <Guide />
+      <Heading>Team</Heading>
       <Row>
         <Column start={[1, 2]} width={[6, 3]}>
           <Box
-            as='h1'
-            variant='styles.h1'
-            sx={{ mt: [5, 6, 7, 8], mb: [5, 6, 7, 8] }}
+            as='h2'
+            variant='styles.h2'
+            sx={{ mt: [0, 0, 0, 0], mb: [0, 3, 5, 5] }}
           >
-            Team
-          </Box>
-          <Box as='h2' variant='styles.h2' sx={{ mb: [0, 3, 5, 5] }}>
             Core team
           </Box>
         </Column>

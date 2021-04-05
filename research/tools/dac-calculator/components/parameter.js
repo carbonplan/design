@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, memo } from 'react'
-import { Box, Divider, Grid, Input, Slider, Text } from 'theme-ui'
+import { useThemeUI, Box, Divider, Grid, Input, Slider, Text } from 'theme-ui'
 import { Row, Column } from '@carbonplan/components'
 import ParamChart from './charts/param-chart'
 import ParamDescription from './parameter-description'
@@ -11,6 +11,7 @@ const Parameter = ({ param, data, state }) => {
   const [displayValue, setDisplayValue] = useState(value)
   const [inputFocus, setInputFocus] = useState(false)
   const inputRef = useRef(null)
+  const { theme } = useThemeUI()
 
   const handleEnter = (e) => {
     if (e.key == 'Enter') {
@@ -125,6 +126,15 @@ const Parameter = ({ param, data, state }) => {
                   '&::-webkit-slider-thumb': {
                     height: [24, 24, 16],
                     width: [24, 24, 16],
+                  },
+                  ':focus-visible': {
+                    outline: 'none !important',
+                    background: `${theme.rawColors.secondary} !important`,
+                  },
+                  ':focus': {
+                    '&::-webkit-slider-thumb': {
+                      boxShadow: `0 0 0 4px ${theme.rawColors.secondary}`,
+                    },
                   },
                   pointerEvents: 'all',
                 }}

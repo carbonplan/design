@@ -379,4 +379,6 @@ CarbonPlan received no specific financial support for this work.
 
 ### Questions? Interested in collaborating on these problems? Email us at [hello@carbonplan.org](mailto:hello@carbonplan.org)
 
+### Want to read more? Go back to our [research](/research)
+
 export default ({ children }) => <Article meta={meta}>{children}</Article>

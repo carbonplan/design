@@ -32,22 +32,7 @@ const Main = () => {
           setSort={setSort}
         />
       </Column>
-      <Column
-        start={[5]}
-        width={[1]}
-        sx={{ display: ['none', 'none', 'flex'], justifyContent: 'center' }}
-      >
-        <Box
-          sx={{
-            position: 'fixed',
-            bg: 'muted',
-            width: '1px',
-            mt: [4, 5, 6, 7],
-            height: 'calc(100% - 152px)',
-          }}
-        ></Box>
-      </Column>
-      <Column start={[1, 6]} width={[6, 6]}>
+      <Column start={[1, 5]} width={[6, 7]} sx={{ mt: [0, 0, '13px', '27px'] }}>
         <List filter={filter} sort={sort} />
       </Column>
     </Row>

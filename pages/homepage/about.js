@@ -1,21 +1,20 @@
 import { Box, Themed, Divider, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { Row, Column, Layout, Guide } from '@carbonplan/components'
+import Heading from '../../homepage/components/heading'
 
 const About = () => {
   return (
     <Layout title='about / carbonplan'>
       <Guide />
-      <Row sx={{ mt: [5, 6, 7, 8], mb: [4, 5, 6, 7] }}>
+      <Heading>About</Heading>
+      <Row>
         <Column start={[1, 2]} width={[6, 6]}>
           <Box
-            as='h1'
-            variant='styles.h1'
-            sx={{ my: [0, 0, 0], mb: [5, 6, 7, 8] }}
+            as='h2'
+            variant='styles.h2'
+            sx={{ mt: [0, 0, 0, 0], mb: [4, 5, 6, 7] }}
           >
-            About
-          </Box>
-          <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
             Our mission
           </Box>
         </Column>
@@ -353,7 +352,8 @@ function ArrowLink({ href, children, big = false, color = 'text' }) {
     <Box
       sx={{
         fontSize: big ? [5, 5, 6, 7] : [4, 4, 4, 5],
-        lineHeight: ['1.2em', '1.25em', 'heading'],
+        fontFamily: big ? 'heading' : 'body',
+        lineHeight: 'heading',
         width: 'fit-content',
         mb: big ? [0] : [1],
       }}

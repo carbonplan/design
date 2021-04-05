@@ -1,6 +1,5 @@
-import { Layout } from '../../components'
+import { Layout, Guide } from '@carbonplan/components'
 import Main from '../../research/components/main'
-import { Guide } from '@carbonplan/components'
 
 const Index = () => {
   return (
