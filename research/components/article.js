@@ -18,7 +18,7 @@ const Article = ({ children, meta }) => {
       <Box
         sx={{
           backgroundColor: meta.color,
-          height: ['auto', 'auto', meta.background ? '275px' : '100px'],
+          height: ['auto', 'auto', meta.background ? '275px' : 'auto'],
           position: ['relative', 'relative', 'absolute'],
           backgroundImage: [
             'none',
@@ -30,14 +30,18 @@ const Article = ({ children, meta }) => {
           ml: [-3, -4, 0],
           backgroundSize: 'cover',
           backgroundPosition: '50% 70%',
-          py: [3, 3, 0],
+          py: [3],
         }}
       >
         <Box
           sx={{
-            position: ['initial', 'initial', 'absolute'],
+            position: [
+              'intial',
+              'initial',
+              meta.background ? 'absolute' : 'relative',
+            ],
             bottom: 0,
-            pb: [0, 0, 3],
+            pb: ['2px', '2px', meta.background ? 3 : 0],
             width: '100%',
             color: ['#1b1e23', '#1b1e23', meta.invert ? '#1b1e23' : '#ebebec'],
           }}
