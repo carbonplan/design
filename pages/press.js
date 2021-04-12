@@ -198,81 +198,46 @@ const Press = () => {
         Press
       </Heading>
       <Box
+        onClick={() => setMobileExpanded(!mobileExpanded)}
         sx={{
           display: ['inherit', 'inherit', 'none', 'none'],
           position: 'fixed',
-          bottom: '0px',
-          pb: [3, 4, 5, 6],
+          top: '6px',
+          right: '64px',
+          p: ['8px'],
+          zIndex: 5000,
+          cursor: 'pointer',
+        }}
+      >
+      <Funnel 
+        sx={{
+          width: 26, height: 26, transition: 'stroke 0.15s', stroke: 'primary'
+        }} 
+      />
+      </Box>
+      <Box
+        sx={{
+          display: ['inherit', 'inherit', 'none', 'none'],
+          position: 'fixed',
+          top: '0px',
+          pb: [4, 5, 6, 7],
+          mt: ['56px'],
           pt: [3, 4, 5, 6],
           bg: 'background',
-          zIndex: 1,
+          zIndex: 100,
           borderStyle: 'solid',
           borderColor: 'muted',
           borderWidth: '0px',
-          borderTopWidth: '1px',
+          borderBottomWidth: '1px',
+          transition: 'transform 0.15s',
           ml: [-3, -4, -5, -6],
           pl: [3, 4, 5, 6],
+          transform: mobileExpanded ? 'translateY(0)' : 'translateY(-400px)'
         }}
       >
         <Row>
           <Column start={[1, 1, 1, 1]} width={[5, 4, 1, 1]}>
-            <Box
-              sx={{
-                transition: 'height 0.15s',
-                height: mobileExpanded ? 'auto' : '30px',
-                width: mobileExpanded ? 'auto' : 'calc(100vw)',
-              }}
-            >
-              <Box
-                sx={{
-                  display: mobileExpanded ? 'inherit' : 'none',
-                  mb: [6],
-                  mt: [2],
-                }}
-              >
-                <FilterContents />
-              </Box>
-              <Box
-                sx={{
-                  position: 'absolute',
-                  bottom: [3, 4, 5, 6],
-                  left: [3, 4, 5, 6],
-                }}
-              >
-                <Box
-                  onClick={() => setMobileExpanded(!mobileExpanded)}
-                  sx={{
-                    cursor: 'pointer',
-                    '@media (hover: hover) and (pointer: fine)': {
-                      '&:hover > #funnel': {
-                        stroke: 'primary',
-                      },
-                      '&:hover > #label': {
-                        color: 'primary',
-                      },
-                    },
-                  }}
-                >
-                  <Funnel id='funnel' sx={{ transition: 'stroke 0.15s', stroke: mobileExpanded ? 'primary' : 'secondary' }} />
-                  <Box
-                    id='label'
-                    sx={{
-                      transition: 'color 0.15s',
-                      position: 'relative',
-                      top: '-5px',
-                      ml: [2],
-                      display: 'inline-block',
-                      textTransform: 'uppercase',
-                      fontFamily: 'mono',
-                      color: mobileExpanded ? 'primary' : 'secondary',
-                      fontSize: [1, 1, 1, 2],
-                    }}
-                  >
-                    {mobileExpanded ? 'Hide' : 'Show'} Filter
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
+              <FilterContents />
           </Column>
         </Row>
       </Box>

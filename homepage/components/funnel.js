@@ -10,6 +10,7 @@ const Funnel = ({ sx, ...props }) => {
         width: '20px',
         height: '20px',
         stroke: 'secondary',
+        strokeWidth: '1px',
         ...sx,
       }}
       {...props}
@@ -19,7 +20,6 @@ const Funnel = ({ sx, ...props }) => {
         x2='17'
         y1='1'
         y2='1'
-        strokeWidth='1.5'
         strokeLinecap='round'
       />
       <line
@@ -27,7 +27,6 @@ const Funnel = ({ sx, ...props }) => {
         x2='15'
         y1='5'
         y2='5'
-        strokeWidth='1.5'
         strokeLinecap='round'
       />
       <line
@@ -35,7 +34,6 @@ const Funnel = ({ sx, ...props }) => {
         x2='12'
         y1='9'
         y2='9'
-        strokeWidth='1.5'
         strokeLinecap='round'
       />
       <line
@@ -43,7 +41,6 @@ const Funnel = ({ sx, ...props }) => {
         x2='10'
         y1='13'
         y2='13'
-        strokeWidth='1.5'
         strokeLinecap='round'
       />
     </Box>
