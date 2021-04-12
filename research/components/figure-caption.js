@@ -6,7 +6,7 @@ const FigureCaption = ({ number, children }) => {
       sx={{
         color: 'secondary',
         mt: [3],
-        mb: [5],
+        mb: [6],
       }}
     >
       <Box sx={{ letterSpacing: 'smallcaps', display: 'inline-block' }}>

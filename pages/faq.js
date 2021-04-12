@@ -1,7 +1,7 @@
 import { Box, Themed, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { Layout, Row, Column, Guide } from '@carbonplan/components'
-import Heading from '../../homepage/components/heading'
+import Heading from '../homepage/components/heading'
 
 const FAQ = () => {
   return (
@@ -89,7 +89,7 @@ function Question({ children, first = false }) {
 function Answer({ children }) {
   return (
     <Row>
-      <Column start={[1, 3]} width={[6, 4, 6, 6]}>
+      <Column start={[2, 3]} width={[5, 4, 6, 6]}>
         <Themed.p>{children}</Themed.p>
       </Column>
     </Row>

@@ -7,7 +7,7 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write '{components,research,pages}/**/*.js'"
+    "format": "prettier --write '{homepage,components,research,pages}/**/*.js'"
   },
   "repository": {
     "type": "git",
