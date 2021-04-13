@@ -60,7 +60,7 @@ const board = [
   },
   {
     name: 'Zeke Hausfather',
-    description: 'CarbonBrief / BTI',
+    description: 'CarbonBrief / Breakthrough Institute',
   },
 ]
 

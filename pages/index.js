@@ -1,6 +1,8 @@
 import { Link, Box } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { Guide, Layout, Row, Column } from '@carbonplan/components'
+import Lottie from 'react-lottie'
+import * as animationData from '../animations/carbonplan-infographic-desktop-sample-01.json'
 
 const Index = () => {
   return (
@@ -10,11 +12,20 @@ const Index = () => {
         sx={{
           width: 'calc(100vw)',
           ml: [-3, -4, -5, -6],
-          height: '200px',
-          bg: 'secondary',
+          mt: ['-20px']
         }}
-      ></Box>
-      <Row sx={{ position: 'relative', mt: [5, 6, 7, 8] }}>
+      >
+      <Lottie 
+        options={{
+          loop: true,
+          autoplay: true, 
+          animationData: animationData.default,
+        }}
+        height={400}
+        width={'100%'}
+      />
+      </Box>
+      <Row sx={{ position: 'relative', mt: [0] }}>
         <Column start={[2, 6]} width={[5, 6]}>
           <Box
             sx={{
