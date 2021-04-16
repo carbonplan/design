@@ -25,7 +25,7 @@ const Index = () => {
         width={'100%'}
       />
       </Box>
-      <Row sx={{ position: 'relative', mt: [0] }}>
+      <Row sx={{ position: 'relative', mt: [1] }}>
         <Column start={[2, 6]} width={[5, 6]}>
           <Box
             sx={{

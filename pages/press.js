@@ -198,7 +198,6 @@ const Press = () => {
         Press
       </Heading>
       <Box
-        onClick={() => setMobileExpanded(!mobileExpanded)}
         sx={{
           display: ['inherit', 'inherit', 'none', 'none'],
           position: 'fixed',
@@ -206,10 +205,10 @@ const Press = () => {
           right: '64px',
           p: ['8px'],
           zIndex: 5000,
-          cursor: 'pointer',
         }}
       >
       <Funnel 
+        onClick={() => setMobileExpanded(!mobileExpanded)}
         sx={{
           width: 26, height: 26, transition: 'stroke 0.15s', stroke: 'primary'
         }} 
@@ -282,13 +281,12 @@ function Item({ data, final = false }) {
   const { source, description, title, href, date, authors } = data
 
   return (
-    <Box>
+    
       <Link
         sx={{
           textDecoration: 'none',
-          '&:hover > #container': {
-            borderColor: ['muted', 'secondary', 'secondary', 'secondary'],
-          },
+          display: 'block',
+          transition: 'color 0.15s',
           '&:hover > #container > #title > #span-1 > #span-2 > #arrow': {
             transform: 'rotate(45deg)',
             fill: 'secondary',
@@ -362,6 +360,7 @@ function Item({ data, final = false }) {
                     ml: [2],
                     width: ['12px', '12px', '12px', '13px'],
                     height: ['12px', '12px', '12px', '13px'],
+                    fill: 'primary'
                   }}
                 />
               </Box>
@@ -394,7 +393,7 @@ function Item({ data, final = false }) {
           )}
         </Box>
       </Link>
-    </Box>
+    
   )
 }
 
