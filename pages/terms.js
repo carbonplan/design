@@ -10,12 +10,19 @@ const FAQ = () => {
         <Heading>Terms</Heading>
         <Row>
           <Column start={[2, 2, 3, 3]} width={[5, 5, 6, 6]}>
-            <Themed.p>
+            <Box
+              sx={{
+                fontSize: [3, 3, 3, 4],
+                fontFamily: 'body',
+                lineHeight: 'body',
+                letterSpacing: 'body',
+              }}
+            >
               All code powering this website is{' '}
               <Link href='https://choosealicense.com/licenses/mit/'>MIT</Link>{' '}
               licensed and available on{' '}
               <Link href='https://github.com/carbonplan'>GitHub</Link>.
-            </Themed.p>
+            </Box>
             <Themed.p>
               Consistent with our charitable mission to build open tools and
               resources for the evaluation and deployment of climate solutions,

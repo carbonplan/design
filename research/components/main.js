@@ -34,7 +34,7 @@ const Main = () => {
   }
 
   return (
-    <Box sx={{mb: [4, 0, 0, 0]}}>
+    <Box sx={{ mb: [4, 0, 0, 0] }}>
       <Heading
         description={
           'Articles, tools, and commentary on carbon removal and climate solutions.'
@@ -48,11 +48,15 @@ const Main = () => {
           width={[6, 6, 2, 2]}
           sx={{ display: ['none', 'none', 'initial', 'intial'] }}
         >
-          <Box sx={{ position: 'sticky', top: '76px', height: 'auto'}}>
+          <Box sx={{ position: 'sticky', top: '76px', height: 'auto' }}>
             <FilterContents />
           </Box>
         </Column>
-        <Column start={[1, 2, 5, 5]} width={[6, 7, 7, 7]} sx={{mt: ['-3px', '0px', '-1px', '0px']}}>
+        <Column
+          start={[1, 2, 5, 5]}
+          width={[6, 7, 7, 7]}
+          sx={{ mt: ['-3px', '0px', '-1px', '0px'] }}
+        >
           <List category={category} year={year} />
         </Column>
       </Row>

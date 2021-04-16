@@ -48,7 +48,11 @@ const Entry = ({ info, first, final }) => {
         }}
       >
         <Row id='grid' columns={[6, 7, 7, 7]}>
-          <Column start={[1]} width={[2]} sx={{display: ['initial', 'none', 'none', 'none']}}>
+          <Column
+            start={[1]}
+            width={[2]}
+            sx={{ display: ['initial', 'none', 'none', 'none'] }}
+          >
             {icon && (
               <WrappedLink url={links[0].url}>
                 <Icon icon={icon} color={color} />
@@ -106,10 +110,25 @@ const Entry = ({ info, first, final }) => {
             >
               {formatDate(date)}{' '}
             </Box>
-            <Box sx={{ mt: [2], mb: [1], fontSize: [2, 2, 2, 3], lineHeight: 1.35, display: ['none', 'block', 'block', 'block'] }}>
+            <Box
+              sx={{
+                mt: [2],
+                mb: [1],
+                fontSize: [2, 2, 2, 3],
+                lineHeight: 1.35,
+                display: ['none', 'block', 'block', 'block'],
+              }}
+            >
               {summary}
             </Box>
-            <Box sx={{ mt: ['12px'], fontSize: [2, 2, 2, 3], userSelect: 'none', display: ['none', 'block', 'block', 'block'] }}>
+            <Box
+              sx={{
+                mt: ['12px'],
+                fontSize: [2, 2, 2, 3],
+                userSelect: 'none',
+                display: ['none', 'block', 'block', 'block'],
+              }}
+            >
               <Box sx={{ mb: [-1] }}>
                 <LinkGroup links={links} />
               </Box>
@@ -147,13 +166,13 @@ const Entry = ({ info, first, final }) => {
             )}
           </Column>
         </Row>
-        <Box sx={{display: ['initial', 'none', 'none', 'none']}}>
-        <Box sx={{ my: [3], fontSize: [2, 2, 2, 3], lineHeight: 1.35 }}>
-          {summary}
-        </Box>
-        <Box sx={{ mt: [3], display: 'block'}}>
-          <LinkGroup links={links} />
-        </Box>
+        <Box sx={{ display: ['initial', 'none', 'none', 'none'] }}>
+          <Box sx={{ my: [3], fontSize: [2, 2, 2, 3], lineHeight: 1.35 }}>
+            {summary}
+          </Box>
+          <Box sx={{ mt: [3], display: 'block' }}>
+            <LinkGroup links={links} />
+          </Box>
         </Box>
       </Box>
     </Box>
@@ -161,54 +180,51 @@ const Entry = ({ info, first, final }) => {
 }
 
 function LinkGroup({ links }) {
-  return (
-    links.map((link, ix) => {
-      const pad = links.length > 1 && ix < links.length - 1
-      return (
-        <WrappedLink key={ix} url={link.url}>
-          <Box
-            sx={{
-              color: 'secondary',
-              mr: [4, 4, 4, 5],
-              pr: [0, 0, 2, 0],
-              mb: [1],
-              mt: [0, 0, 1],
-              cursor: 'pointer',
-              display: ['inline-block'],
-              '@media (hover: hover) and (pointer: fine)': {
-                '&:hover': {
-                  color: 'text',
-                },
-                '&:hover > #container > #arrow': {
-                  transform: 'rotate(45deg)',
-                  fill: 'primary',
-                },
+  return links.map((link, ix) => {
+    const pad = links.length > 1 && ix < links.length - 1
+    return (
+      <WrappedLink key={ix} url={link.url}>
+        <Box
+          sx={{
+            color: 'secondary',
+            mr: [4, 4, 4, 5],
+            pr: [0, 0, 2, 0],
+            mb: [1],
+            mt: [0, 0, 1],
+            cursor: 'pointer',
+            display: ['inline-block'],
+            '@media (hover: hover) and (pointer: fine)': {
+              '&:hover': {
+                color: 'text',
               },
-            }}
-          >
-            <Box as='span' id='label' sx={{ transition: '0.15s' }}>
-              {link.label}
-            </Box>
-            <Box
-              id='container'
-              as='span'
-              sx={{ position: 'relative' }}
-            >
-              <Arrow id='arrow' sx={{
+              '&:hover > #container > #arrow': {
+                transform: 'rotate(45deg)',
+                fill: 'primary',
+              },
+            },
+          }}
+        >
+          <Box as='span' id='label' sx={{ transition: '0.15s' }}>
+            {link.label}
+          </Box>
+          <Box id='container' as='span' sx={{ position: 'relative' }}>
+            <Arrow
+              id='arrow'
+              sx={{
                 transition: 'fill 0.15s, transform 0.15s',
                 position: 'relative',
                 top: '2px',
-                width: 12, 
-                height: 12, 
+                width: 12,
+                height: 12,
                 ml: [1, 1, 2, 2],
-                fill: 'secondary'
-              }}/>
-            </Box>
+                fill: 'secondary',
+              }}
+            />
           </Box>
-        </WrappedLink>
-      )
-    })
-  )
+        </Box>
+      </WrappedLink>
+    )
+  })
 }
 
 function WrappedLink({ url, children }) {

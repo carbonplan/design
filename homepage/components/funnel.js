@@ -15,34 +15,10 @@ const Funnel = ({ sx, ...props }) => {
       }}
       {...props}
     >
-      <line
-        x1='1'
-        x2='17'
-        y1='1'
-        y2='1'
-        strokeLinecap='round'
-      />
-      <line
-        x1='3'
-        x2='15'
-        y1='5'
-        y2='5'
-        strokeLinecap='round'
-      />
-      <line
-        x1='5'
-        x2='12'
-        y1='9'
-        y2='9'
-        strokeLinecap='round'
-      />
-      <line
-        x1='7'
-        x2='10'
-        y1='13'
-        y2='13'
-        strokeLinecap='round'
-      />
+      <line x1='1' x2='17' y1='1' y2='1' strokeLinecap='round' />
+      <line x1='3' x2='15' y1='5' y2='5' strokeLinecap='round' />
+      <line x1='5' x2='12' y1='9' y2='9' strokeLinecap='round' />
+      <line x1='7' x2='10' y1='13' y2='13' strokeLinecap='round' />
     </Box>
   )
 }

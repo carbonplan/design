@@ -26,7 +26,7 @@ const BackLink = () => {
               transition: '0.15s',
               '@media (hover: hover) and (pointer: fine)': {
                 '&:hover': {
-                  color: 'primary'
+                  color: 'primary',
                 },
                 '&:hover > #arrow': {
                   fill: 'primary',
@@ -34,15 +34,18 @@ const BackLink = () => {
               },
             }}
           >
-            <Arrow id='arrow' sx={{
-              transition: 'fill 0.15s',
-              transform: 'rotate(-135deg)',
-              position: 'relative',
-              top: ['3px'],
-              fill: 'secondary',
-              width: 13,
-              height: 13
-            }}/>
+            <Arrow
+              id='arrow'
+              sx={{
+                transition: 'fill 0.15s',
+                transform: 'rotate(-135deg)',
+                position: 'relative',
+                top: ['3px'],
+                fill: 'secondary',
+                width: 13,
+                height: 13,
+              }}
+            />
             <Box
               as='span'
               sx={{

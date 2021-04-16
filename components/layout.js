@@ -18,6 +18,7 @@ const Layout = ({
   metadata,
   links,
   dimmer,
+  nav,
 }) => {
   footer = footer == null ? true : footer
   header = header == null ? true : header
@@ -50,7 +51,7 @@ const Layout = ({
             }}
           >
             <Container>
-              <Header mode={links} status={status} />
+              <Header mode={links} status={status} nav={nav} />
             </Container>
           </Box>
         )}

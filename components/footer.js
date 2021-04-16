@@ -37,7 +37,7 @@ const Footer = () => {
             </Link>
           </Box>
         </Column>
-        <Column start={[1, 5, 6, 6]} width={[3, 3]} sx={{mt: [4, 0, 0, 0]}}>
+        <Column start={[1, 5, 6, 6]} width={[3, 3]} sx={{ mt: [4, 0, 0, 0] }}>
           <Box>
             <Box
               sx={{
@@ -63,7 +63,7 @@ const Footer = () => {
         <Column
           start={[1, 9]}
           width={[5, 4, 3, 3]}
-          sx={{ mt: [6, 6, 0], mb: [3, 3, 0] }}
+          sx={{ mt: ['42px', '42px', 0, 0], mb: [3, 3, 0, 0] }}
         >
           <Box>
             <Box

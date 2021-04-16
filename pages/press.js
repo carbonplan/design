@@ -207,12 +207,15 @@ const Press = () => {
           zIndex: 5000,
         }}
       >
-      <Funnel 
-        onClick={() => setMobileExpanded(!mobileExpanded)}
-        sx={{
-          width: 26, height: 26, transition: 'stroke 0.15s', stroke: 'primary'
-        }} 
-      />
+        <Funnel
+          onClick={() => setMobileExpanded(!mobileExpanded)}
+          sx={{
+            width: 26,
+            height: 26,
+            transition: 'stroke 0.15s',
+            stroke: 'primary',
+          }}
+        />
       </Box>
       <Box
         sx={{
@@ -231,12 +234,12 @@ const Press = () => {
           transition: 'transform 0.15s',
           ml: [-3, -4, -5, -6],
           pl: [3, 4, 5, 6],
-          transform: mobileExpanded ? 'translateY(0)' : 'translateY(-400px)'
+          transform: mobileExpanded ? 'translateY(0)' : 'translateY(-400px)',
         }}
       >
         <Row>
           <Column start={[1, 1, 1, 1]} width={[5, 4, 1, 1]}>
-              <FilterContents />
+            <FilterContents />
           </Column>
         </Row>
       </Box>
@@ -281,124 +284,122 @@ function Item({ data, final = false }) {
   const { source, description, title, href, date, authors } = data
 
   return (
-    
-      <Link
+    <Link
+      sx={{
+        textDecoration: 'none',
+        display: 'block',
+        transition: 'color 0.15s',
+        '@media (hover: hover) and (pointer: fine)': {
+          '&:hover > #container > #title > #span-1 > #span-2 > #arrow': {
+            transform: 'rotate(45deg)',
+            fill: 'secondary',
+          },
+          '&:hover > #container': {
+            borderColor: alpha('secondary', 0.5),
+          },
+        },
+      }}
+      href={href}
+    >
+      <Box
+        id='container'
         sx={{
-          textDecoration: 'none',
-          display: 'block',
-          transition: 'color 0.15s',
-          '@media (hover: hover) and (pointer: fine)': {
-            '&:hover > #container > #title > #span-1 > #span-2 > #arrow': {
-              transform: 'rotate(45deg)',
-              fill: 'secondary',
-            },
-            '&:hover > #container': {
-              borderColor: alpha('secondary', 0.5)
-            }
-          }
+          ml: [0, -5, -5, -6],
+          mr: [0, -5, 0, 0],
+          pr: [0, 5, 0, 0],
+          pl: [0, 5, 5, 6],
+          pt: [3, 0, 0, 0],
+          mb: [0, 5, 6, 7],
+          pb: [2, 0, 0, 0],
+          transition: 'border-color 0.15s',
+          borderStyle: 'solid',
+          borderWidth: '0px',
+          borderLeftWidth: ['0px', '1px', '1px', '1px'],
+          borderTopWidth: ['1px', '0px', '0px', '0px'],
+          borderColor: 'muted',
         }}
-        href={href}
       >
         <Box
-          id='container'
           sx={{
-            ml: [0, -5, -5, -6],
-            mr: [0, -5, 0, 0],
-            pr: [0, 5, 0, 0],
-            pl: [0, 5, 5, 6],
-            pt: [3, 0, 0, 0],
-            mb: [0, 5, 6, 7],
-            pb: [2, 0, 0, 0],
-            transition: 'border-color 0.15s',
-            borderStyle: 'solid',
-            borderWidth: '0px',
-            borderLeftWidth: ['0px', '1px', '1px', '1px'],
-            borderTopWidth: ['1px', '0px', '0px', '0px'],
-            borderColor: 'muted',
+            color: 'secondary',
+            fontSize: [1, 1, 1, 2],
+            fontFamily: 'mono',
+            letterSpacing: 'mono',
+            textTransform: 'uppercase',
+            display: 'inline-block',
           }}
         >
-          <Box
-            sx={{
-              color: 'secondary',
-              fontSize: [1, 1, 1, 2],
-              fontFamily: 'mono',
-              letterSpacing: 'mono',
-              textTransform: 'uppercase',
-              display: 'inline-block',
-            }}
-          >
-            {formatDate(date)}
-          </Box>
-          <Box
-            sx={{
-              display: 'inline-block',
-              float: 'right',
-            }}
-          >
-            <Tag sx={{ color: sourceColors[source] }}>{source}</Tag>
-          </Box>
-          <Box
-            id='title'
-            sx={{
-              fontSize: [2, 2, 2, 3],
-              mt: [3],
-              pb: [2],
-              mb: [1],
-              lineHeight: 'body',
-            }}
-          >
-            <span id='span-1'>
+          {formatDate(date)}
+        </Box>
+        <Box
+          sx={{
+            display: 'inline-block',
+            float: 'right',
+          }}
+        >
+          <Tag sx={{ color: sourceColors[source] }}>{source}</Tag>
+        </Box>
+        <Box
+          id='title'
+          sx={{
+            fontSize: [2, 2, 2, 3],
+            mt: [3],
+            pb: [2],
+            mb: [1],
+            lineHeight: 'body',
+          }}
+        >
+          <span id='span-1'>
+            {title
+              .split(' ')
+              .slice(0, title.split(' ').length - 1)
+              .join(' ')}{' '}
+            <Box as='span' id='span-2' sx={{ whiteSpace: 'nowrap' }}>
               {title
                 .split(' ')
-                .slice(0, title.split(' ').length - 1)
-                .join(' ')}{' '}
-              <Box as='span' id='span-2' sx={{ whiteSpace: 'nowrap' }}>
-                {title
-                  .split(' ')
-                  .slice(title.split(' ').length - 1, title.split(' ').length)}
-                <Arrow
-                  id='arrow'
-                  sx={{
-                    transition: '0.15s',
-                    position: 'relative',
-                    top: ['2px', '2px', '2px', '2px'],
-                    ml: [2],
-                    width: ['12px', '12px', '12px', '13px'],
-                    height: ['12px', '12px', '12px', '13px'],
-                    fill: 'primary'
-                  }}
-                />
-              </Box>
-            </span>
-          </Box>
-          {authors.length > 0 && (
+                .slice(title.split(' ').length - 1, title.split(' ').length)}
+              <Arrow
+                id='arrow'
+                sx={{
+                  transition: '0.15s',
+                  position: 'relative',
+                  top: ['2px', '2px', '2px', '2px'],
+                  ml: [2],
+                  width: ['12px', '12px', '12px', '13px'],
+                  height: ['12px', '12px', '12px', '13px'],
+                  fill: 'primary',
+                }}
+              />
+            </Box>
+          </span>
+        </Box>
+        {authors.length > 0 && (
+          <Box
+            id='authors'
+            sx={{
+              fontSize: [2],
+              mt: [2],
+              mb: [2],
+              pb: [1],
+              color: 'text',
+            }}
+          >
             <Box
-              id='authors'
+              as='span'
+              id='authors-span'
               sx={{
-                fontSize: [2],
-                mt: [2],
-                mb: [2],
-                pb: [1],
-                color: 'text',
+                letterSpacing: 'body',
+                fontFamily: 'body',
+                fontSize: [2, 2, 2, 3],
+                color: 'secondary',
               }}
             >
-              <Box
-                as='span'
-                id='authors-span'
-                sx={{
-                  letterSpacing: 'body',
-                  fontFamily: 'body',
-                  fontSize: [2, 2, 2, 3],
-                  color: 'secondary',
-                }}
-              >
-                by {authors.join(' + ')}
-              </Box>
+              by {authors.join(' + ')}
             </Box>
-          )}
-        </Box>
-      </Link>
-    
+          </Box>
+        )}
+      </Box>
+    </Link>
   )
 }
 

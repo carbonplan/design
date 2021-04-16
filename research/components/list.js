@@ -7,7 +7,7 @@ const List = ({ category, year }) => {
   const inFilter = (d) => {
     return (
       d.tags.some((t) => category[t]) &&
-      year[(new Date(d.date.replace(/-/g, '/'))).getFullYear()]
+      year[new Date(d.date.replace(/-/g, '/')).getFullYear()]
     )
   }
 

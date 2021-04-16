@@ -5,7 +5,7 @@ import Heading from '../homepage/components/heading'
 
 const FAQ = () => {
   return (
-    <Layout links={'homepage'} title={'faq / carbonplan'}>
+    <Layout links={'homepage'} title={'faq / carbonplan'} nav={'faq'}>
       <Guide />
       <Box sx={{ mb: [5, 6, 7, 8] }}>
         <Heading>FAQ</Heading>

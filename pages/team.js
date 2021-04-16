@@ -50,10 +50,10 @@ const team = [
   {
     name: 'Becky Hurst',
     role: 'Operations Manager',
-    bio: 
+    bio:
       'Becky has extensive experience in the nonprofit sector, and is energized by operations and project management. She is passionate about creating organizational systems that foster team productivity, and is excited to be involved in climate action. She holds a BA in English Literature from Western Washington University.',
-    final: true
-  }
+    final: true,
+  },
 ]
 
 const board = [
@@ -110,7 +110,7 @@ const collaborators = [
 
 const Team = () => {
   return (
-    <Layout links={'homepage'} title={'team / carbonplan'}>
+    <Layout links={'homepage'} title={'team / carbonplan'} nav={'team'}>
       <Guide />
       <Heading
         sidenote={

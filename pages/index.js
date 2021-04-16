@@ -12,18 +12,18 @@ const Index = () => {
         sx={{
           width: 'calc(100vw)',
           ml: [-3, -4, -5, -6],
-          mt: ['-20px']
+          mt: ['-20px'],
         }}
       >
-      <Lottie 
-        options={{
-          loop: true,
-          autoplay: true, 
-          animationData: animationData.default,
-        }}
-        height={400}
-        width={'100%'}
-      />
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: animationData.default,
+          }}
+          height={400}
+          width={'100%'}
+        />
       </Box>
       <Row sx={{ position: 'relative', mt: [1] }}>
         <Column start={[1, 3, 6, 6]} width={[5, 5, 6, 6]}>
@@ -52,7 +52,9 @@ const Index = () => {
           <InternalLink href={'/research'}>Research</InternalLink>
           <InternalLink href={'/team'}>Team</InternalLink>
           <InternalLink href={'/faq'}>FAQ</InternalLink>
-          <InternalLink href={'/donate'} final>Donate</InternalLink>
+          <InternalLink href={'/donate'} final>
+            Donate
+          </InternalLink>
         </Column>
       </Row>
     </Layout>

@@ -47,7 +47,7 @@ const data = {
 
 const About = () => {
   return (
-    <Layout links={'homepage'} title={'about / carbonplan'}>
+    <Layout links={'homepage'} title={'about / carbonplan'} nav={'about'}>
       <Guide />
       <Heading>About</Heading>
       <Box sx={{ display: ['none', 'none', 'initial', 'initial'] }}>

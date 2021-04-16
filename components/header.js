@@ -6,23 +6,37 @@ import Row from './row'
 import Column from './column'
 
 const sx = {
-  link: {
-    width: '100%',
-    textAlign: 'right',
-    color: 'text',
-    fontSize: [6, 6, 7, 8],
-    pb: [1, 0, 0],
-    textDecoration: 'none',
-    display: 'block',
-    '&:hover': {
-      color: 'secondary',
+  link: (current, label, first = false) => {
+    return {
+      width: 'auto',
+      color: current === label ? 'secondary' : 'text',
+      fontSize: [6, 6, 7, 8],
+      borderStyle: 'solid',
+      borderColor: 'muted',
+      borderWidth: '0px',
       borderBottomWidth: '1px',
-      borderColor: 'secondary',
-    },
+      borderTopWidth: first ? '1px' : '0px',
+      py: [3, 3, 4, 5],
+      textDecoration: 'none',
+      display: 'block',
+      transition: 'color 0.15s',
+      '&:hover': {
+        color: 'secondary',
+      },
+    }
   },
 }
 
-const Header = ({ status, mode }) => {
+const links = ['about', 'research', 'team', 'faq']
+
+const displayLinks = {
+  about: 'About',
+  research: 'Research',
+  team: 'Team',
+  faq: 'FAQ',
+}
+
+const Header = ({ status, mode, nav }) => {
   const [expanded, setExpanded] = useState(false)
 
   const toggle = (e) => {
@@ -168,75 +182,68 @@ const Header = ({ status, mode }) => {
               width: '100vw',
               backgroundColor: 'background',
               zIndex: 5000,
-              mt: ['56px'],
+              mt: ['55px'],
               pt: [4],
-              transition: '0.25s',
+              transition: 'opacity 0.25s',
             }}
           >
             <Container>
-              <Box
-                sx={{
-                  display: expanded ? 'inherit' : 'none',
-                  position: 'relative',
-                }}
-              >
-                <Box sx={{ position: 'absolute', right: 0 }}>
-                  {mode == 'homepage' && (
+              <Row>
+                <Column start={[2, 4, 7, 7]} width={[5, 4, 5, 5]}>
+                  <Box
+                    sx={{
+                      display: expanded ? 'inherit' : 'none',
+                      mt: [5],
+                    }}
+                  >
                     <Box>
-                      <NextLink href='/about' passHref>
-                        <Link onClick={() => setExpanded(false)} sx={sx.link}>
-                          About
-                        </Link>
-                      </NextLink>
-                      <Link href='/research' sx={sx.link}>
-                        Research
-                      </Link>
-                      <NextLink href='/team' passHref>
-                        <Link onClick={() => setExpanded(false)} sx={sx.link}>
-                          Team
-                        </Link>
-                      </NextLink>
-                      <NextLink href='/faq' passHref>
-                        <Link onClick={() => setExpanded(false)} sx={sx.link}>
-                          FAQ
-                        </Link>
-                      </NextLink>
+                      {mode == 'homepage' && (
+                        <Box>
+                          {links.map((d, i) => {
+                            return (
+                              <NextLink href={'/' + d} passHref>
+                                <Link
+                                  onClick={() => {
+                                    if (nav === d) setExpanded(false)
+                                  }}
+                                  sx={sx.link(nav, d, i == 0)}
+                                >
+                                  {displayLinks[d]}
+                                </Link>
+                              </NextLink>
+                            )
+                          })}
+                        </Box>
+                      )}
+                      {mode == 'local' && (
+                        <Box>
+                          {links.map((d, i) => {
+                            return (
+                              <Link href={'/' + d} sx={sx.link(nav, d, i == 0)}>
+                                {displayLinks[d]}
+                              </Link>
+                            )
+                          })}
+                        </Box>
+                      )}
+                      {(mode == null || mode == 'remote') && (
+                        <Box>
+                          {links.map((d, i) => {
+                            return (
+                              <Link
+                                href={'https://carbonplan.org/' + d}
+                                sx={sx.link(nav, d, i == 0)}
+                              >
+                                {displayLinks[d]}
+                              </Link>
+                            )
+                          })}
+                        </Box>
+                      )}
                     </Box>
-                  )}
-                  {mode == 'local' && (
-                    <Box>
-                      <Link href='/about' sx={sx.link}>
-                        About
-                      </Link>
-                      <Link href='/research' sx={sx.link}>
-                        Research
-                      </Link>
-                      <Link href='/team' sx={sx.link}>
-                        Team
-                      </Link>
-                      <Link href='/faq' sx={sx.link}>
-                        FAQ
-                      </Link>
-                    </Box>
-                  )}
-                  {(mode == null || mode == 'remote') && (
-                    <Box>
-                      <Link href='https://carbonplan.org/about' sx={sx.link}>
-                        About
-                      </Link>
-                      <Link href='https://carbonplan.org/research' sx={sx.link}>
-                        Research
-                      </Link>
-                      <Link href='https://carbonplan.org/team' sx={sx.link}>
-                        Team
-                      </Link>
-                      <Link href='https://carbonplan.org/faq' sx={sx.link}>
-                        FAQ
-                      </Link>
-                    </Box>
-                  )}
-                </Box>
-              </Box>
+                  </Box>
+                </Column>
+              </Row>
             </Container>
           </Box>
         </Box>

@@ -78,7 +78,10 @@ const Filter = ({
                   value={filters[f][d]}
                   sx={{
                     width: 'max-content',
-                    color: (filterColors && filterColors[f]) ? filterColors[f][d] : 'primary',
+                    color:
+                      filterColors && filterColors[f]
+                        ? filterColors[f][d]
+                        : 'primary',
                     mr: [2],
                     mb: [1],
                   }}

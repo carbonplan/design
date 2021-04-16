@@ -18,7 +18,7 @@ const Icon = ({ color, icon, link }) => {
         borderStyle: 'solid',
         borderColor: 'primary',
         borderWidth: '0px',
-        '@media (hover: hover) and (pointer: fine)':{
+        '@media (hover: hover) and (pointer: fine)': {
           '&:hover > #background': {
             opacity: 0.5,
           },
@@ -26,7 +26,7 @@ const Icon = ({ color, icon, link }) => {
             opacity: 1,
             left: ['20px', '22px', '22px', '30px'],
           },
-        }
+        },
       }}
     >
       <Box
