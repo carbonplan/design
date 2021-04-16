@@ -1,8 +1,7 @@
 import { Flex, Grid, Box, Themed, Divider, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Row, Column, Layout, Guide } from '@carbonplan/components'
+import { Row, Column, Layout, Guide, Arrow } from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
-import Arrow from '../homepage/components/arrow'
 
 const data = {
   recentHighlights: [
@@ -111,7 +110,7 @@ const About = () => {
           </Column>
         </Row>
         <Row sx={{ mb: [4, 5, 6, 7] }}>
-          <Column start={[1, 1, 1, 1]} width={[6, 5, 5, 5]}>
+          <Column start={[1, 1, 1, 1]} width={[6, 6, 5, 5]}>
             <Box sx={{ pb: [1] }}>
               <Box as='p' variant='styles.p' sx={{ mb: [4, 5, 6, 7] }}>
                 Addressing the climate crisis requires action on several fronts.
@@ -142,7 +141,7 @@ const About = () => {
           </Column>
         </Row>
         <Row sx={{ mb: [4, 5, 6, 7] }}>
-          <Column start={[1, 1, 1, 1]} width={[6, 5, 5, 5]}>
+          <Column start={[1, 1, 1, 1]} width={[6, 6, 5, 5]}>
             <Box sx={{ pb: [1] }}>
               <Box as='p' variant='styles.p' sx={{ mb: [2] }}>
                 We work collaboratively to build open tools and resources for
@@ -158,7 +157,7 @@ const About = () => {
       </Box>
 
       <Row>
-        <Column start={[1, 2]} width={[6, 10]}>
+        <Column start={[1, 2]} width={[6, 10, 10, 10]}>
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
@@ -170,7 +169,7 @@ const About = () => {
         </Column>
       </Row>
       <Row sx={{ mt: [4, 5, 6, 7], mb: [5, 6, 7, 8] }}>
-        <Column start={[2, 3]} width={[6, 4, 3, 3]} sx={{ mb: [4, 5, 0, 0] }}>
+        <Column start={[2, 3]} width={[6, 5, 3, 3]} sx={{ mb: [4, 5, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -189,7 +188,7 @@ const About = () => {
             </Box>
           </Box>
         </Column>
-        <Column start={[2, 6]} width={[6, 4, 3, 3]} sx={{ mb: [4, 5, 0, 0] }}>
+        <Column start={[2, 6]} width={[6, 5, 3, 3]} sx={{ mb: [4, 5, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -208,7 +207,7 @@ const About = () => {
             </Box>
           </Box>
         </Column>
-        <Column start={[2, 9]} width={[6, 4, 3, 3]}>
+        <Column start={[2, 9]} width={[6, 5, 3, 3]}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             <Box
               sx={{
@@ -229,14 +228,14 @@ const About = () => {
         </Column>
       </Row>
       <Row>
-        <Column start={[1, 2]} width={[6, 10]}>
+        <Column start={[1, 2]} width={[6, 8, 10, 10]}>
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
       <Row sx={{ mt: [4, 5, 6, 7], mb: [5, 6, 7, 8] }}>
         <Column
           start={[1, 1, 2, 2]}
-          width={[6, 3, 5, 5]}
+          width={[6, 4, 5, 5]}
           sx={{ mb: [3, 0, 0, 0] }}
         >
           <Box
@@ -259,7 +258,7 @@ const About = () => {
             />
           </Box>
         </Column>
-        <Column start={[1, 4, 7, 7]} width={[6, 3, 5, 5]}>
+        <Column start={[1, 5, 7, 7]} width={[6, 4, 5, 5]}>
           <Box sx={{ fontSize: [6] }}>
             <ArrowLink
               big={true}
@@ -277,7 +276,7 @@ const About = () => {
         </Column>
       </Row>
       <Row>
-        <Column start={[1, 2]} width={[6, 10]}>
+        <Column start={[1, 2]} width={[6, 8, 10, 10]}>
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
@@ -322,7 +321,7 @@ const About = () => {
         </Column>
       </Row>
       <Row>
-        <Column start={[1, 2]} width={[6, 10]}>
+        <Column start={[1, 2]} width={[6, 8, 10, 10]}>
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
         </Column>
       </Row>
@@ -334,21 +333,21 @@ const About = () => {
         </Column>
       </Row>
       <Row sx={{ mt: [4, 4, 5, 6], mb: [3, 5, 7, 8] }}>
-        <Column start={[1, 3]} width={[3, 2]} sx={{ mb: [3, 0, 0, 0] }}>
+        <Column start={[1, 3]} width={[3, 4, 2, 2]} sx={{ mb: [3, 0, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink internal={true} label={'TEAM'} href='/team'>
               Read about our team and collaborators
             </LearnMoreLink>
           </Box>
         </Column>
-        <Column start={[4, 5]} width={[3, 2]}>
+        <Column start={[4, 5, 5, 5]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink internal={true} label={'PRESS'} href='/press'>
               View a list of press about our work
             </LearnMoreLink>
           </Box>
         </Column>
-        <Column start={[1, 7]} width={[3, 2]}>
+        <Column start={[1, 7]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink
               label={'GITHUB'}
@@ -358,7 +357,7 @@ const About = () => {
             </LearnMoreLink>
           </Box>
         </Column>
-        <Column start={[4, 9]} width={[3, 2]}>
+        <Column start={[4, 5, 9, 9]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <LearnMoreLink internal={true} label={'FUNDING'} href='/funding'>
               View our sources of funding

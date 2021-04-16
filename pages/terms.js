@@ -9,7 +9,7 @@ const FAQ = () => {
       <Box sx={{ mb: [5, 6, 7, 8] }}>
         <Heading>Terms</Heading>
         <Row>
-          <Column start={[1, 3]} width={[6, 6]}>
+          <Column start={[2, 2, 3, 3]} width={[5, 5, 6, 6]}>
             <Themed.p>
               All code powering this website is{' '}
               <Link href='https://choosealicense.com/licenses/mit/'>MIT</Link>{' '}

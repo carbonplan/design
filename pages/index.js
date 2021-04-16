@@ -26,7 +26,7 @@ const Index = () => {
       />
       </Box>
       <Row sx={{ position: 'relative', mt: [1] }}>
-        <Column start={[2, 6]} width={[5, 6]}>
+        <Column start={[1, 3, 6, 6]} width={[5, 5, 6, 6]}>
           <Box
             sx={{
               fontFamily: 'heading',
@@ -39,7 +39,7 @@ const Index = () => {
         </Column>
       </Row>
       <Row sx={{ position: 'relative', mt: [4, 4, 4, 5] }}>
-        <Column start={[2, 6]} width={[4, 4]}>
+        <Column start={[1, 3, 6, 6]} width={[6, 4, 4, 4]}>
           <Box sx={{ fontSize: [3, 3, 3, 4] }}>
             Improving the transparency and scientific integrity of carbon
             removal and climate solutions through open data and tools
@@ -47,19 +47,19 @@ const Index = () => {
         </Column>
       </Row>
       <Row sx={{ position: 'relative', mt: [4, 4, 4, 5], mb: [6, 10] }}>
-        <Column start={[2, 6]} width={[5, 6]}>
+        <Column start={[1, 3, 6, 6]} width={[6, 6, 6, 6]}>
           <InternalLink href={'/about'}>About</InternalLink>
           <InternalLink href={'/research'}>Research</InternalLink>
           <InternalLink href={'/team'}>Team</InternalLink>
           <InternalLink href={'/faq'}>FAQ</InternalLink>
-          <InternalLink href={'/donate'}>Donate</InternalLink>
+          <InternalLink href={'/donate'} final>Donate</InternalLink>
         </Column>
       </Row>
     </Layout>
   )
 }
 
-function InternalLink({ children, href }) {
+function InternalLink({ children, href, final = false }) {
   return (
     <NextLink href={href} passHref>
       <Link
@@ -74,7 +74,7 @@ function InternalLink({ children, href }) {
           borderWidth: '0px',
           borderBottomWidth: '1px',
           pb: [1],
-          mr: [4],
+          mr: [final ? 0 : 4],
           mb: [2],
           color: 'primary',
           textDecoration: 'none',

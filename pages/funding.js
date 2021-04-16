@@ -113,7 +113,7 @@ const Funding = () => {
           Funding
         </Heading>
         <Row>
-          <Column start={[1, 1, 2, 2]} width={[6, 5, 6, 6]}>
+          <Column start={[1, 1, 2, 2]} width={[6, 6, 6, 6]}>
             <Themed.p>
               We receive a mix of unrestricted funding through donations and
               grants, and project-specific funding through contracts and grants.

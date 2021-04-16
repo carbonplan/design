@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Box, Styled, Text, Link, Divider, Grid } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Tag, Row, Column, Guide, Layout } from '@carbonplan/components'
+import { Tag, Row, Column, Guide, Layout, Arrow } from '@carbonplan/components'
+import { alpha } from '@theme-ui/color'
 import Heading from '../homepage/components/heading'
 import Filter from '../homepage/components/filter'
 import Funnel from '../homepage/components/funnel'
-import Arrow from '../homepage/components/arrow'
 
 const data = [
   {
@@ -246,24 +246,24 @@ const Press = () => {
           width={[6, 6, 2, 2]}
           sx={{ display: ['none', 'none', 'initial', 'intial'] }}
         >
-          <Box sx={{ position: 'sticky', top: '76px', height: '600px' }}>
+          <Box sx={{ position: 'sticky', top: '76px', height: 'auto' }}>
             <FilterContents />
           </Box>
         </Column>
-        <Column start={[1, 1, 5, 5]} width={[6, 7]}>
+        <Column start={[1, 2, 5, 5]} width={[6, 7, 7, 7]}>
           <Box sx={{ mt: ['-3px', '-3px', '-3px', '0px'], mb: [3, 0, 0, 0] }}>
-            <Row columns={[1, 6, 7, 7]}>
+            <Row columns={[1, 7, 7, 7]}>
               {filtered.map((d, i) => {
                 return (
                   <Column
                     key={i}
                     start={[
                       1,
-                      i % 2 === 0 ? 2 : 5,
+                      i % 2 === 0 ? 1 : 5,
                       i % 2 === 0 ? 1 : 5,
                       i % 2 === 0 ? 1 : 5,
                     ]}
-                    width={[3, 2, 3, 3]}
+                    width={[3, 3, 3, 3]}
                   >
                     <Item data={d} final={i == data.length - 1} />
                   </Column>
@@ -287,10 +287,15 @@ function Item({ data, final = false }) {
           textDecoration: 'none',
           display: 'block',
           transition: 'color 0.15s',
-          '&:hover > #container > #title > #span-1 > #span-2 > #arrow': {
-            transform: 'rotate(45deg)',
-            fill: 'secondary',
-          },
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover > #container > #title > #span-1 > #span-2 > #arrow': {
+              transform: 'rotate(45deg)',
+              fill: 'secondary',
+            },
+            '&:hover > #container': {
+              borderColor: alpha('secondary', 0.5)
+            }
+          }
         }}
         href={href}
       >

@@ -60,7 +60,7 @@ const Article = ({ children, meta }) => {
                   ARTICLE({meta.number})
                 </Text>
               </Column>
-              <Column start={[1, 3]} width={[6, 5, 6, 6]}>
+              <Column start={[1, 3]} width={[6, 6, 6, 6]}>
                 <Text
                   sx={{
                     fontFamily: 'mono',
@@ -130,7 +130,7 @@ const Article = ({ children, meta }) => {
               <BackLink />
             </Column>
           </Box>
-          <Column start={[1, 3]} width={[6, 5, 6, 6]}>
+          <Column start={[1, 3]} width={[6, 6, 6, 6]}>
             <Box>{children}</Box>
           </Column>
           <Column start={[1, 10]} width={[2]}>

@@ -1,5 +1,6 @@
 import { Box, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
+import { Arrow } from '@carbonplan/components'
 
 const BackLink = () => {
   return (
@@ -25,29 +26,31 @@ const BackLink = () => {
               transition: '0.15s',
               '@media (hover: hover) and (pointer: fine)': {
                 '&:hover': {
-                  color: 'primary',
+                  color: 'primary'
+                },
+                '&:hover > #arrow': {
+                  fill: 'primary',
                 },
               },
             }}
           >
+            <Arrow id='arrow' sx={{
+              transition: 'fill 0.15s',
+              transform: 'rotate(-135deg)',
+              position: 'relative',
+              top: ['3px'],
+              fill: 'secondary',
+              width: 13,
+              height: 13
+            }}/>
             <Box
               as='span'
               sx={{
-                position: 'relative',
-                top: ['-3px'],
-                fontSize: [4, 4, 4, 5],
-              }}
-            >
-              ←
-            </Box>
-            <Box
-              as='span'
-              sx={{
-                fontSize: [3, 3, 3, 4],
+                fontSize: [2, 2, 2, 3],
                 position: 'relative',
                 pb: [1],
                 ml: [2],
-                top: ['-6px'],
+                top: ['2px'],
               }}
             >
               Back

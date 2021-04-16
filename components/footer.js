@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        mt: [5, 6, 7, 8],
-        mb: [5, 6, 7, 8],
+        mt: [6, 6, 7, 8],
+        mb: [6, 6, 7, 8],
       }}
     >
       <Row sx={{ mb: [0, 0, 4, 5] }}>
@@ -37,7 +37,7 @@ const Footer = () => {
             </Link>
           </Box>
         </Column>
-        <Column start={[4, 6]} width={[3, 3]}>
+        <Column start={[1, 5, 6, 6]} width={[3, 3]} sx={{mt: [4, 0, 0, 0]}}>
           <Box>
             <Box
               sx={{
@@ -62,7 +62,7 @@ const Footer = () => {
         </Column>
         <Column
           start={[1, 9]}
-          width={[6, 3, 3, 3]}
+          width={[5, 4, 3, 3]}
           sx={{ mt: [6, 6, 0], mb: [3, 3, 0] }}
         >
           <Box>
@@ -82,7 +82,7 @@ const Footer = () => {
       <Row sx={{ mb: ['2px'], mt: [5, 5, 4] }}>
         <Column
           start={[1, 2]}
-          width={[6, 4]}
+          width={[5, 6, 4, 4]}
           sx={{
             display: 'flex',
             alignItems: ['flex-start', 'flex-start', 'flex-end'],
@@ -106,7 +106,7 @@ const Footer = () => {
                 letterSpacing: 'mono',
               }}
             >
-              (c) 2020 CARBONPLAN, SAN FRANCISCO, CA
+              (c) 2021 CARBONPLAN, SAN FRANCISCO, CA
             </Box>
           </Box>
         </Column>
@@ -144,8 +144,8 @@ const Footer = () => {
             </NextLink>
           </Box>
         </Column>
-        <Column start={[1, 9]} width={[3, 3]} sx={{}}>
-          <Monogram sx={{ mt: [5, 6, 4, 5], mb: ['-12px'] }} />
+        <Column start={[5, 5, 9, 9]} width={[2, 3, 3, 3]} sx={{}}>
+          <Monogram sx={{ mt: ['16px', '22px', 4, 5], mb: ['-12px'] }} />
         </Column>
       </Row>
     </Box>

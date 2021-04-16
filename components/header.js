@@ -77,7 +77,7 @@ const Header = ({ status, mode }) => {
           </Box>
         </Column>
         <Column
-          start={[6, 12]}
+          start={[6, 8, 12, 12]}
           width={[1, 1]}
           sx={{
             display: 'flex',

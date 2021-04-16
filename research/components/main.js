@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Box } from 'theme-ui'
 import { Row, Column } from '@carbonplan/components'
-import Sidebar from './sidebar'
 import List from './list'
+import Filter from './filter'
+import Heading from './heading'
 
-const initFilter = {
-  all: true,
+const initCategory = {
   article: true,
   tool: true,
   comment: true,
@@ -13,29 +13,50 @@ const initFilter = {
   dataset: true,
 }
 
-const initSort = {
-  date: true,
-  title: false,
+const initYear = {
+  2020: true,
+  2021: true,
 }
 
 const Main = () => {
-  const [filter, setFilter] = useState(initFilter)
-  const [sort, setSort] = useState(initSort)
+  const [category, setCategory] = useState(initCategory)
+  const [year, setYear] = useState(initYear)
+
+  const FilterContents = () => {
+    return (
+      <Filter
+        filters={{ category: category, year: year }}
+        setFilters={{ category: setCategory, year: setYear }}
+        filterLabels={{ category: 'Category', year: 'Year' }}
+        filterList={['year', 'category']}
+      />
+    )
+  }
 
   return (
-    <Row>
-      <Column start={[1, 2]} width={[6, 3]}>
-        <Sidebar
-          filter={filter}
-          setFilter={setFilter}
-          sort={sort}
-          setSort={setSort}
-        />
-      </Column>
-      <Column start={[1, 5]} width={[6, 7]} sx={{ mt: [0, 0, '13px', '27px'] }}>
-        <List filter={filter} sort={sort} />
-      </Column>
-    </Row>
+    <Box sx={{mb: [4, 0, 0, 0]}}>
+      <Heading
+        description={
+          'Articles, tools, and commentary on carbon removal and climate solutions.'
+        }
+      >
+        Research
+      </Heading>
+      <Row sx={{ mb: [0, 3, 4, 5] }}>
+        <Column
+          start={[1, 1, 2, 2]}
+          width={[6, 6, 2, 2]}
+          sx={{ display: ['none', 'none', 'initial', 'intial'] }}
+        >
+          <Box sx={{ position: 'sticky', top: '76px', height: 'auto'}}>
+            <FilterContents />
+          </Box>
+        </Column>
+        <Column start={[1, 2, 5, 5]} width={[6, 7, 7, 7]} sx={{mt: ['-3px', '0px', '-1px', '0px']}}>
+          <List category={category} year={year} />
+        </Column>
+      </Row>
+    </Box>
   )
 }
 

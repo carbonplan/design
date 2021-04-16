@@ -99,7 +99,7 @@ const Parameter = ({ param, data, state }) => {
             />
           </Box>
         </Column>
-        <Column start={[1, 3]} width={[6, 4, 4, 4]}>
+        <Column start={[1, 3]} width={[6, 5, 4, 4]}>
           <Box
             sx={{
               position: 'relative',

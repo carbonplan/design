@@ -1,3 +1,4 @@
+import Arrow from './arrow'
 import Badge from './badge'
 import Column from './column'
 import Custom404 from './404'
@@ -18,6 +19,7 @@ import Toggle from './toggle'
 import Tracking from './tracking'
 
 export {
+  Arrow,
   Badge,
   Column,
   Custom404,

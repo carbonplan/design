@@ -89,7 +89,7 @@ function Question({ children, first = false }) {
 function Answer({ children }) {
   return (
     <Row>
-      <Column start={[2, 3]} width={[5, 4, 6, 6]}>
+      <Column start={[2, 3]} width={[5, 5, 6, 6]}>
         <Themed.p>{children}</Themed.p>
       </Column>
     </Row>

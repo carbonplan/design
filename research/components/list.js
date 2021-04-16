@@ -3,20 +3,18 @@ import { default as NextLink } from 'next/link'
 import Entry from './entry'
 import contents from '../contents'
 
-const List = ({ filter, sort }) => {
+const List = ({ category, year }) => {
   const inFilter = (d) => {
-    return d.tags.some((t) => filter[t])
+    return (
+      d.tags.some((t) => category[t]) &&
+      year[(new Date(d.date.replace(/-/g, '/'))).getFullYear()]
+    )
   }
 
   const compare = (a, b) => {
-    if (sort.date) {
-      const da = new Date(a.date.replace(/-/g, '/'))
-      const db = new Date(b.date.replace(/-/g, '/'))
-      return (da < db) - (da > db)
-    }
-    if (sort.title) {
-      return (a.title > b.title) - (a.title < b.title)
-    }
+    const da = new Date(a.date.replace(/-/g, '/'))
+    const db = new Date(b.date.replace(/-/g, '/'))
+    return (da < db) - (da > db)
   }
 
   return (
@@ -28,6 +26,7 @@ const List = ({ filter, sort }) => {
           <Entry
             key={d.title}
             info={d}
+            first={ix == 0}
             final={ix === contents.filter(inFilter).length - 1}
           ></Entry>
         ))}

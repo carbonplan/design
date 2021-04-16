@@ -36,7 +36,7 @@ const Tool = ({ title, description, meta, children }) => {
             <BackLink />
           </Column>
         </Box>
-        <Column start={[1, 2]} width={[6, 4, 6, 6]}>
+        <Column start={[1, 2]} width={[6, 6, 6, 6]}>
           <Box sx={{}}>
             <Box as='h1' variant='styles.h1' sx={{ mt: [5, 7, 7, 8] }}>
               {title}

@@ -134,7 +134,7 @@ const Team = () => {
         </Column>
       </Row>
       <Row sx={{ mt: [2, 3, 4, 5], mb: [4, 5, 6, 7] }}>
-        <Column start={[1, 2]} width={[6, 6, 10, 10]}>
+        <Column start={[1, 2]} width={[6, 8, 10, 10]}>
           <Box sx={{ pt: [2, 0, 0], pb: [1] }}>
             <Grid
               columns={[1, 2, 2, 2]}
@@ -157,7 +157,7 @@ const Team = () => {
         </Column>
       </Row>
       <Row>
-        <Column start={[1, 2]} width={[6, 9]}>
+        <Column start={[1, 2]} width={[6, 8, 9, 9]}>
           <Divider sx={{ my: [0] }} />
         </Column>
       </Row>
@@ -165,7 +165,7 @@ const Team = () => {
         <Table heading='Board' data={board} />
       </Box>
       <Row>
-        <Column start={[1, 2]} width={[6, 9]}>
+        <Column start={[1, 2]} width={[6, 8, 9, 9]}>
           <Divider sx={{ my: [0] }} />
         </Column>
       </Row>
