@@ -90,7 +90,8 @@ const Layout = ({
         {dimmer && (
           <Box
             sx={{
-              position: ['none', 'none', 'fixed', 'fixed'],
+              display: ['none', 'none', 'initial', 'initial'],
+              position: ['fixed'],
               right: [13],
               bottom: [17, 17, 15, 15],
             }}
