@@ -1,6 +1,6 @@
 import { IconButton } from 'theme-ui'
 
-const Hamburger = ({ value, ...props }) => {
+const Hamburger = ({ value, sx, ...props }) => {
   return (
     <IconButton
       sx={{
@@ -16,6 +16,7 @@ const Hamburger = ({ value, ...props }) => {
             opacity: '1',
           },
         },
+        ...sx,
       }}
       aria-label='Toggle Menu'
       {...props}

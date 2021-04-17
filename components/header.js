@@ -159,6 +159,10 @@ const Header = ({ status, mode, nav, settings }) => {
               mr: ['18px'],
               position: 'relative',
               top: ['-1px'],
+              opacity: expanded || (settings && settings.value) ? 0 : 1,
+              pointerEvents:
+                expanded || (settings && settings.value) ? 'none' : 'all',
+              transition: 'opacity 0.15s',
               display: [status ? 'none' : 'block', 'block', 'none', 'none'],
             }}
           >
@@ -169,6 +173,9 @@ const Header = ({ status, mode, nav, settings }) => {
               sx={{
                 mr: ['21px'],
                 position: 'relative',
+                opacity: expanded ? 0 : 1,
+                pointerEvents: expanded ? 'none' : 'all',
+                transition: 'opacity 0.15s',
                 display: [status ? 'none' : 'block', 'block', 'none', 'none'],
               }}
             >
@@ -179,7 +186,15 @@ const Header = ({ status, mode, nav, settings }) => {
               />
             </Box>
           )}
-          <Hamburger value={expanded} onClick={toggle} />
+          <Hamburger
+            sx={{
+              transition: 'opacity 0.15s',
+              pointerEvents: settings && settings.value ? 'none' : 'all',
+              opacity: settings && settings.value ? 0 : 1,
+            }}
+            value={expanded}
+            onClick={toggle}
+          />
         </Column>
         <Box>
           <Box
