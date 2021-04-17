@@ -209,6 +209,7 @@ const Press = () => {
           zIndex: 100,
           transition: 'opacity 0.15s',
           opacity: expanded ? 0.9 : 0,
+          pointerEvents: expanded ? 'all' : 'none',
         }}
       />
       <Box
