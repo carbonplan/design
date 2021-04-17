@@ -60,7 +60,7 @@ const About = () => {
                 flexWrap: 'wrap',
               }}
             >
-              <Box sx={{ width: '100%' }}>
+              <Box sx={{ width: '100%', mt: [0, 0, '-7px', '-13px'] }}>
                 <WelcomeArrow />
               </Box>
               <Box
