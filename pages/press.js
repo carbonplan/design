@@ -162,7 +162,7 @@ const Press = () => {
   const [source, setSource] = useState(initSource)
   const [year, setYear] = useState(initYear)
   const [filtered, setFiltered] = useState(data)
-  const [mobileExpanded, setMobileExpanded] = useState(false)
+  const [settings, setSettings] = useState(false)
 
   useEffect(() => {
     setFiltered(
@@ -188,7 +188,11 @@ const Press = () => {
   }
 
   return (
-    <Layout links={'homepage'} title={'press / carbonplan'}>
+    <Layout
+      links={'homepage'}
+      title={'press / carbonplan'}
+      settings={{ value: settings, onClick: () => setSettings(!settings) }}
+    >
       <Guide />
       <Heading
         description={
@@ -197,26 +201,6 @@ const Press = () => {
       >
         Press
       </Heading>
-      <Box
-        sx={{
-          display: ['inherit', 'inherit', 'none', 'none'],
-          position: 'fixed',
-          top: '6px',
-          right: '64px',
-          p: ['8px'],
-          zIndex: 5000,
-        }}
-      >
-        <Funnel
-          onClick={() => setMobileExpanded(!mobileExpanded)}
-          sx={{
-            width: 26,
-            height: 26,
-            transition: 'stroke 0.15s',
-            stroke: 'primary',
-          }}
-        />
-      </Box>
       <Box
         sx={{
           display: ['inherit', 'inherit', 'none', 'none'],
@@ -234,7 +218,7 @@ const Press = () => {
           transition: 'transform 0.15s',
           ml: [-3, -4, -5, -6],
           pl: [3, 4, 5, 6],
-          transform: mobileExpanded ? 'translateY(0)' : 'translateY(-400px)',
+          transform: settings ? 'translateY(0)' : 'translateY(-400px)',
         }}
       >
         <Row>
@@ -295,7 +279,12 @@ function Item({ data, final = false }) {
             fill: 'secondary',
           },
           '&:hover > #container': {
-            borderColor: alpha('secondary', 0.5),
+            borderColor: [
+              'muted',
+              alpha('secondary', 0.5),
+              alpha('secondary', 0.5),
+              alpha('secondary', 0.5),
+            ],
           },
         },
       }}

@@ -13,6 +13,7 @@ const Article = ({ children, meta }) => {
       title={meta.title.toLowerCase() + ' / research / carbonplan'}
       links={'local'}
       metadata={'scroll'}
+      nav={'research'}
     >
       <Guide />
       <Box

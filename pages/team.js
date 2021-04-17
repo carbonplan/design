@@ -108,6 +108,8 @@ const collaborators = [
   },
 ]
 
+const colors = ['red', 'yellow', 'orange', 'pink']
+
 const Team = () => {
   return (
     <Layout links={'homepage'} title={'team / carbonplan'} nav={'team'}>
@@ -143,13 +145,14 @@ const Team = () => {
                 gridRowGap: [4, 5, 5, 6],
               }}
             >
-              {team.map((p) => (
+              {team.map((p, i) => (
                 <Person
                   key={p.name}
                   name={p.name}
                   role={p.role}
                   bio={p.bio}
                   final={p.final}
+                  color={colors[i % 4]}
                 />
               ))}
             </Grid>
@@ -219,17 +222,17 @@ function Bio({ text }) {
   )
 }
 
-function Person({ name, role, bio, final }) {
+function Person({ name, role, bio, final, color }) {
   return (
-    <Row columns={[6, 5]}>
+    <Row columns={[6, 4, 5, 5]}>
       <Column start={[1]} width={[1]}>
         <Box
-          sx={{ width: '100%', height: '50%', borderRadius: '50%', bg: 'red' }}
+          sx={{ width: '100%', height: '40%', borderRadius: '50%', bg: color }}
         ></Box>
       </Column>
       <Column
         start={[2]}
-        width={[5, 4]}
+        width={[5, 3, 4, 4]}
         sx={{
           borderStyle: 'solid',
           borderWidth: '0px',

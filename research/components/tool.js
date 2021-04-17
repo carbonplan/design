@@ -14,6 +14,7 @@ const Tool = ({ title, description, meta, children }) => {
       description={meta.summary}
       title={meta.title.toLowerCase() + ' / research / carbonplan'}
       links={'local'}
+      nav={'research'}
     >
       <Guide />
       <Row sx={{ mb: [3, 4, 5, 6] }}>

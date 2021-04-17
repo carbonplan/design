@@ -12,6 +12,7 @@ const Sidenote = ({ children, variant = 'h1' }) => {
           sx={{
             mt: mt,
             fontFamily: 'faux',
+            letterSpacing: 'faux',
             fontSize: [2, 2, 2, 3],
             textAlign: 'right',
           }}
@@ -24,6 +25,7 @@ const Sidenote = ({ children, variant = 'h1' }) => {
           sx={{
             mt: mt,
             fontFamily: 'faux',
+            letterSpacing: 'faux',
             fontSize: [2, 2, 2, 3],
             height: ['100%', '0px', '0px', '0px'],
           }}

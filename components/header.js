@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { default as NextLink } from 'next/link'
-import { Box, Flex, Container, IconButton, Link } from 'theme-ui'
+import { Box, Flex, Container, Link } from 'theme-ui'
 import Logo from './logo'
 import Row from './row'
 import Column from './column'
+import Hamburger from './hamburger'
+import Settings from './settings'
+import Dimmer from './dimmer'
 
 const sx = {
   link: (current, label, first = false) => {
@@ -11,6 +14,8 @@ const sx = {
       width: 'auto',
       color: current === label ? 'secondary' : 'text',
       fontSize: [6, 6, 7, 8],
+      fontFamily: 'heading',
+      letterSpacing: 'heading',
       borderStyle: 'solid',
       borderColor: 'muted',
       borderWidth: '0px',
@@ -27,16 +32,55 @@ const sx = {
   },
 }
 
-const links = ['about', 'research', 'team', 'faq']
+const links = [
+  { url: 'about', display: 'About' },
+  { url: 'research', display: 'Research' },
+  { url: 'team', display: 'Team' },
+  { url: 'faq', display: 'FAQ' },
+]
 
-const displayLinks = {
-  about: 'About',
-  research: 'Research',
-  team: 'Team',
-  faq: 'FAQ',
+const Nav = ({ link, mode, nav, first, setExpanded }) => {
+  const { url, display } = link
+  const href = mode === 'remote' ? 'https://carbonplan.org/' + url : '/' + url
+
+  if (mode === 'homepage' || (mode === 'local' && nav === url)) {
+    return (
+      <NextLink href={href} passHref>
+        <Link
+          onClick={() => {
+            if (nav === url) setExpanded(false)
+          }}
+          sx={sx.link(nav, url, first)}
+        >
+          {display}
+        </Link>
+      </NextLink>
+    )
+  } else {
+    return (
+      <Link href={href} sx={sx.link(nav, url, first)}>
+        {display}
+      </Link>
+    )
+  }
 }
 
-const Header = ({ status, mode, nav }) => {
+const NavGroup = ({ links, nav, mode, setExpanded }) => {
+  return links.map((d, i) => {
+    return (
+      <Nav
+        key={i}
+        link={d}
+        mode={mode}
+        nav={nav}
+        first={i === 0}
+        setExpanded={setExpanded}
+      />
+    )
+  })
+}
+
+const Header = ({ status, mode, nav, settings }) => {
   const [expanded, setExpanded] = useState(false)
 
   const toggle = (e) => {
@@ -58,9 +102,16 @@ const Header = ({ status, mode, nav }) => {
               <NextLink href='/' passHref>
                 <Link
                   aria-label='CarbonPlan Homepage'
-                  sx={{ display: 'block' }}
+                  sx={{
+                    display: 'block',
+                  }}
                 >
-                  <Logo sx={{ cursor: 'pointer' }} />
+                  <Logo
+                    id='logo'
+                    sx={{
+                      cursor: 'pointer',
+                    }}
+                  />
                 </Link>
               </NextLink>
             )}
@@ -77,8 +128,12 @@ const Header = ({ status, mode, nav }) => {
         </Column>
         <Column
           start={[4, 9]}
-          width={[2, 2]}
-          sx={{ display: 'flex', alignItems: 'center' }}
+          width={[1, 1]}
+          dr={1}
+          sx={{
+            display: [status ? 'flex' : 'none', 'flex', 'flex', 'flex'],
+            alignItems: 'center',
+          }}
         >
           <Box
             sx={{
@@ -91,82 +146,40 @@ const Header = ({ status, mode, nav }) => {
           </Box>
         </Column>
         <Column
-          start={[6, 8, 12, 12]}
-          width={[1, 1]}
+          start={[status ? 6 : 4, 6, 12, 12]}
+          width={[status ? 1 : 3, 3, 1, 1]}
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'flex-end',
           }}
         >
-          <IconButton
-            onClick={toggle}
+          <Box
             sx={{
-              cursor: 'pointer',
-              fill: 'none',
-              strokeWidth: '2px',
-              stroke: 'text',
-              '.paren': {
-                opacity: '0',
-              },
-              '&:hover .paren': {
-                opacity: '1',
-              },
+              mr: ['18px'],
+              position: 'relative',
+              top: ['-1px'],
+              display: [status ? 'none' : 'block', 'block', 'none', 'none'],
             }}
-            aria-label='Toggle Menu'
           >
-            {!expanded && (
-              <svg
-                style={{
-                  width: '50px',
-                  height: '30px',
-                  transform: 'scale(2)',
-                  marginTop: '-3px',
-                }}
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 68 36'
-              >
-                <line x1='52' y1='29.9' x2='16' y2='29.9' />
-                <line x1='52' y1='6.1' x2='16' y2='6.1' />
-                <line x1='52' y1='18' x2='16' y2='18' />
-                <path
-                  style={{ transition: 'all 0.2s' }}
-                  className='paren'
-                  d='M6.4,1.2c-6.3,10.3-6.3,23.3,0,33.6'
-                />
-                <path
-                  style={{ transition: 'all 0.2s' }}
-                  className='paren'
-                  d='M61.6,34.8c6.3-10.3,6.3-23.3,0-33.6'
-                />
-              </svg>
-            )}
-            {expanded && (
-              <svg
-                style={{
-                  width: '50px',
-                  height: '30px',
-                  transform: 'scale(2)',
-                  marginTop: '-3px',
-                }}
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 68 36'
-              >
-                <line x1='50.85' y1='29.79' x2='17.15' y2='6.21' />
-                <line x1='17.15' y1='29.79' x2='50.85' y2='6.21' />
-                <path
-                  style={{ transition: 'all 0.2s' }}
-                  className='paren'
-                  d='M6.4,1.2c-6.3,10.3-6.3,23.3,0,33.6'
-                />
-                <path
-                  style={{ transition: 'all 0.2s' }}
-                  className='paren'
-                  d='M61.6,34.8c6.3-10.3,6.3-23.3,0-33.6'
-                />
-              </svg>
-            )}
-          </IconButton>
+            <Dimmer sx={{ stroke: 'primary' }} />
+          </Box>
+          {settings && (
+            <Box
+              sx={{
+                mr: ['18px'],
+                position: 'relative',
+                display: [status ? 'none' : 'block', 'block', 'none', 'none'],
+              }}
+            >
+              <Settings
+                value={settings.value}
+                onClick={settings.onClick}
+                sx={{ stroke: 'primary' }}
+              />
+            </Box>
+          )}
+          <Hamburger value={expanded} onClick={toggle} />
         </Column>
         <Box>
           <Box
@@ -196,51 +209,12 @@ const Header = ({ status, mode, nav }) => {
                       mt: [5],
                     }}
                   >
-                    <Box>
-                      {mode == 'homepage' && (
-                        <Box>
-                          {links.map((d, i) => {
-                            return (
-                              <NextLink href={'/' + d} passHref>
-                                <Link
-                                  onClick={() => {
-                                    if (nav === d) setExpanded(false)
-                                  }}
-                                  sx={sx.link(nav, d, i == 0)}
-                                >
-                                  {displayLinks[d]}
-                                </Link>
-                              </NextLink>
-                            )
-                          })}
-                        </Box>
-                      )}
-                      {mode == 'local' && (
-                        <Box>
-                          {links.map((d, i) => {
-                            return (
-                              <Link href={'/' + d} sx={sx.link(nav, d, i == 0)}>
-                                {displayLinks[d]}
-                              </Link>
-                            )
-                          })}
-                        </Box>
-                      )}
-                      {(mode == null || mode == 'remote') && (
-                        <Box>
-                          {links.map((d, i) => {
-                            return (
-                              <Link
-                                href={'https://carbonplan.org/' + d}
-                                sx={sx.link(nav, d, i == 0)}
-                              >
-                                {displayLinks[d]}
-                              </Link>
-                            )
-                          })}
-                        </Box>
-                      )}
-                    </Box>
+                    <NavGroup
+                      links={links}
+                      nav={nav}
+                      mode={mode}
+                      setExpanded={setExpanded}
+                    />
                   </Box>
                 </Column>
               </Row>

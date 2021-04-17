@@ -4,6 +4,7 @@ import Column from './column'
 import Custom404 from './404'
 import Dimmer from './dimmer'
 import Expander from './expander'
+import FadeIn from './fade-in'
 import Footer from './footer'
 import Guide from './guide'
 import Header from './header'
@@ -24,6 +25,7 @@ export {
   Column,
   Custom404,
   Expander,
+  FadeIn,
   Footer,
   Guide,
   Header,

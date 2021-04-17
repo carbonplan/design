@@ -452,7 +452,7 @@ function ArrowLink({ href, label, big = false, color = 'text' }) {
         as='span'
         id='container'
         sx={{
-          ml: big ? [2, 2, 2, 3] : [2],
+          ml: big ? ['8px', '8px', '12px', '16px'] : [2],
           display: 'inline-block',
         }}
       >

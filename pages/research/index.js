@@ -11,6 +11,7 @@ const Index = () => {
       card={'https://images.carbonplan.org/social/research.png'}
       links={'local'}
       metadata={'POSTS: 10'}
+      nav={'research'}
     >
       <Guide />
       <Main />

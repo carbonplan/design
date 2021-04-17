@@ -2,7 +2,7 @@ import { Link, Box } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { Guide, Layout, Row, Column } from '@carbonplan/components'
 import Lottie from 'react-lottie'
-import * as animationData from '../animations/carbonplan-infographic-desktop-sample-01.json'
+import * as animationData from '../animations/data.json'
 
 const Index = () => {
   return (
@@ -17,8 +17,8 @@ const Index = () => {
       >
         <Lottie
           options={{
-            loop: true,
-            autoplay: true,
+            loop: false,
+            autoplay: false,
             animationData: animationData.default,
           }}
           height={400}

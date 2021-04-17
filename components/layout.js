@@ -5,6 +5,7 @@ import Header from './header'
 import Footer from './footer'
 import Dimmer from './dimmer'
 import Metadata from './metadata'
+import FadeIn from './fade-in'
 
 const Layout = ({
   footer,
@@ -19,6 +20,7 @@ const Layout = ({
   links,
   dimmer,
   nav,
+  settings,
 }) => {
   footer = footer == null ? true : footer
   header = header == null ? true : header
@@ -51,7 +53,12 @@ const Layout = ({
             }}
           >
             <Container>
-              <Header mode={links} status={status} nav={nav} />
+              <Header
+                mode={links}
+                status={status}
+                nav={nav}
+                settings={settings}
+              />
             </Container>
           </Box>
         )}
@@ -61,7 +68,9 @@ const Layout = ({
             flex: '1 1 auto',
           }}
         >
-          <Container>{children}</Container>
+          <Container>
+            <FadeIn duration={250}>{children}</FadeIn>
+          </Container>
         </Box>
         {footer && (
           <Box
@@ -81,7 +90,7 @@ const Layout = ({
         {dimmer && (
           <Box
             sx={{
-              position: 'fixed',
+              position: ['none', 'none', 'fixed', 'fixed'],
               right: [13],
               bottom: [17, 17, 15, 15],
             }}

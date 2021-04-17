@@ -190,7 +190,8 @@ function LinkGroup({ links }) {
             mr: [4, 4, 4, 5],
             pr: [0, 0, 2, 0],
             mb: [1],
-            mt: [0, 0, 1],
+            mt: ['2px'],
+            fontSize: [2, 2, 2, 3],
             cursor: 'pointer',
             display: ['inline-block'],
             '@media (hover: hover) and (pointer: fine)': {
@@ -216,7 +217,7 @@ function LinkGroup({ links }) {
                 top: '2px',
                 width: 12,
                 height: 12,
-                ml: [1, 1, 2, 2],
+                ml: [1, 1, 1, 2],
                 fill: 'secondary',
               }}
             />
