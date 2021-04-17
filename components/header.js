@@ -7,6 +7,7 @@ import Column from './column'
 import Hamburger from './hamburger'
 import Settings from './settings'
 import Dimmer from './dimmer'
+import Arrow from './arrow'
 
 const sx = {
   link: (current, label, first = false) => {
@@ -24,9 +25,15 @@ const sx = {
       py: [3, 3, 4, 5],
       textDecoration: 'none',
       display: 'block',
+      position: 'relative',
       transition: 'color 0.15s',
+      '@media (hover: hover) and (pointer: fine)': {
+        '&:hover > #arrow': {
+          opacity: 1,
+        },
+      },
       '&:hover': {
-        color: 'secondary',
+        color: current == label ? 'secondary' : 'text',
       },
     }
   },
@@ -38,6 +45,26 @@ const links = [
   { url: 'team', display: 'Team' },
   { url: 'faq', display: 'FAQ' },
 ]
+
+const HoverArrow = () => {
+  return (
+    <Arrow
+      id='arrow'
+      sx={{
+        pointerEvents: 'none',
+        display: 'inline-block',
+        position: 'absolute',
+        left: ['-60px', '-68px', '-80px', '-104px'],
+        top: ['32px', '32px', '46px', '62px'],
+        opacity: 0,
+        transition: 'opacity 0.2s',
+        transform: 'rotate(45deg)',
+        width: [36, 36, 48, 56],
+        height: [36, 36, 48, 56],
+      }}
+    />
+  )
+}
 
 const Nav = ({ link, mode, nav, first, setExpanded }) => {
   const { url, display } = link
@@ -52,6 +79,7 @@ const Nav = ({ link, mode, nav, first, setExpanded }) => {
           }}
           sx={sx.link(nav, url, first)}
         >
+          <HoverArrow />
           {display}
         </Link>
       </NextLink>
@@ -59,6 +87,7 @@ const Nav = ({ link, mode, nav, first, setExpanded }) => {
   } else {
     return (
       <Link href={href} sx={sx.link(nav, url, first)}>
+        <HoverArrow />
         {display}
       </Link>
     )
@@ -159,21 +188,24 @@ const Header = ({ status, mode, nav, settings }) => {
               mr: ['18px'],
               position: 'relative',
               top: ['-1px'],
-              opacity: expanded || (settings && settings.value) ? 0 : 1,
               pointerEvents:
                 expanded || (settings && settings.value) ? 'none' : 'all',
               transition: 'opacity 0.15s',
               display: [status ? 'none' : 'block', 'block', 'none', 'none'],
             }}
           >
-            <Dimmer sx={{ stroke: 'primary' }} />
+            <Dimmer
+              sx={{
+                opacity: expanded || (settings && settings.value) ? 0 : 1,
+                stroke: 'primary',
+              }}
+            />
           </Box>
           {settings && (
             <Box
               sx={{
                 mr: ['21px'],
                 position: 'relative',
-                opacity: expanded ? 0 : 1,
                 pointerEvents: expanded ? 'none' : 'all',
                 transition: 'opacity 0.15s',
                 display: [status ? 'none' : 'block', 'block', 'none', 'none'],
@@ -182,7 +214,7 @@ const Header = ({ status, mode, nav, settings }) => {
               <Settings
                 value={settings.value}
                 onClick={settings.onClick}
-                sx={{ stroke: 'primary' }}
+                sx={{ opacity: expanded ? 0 : 1, stroke: 'primary' }}
               />
             </Box>
           )}
