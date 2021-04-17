@@ -167,7 +167,7 @@ const Header = ({ status, mode, nav, settings }) => {
           {settings && (
             <Box
               sx={{
-                mr: ['18px'],
+                mr: ['21px'],
                 position: 'relative',
                 display: [status ? 'none' : 'block', 'block', 'none', 'none'],
               }}

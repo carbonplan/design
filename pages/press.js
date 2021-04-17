@@ -141,10 +141,6 @@ for (const key of sources) {
   count += 1
 }
 
-//['pink','red','orange','yellow'][count % 4]
-//sourceColors[key] = ['pink','red','orange','yellow'][count % 4]
-//sourceColors[key] = ['red','yellow','teal','purple','orange','green','blue','pink'][count % 8]
-
 const initYear = {
   2020: true,
   2021: true,
@@ -162,7 +158,7 @@ const Press = () => {
   const [source, setSource] = useState(initSource)
   const [year, setYear] = useState(initYear)
   const [filtered, setFiltered] = useState(data)
-  const [settings, setSettings] = useState(false)
+  const [expanded, setExpanded] = useState(false)
 
   useEffect(() => {
     setFiltered(
@@ -191,7 +187,7 @@ const Press = () => {
     <Layout
       links={'homepage'}
       title={'press / carbonplan'}
-      settings={{ value: settings, onClick: () => setSettings(!settings) }}
+      settings={{ value: expanded, onClick: () => setExpanded(!expanded) }}
     >
       <Guide />
       <Heading
@@ -205,10 +201,24 @@ const Press = () => {
         sx={{
           display: ['inherit', 'inherit', 'none', 'none'],
           position: 'fixed',
-          top: '0px',
-          pb: [4, 5, 6, 7],
+          top: '56px',
+          bottom: '0px',
+          width: '100%',
           mt: ['56px'],
-          pt: [3, 4, 5, 6],
+          bg: 'background',
+          zIndex: 100,
+          transition: 'opacity 0.15s',
+          opacity: expanded ? 0.9 : 0,
+        }}
+      />
+      <Box
+        sx={{
+          display: ['inherit', 'inherit', 'none', 'none'],
+          position: 'fixed',
+          top: '0px',
+          mt: ['56px'],
+          pb: [6, 7, 7, 8],
+          pt: [5, 6, 7, 8],
           bg: 'background',
           zIndex: 100,
           borderStyle: 'solid',
@@ -218,7 +228,7 @@ const Press = () => {
           transition: 'transform 0.15s',
           ml: [-3, -4, -5, -6],
           pl: [3, 4, 5, 6],
-          transform: settings ? 'translateY(0)' : 'translateY(-400px)',
+          transform: expanded ? 'translateY(0)' : 'translateY(-400px)',
         }}
       >
         <Row>
