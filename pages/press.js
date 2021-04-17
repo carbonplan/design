@@ -5,7 +5,6 @@ import { Tag, Row, Column, Guide, Layout, Arrow } from '@carbonplan/components'
 import { alpha } from '@theme-ui/color'
 import Heading from '../homepage/components/heading'
 import Filter from '../homepage/components/filter'
-import Funnel from '../homepage/components/funnel'
 
 const data = [
   {

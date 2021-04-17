@@ -1,4 +1,4 @@
-import { Box, Divider, Styled, Text, Link, Grid } from 'theme-ui'
+import { Box, Image, Divider, Styled, Text, Link, Grid } from 'theme-ui'
 import { Layout, Row, Column, Guide } from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
 import Table from '../homepage/components/table'
@@ -43,7 +43,6 @@ const team = [
   {
     name: 'Jane Zelikova',
     role: 'Senior Fellow',
-    final: true,
     bio:
       'Jane is an ecosystem scientist working at the intersection of climate science and policy. Her work focuses on advancing the science of engineered and natural carbon sequestration. She earned a PhD from the University of Colorado, is a researcher at the University of Wyoming, and is the founder of 500 Women Scientists.',
   },
@@ -52,7 +51,6 @@ const team = [
     role: 'Operations Manager',
     bio:
       'Becky has extensive experience in the nonprofit sector, and is energized by operations and project management. She is passionate about creating organizational systems that foster team productivity, and is excited to be involved in climate action. She holds a BA in English Literature from Western Washington University.',
-    final: true,
   },
 ]
 
@@ -108,7 +106,7 @@ const collaborators = [
   },
 ]
 
-const colors = ['red', 'yellow', 'orange', 'pink']
+const colors = ['red', 'orange', 'yellow', 'pink']
 
 const Team = () => {
   return (
@@ -145,13 +143,14 @@ const Team = () => {
                 gridRowGap: [4, 5, 5, 6],
               }}
             >
-              {team.map((p, i) => (
+              {team.sort((a, b) => a.name.localeCompare(b.name)).map((p, i) => (
                 <Person
                   key={p.name}
                   name={p.name}
                   role={p.role}
                   bio={p.bio}
-                  final={p.final}
+                  final={i == team.length - 1}
+                  penultimate={i == team.length - 2}
                   color={colors[i % 4]}
                 />
               ))}
@@ -222,22 +221,43 @@ function Bio({ text }) {
   )
 }
 
-function Person({ name, role, bio, final, color }) {
+function Person({ name, role, bio, penultimate, final, color }) {
   return (
     <Row columns={[6, 4, 5, 5]}>
-      <Column start={[1]} width={[1]}>
-        <Box
-          sx={{ width: '100%', height: '40%', borderRadius: '50%', bg: color }}
-        ></Box>
+      <Column start={[1]} width={[2, 1, 1, 1]}>
+        <Box sx={{
+          maxWidth: '100px', 
+          width: '100%', 
+          height: 'auto', 
+          borderRadius: '50%', 
+          position: 'relative', 
+          bg: color,
+        }}>
+        <Image
+          src={`https://images.carbonplan.org/team/${name.toLowerCase().replace(' ', '-')}.png`}
+          sx={{ opacity: 0.25, filter: 'contrast(200%) brightness(100%)', width: '100%', borderRadius: '50%', display: 'block'}}
+        >
+        </Image>  
+        </Box>
       </Column>
       <Column
-        start={[2]}
-        width={[5, 3, 4, 4]}
+        start={[3, 2, 2, 2]}
+        width={[4, 3, 4, 4]}
         sx={{
           borderStyle: 'solid',
           borderWidth: '0px',
-          borderBottomWidth: final ? '0px' : '1px',
-          pb: [final ? 0 : 4],
+          borderBottomWidth: [
+            (final) ? '0px' : '1px',
+            (final || penultimate) ? '0px' : '1px',
+            (final || penultimate) ? '0px' : '1px',
+            (final || penultimate) ? '0px' : '1px'
+          ],
+          pb: [
+            final ? 2 : 4,
+            (final || penultimate) ? 2 : 4,
+            (final || penultimate) ? 2 : 4,
+            (final || penultimate) ? 2 : 4,
+          ],
           borderColor: 'muted',
         }}
       >

@@ -1,8 +1,7 @@
 import { Link, Box } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { Guide, Layout, Row, Column } from '@carbonplan/components'
-import Lottie from 'react-lottie'
-import * as animationData from '../animations/data.json'
+import Splash from '../homepage/components/splash'
 
 const Index = () => {
   return (
@@ -10,20 +9,10 @@ const Index = () => {
       <Guide />
       <Box
         sx={{
-          width: 'calc(100vw)',
-          ml: [-3, -4, -5, -6],
-          mt: ['-20px'],
+          mb: [5, 6, 7, 8],
         }}
       >
-        <Lottie
-          options={{
-            loop: false,
-            autoplay: false,
-            animationData: animationData.default,
-          }}
-          height={400}
-          width={'100%'}
-        />
+        <Splash />
       </Box>
       <Row sx={{ position: 'relative', mt: [1] }}>
         <Column start={[1, 3, 6, 6]} width={[5, 5, 6, 6]}>

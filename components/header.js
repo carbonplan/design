@@ -57,7 +57,7 @@ const HoverArrow = () => {
         left: ['-60px', '-68px', '-80px', '-104px'],
         top: ['32px', '32px', '46px', '62px'],
         opacity: 0,
-        transition: 'opacity 0.2s',
+        transition: 'opacity 0.2s ease-out',
         transform: 'rotate(45deg)',
         width: [36, 36, 48, 56],
         height: [36, 36, 48, 56],
