@@ -162,7 +162,7 @@ const Donate = () => {
               <Column start={[1]} width={[4]}>
                 <Box sx={{ ...sx.details, ...sx.bordered, mt: [0, 0, 4, 5] }}>
                   Mailing address: <br />
-                  2443 Fillmore St #380-6048 <br />
+                  2443 Fillmore St <Box as='br' sx={{display: ['initial', 'none']}}/>#380-6048 <br />
                   San Francisco, CA 94115
                 </Box>
               </Column>
