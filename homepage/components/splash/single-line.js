@@ -1,20 +1,17 @@
 import { useState, useCallback } from 'react'
-import { useThemeUI, Box } from 'theme-ui'
+import { Box } from 'theme-ui'
 import { keyframes } from '@emotion/react'
 
 const Line = () => {
   const [tick, setTick] = useState(null)
 
-  const {
-    theme: { rawColors: colors },
-  } = useThemeUI()
-
   const mouseEnter = (e) => {
     e.persist()
-    setTick(setTimeout(() => {
-      e.target.unpauseAnimations()
-    }, 100))
-    
+    setTick(
+      setTimeout(() => {
+        e.target.unpauseAnimations()
+      }, 100)
+    )
   }
 
   const mouseLeave = (e) => {
@@ -23,7 +20,11 @@ const Line = () => {
   }
 
   const ref = useCallback((svg) => {
-    if (svg) svg.pauseAnimations()
+    if (svg) {
+      setTimeout(() => {
+        svg.pauseAnimations()
+      }, 0)
+    }
   }, [])
 
   const Segment = ({ start, end, delay, opacity, i }) => {
@@ -31,8 +32,8 @@ const Line = () => {
       <Box
         className='line'
         as='line'
-        x1={i * 100/9 + '%'}
-        x2={(i + 1) * 100/9 + '%'}
+        x1={(i * 100) / 9 + '%'}
+        x2={((i + 1) * 100) / 9 + '%'}
         y1={100 - start.y1 + '%'}
         y2={100 - start.y2 + '%'}
         height={start + '%'}
@@ -43,21 +44,36 @@ const Line = () => {
           transition: 'stroke 0.5s ease-out',
         }}
       >
-        {end && <animate
-          attributeName='y1'
-          keyTimes={[0, 0.50 + delay / 100, 1].join(';')}
-          values={[100 - start.y1 + '%', 100 - end.y1 + '%', 100 - start.y1 + '%'].join(';')}
-          dur='2000ms'
-          repeatCount='indefinite'
-        />}
-        {end && <animate
-          attributeName='y2'
-          dur='2000ms'
-          values={[100 - start.y2 + '%', 100 - end.y2 + '%', 100 - start.y2 + '%'].join(';')}
-          keyTimes={[0, 0.50 + delay / 100, 1].join(';')}
-          repeatCount='indefinite'
-        />
-        }
+        {end && (
+          <animate
+            attributeName='y1'
+            keyTimes={[0, 0.5 + delay / 100, 1].join(';')}
+            values={[
+              100 - start.y1 + '%',
+              100 - end.y1 + '%',
+              100 - start.y1 + '%',
+            ].join(';')}
+            dur='2000ms'
+            repeatCount='indefinite'
+            calcMode='spline'
+            keySplines='0 0 0.5 1 ; 0 0 0.5 1'
+          />
+        )}
+        {end && (
+          <animate
+            attributeName='y2'
+            dur='2000ms'
+            values={[
+              100 - start.y2 + '%',
+              100 - end.y2 + '%',
+              100 - start.y2 + '%',
+            ].join(';')}
+            keyTimes={[0, 0.5 + delay / 100, 1].join(';')}
+            repeatCount='indefinite'
+            calcMode='spline'
+            keySplines='0 0 0.5 1 ; 0 0 0.5 1'
+          />
+        )}
       </Box>
     )
   }

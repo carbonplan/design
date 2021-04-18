@@ -1,11 +1,7 @@
-import { useThemeUI, Box } from 'theme-ui'
+import { Box } from 'theme-ui'
 import { keyframes } from '@emotion/react'
 
-const BigBars = () => {
-  const {
-    theme: { rawColors: colors },
-  } = useThemeUI()
-
+const WideBars = () => {
   const animateHeight = (start, end, delay) => {
     const keys = {}
     keys[`${15 + delay}%`] = {
@@ -69,4 +65,4 @@ const BigBars = () => {
   )
 }
 
-export default BigBars
+export default WideBars

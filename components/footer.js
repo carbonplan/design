@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        mt: [6, 6, 7, 8],
-        mb: [6, 6, 7, 8],
+        mt: [7, 7, 7, 8],
+        mb: [7, 7, 7, 8],
       }}
     >
       <Row sx={{ mb: [0, 0, 4, 5] }}>
@@ -37,7 +37,19 @@ const Footer = () => {
             </Link>
           </Box>
         </Column>
-        <Column start={[1, 5, 6, 6]} width={[3, 3]} sx={{ mt: [4, 0, 0, 0] }}>
+        <Column
+          start={[5]}
+          width={[1]}
+          dl={0.5}
+          dr={0.5}
+          sx={{
+            display: ['flex', 'none', 'none', 'none'],
+            justifyContent: ['center'],
+          }}
+        >
+          <Monogram sx={{ mt: ['-8px'] }} />
+        </Column>
+        <Column start={[1, 6, 6, 6]} width={[3, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
             <Box
               sx={{
@@ -81,8 +93,8 @@ const Footer = () => {
       </Row>
       <Row sx={{ mb: ['2px'], mt: [5, 5, 4] }}>
         <Column
-          start={[1, 2]}
-          width={[5, 6, 4, 4]}
+          start={[1, 1, 2, 2]}
+          width={[3, 2, 4, 4]}
           sx={{
             display: 'flex',
             alignItems: ['flex-start', 'flex-start', 'flex-end'],
@@ -106,17 +118,17 @@ const Footer = () => {
                 letterSpacing: 'mono',
               }}
             >
-              (c) 2021 CARBONPLAN, SAN FRANCISCO, CA
+              (c) 2021 CARBONPLAN
             </Box>
           </Box>
         </Column>
         <Column
-          start={[1, 6]}
-          width={[3, 3]}
+          start={[4, 3, 6, 6]}
+          width={[2, 2, 3, 3]}
           sx={{
             display: 'flex',
             alignItems: ['flex-start', 'flex-start', 'flex-end'],
-            mt: [4, 5, 0, 0],
+            mt: [0, 0, 0, 0],
           }}
         >
           <Box
@@ -126,26 +138,33 @@ const Footer = () => {
               borderColor: 'muted',
               borderWidth: '0px',
               borderTopWidth: '1px',
-              pt: '5px',
+              width: ['100%', 'auto', 'auto', 'auto'],
+              pt: [2],
             }}
           >
             <NextLink href='/terms' passHref>
-              <Link
+              <Box
+                as='a'
                 sx={{
                   textDecoration: 'none',
                   fontSize: [1, 1, 1, 2],
                   color: 'secondary',
                   fontFamily: 'mono',
                   letterSpacing: 'mono',
+                  display: 'block',
                 }}
               >
                 READ OUR TERMS
-              </Link>
+              </Box>
             </NextLink>
           </Box>
         </Column>
-        <Column start={[5, 5, 9, 9]} width={[2, 3, 3, 3]} sx={{}}>
-          <Monogram sx={{ mt: ['16px', '22px', 4, 5], mb: ['-12px'] }} />
+        <Column
+          start={[5, 6, 9, 9]}
+          width={[2, 3, 3, 3]}
+          sx={{ display: ['none', 'initial', 'initial', 'initial'] }}
+        >
+          <Monogram sx={{ mt: [0, '-10px', 4, 5], mb: ['-12px'] }} />
         </Column>
       </Row>
     </Box>

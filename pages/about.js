@@ -328,7 +328,7 @@ const About = () => {
       <Row sx={{ mt: [4, 5, 6, 7] }}>
         <Column start={[1, 2]} width={[6, 10]}>
           <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
-            Learn more
+            Want more?
           </Box>
         </Column>
       </Row>
@@ -359,8 +359,8 @@ const About = () => {
         </Column>
         <Column start={[4, 5, 9, 9]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMoreLink internal={true} label={'FUNDING'} href='/funding'>
-              View our sources of funding
+            <LearnMoreLink internal={true} label={'DONATE'} href='/donate'>
+              Donate to our organization
             </LearnMoreLink>
           </Box>
         </Column>

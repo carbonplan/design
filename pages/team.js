@@ -143,17 +143,19 @@ const Team = () => {
                 gridRowGap: [4, 5, 5, 6],
               }}
             >
-              {team.sort((a, b) => a.name.localeCompare(b.name)).map((p, i) => (
-                <Person
-                  key={p.name}
-                  name={p.name}
-                  role={p.role}
-                  bio={p.bio}
-                  final={i == team.length - 1}
-                  penultimate={i == team.length - 2}
-                  color={colors[i % 4]}
-                />
-              ))}
+              {team
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((p, i) => (
+                  <Person
+                    key={p.name}
+                    name={p.name}
+                    role={p.role}
+                    bio={p.bio}
+                    final={i == team.length - 1}
+                    penultimate={i == team.length - 2}
+                    color={colors[i % 4]}
+                  />
+                ))}
             </Grid>
           </Box>
         </Column>
@@ -177,11 +179,8 @@ const Team = () => {
           data={collaborators}
           sidenote={
             <span>
-              Interested in working together? Email us at{' '}
-              <Link href='mailto:hello@carbonplan.org'>
-                hello@carbonplan.org
-              </Link>
-              .
+              Interested in working together?{' '}
+              <Link href='mailto:hello@carbonplan.org'>Email us</Link>.
             </span>
           }
         />
@@ -225,19 +224,28 @@ function Person({ name, role, bio, penultimate, final, color }) {
   return (
     <Row columns={[6, 4, 5, 5]}>
       <Column start={[1]} width={[2, 1, 1, 1]}>
-        <Box sx={{
-          maxWidth: '100px', 
-          width: '100%', 
-          height: 'auto', 
-          borderRadius: '50%', 
-          position: 'relative', 
-          bg: color,
-        }}>
-        <Image
-          src={`https://images.carbonplan.org/team/${name.toLowerCase().replace(' ', '-')}.png`}
-          sx={{ opacity: 0.25, filter: 'contrast(200%) brightness(100%)', width: '100%', borderRadius: '50%', display: 'block'}}
+        <Box
+          sx={{
+            maxWidth: '100px',
+            width: '100%',
+            height: 'auto',
+            borderRadius: '50%',
+            position: 'relative',
+            bg: color,
+          }}
         >
-        </Image>  
+          <Image
+            src={`https://images.carbonplan.org/team/${name
+              .toLowerCase()
+              .replace(' ', '-')}.png`}
+            sx={{
+              opacity: 0.25,
+              filter: 'contrast(200%) brightness(100%)',
+              width: '100%',
+              borderRadius: '50%',
+              display: 'block',
+            }}
+          ></Image>
         </Box>
       </Column>
       <Column
@@ -247,16 +255,16 @@ function Person({ name, role, bio, penultimate, final, color }) {
           borderStyle: 'solid',
           borderWidth: '0px',
           borderBottomWidth: [
-            (final) ? '0px' : '1px',
-            (final || penultimate) ? '0px' : '1px',
-            (final || penultimate) ? '0px' : '1px',
-            (final || penultimate) ? '0px' : '1px'
+            final ? '0px' : '1px',
+            final || penultimate ? '0px' : '1px',
+            final || penultimate ? '0px' : '1px',
+            final || penultimate ? '0px' : '1px',
           ],
           pb: [
             final ? 2 : 4,
-            (final || penultimate) ? 2 : 4,
-            (final || penultimate) ? 2 : 4,
-            (final || penultimate) ? 2 : 4,
+            final || penultimate ? 2 : 4,
+            final || penultimate ? 2 : 4,
+            final || penultimate ? 2 : 4,
           ],
           borderColor: 'muted',
         }}
