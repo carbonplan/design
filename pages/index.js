@@ -36,7 +36,7 @@ const Index = () => {
         </Column>
       </Row>
       <Row sx={{ position: 'relative', mt: [4, 4, 4, 5], mb: [6, 10] }}>
-        <Column start={[1, 3, 6, 6]} width={[6, 6, 6, 6]}>
+        <Column start={[1, 3, 6, 6]} width={[4, 6, 6, 6]}>
           <InternalLink href={'/about'}>About</InternalLink>
           <InternalLink href={'/research'}>Research</InternalLink>
           <InternalLink href={'/team'}>Team</InternalLink>
@@ -66,7 +66,7 @@ function InternalLink({ children, href, final = false }) {
           borderBottomWidth: '1px',
           pb: [1],
           mr: [final ? 0 : 4],
-          mb: [2],
+          mb: [3, 2, 2, 2],
           color: 'primary',
           textDecoration: 'none',
           '&:hover': {
