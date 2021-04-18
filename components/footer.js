@@ -11,6 +11,7 @@ const Footer = () => {
       sx={{
         mt: [7, 7, 7, 8],
         mb: [7, 7, 7, 8],
+        pb: [2, 1, 0, 0]
       }}
     >
       <Row sx={{ mb: [0, 0, 4, 5] }}>
@@ -40,14 +41,14 @@ const Footer = () => {
         <Column
           start={[5]}
           width={[1]}
-          dl={0.5}
-          dr={0.5}
+          dl={1}
+          dr={1}
           sx={{
             display: ['flex', 'none', 'none', 'none'],
             justifyContent: ['center'],
           }}
         >
-          <Monogram sx={{ mt: ['-8px'] }} />
+          <Monogram sx={{ mt: ['-4px'], width: '60px', height: '60px' }} />
         </Column>
         <Column start={[1, 6, 6, 6]} width={[3, 3]} sx={{ mt: [3, 0, 0, 0] }}>
           <Box>
