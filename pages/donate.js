@@ -80,7 +80,7 @@ const sx = {
 
 const Donate = () => {
   return (
-    <Layout links={'homepage'} title={'donate / carbonplan'} nav={'donate'}>
+    <Layout links={'homepage'} title={'donate / carbonplan'}>
       <Guide />
       <Box sx={{ mb: [7, 8, 9, 10] }}>
         <Heading sidenote={<Sidenote />}>Donate</Heading>

@@ -2,6 +2,7 @@ import { Flex, Grid, Box, Themed, Divider, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { Row, Column, Layout, Guide, Arrow } from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
+import LearnMore from '../homepage/components/learn-more'
 
 const data = {
   recentHighlights: [
@@ -155,7 +156,6 @@ const About = () => {
           </Column>
         </Row>
       </Box>
-
       <Row>
         <Column start={[1, 2]} width={[6, 10, 10, 10]}>
           <Divider sx={{ width: '100%', my: [0] }}></Divider>
@@ -335,113 +335,34 @@ const About = () => {
       <Row sx={{ mt: [4, 4, 5, 6], mb: [3, 5, 7, 8] }}>
         <Column start={[1, 3]} width={[3, 4, 2, 2]} sx={{ mb: [3, 0, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMoreLink internal={true} label={'TEAM'} href='/team'>
+            <LearnMore internal={true} label={'TEAM'} href='/team'>
               Read about our team and collaborators
-            </LearnMoreLink>
+            </LearnMore>
           </Box>
         </Column>
         <Column start={[4, 5, 5, 5]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMoreLink internal={true} label={'PRESS'} href='/press'>
+            <LearnMore internal={true} label={'PRESS'} href='/press'>
               View a list of press about our work
-            </LearnMoreLink>
+            </LearnMore>
           </Box>
         </Column>
         <Column start={[1, 7]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMoreLink
-              label={'GITHUB'}
-              href='https://github.com/carbonplan'
-            >
+            <LearnMore label={'GITHUB'} href='https://github.com/carbonplan'>
               Check out our open source code
-            </LearnMoreLink>
+            </LearnMore>
           </Box>
         </Column>
         <Column start={[4, 5, 9, 9]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMoreLink internal={true} label={'DONATE'} href='/donate'>
+            <LearnMore internal={true} label={'DONATE'} href='/donate'>
               Donate to our organization
-            </LearnMoreLink>
+            </LearnMore>
           </Box>
         </Column>
       </Row>
     </Layout>
-  )
-}
-
-function LearnMoreLink({ label, href, children, internal = false }) {
-  const sx = {
-    link: {
-      textDecoration: 'none',
-      '&:hover > #container > #arrow': {
-        transform: 'rotate(45deg)',
-        fill: 'secondary',
-      },
-    },
-  }
-
-  function Wrapper({ href, children }) {
-    if (internal) {
-      return (
-        <NextLink href={href} passHref>
-          <Link sx={sx.link}>{children}</Link>
-        </NextLink>
-      )
-    } else {
-      return (
-        <Link href={href} sx={sx.link}>
-          {children}
-        </Link>
-      )
-    }
-  }
-
-  return (
-    <Box
-      sx={{
-        fontSize: [3, 3, 3, 4],
-        lineHeight: '1.2em',
-        width: 'fit-content',
-        mb: [1],
-      }}
-    >
-      <Wrapper href={href}>
-        <Box sx={{ transition: '0.15s', pb: [2] }}>{children}</Box>
-        <Box
-          sx={{
-            transition: '0.15s',
-            display: 'inline-block',
-            textTransform: 'uppercase',
-            letterSpacing: 'smallcaps',
-            fontFamily: 'heading',
-            fontSize: [2, 2, 2, 3],
-          }}
-        >
-          {label}
-        </Box>
-        <Box
-          as='span'
-          id='container'
-          sx={{
-            ml: [2],
-            display: 'inline-block',
-          }}
-        >
-          <Arrow
-            id='arrow'
-            sx={{
-              transition: 'fill 0.15s, transform 0.15s',
-              position: 'relative',
-              top: ['2px'],
-              fill: 'primary',
-              height: [15, 15, 15, 17],
-              width: [15, 15, 15, 17],
-            }}
-          />
-        </Box>
-        <Box as='span' sx={{ display: 'inline-block', width: ['12px'] }} />
-      </Wrapper>
-    </Box>
   )
 }
 
