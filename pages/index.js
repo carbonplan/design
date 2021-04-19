@@ -120,7 +120,7 @@ const Index = () => {
                 mb: [4, 3, 3, 4],
                 ml: ['-1px'],
                 lineHeight: 'heading',
-                fontFamily: 'heading',
+                fontFamily: ['body', 'heading', 'heading', 'heading'],
                 fontSize: [4, 5, 5, 6],
                 mt: [4, 3, 3, 4],
                 color: research.color,
