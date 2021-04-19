@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { Box } from 'theme-ui'
-import { Row, Column } from '@carbonplan/components'
+import { Row, Column, Tray, Filter } from '@carbonplan/components'
 import List from './list'
-import Filter from './filter'
 import Heading from './heading'
 
 const initCategory = {
@@ -18,7 +17,7 @@ const initYear = {
   2021: true,
 }
 
-const Main = () => {
+const Main = ({ expanded }) => {
   const [category, setCategory] = useState(initCategory)
   const [year, setYear] = useState(initYear)
 
@@ -42,6 +41,9 @@ const Main = () => {
       >
         Research
       </Heading>
+      <Tray expanded={expanded}>
+        <FilterContents />
+      </Tray>
       <Row sx={{ mb: [0, 3, 4, 5] }}>
         <Column
           start={[1, 1, 2, 2]}

@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { Layout, Guide } from '@carbonplan/components'
 import Main from '../../research/components/main'
 
 const Index = () => {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <Layout
       title={'research / carbonplan'}
@@ -12,9 +15,10 @@ const Index = () => {
       links={'local'}
       metadata={'POSTS: 10'}
       nav={'research'}
+      settings={{ value: expanded, onClick: () => setExpanded(!expanded) }}
     >
       <Guide />
-      <Main />
+      <Main expanded={expanded} />
     </Layout>
   )
 }

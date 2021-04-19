@@ -1,17 +1,13 @@
 import { memo } from 'react'
 import { Box, Paragraph, Grid, Text, Link, Heading } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Row, Column, Tag, Arrow, TaggedLink } from '@carbonplan/components'
+import { Row, Column, Tag, Arrow, Links, Buttons } from '@carbonplan/components'
 import { mix } from '@theme-ui/color'
+import { formatDate } from '../../utils'
 import Icon from './icon'
 
-const formatDate = (date) => {
-  let d = new Date(date.replace(/-/g, '/'))
-  let month = d.toLocaleString('default', { month: 'short' })
-  let day = String(d.getDay()).padStart(2, '0')
-  let year = d.getFullYear()
-  return month + ' ' + day + ' ' + year
-}
+const { ArrowButton } = Buttons
+const { WrappedLink } = Links
 
 const Entry = ({ info, first, final }) => {
   let {
@@ -54,7 +50,7 @@ const Entry = ({ info, first, final }) => {
             sx={{ display: ['initial', 'none', 'none', 'none'] }}
           >
             {icon && (
-              <WrappedLink url={links[0].url}>
+              <WrappedLink href={links[0].href}>
                 <Icon icon={icon} color={color} />
               </WrappedLink>
             )}
@@ -160,7 +156,7 @@ const Entry = ({ info, first, final }) => {
                 ))}
             </Box>
             {icon && (
-              <WrappedLink url={links[0].url}>
+              <WrappedLink href={links[0].href}>
                 <Icon icon={icon} color={color} />
               </WrappedLink>
             )}
@@ -180,79 +176,24 @@ const Entry = ({ info, first, final }) => {
 }
 
 function LinkGroup({ links }) {
-  return links.map((link, ix) => {
-    const pad = links.length > 1 && ix < links.length - 1
+  return links.map((link, i) => {
     return (
-      <WrappedLink key={ix} url={link.url}>
-        <Box
+      <WrappedLink href={link.href}>
+        <ArrowButton
+          key={i}
+          label={link.label}
+          color={'secondary'}
+          fill={'secondary'}
           sx={{
-            color: 'secondary',
+            display: 'inline-block',
+            mb: ['6px'],
+            mt: ['5px'],
             mr: [4, 4, 4, 5],
-            pr: [0, 0, 2, 0],
-            mb: [1],
-            mt: ['2px'],
-            fontSize: [2, 2, 2, 3],
-            cursor: 'pointer',
-            display: ['inline-block'],
-            '@media (hover: hover) and (pointer: fine)': {
-              '&:hover': {
-                color: 'text',
-              },
-              '&:hover > #container > #arrow': {
-                transform: 'rotate(45deg)',
-                fill: 'primary',
-              },
-            },
           }}
-        >
-          <Box as='span' id='label' sx={{ transition: '0.15s' }}>
-            {link.label}
-          </Box>
-          <Box id='container' as='span' sx={{ position: 'relative' }}>
-            <Arrow
-              id='arrow'
-              sx={{
-                transition: 'fill 0.15s, transform 0.15s',
-                position: 'relative',
-                top: '2px',
-                width: 12,
-                height: 12,
-                ml: [1, 1, 1, 2],
-                fill: 'secondary',
-              }}
-            />
-          </Box>
-        </Box>
+        />
       </WrappedLink>
     )
   })
-}
-
-function WrappedLink({ url, children }) {
-  if (url.startsWith('/research')) {
-    return (
-      <NextLink href={url} passHref={true}>
-        <Link sx={{ textDecoration: 'none' }}>{children}</Link>
-      </NextLink>
-    )
-  } else {
-    let action = 'website'
-    let category = 'external'
-    if (url.includes('pdf')) {
-      action = 'PDF'
-      category = 'download'
-    }
-    return (
-      <TaggedLink
-        action={action}
-        category={category}
-        sx={{ textDecoration: 'none' }}
-        href={url}
-      >
-        {children}
-      </TaggedLink>
-    )
-  }
 }
 
 export default memo(Entry)

@@ -1,49 +1,25 @@
 import { Flex, Grid, Box, Themed, Divider, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Row, Column, Layout, Guide, Arrow } from '@carbonplan/components'
+import {
+  Row,
+  Column,
+  Layout,
+  Guide,
+  Buttons,
+  Links,
+} from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
-import LearnMore from '../homepage/components/learn-more'
+import { highlights, press } from '../homepage/data/recent'
 
-const data = {
-  recentHighlights: [
-    {
-      label: 'CDR Database',
-      href: '/research/cdr-database',
-    },
-    {
-      label: 'CDR Primer',
-      href: 'https://cdrprimer.org/',
-    },
-    {
-      label: 'DAC Calculator',
-      href: '/research/dac-calculator',
-    },
-    {
-      label: 'Permanence Calculator',
-      href: '/research/permanence-calculator',
-    },
-  ],
-  recentPress: [
-    {
-      label: 'Financial Times',
-      href: 'https://www.ft.com/content/de5e8631-bdf2-4c2e-8b7f-83c0c80cdea8',
-    },
-    {
-      label: 'Bloomberg',
-      href:
-        'https://www.bloomberg.com/features/2020-nature-conservancy-carbon-offsets-trees/',
-    },
-    {
-      label: 'Ars Technica',
-      href:
-        'https://arstechnica.com/science/2020/11/want-to-offset-your-carbon-footprint-heres-what-you-need-to-know/',
-    },
-    {
-      label: 'Grist',
-      href:
-        'https://grist.org/climate/this-oregon-forest-was-supposed-to-store-carbon-for-100-years-now-its-on-fire/',
-    },
-  ],
+const { ArrowButton, CalloutButton } = Buttons
+const { WrappedLink } = Links
+
+const sx = {
+  link: {
+    textDecoration: 'none',
+    display: 'block',
+    width: 'fit-content',
+  },
 }
 
 const About = () => {
@@ -244,34 +220,39 @@ const About = () => {
               mb: [2, 0, 0],
             }}
           >
-            <ArrowLink
-              label={
-                <span>
-                  Browse our
-                  <br />
-                  latest research
-                </span>
-              }
-              big={true}
-              href={'/research'}
-              color={'red'}
-            />
+            <WrappedLink href='/research' sx={sx.link}>
+              <ArrowButton
+                label={
+                  <span>
+                    Browse our
+                    <br />
+                    latest research
+                  </span>
+                }
+                size={'lg'}
+                fill={'red'}
+              />
+            </WrappedLink>
           </Box>
         </Column>
         <Column start={[1, 5, 7, 7]} width={[6, 4, 5, 5]}>
           <Box sx={{ fontSize: [6] }}>
-            <ArrowLink
-              big={true}
+            <WrappedLink
               href={
                 'https://carbonplan-assets.s3.amazonaws.com/docs/CarbonPlan-Annual-Report-2020.pdf'
               }
-              color={'yellow'}
-              label={
-                <span>
-                  Download 2020 <br /> annual report
-                </span>
-              }
-            />
+              sx={sx.link}
+            >
+              <ArrowButton
+                size={'lg'}
+                fill={'yellow'}
+                label={
+                  <span>
+                    Download 2020 <br /> annual report
+                  </span>
+                }
+              />
+            </WrappedLink>
           </Box>
         </Column>
       </Row>
@@ -297,8 +278,15 @@ const About = () => {
             >
               RECENT HIGHLIGHTS
             </Box>
-            {data.recentHighlights.map((d, i) => (
-              <ArrowLink key={i} label={d.label} href={d.href} />
+            {highlights.map((d, i) => (
+              <WrappedLink href={d.href} sx={sx.link}>
+                <ArrowButton
+                  key={i}
+                  label={d.label}
+                  size={'md'}
+                  sx={{ mb: [1] }}
+                />
+              </WrappedLink>
             ))}
           </Box>
         </Column>
@@ -314,8 +302,15 @@ const About = () => {
             >
               RECENT PRESS
             </Box>
-            {data.recentPress.map((d, i) => (
-              <ArrowLink key={i} label={d.label} href={d.href} />
+            {press.map((d, i) => (
+              <WrappedLink href={d.href} sx={sx.link}>
+                <ArrowButton
+                  key={i}
+                  label={d.label}
+                  size={'md'}
+                  sx={{ mb: [1] }}
+                />
+              </WrappedLink>
             ))}
           </Box>
         </Column>
@@ -328,122 +323,49 @@ const About = () => {
       <Row sx={{ mt: [4, 5, 6, 7] }}>
         <Column start={[1, 2]} width={[6, 10]}>
           <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
-            Want more?
+            Read more
           </Box>
         </Column>
       </Row>
       <Row sx={{ mt: [4, 4, 5, 6], mb: [3, 5, 7, 8] }}>
         <Column start={[1, 3]} width={[3, 4, 2, 2]} sx={{ mb: [3, 0, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMore internal={true} label={'TEAM'} href='/team'>
-              Read about our team and collaborators
-            </LearnMore>
+            <WrappedLink href='/team' sx={sx.link}>
+              <CalloutButton label={'team'}>
+                Read about our team and collaborators
+              </CalloutButton>
+            </WrappedLink>
           </Box>
         </Column>
         <Column start={[4, 5, 5, 5]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMore internal={true} label={'PRESS'} href='/press'>
-              View a list of press about our work
-            </LearnMore>
+            <WrappedLink href='/press' sx={sx.link}>
+              <CalloutButton label={'press'}>
+                View a list of press about our work
+              </CalloutButton>
+            </WrappedLink>
           </Box>
         </Column>
         <Column start={[1, 7]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMore label={'GITHUB'} href='https://github.com/carbonplan'>
-              Check out our open source code
-            </LearnMore>
+            <WrappedLink href='https://github.com/carbonplan' sx={sx.link}>
+              <CalloutButton label={'github'}>
+                Check out our open source code
+              </CalloutButton>
+            </WrappedLink>
           </Box>
         </Column>
         <Column start={[4, 5, 9, 9]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <LearnMore internal={true} label={'DONATE'} href='/donate'>
-              Donate to our organization
-            </LearnMore>
+            <WrappedLink href='/donate' sx={sx.link}>
+              <CalloutButton label={'donate'}>
+                Donate to our organization
+              </CalloutButton>
+            </WrappedLink>
           </Box>
         </Column>
       </Row>
     </Layout>
-  )
-}
-
-function ArrowLink({ href, label, big = false, color = 'text' }) {
-  const InnerArrow = () => {
-    return (
-      <Box
-        as='span'
-        id='container'
-        sx={{
-          ml: big ? ['8px', '8px', '12px', '16px'] : [2],
-          display: 'inline-block',
-        }}
-      >
-        <Arrow
-          id='arrow'
-          sx={{
-            transition: 'fill 0.15s, transform 0.15s',
-            position: 'relative',
-            top: big ? ['4px', '4px', '5px', '6px'] : ['3px'],
-            fill: color,
-            height: big ? [25, 25, 35, 45] : [18, 18, 18, 24],
-            width: big ? [25, 25, 35, 45] : [18, 18, 18, 24],
-          }}
-        />
-      </Box>
-    )
-  }
-
-  return (
-    <Box
-      sx={{
-        fontSize: big ? [5, 5, 6, 7] : [4, 4, 4, 5],
-        fontFamily: big ? 'heading' : 'body',
-        lineHeight: 'heading',
-        width: 'fit-content',
-        mb: big ? [0] : [1],
-      }}
-    >
-      <Link
-        id='link'
-        sx={{
-          textDecoration: 'none',
-          transition: 'color 0.15s',
-          '&:hover': {
-            color: 'secondary',
-          },
-          '&:hover > #span-1 > #container > #arrow': {
-            transform: 'rotate(45deg)',
-            fill: 'secondary',
-          },
-          '&:hover > #span-1 > #span-2 > #container > #arrow': {
-            transform: 'rotate(45deg)',
-            fill: 'secondary',
-          },
-        }}
-        href={href}
-      >
-        {!(typeof label === 'string') && (
-          <span id='span-1'>
-            {label}
-            <InnerArrow />
-          </span>
-        )}
-        {typeof label === 'string' && (
-          <span id='span-1'>
-            {label
-              .split(' ')
-              .slice(0, label.split(' ').length - 1)
-              .join(' ')}{' '}
-            <Box as='span' id='span-2' sx={{ whiteSpace: 'nowrap' }}>
-              {label
-                .split(' ')
-                .slice(label.split(' ').length - 1, label.split(' ').length)}
-              <InnerArrow />
-            </Box>
-          </span>
-        )}
-        <Box as='span' sx={{ display: 'inline-block', width: ['1px'] }} />
-      </Link>
-    </Box>
   )
 }
 

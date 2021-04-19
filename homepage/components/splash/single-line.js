@@ -6,12 +6,7 @@ const Line = () => {
   const [tick, setTick] = useState(null)
 
   const mouseEnter = (e) => {
-    e.persist()
-    setTick(
-      setTimeout(() => {
-        e.target.unpauseAnimations()
-      }, 100)
-    )
+    e.target.unpauseAnimations()
   }
 
   const mouseLeave = (e) => {
@@ -23,7 +18,7 @@ const Line = () => {
     if (svg) {
       setTimeout(() => {
         svg.pauseAnimations()
-      }, 0)
+      }, 50)
     }
   }, [])
 

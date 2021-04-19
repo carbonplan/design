@@ -4,7 +4,7 @@ import { Box, Flex, Container, Link } from 'theme-ui'
 import Logo from './logo'
 import Row from './row'
 import Column from './column'
-import Hamburger from './hamburger'
+import Menu from './menu'
 import Settings from './settings'
 import Dimmer from './dimmer'
 import Arrow from './arrow'
@@ -218,7 +218,7 @@ const Header = ({ status, mode, nav, settings }) => {
               />
             </Box>
           )}
-          <Hamburger
+          <Menu
             sx={{
               transition: 'opacity 0.15s',
               pointerEvents: settings && settings.value ? 'none' : 'all',

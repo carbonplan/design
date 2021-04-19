@@ -1,7 +1,9 @@
 import { Box, Themed, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Layout, Row, Column, Guide, Arrow } from '@carbonplan/components'
+import { Layout, Row, Column, Guide, Buttons } from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
+
+const { ArrowButton } = Buttons
 
 const amounts = [20, 50, 100, 500]
 
@@ -17,45 +19,21 @@ const Sidenote = () => {
 const Amount = ({ value, color }) => {
   return (
     <Link
-      href=''
+      href='/'
       sx={{
+        mt: [3, 3, 3, 4],
+        mb: [2, 2, 2, 3],
         textDecoration: 'none',
         display: 'block',
         width: 'fit-content',
-        '&:hover > .container': {
-          color: 'secondary',
-        },
-        '&:hover > .container > .arrow': {
-          fill: 'secondary',
-          transform: 'rotate(45deg)',
-        },
       }}
     >
-      <Box
-        className='container'
-        sx={{
-          fontFamily: 'heading',
-          fontSize: [6, 7, 8, 9],
-          letterSpacing: 'heading',
-          mt: [3, 3, 3, 4],
-          mb: [2, 2, 2, 3],
-          transition: 'color 0.15s',
-        }}
-      >
-        ${value}
-        <Arrow
-          className='arrow'
-          sx={{
-            position: 'relative',
-            ml: ['8px', '12px', '12px', '16px'],
-            width: [34, 46, 56, 68],
-            height: [34, 46, 56, 68],
-            top: ['5px', '7px', '9px', '11px'],
-            transition: 'fill 0.15s, transform 0.15s',
-            fill: color,
-          }}
-        />
-      </Box>
+      <ArrowButton
+        size={'xl'}
+        label={'$' + value}
+        fill={color}
+        sx={{ py: [1, 1, 2, 2], mb: [3, 3, 3, 3] }}
+      />
     </Link>
   )
 }
@@ -117,7 +95,7 @@ const Donate = () => {
             </Box>
           </Column>
         </Row>
-        <Row>
+        <Row sx={{ mt: [1], mb: [-1] }}>
           <Column start={[1, 2, 3, 3]} width={[3, 3, 4, 3]}>
             <Amount value={20} color='red' />
           </Column>
@@ -162,7 +140,9 @@ const Donate = () => {
               <Column start={[1]} width={[4]}>
                 <Box sx={{ ...sx.details, ...sx.bordered, mt: [0, 0, 4, 5] }}>
                   Mailing address: <br />
-                  2443 Fillmore St <Box as='br' sx={{display: ['initial', 'none']}}/>#380-6048 <br />
+                  2443 Fillmore St{' '}
+                  <Box as='br' sx={{ display: ['initial', 'none'] }} />
+                  #380-6048 <br />
                   San Francisco, CA 94115
                 </Box>
               </Column>

@@ -1,8 +1,7 @@
 import { Box, Themed, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Layout, Row, Column, Guide } from '@carbonplan/components'
+import { Layout, Row, Column, Guide, CalloutLink } from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
-import LearnMore from '../homepage/components/learn-more'
 
 const Thanks = () => {
   return (
@@ -35,30 +34,33 @@ const Thanks = () => {
         <Row sx={{ mt: [4, 4, 5, 6], mb: [3, 5, 7, 8] }}>
           <Column start={[1, 3]} width={[3, 4, 2, 2]} sx={{ mb: [3, 0, 0, 0] }}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <LearnMore internal={true} label={'RESEARCH'} href='/research'>
+              <CalloutLink internal={true} label={'research'} href='/research'>
                 Browse our latest articles
-              </LearnMore>
+              </CalloutLink>
             </Box>
           </Column>
           <Column start={[4, 5, 5, 5]} width={[3, 4, 2, 2]}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <LearnMore internal={true} label={'PRESS'} href='/press'>
+              <CalloutLink internal={true} label={'press'} href='/press'>
                 View a list of press about our work
-              </LearnMore>
+              </CalloutLink>
             </Box>
           </Column>
           <Column start={[1, 7]} width={[3, 4, 2, 2]}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <LearnMore internal={true} label={'TEAM'} href='/team'>
+              <CalloutLink internal={true} label={'team'} href='/team'>
                 Read about our team and collaborators
-              </LearnMore>
+              </CalloutLink>
             </Box>
           </Column>
           <Column start={[4, 5, 9, 9]} width={[3, 4, 2, 2]}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <LearnMore label={'GITHUB'} href='https://github.com/carbonplan'>
+              <CalloutLink
+                label={'github'}
+                href='https://github.com/carbonplan'
+              >
                 Check out our open source code
-              </LearnMore>
+              </CalloutLink>
             </Box>
           </Column>
         </Row>

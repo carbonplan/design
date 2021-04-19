@@ -1,7 +1,16 @@
 import { Box, Text, Grid, Container } from 'theme-ui'
-import { Layout, Row, Column, Guide } from '@carbonplan/components'
-import BackArrow from './back-arrow'
-import BackLink from './back-link'
+import {
+  Layout,
+  Row,
+  Column,
+  Guide,
+  Buttons,
+  Links,
+} from '@carbonplan/components'
+import QuickLook from './quick-look'
+
+const { BackButton } = Buttons
+const { InternalLink } = Links
 
 const prefix = 'https://images.carbonplan.org'
 
@@ -112,15 +121,6 @@ const Article = ({ children, meta }) => {
         }}
       >
         <Row>
-          <Box sx={{ display: ['none', 'none', 'none', 'none'] }}>
-            <Column
-              start={[1, 1]}
-              width={[2]}
-              sx={{ mb: [-5, -7, 0, 0], mt: [3, 3, 6, 7] }}
-            >
-              <BackArrow />
-            </Column>
-          </Box>
           <Box sx={{ display: ['initial', 'initial', 'initial', 'initial'] }}>
             <Column
               start={[1, 1]}
@@ -128,34 +128,17 @@ const Article = ({ children, meta }) => {
               dr={1}
               sx={{ mb: [-3, -4, 0, 0], mt: [3, 3, '104px', '104px'] }}
             >
-              <BackLink />
+              <InternalLink href={'/research'}>
+                <BackButton sx={{ ml: ['-2px', '-2px', '-2px', '-2px'] }} />
+              </InternalLink>
             </Column>
           </Box>
           <Column start={[1, 3]} width={[6, 6, 6, 6]}>
             <Box>{children}</Box>
           </Column>
-          <Column start={[1, 10]} width={[2]}>
-            <Box
-              sx={{
-                display: ['none', 'none', 'initial'],
-                fontSize: [2, 2, 2, 3],
-              }}
-            >
-              <Box sx={{ mt: [5, 6, 7, 8] }}>
-                <Box
-                  sx={{
-                    fontFamily: 'heading',
-                    letterSpacing: 'smallcaps',
-                    mb: [3],
-                    pt: [0, 0, '42px', '22px'],
-                  }}
-                >
-                  / QUICK LOOK
-                </Box>
-                <Box sx={{ color: meta.color }}>{meta.summary}</Box>
-              </Box>
-            </Box>
-          </Column>
+          <QuickLook color={meta.color} start={9}>
+            {meta.summary}
+          </QuickLook>
         </Row>
       </Box>
     </Layout>

@@ -1,4 +1,4 @@
-import { TaggedLink } from '@carbonplan/components'
+import { Links } from '@carbonplan/components'
 import Article from '../../components/article'
 import Reference from '../../components/reference'
 import PullQuote from '../../components/pull-quote'
@@ -134,7 +134,7 @@ Any protocol for soil carbon crediting needs to start by appreciating the comple
 
 ## Our comments
 
-Given the enormous challenges in designing a carbon offset protocol to quantify and credit soil carbon storage, we were interested to see the Climate Action Reserve take this problem on. We reviewed the draft protocol and highlight two sets of issues here. See our <TaggedLink action='PDF' category='downloads' href='https://carbonplan-assets.s3.amazonaws.com/docs/Soil-Carbon-Comment-Letter-05-18-2020.pdf'>comment letter</TaggedLink> for details and check out comments posted by other groups at the [protocol website](https://www.climateactionreserve.org/how/protocols/soil-enrichment/).
+Given the enormous challenges in designing a carbon offset protocol to quantify and credit soil carbon storage, we were interested to see the Climate Action Reserve take this problem on. We reviewed the draft protocol and highlight two sets of issues here. See our <Links.TaggedLink action='PDF' category='downloads' href='https://carbonplan-assets.s3.amazonaws.com/docs/Soil-Carbon-Comment-Letter-05-18-2020.pdf'>comment letter</Links.TaggedLink> for details and check out comments posted by other groups at the [protocol website](https://www.climateactionreserve.org/how/protocols/soil-enrichment/).
 
 ### Conflict of interest
 
@@ -184,7 +184,7 @@ Meanwhile, any efforts built around carbon offset credits should be transparent,
 
 ### 08-25-2020
 
-After reviewing an updated version of the draft protocol, we submitted a second <TaggedLink action='PDF' category='downloads' href='https://carbonplan-assets.s3.amazonaws.com/docs/Soil-Carbon-Comment-Letter-08-25-2020.pdf'>comment letter</TaggedLink> on remaining concerns and additional issues.
+After reviewing an updated version of the draft protocol, we submitted a second <Links.TaggedLink action='PDF' category='downloads' href='https://carbonplan-assets.s3.amazonaws.com/docs/Soil-Carbon-Comment-Letter-08-25-2020.pdf'>comment letter</Links.TaggedLink> on remaining concerns and additional issues.
 
 <SectionBreak />
 

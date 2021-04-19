@@ -49,7 +49,7 @@ const Layout = ({
               top: 0,
               bg: 'background',
               height: '56px',
-              zIndex: 1000,
+              zIndex: 2000,
             }}
           >
             <Container>

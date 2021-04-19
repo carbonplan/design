@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box } from 'theme-ui'
 import { Tag } from '@carbonplan/components'
 
@@ -46,13 +47,6 @@ const Filter = ({
         setFilter(init)
       }
     }
-  }
-
-  const toggleSort = (value) => {
-    setSort({
-      date: value === 'date',
-      title: value === 'title',
-    })
   }
 
   return (
