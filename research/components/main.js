@@ -33,7 +33,7 @@ const Main = ({ expanded }) => {
   }
 
   return (
-    <Box sx={{ mb: [4, 0, 0, 0] }}>
+    <Box sx={{ mb: [8, 8, 9, 10] }}>
       <Heading
         description={
           'Articles, tools, and commentary on carbon removal and climate solutions.'
@@ -44,7 +44,7 @@ const Main = ({ expanded }) => {
       <Tray expanded={expanded}>
         <FilterContents />
       </Tray>
-      <Row sx={{ mb: [0, 3, 4, 5] }}>
+      <Row sx={{ mb: [0] }}>
         <Column
           start={[1, 1, 2, 2]}
           width={[6, 6, 2, 2]}

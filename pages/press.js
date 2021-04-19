@@ -87,7 +87,7 @@ const Press = () => {
       <Tray expanded={expanded}>
         <FilterContents />
       </Tray>
-      <Row sx={{ mb: [0, 5, 5, 6] }}>
+      <Row sx={{ mb: [8, 8, 9, 10] }}>
         <Column
           start={[1, 1, 2, 2]}
           width={[6, 6, 2, 2]}

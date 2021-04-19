@@ -25,7 +25,7 @@ const Thanks = () => {
   return (
     <Layout links={'homepage'} title={'thanks / carbonplan'}>
       <Guide />
-      <Box sx={{ mb: [5, 6, 7, 8] }}>
+      <Box sx={{ mb: [8, 8, 9, 10] }}>
         <Heading>Thank you</Heading>
         <Row>
           <Column start={[1, 1, 2, 2]} width={[6, 6, 6, 6]}>

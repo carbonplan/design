@@ -279,7 +279,7 @@ const About = () => {
               RECENT HIGHLIGHTS
             </Box>
             {highlights.map((d, i) => (
-              <WrappedLink href={d.href} sx={sx.link}>
+              <WrappedLink key={i} href={d.href} sx={sx.link}>
                 <ArrowButton
                   key={i}
                   label={d.label}
@@ -303,7 +303,7 @@ const About = () => {
               RECENT PRESS
             </Box>
             {press.map((d, i) => (
-              <WrappedLink href={d.href} sx={sx.link}>
+              <WrappedLink key={i} href={d.href} sx={sx.link}>
                 <ArrowButton
                   key={i}
                   label={d.label}
@@ -327,7 +327,7 @@ const About = () => {
           </Box>
         </Column>
       </Row>
-      <Row sx={{ mt: [4, 4, 5, 6], mb: [3, 5, 7, 8] }}>
+      <Row sx={{ mt: [4, 4, 5, 6], mb: [8, 8, 9, 10] }}>
         <Column start={[1, 3]} width={[3, 4, 2, 2]} sx={{ mb: [3, 0, 0, 0] }}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
             <WrappedLink href='/team' sx={sx.link}>

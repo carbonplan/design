@@ -33,7 +33,7 @@ const Entry = ({ info, first, final }) => {
       <Box
         id='box'
         sx={{
-          pb: [4, 6, 6, 7],
+          pb: final ? [2, 3, 4, 5] : [4, 6, 6, 7],
           pt: [4, 0, 0, 0],
           borderStyle: 'solid',
           borderColor: 'muted',
@@ -178,7 +178,7 @@ const Entry = ({ info, first, final }) => {
 function LinkGroup({ links }) {
   return links.map((link, i) => {
     return (
-      <WrappedLink href={link.href}>
+      <WrappedLink key={i} href={link.href}>
         <ArrowButton
           key={i}
           label={link.label}

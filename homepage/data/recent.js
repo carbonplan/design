@@ -7,11 +7,11 @@ const research = {
   links: [
     {
       label: 'Read article',
-      url: '/research/microsoft-2021-insights',
+      href: '/research/microsoft-2021-insights',
     },
     {
       label: 'Explore database',
-      url: '/research/cdr-database',
+      href: '/research/cdr-database',
     },
   ],
 }

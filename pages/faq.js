@@ -7,7 +7,7 @@ const FAQ = () => {
   return (
     <Layout links={'homepage'} title={'faq / carbonplan'} nav={'faq'}>
       <Guide />
-      <Box sx={{ mb: [5, 6, 7, 8] }}>
+      <Box sx={{ mb: [8, 8, 9, 10] }}>
         <Heading>FAQ</Heading>
         <Question first>Are you a nonprofit?</Question>
         <Answer>

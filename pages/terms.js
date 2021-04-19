@@ -6,7 +6,7 @@ const FAQ = () => {
   return (
     <Layout links={'homepage'} title={'terms / carbonplan'}>
       <Guide />
-      <Box sx={{ mb: [5, 6, 7, 8] }}>
+      <Box sx={{ mb: [8, 8, 9, 10] }}>
         <Heading>Terms</Heading>
         <Row>
           <Column start={[2, 2, 3, 3]} width={[5, 5, 6, 6]}>

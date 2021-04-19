@@ -1,4 +1,4 @@
-import { Link, Box } from 'theme-ui'
+import { Link, Box, Image } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import {
   Guide,
@@ -42,7 +42,7 @@ const Index = () => {
         <Splash />
       </Box>
       <Row sx={{ position: 'relative', mt: [1] }}>
-        <Column start={[1, 3, 6, 6]} width={[5, 5, 6, 6]}>
+        <Column start={[1, 3, 6, 6]} width={[6, 5, 6, 6]}>
           <Box
             sx={{
               fontFamily: 'heading',
@@ -55,15 +55,17 @@ const Index = () => {
         </Column>
       </Row>
       <Row sx={{ position: 'relative', mt: [4, 4, 4, 5] }}>
-        <Column start={[1, 3, 6, 6]} width={[6, 4, 4, 4]}>
-          <Box sx={{ fontSize: [3, 3, 3, 4] }}>
+        <Column start={[1, 3, 6, 6]} width={[5, 4, 4, 4]}>
+          <Box
+            sx={{ fontSize: [3, 3, 3, 4], lineHeight: 'h3', mb: [2, 3, 0, 0] }}
+          >
             Improving the transparency and scientific integrity of carbon
             removal and climate solutions through open data and tools
           </Box>
         </Column>
       </Row>
       <Row sx={{ mt: [4, 4, 4, 5] }}>
-        <Column start={[1, 3, 6, 6]} width={[4, 6, 6, 6]}>
+        <Column start={[2, 3, 6, 6]} width={[4, 6, 6, 6]}>
           <InternalNav href={'/about'}>About</InternalNav>
           <InternalNav href={'/research'}>Research</InternalNav>
           <InternalNav href={'/team'}>Team</InternalNav>
@@ -73,10 +75,10 @@ const Index = () => {
           </InternalNav>
         </Column>
       </Row>
-      <Row sx={{ mt: [6, 7, 8, 9] }}>
+      <Row sx={{ mt: [5, 7, 8, 9] }}>
         <Column
           start={[1, 2]}
-          width={[6, 10]}
+          width={[6, 8, 10, 10]}
           sx={{
             pt: [4, 5, 6, 7],
             ...sx.borderTop,
@@ -85,20 +87,21 @@ const Index = () => {
           <Box
             as='h2'
             variant='styles.h2'
-            sx={{ mt: [0, 0, 0, 0], mb: [3, 4, 5, 6] }}
+            sx={{ mt: [2, 2, 2, 2], mb: [4, 4, 5, 6] }}
           >
             Recent research
           </Box>
         </Column>
       </Row>
       <Row sx={{ mb: [4, 5, 6, 7] }}>
-        <Column start={[1, 2]} width={[6, 6]} sx={{}}>
-          <Box sx={{ width: '100%', height: '200px', bg: 'green' }}>
-            Graphic
-          </Box>
+        <Column start={[1, 1, 2, 2]} width={[6, 4, 6, 6]} sx={{}}>
+          <Image
+            src='/CDR-Database.png'
+            sx={{ width: '100%', height: ['125px', '225px', '225px', '280px'] }}
+          />
         </Column>
-        <Column start={[1, 8]} width={[6, 4]} sx={{}}>
-          <Box sx={{ width: '100%', height: '200px', bg: 'green' }}>
+        <Column start={[1, 5, 8, 8]} width={[5, 4]} sx={{}}>
+          <Box sx={{ width: '100%' }}>
             <Box
               sx={{
                 color: 'secondary',
@@ -114,12 +117,12 @@ const Index = () => {
             </Box>
             <Box
               sx={{
-                mb: ['14px'],
-                mt: ['-5px', '10px', '10px', '10px'],
+                mb: [4, 3, 3, 4],
                 ml: ['-1px'],
                 lineHeight: 'heading',
                 fontFamily: 'heading',
                 fontSize: [4, 5, 5, 6],
+                mt: [4, 3, 3, 4],
                 color: research.color,
               }}
             >
@@ -144,32 +147,55 @@ const Index = () => {
                 mb: [1],
                 fontSize: [2, 2, 2, 3],
                 lineHeight: 1.35,
-                display: ['none', 'block', 'block', 'block'],
               }}
             >
               {research.summary}
-            </Box>
-            <Box
-              sx={{
-                mt: ['12px'],
-                fontSize: [2, 2, 2, 3],
-                userSelect: 'none',
-                display: ['none', 'block', 'block', 'block'],
-              }}
-            >
-              <Box sx={{ mb: [-1] }}></Box>
+              <Box
+                sx={{
+                  mt: ['12px'],
+                  fontSize: [2, 2, 2, 3],
+                  userSelect: 'none',
+                }}
+              >
+                <Box sx={{ mb: [-1] }}>
+                  {research.links.map((d, i) => {
+                    return (
+                      <WrappedLink
+                        key={i}
+                        href={d.href}
+                        sx={{
+                          display: 'inline-block',
+                          textDecoration: 'none',
+                          mr: [4, 4, 4, 5],
+                        }}
+                      >
+                        <ArrowButton
+                          key={i}
+                          label={d.label}
+                          color={'secondary'}
+                          fill={'secondary'}
+                          sx={{
+                            mb: ['6px'],
+                            mt: ['5px'],
+                          }}
+                        />
+                      </WrappedLink>
+                    )
+                  })}
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Column>
       </Row>
-      <Row sx={{ mt: [6, 7, 8, 9], mb: [7, 8, 9, 10] }}>
+      <Row sx={{ mt: [5, 6, 7, 8], mb: [8, 8, 9, 10], pb: [1] }}>
         <Column
-          start={[2]}
-          width={[10]}
-          sx={{ pt: [4, 5, 6, 7], ...sx.borderTop }}
+          start={[1, 1, 2, 2]}
+          width={[6, 8, 10, 10]}
+          sx={{ pt: [5, 6, 7, 8], ...sx.borderTop }}
         >
-          <Row columns={[10]}>
-            <Column start={[1]} width={[3]}>
+          <Row columns={[6, 8, 10, 10]}>
+            <Column start={[1, 3, 1, 1]} width={[5, 6, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
@@ -179,20 +205,44 @@ const Index = () => {
                 >
                   Annual report
                 </Box>
+                <WrappedLink
+                  href={
+                    'https://carbonplan-assets.s3.amazonaws.com/docs/CarbonPlan-Annual-Report-2020.pdf'
+                  }
+                  sx={{ display: 'block', textDecoration: 'none', mb: [3] }}
+                >
+                  <ArrowButton label={'Our 2020 in review'} size={'md'} />
+                </WrappedLink>
+                <Box
+                  sx={{
+                    fontSize: [3, 3, 3, 4],
+                    fontFamily: 'body',
+                    letterSpacing: 'body',
+                    lineHeight: 'h3',
+                  }}
+                >
+                  Read all about the work we did in our first year, and some of
+                  what we're planning to do next.
+                </Box>
               </Box>
             </Column>
-            <Column start={[5]} width={[3]}>
+            <Column start={[2, 3, 5, 5]} width={[5, 3, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
                     ...sx.highlight,
                     color: 'yellow',
+                    mt: [6, 6, 0, 0],
                   }}
                 >
                   Recent highlights
                 </Box>
                 {highlights.map((d, i) => (
-                  <WrappedLink href={d.href} sx={{ textDecoration: 'none' }}>
+                  <WrappedLink
+                    key={i}
+                    href={d.href}
+                    sx={{ textDecoration: 'none' }}
+                  >
                     <ArrowButton
                       key={i}
                       label={d.label}
@@ -203,18 +253,23 @@ const Index = () => {
                 ))}
               </Box>
             </Column>
-            <Column start={[8]} width={[3]}>
+            <Column start={[1, 6, 8, 8]} width={[5, 3, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
                     ...sx.highlight,
                     color: 'teal',
+                    mt: [6, 6, 0, 0],
                   }}
                 >
                   Recent press
                 </Box>
                 {press.map((d, i) => (
-                  <WrappedLink href={d.href} sx={{ textDecoration: 'none' }}>
+                  <WrappedLink
+                    key={i}
+                    href={d.href}
+                    sx={{ textDecoration: 'none' }}
+                  >
                     <ArrowButton
                       key={i}
                       label={d.label}

@@ -8,6 +8,7 @@ import {
   Links,
 } from '@carbonplan/components'
 import QuickLook from './quick-look'
+import { formatDate } from '../../utils'
 
 const { BackButton } = Buttons
 const { InternalLink } = Links
@@ -106,7 +107,7 @@ const Article = ({ children, meta }) => {
                     fontSize: [2, 2, 2, 3],
                   }}
                 >
-                  {meta.date}
+                  {formatDate(meta.date)}
                 </Text>
               </Column>
             </Row>
