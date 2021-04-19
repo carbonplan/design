@@ -1,7 +1,25 @@
 import { Box, Themed, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
-import { Layout, Row, Column, Guide, CalloutLink } from '@carbonplan/components'
+import {
+  Layout,
+  Row,
+  Column,
+  Guide,
+  Buttons,
+  Links,
+} from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
+
+const { CalloutButton } = Buttons
+const { WrappedLink } = Links
+
+const sx = {
+  link: {
+    textDecoration: 'none',
+    display: 'block',
+    width: 'fit-content',
+  },
+}
 
 const Thanks = () => {
   return (
@@ -34,33 +52,38 @@ const Thanks = () => {
         <Row sx={{ mt: [4, 4, 5, 6], mb: [3, 5, 7, 8] }}>
           <Column start={[1, 3]} width={[3, 4, 2, 2]} sx={{ mb: [3, 0, 0, 0] }}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <CalloutLink internal={true} label={'research'} href='/research'>
-                Browse our latest articles
-              </CalloutLink>
+              <WrappedLink href='/research' sx={sx.link}>
+                <CalloutButton label={'research'}>
+                  Browse our latest articles
+                </CalloutButton>
+              </WrappedLink>
             </Box>
           </Column>
           <Column start={[4, 5, 5, 5]} width={[3, 4, 2, 2]}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <CalloutLink internal={true} label={'press'} href='/press'>
-                View a list of press about our work
-              </CalloutLink>
+              <WrappedLink href='/press' sx={sx.link}>
+                <CalloutButton label={'press'}>
+                  View a list of press about our work
+                </CalloutButton>
+              </WrappedLink>
             </Box>
           </Column>
           <Column start={[1, 7]} width={[3, 4, 2, 2]}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <CalloutLink internal={true} label={'team'} href='/team'>
-                Read about our team and collaborators
-              </CalloutLink>
+              <WrappedLink href='/team' sx={sx.link}>
+                <CalloutButton label={'team'}>
+                  Read about our team and collaborators
+                </CalloutButton>
+              </WrappedLink>
             </Box>
           </Column>
           <Column start={[4, 5, 9, 9]} width={[3, 4, 2, 2]}>
             <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-              <CalloutLink
-                label={'github'}
-                href='https://github.com/carbonplan'
-              >
-                Check out our open source code
-              </CalloutLink>
+              <WrappedLink href='https://github.com/carbonplan' sx={sx.link}>
+                <CalloutButton label={'github'}>
+                  Check out our open source code
+                </CalloutButton>
+              </WrappedLink>
             </Box>
           </Column>
         </Row>
