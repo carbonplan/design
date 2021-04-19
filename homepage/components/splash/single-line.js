@@ -15,11 +15,7 @@ const Line = () => {
   }
 
   const ref = useCallback((svg) => {
-    if (svg) {
-      setTimeout(() => {
-        svg.pauseAnimations()
-      }, 50)
-    }
+    if (svg) svg.pauseAnimations()
   }, [])
 
   const Segment = ({ start, end, delay, opacity, i }) => {
