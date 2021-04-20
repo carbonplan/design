@@ -27,6 +27,7 @@ const sx = {
     fontFamily: 'heading',
     letterSpacing: 'smallcaps',
     textTransform: 'uppercase',
+    color: 'secondary'
   },
 }
 
@@ -200,7 +201,6 @@ const Index = () => {
                 <Box
                   sx={{
                     ...sx.highlight,
-                    color: 'red',
                   }}
                 >
                   Annual report
@@ -231,7 +231,6 @@ const Index = () => {
                 <Box
                   sx={{
                     ...sx.highlight,
-                    color: 'yellow',
                     mt: [6, 6, 0, 0],
                   }}
                 >
@@ -258,7 +257,6 @@ const Index = () => {
                 <Box
                   sx={{
                     ...sx.highlight,
-                    color: 'teal',
                     mt: [6, 6, 0, 0],
                   }}
                 >

@@ -12,10 +12,10 @@ const stripePromise = loadStripe(
 )
 
 const priceIds = {
+  10: 'price_1IiDHKKRZDalHX4oRO6aOVBQ',
   20: 'price_1Ii9onKRZDalHX4oTTINKF9F',
   50: 'price_1Ii9onKRZDalHX4o644Sf3ro',
   100: 'price_1Ii9onKRZDalHX4o9ovB5nOl',
-  500: 'price_1Ii9onKRZDalHX4og7QLs7DJ',
 }
 
 const Sidenote = () => {
