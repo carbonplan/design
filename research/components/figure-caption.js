@@ -5,8 +5,8 @@ const FigureCaption = ({ number, children }) => {
     <Box
       sx={{
         color: 'secondary',
-        mt: [3],
-        mb: [6],
+        mt: [3, 3, 3, 4],
+        mb: [6, 6, 6, 7],
       }}
     >
       <Box sx={{ letterSpacing: 'smallcaps', display: 'inline-block' }}>

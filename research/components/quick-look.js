@@ -17,7 +17,7 @@ const QuickLook = ({ start, color, children }) => {
                 fontFamily: 'faux',
                 letterSpacing: 'smallcaps',
                 mb: [3],
-                pt: [0, 0, '42px', '54px'],
+                pt: [0, 0, '42px', '23px'],
                 textAlign: 'right',
               }}
             >
@@ -39,7 +39,7 @@ const QuickLook = ({ start, color, children }) => {
                 fontFamily: 'faux',
                 letterSpacing: 'smallcaps',
                 mb: [3],
-                pt: ['20px', '20px', '42px', '54px'],
+                pt: ['20px', '20px', '42px', '23px'],
               }}
             >
               QUICK LOOK

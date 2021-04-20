@@ -18,6 +18,7 @@ import Meta from './meta'
 import Monogram from './monogram'
 import Menu from './menu'
 import Row from './row'
+import Table from './table'
 import Tag from './tag'
 import Toggle from './toggle'
 import Tracking from './tracking'
@@ -44,6 +45,7 @@ export {
   Menu,
   Dimmer,
   Row,
+  Table,
   Tag,
   Toggle,
   Tracking,

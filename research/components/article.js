@@ -127,7 +127,7 @@ const Article = ({ children, meta }) => {
               start={[1, 1]}
               width={[2]}
               dr={1}
-              sx={{ mb: [-3, -4, 0, 0], mt: [3, 3, '104px', '104px'] }}
+              sx={{ mb: [-3, -4, 0, 0], mt: [3, 3, '104px', '117px'] }}
             >
               <InternalLink href={'/research'}>
                 <BackButton sx={{ ml: ['-2px', '-2px', '-2px', '-2px'] }} />
