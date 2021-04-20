@@ -32,7 +32,7 @@ const Tool = ({ title, description, meta, children }) => {
             start={[1, 1]}
             width={[2]}
             dr={1}
-            sx={{ mb: [-2, -4, 0, 0], mt: [3, 4, '104px', '140px'] }}
+            sx={{ mb: [-2, -4, 0, 0], mt: [3, 4, '104px', '150px'] }}
           >
             <InternalLink href={'/research'}>
               <BackButton sx={{ ml: ['-2px', '-2px', '-2px', '-2px'] }} />
@@ -54,7 +54,7 @@ const Tool = ({ title, description, meta, children }) => {
         </QuickLook>
       </Row>
       <Row>
-        <Column start={[1, 2]} width={[6, 10]} sx={{ mb: [0, 0, 5, 6] }}>
+        <Column start={[1, 2]} width={[6, 10]} sx={{ mb: [8, 8, 9, 10] }}>
           {children}
         </Column>
       </Row>

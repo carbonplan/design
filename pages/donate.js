@@ -142,16 +142,16 @@ const Donate = () => {
         </Row>
         <Row sx={{ mt: [1], mb: [-1] }}>
           <Column start={[1, 2, 3, 3]} width={[3, 3, 4, 3]}>
-            <Amount value={20} color='red' onClick={onClick} />
+            <Amount value={10} color='red' onClick={onClick} />
           </Column>
           <Column start={[4, 5, 7, 7]} width={[3, 3, 4, 3]} dr={0.5}>
-            <Amount value={100} color='yellow' onClick={onClick} />
+            <Amount value={20} color='yellow' onClick={onClick} />
           </Column>
           <Column start={[1, 2, 3, 3]} width={[3, 3, 4, 3]}>
             <Amount value={50} color='orange' onClick={onClick} />
           </Column>
           <Column start={[4, 5, 7, 7]} width={[3, 3, 4, 3]} dr={0.5}>
-            <Amount value={500} color='green' onClick={onClick} />
+            <Amount value={100} color='green' onClick={onClick} />
           </Column>
         </Row>
         <Row sx={{ mt: [5, 6, 7, 8] }}>

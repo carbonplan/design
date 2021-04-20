@@ -17,7 +17,7 @@ const QuickLook = ({ start, color, children }) => {
                 fontFamily: 'faux',
                 letterSpacing: 'smallcaps',
                 mb: [3],
-                pt: [0, 0, '42px', '22px'],
+                pt: [0, 0, '42px', '54px'],
                 textAlign: 'right',
               }}
             >
@@ -33,13 +33,13 @@ const QuickLook = ({ start, color, children }) => {
             fontSize: [2, 2, 2, 3],
           }}
         >
-          <Box sx={{ mt: [5, 6, 7, 7] }}>
+          <Box sx={{ mt: [5, 6, 7, 8] }}>
             <Box
               sx={{
                 fontFamily: 'faux',
                 letterSpacing: 'smallcaps',
                 mb: [3],
-                pt: ['20px', '20px', '42px', '86px'],
+                pt: ['20px', '20px', '42px', '54px'],
               }}
             >
               QUICK LOOK
