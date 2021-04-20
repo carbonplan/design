@@ -77,13 +77,13 @@ const Donate = () => {
   const [status, setStatus] = useState(null)
 
   const onClick = async (event, price) => {
-    setStatus('submitting')
+    setStatus('processing')
     const stripe = await stripePromise
     try {
       const { error } = await stripe.redirectToCheckout({
         lineItems: [
           {
-            price: 'foo',
+            price: priceIds[price],
             quantity: 1,
           },
         ],
