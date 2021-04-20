@@ -94,7 +94,7 @@ const Index = () => {
         </Column>
       </Row>
       <Row sx={{ mb: [4, 5, 6, 7] }}>
-        <Column start={[1, 1, 2, 2]} width={[6, 4, 6, 6]} sx={{}}>
+        <Column start={[1, 1, 2, 2]} width={[6, 4, 5, 5]}>
           <Image
             src='/CDR-Database.png'
             sx={{ width: '100%', height: ['125px', '225px', '225px', '280px'] }}

@@ -1,11 +1,22 @@
+import { useState, memo } from 'react'
 import { Box, Themed, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
+import { loadStripe } from '@stripe/stripe-js'
 import { Layout, Row, Column, Guide, Buttons } from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
 
 const { ArrowButton } = Buttons
 
-const amounts = [20, 50, 100, 500]
+const stripePromise = loadStripe(
+  'pk_test_51IhKHNKRZDalHX4oiolyojytGNViG2I0IIEDBbCZSc8C5Dlg2teqarxbJRIn7l36Ht7A36zNH3laLP96b2v1aHP700NwMiGXV5'
+)
+
+const priceIds = {
+  20: 'price_1Ii9onKRZDalHX4oTTINKF9F',
+  50: 'price_1Ii9onKRZDalHX4o644Sf3ro',
+  100: 'price_1Ii9onKRZDalHX4o9ovB5nOl',
+  500: 'price_1Ii9onKRZDalHX4og7QLs7DJ',
+}
 
 const Sidenote = () => {
   return (
@@ -13,28 +24,6 @@ const Sidenote = () => {
       Looking to make a larger donation?{' '}
       <Link href='mailto:hello@carbonplan.org'>Email us</Link>.
     </span>
-  )
-}
-
-const Amount = ({ value, color }) => {
-  return (
-    <Link
-      href='/'
-      sx={{
-        mt: [3, 3, 3, 4],
-        mb: [2, 2, 2, 3],
-        textDecoration: 'none',
-        display: 'block',
-        width: 'fit-content',
-      }}
-    >
-      <ArrowButton
-        size={'xl'}
-        label={'$' + value}
-        fill={color}
-        sx={{ py: [1, 1, 2, 2], mb: [3, 3, 3, 3] }}
-      />
-    </Link>
   )
 }
 
@@ -56,9 +45,65 @@ const sx = {
   },
 }
 
-const Donate = () => {
+const Amount = ({ value, color, onClick }) => {
   return (
-    <Layout links={'homepage'} title={'donate / carbonplan'}>
+    <Box
+      as='button'
+      onClick={(e) => onClick(e, value)}
+      sx={{
+        mt: [3, 3, 3, 4],
+        mb: [0, 0, 0, 0],
+        textDecoration: 'none',
+        display: 'block',
+        width: 'fit-content',
+        bg: 'transparent',
+        border: 'none',
+        color: 'primary',
+        p: [0],
+        cursor: 'pointer',
+      }}
+    >
+      <ArrowButton
+        size={'xl'}
+        label={'$' + value}
+        fill={color}
+        sx={{ py: [1, 1, 2, 2], mb: [3, 3, 3, 3] }}
+      />
+    </Box>
+  )
+}
+
+const Donate = () => {
+  const [status, setStatus] = useState(null)
+
+  const onClick = async (event, price) => {
+    setStatus('submitting')
+    const stripe = await stripePromise
+    try {
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [
+          {
+            price: 'foo',
+            quantity: 1,
+          },
+        ],
+        mode: 'payment',
+        successUrl: 'https://redesign.carbonplan.org/thanks',
+        cancelUrl: 'https://redesign.carbonplan.org/donate',
+      })
+      setTimeout(() => {
+        setStatus(null)
+      }, 500)
+    } catch (err) {
+      setStatus('error')
+      setTimeout(() => {
+        setStatus(null)
+      }, 500)
+    }
+  }
+
+  return (
+    <Layout links={'homepage'} title={'donate / carbonplan'} status={status}>
       <Guide />
       <Box sx={{ mb: [8, 8, 9, 10] }}>
         <Heading sidenote={<Sidenote />}>Donate</Heading>
@@ -97,16 +142,16 @@ const Donate = () => {
         </Row>
         <Row sx={{ mt: [1], mb: [-1] }}>
           <Column start={[1, 2, 3, 3]} width={[3, 3, 4, 3]}>
-            <Amount value={20} color='red' />
+            <Amount value={20} color='red' onClick={onClick} />
           </Column>
           <Column start={[4, 5, 7, 7]} width={[3, 3, 4, 3]} dr={0.5}>
-            <Amount value={100} color='yellow' />
+            <Amount value={100} color='yellow' onClick={onClick} />
           </Column>
           <Column start={[1, 2, 3, 3]} width={[3, 3, 4, 3]}>
-            <Amount value={50} color='orange' />
+            <Amount value={50} color='orange' onClick={onClick} />
           </Column>
           <Column start={[4, 5, 7, 7]} width={[3, 3, 4, 3]} dr={0.5}>
-            <Amount value={500} color='green' />
+            <Amount value={500} color='green' onClick={onClick} />
           </Column>
         </Row>
         <Row sx={{ mt: [5, 6, 7, 8] }}>

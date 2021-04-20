@@ -157,7 +157,7 @@ const Header = ({ status, mode, nav, settings }) => {
         </Column>
         <Column
           start={[4, 9]}
-          width={[1, 1]}
+          width={[2, 2]}
           dr={1}
           sx={{
             display: [status ? 'flex' : 'none', 'flex', 'flex', 'flex'],
