@@ -28,7 +28,7 @@ const Row = ({ first = false, children }) => {
         py: [0],
         height: '26px',
         mb: ['8px'],
-        width: ['100%', '650px', '100%'],
+        width: ['100%'],
       }}
     >
       {children}
@@ -58,8 +58,8 @@ const header = {
   letterSpacing: 'body',
   fontSize: [1],
   mt: [2],
-  ml: [2, 0, 0],
-  transform: ['rotate(-90deg)', 'rotate(0deg)', 'rotate(0deg)'],
+  ml: [2, 2, 0],
+  transform: ['rotate(-90deg)', 'rotate(-90deg)', 'rotate(0deg)'],
   transformOrigin: 'left',
 }
 
@@ -83,7 +83,7 @@ const Table = () => {
   const order = ['forests', 'soil', 'biomass', 'dac', 'mineralization', 'ocean']
 
   return (
-    <Box sx={{ maxWidth: '650px' }}>
+    <Box sx={{mt: [6, 6, 6, 7], mb: [4, 4, 4, 5]}}>
       <Box
         sx={{
           mt: [7, 5, 5],
@@ -138,7 +138,7 @@ const Table = () => {
                   color
                 )}
                 <Box sx={{ ml: [1, 0, 0], mt: ['5px', '-3px', '-3px'] }}>
-                  <Box sx={{ display: ['none', 'initial', 'initial'] }}>
+                  <Box sx={{ display: ['none', 'none', 'initial'] }}>
                     <Squares
                       color={color}
                       data={
@@ -151,7 +151,7 @@ const Table = () => {
                   <Box
                     sx={{
                       fontFamily: 'mono',
-                      display: ['initial', 'none', 'none'],
+                      display: ['initial', 'initial', 'none'],
                       color: color,
                     }}
                   >
@@ -160,7 +160,7 @@ const Table = () => {
                   </Box>
                 </Box>
                 <Box sx={{ ml: [1, 0, 0], mt: ['5px', '-3px', '-3px'] }}>
-                  <Box sx={{ display: ['none', 'initial', 'initial'] }}>
+                  <Box sx={{ display: ['none', 'none', 'initial'] }}>
                     <Squares
                       color={color}
                       data={
@@ -173,7 +173,7 @@ const Table = () => {
                   <Box
                     sx={{
                       fontFamily: 'mono',
-                      display: ['initial', 'none', 'none'],
+                      display: ['initial', 'initial', 'none'],
                       color: color,
                     }}
                   >

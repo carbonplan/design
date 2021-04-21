@@ -2,22 +2,23 @@ import Check from './icons/check'
 import Ex from './icons/ex'
 import Squares from './graphics/squares'
 import data from '../data'
-import { Box, Grid, Text, Link } from 'theme-ui'
+import { Box, Grid, Link } from 'theme-ui'
 import { useThemeUI } from 'theme-ui'
 
 const Row = ({ children }) => {
   return (
     <Grid
-      columns={[1, '170px 1fr', '170px 1fr']}
-      gap={[1, '16px', '16px']}
+      columns={[6]}
       sx={{
         borderStyle: 'solid',
         borderWidth: '0px',
         borderTopWidth: '1px',
         borderColor: 'muted',
-        pt: [3],
-        pb: [3],
-        mb: ['2px', 0, 0],
+        rowGap: [0],
+        columnGap: [4, 5, 5, 6],
+        pt: [3, 3, 3, 4],
+        pb: [3, 3, 3, 4],
+        mb: ['2px', '2px', '1px', '1px'],
       }}
     >
       {children}
@@ -29,21 +30,27 @@ const header = {
   textTransform: 'uppercase',
   letterSpacing: 'smallcaps',
   fontFamily: 'heading',
-  fontSize: [2],
+  fontSize: [2, 2, 2, 3],
+  mb: [2, 0, 0, 0],
+  mt: [0, 0, 0, 0],
+  gridColumnStart: [1, 1, 1, 1],
+  gridColumnEnd: [7, 3, 3, 3],
 }
 
 const entry = {
-  fontSize: [2],
+  fontSize: [2, 2, 2, 3],
   fontFamily: 'faux',
   letterSpacing: 'faux',
   mb: [0, 0, '2px'],
+  gridColumnStart: [1, 3, 3, 3],
+  gridColumnEnd: [7, 7, 7, 7],
 }
 
 const Metrics = () => {
   return (
     <Box
       sx={{
-        my: [5],
+        my: [6, 6, 6, 7],
         borderStyle: 'solid',
         borderWidth: '0px',
         borderBottomWidth: '1px',
@@ -51,52 +58,52 @@ const Metrics = () => {
       }}
     >
       <Row>
-        <Text sx={header}>Mechanism</Text>
-        <Text sx={entry}>
+        <Box sx={header}>Mechanism</Box>
+        <Box sx={entry}>
           Does the project directly remove CO₂ from the atmosphere, avoid CO₂
           emissions that would otherwise end up in the atmosphere, or both?
-        </Text>
+        </Box>
       </Row>
       <Row>
-        <Text sx={header}>VOLUME</Text>
-        <Text sx={entry}>
+        <Box sx={header}>VOLUME</Box>
+        <Box sx={entry}>
           How many tons of CO₂ does the project claim to remove or avoid?
-        </Text>
+        </Box>
       </Row>
       <Row>
-        <Text sx={header}>NEGATIVITY</Text>
-        <Text sx={entry}>
+        <Box sx={header}>NEGATIVITY</Box>
+        <Box sx={entry}>
           Based on a life cycle analysis, how emissions-intensive is the
           project's process relative to its carbon removal potential?
-        </Text>
+        </Box>
       </Row>
       <Row>
-        <Text sx={header}>PERMANENCE</Text>
-        <Text sx={entry}>
+        <Box sx={header}>PERMANENCE</Box>
+        <Box sx={entry}>
           How long does the project claim carbon will be safely removed from the
           atmosphere? Is that a question of physical material stability or
           socioeconomic choices?
-        </Text>
+        </Box>
       </Row>
       <Row>
-        <Text sx={header}>COST</Text>
-        <Text sx={entry}>
+        <Box sx={header}>COST</Box>
+        <Box sx={entry}>
           How much does the project want to charge its buyer?
-        </Text>
+        </Box>
       </Row>
       <Row>
-        <Text sx={header}>ADDITIONALITY</Text>
-        <Text sx={entry}>
+        <Box sx={header}>ADDITIONALITY</Box>
+        <Box sx={entry}>
           Would an investment cause new climate benefits or take credit for
           benefits that may already be happening?
-        </Text>
+        </Box>
       </Row>
       <Row>
-        <Text sx={header}>SPECIFICITY</Text>
-        <Text sx={entry}>
+        <Box sx={header}>SPECIFICITY</Box>
+        <Box sx={entry}>
           Is there enough detail in project proposals, publications, or other
           materials to independently validate the rest of our metrics?
-        </Text>
+        </Box>
       </Row>
     </Box>
   )

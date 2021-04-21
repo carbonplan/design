@@ -9,10 +9,11 @@ const Row = ({ children }) => {
         borderWidth: '0px',
         borderTopWidth: '1px',
         borderColor: 'muted',
+        rowGap: [0],
         columnGap: [4, 5, 5, 6],
-        pt: [3],
-        pb: [3],
-        mb: ['2px', 0, 0],
+        pt: [3, 3, 3, 4],
+        pb: [3, 3, 3, 4],
+        mb: ['2px', '2px', '1px', '1px'],
       }}
     >
       {children}
@@ -52,6 +53,7 @@ const sx = {
     letterSpacing: 'smallcaps',
     textTransform: 'uppercase',
     mt: [0],
+    mb: [2, 0, 0, 0],
     fontSize: [2, 2, 2, 3],
     gridColumnStart: [1, 1, 1, 1],
     gridColumnEnd: [7, 4, 4, 4],
@@ -61,6 +63,7 @@ const sx = {
     letterSpacing: 'faux',
     fontSize: [2, 2, 2, 3],
     mb: [0, 0, '2px'],
+    mb: ['1px', '1px', 0],
     gridColumnStart: [1, 4, 4, 4],
     gridColumnEnd: [7, 7, 7, 7],
   },

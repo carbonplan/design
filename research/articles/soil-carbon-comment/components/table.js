@@ -9,10 +9,11 @@ const Row = ({ children }) => {
         borderWidth: '0px',
         borderTopWidth: '1px',
         borderColor: 'muted',
+        rowGap: [0],
         columnGap: [4, 5, 5, 6],
         pt: [3, 3, 3, 4],
         pb: [3, 3, 3, 4],
-        mb: ['2px', 0, 0],
+        mb: ['2px', '2px', '1px', '1px'],
       }}
     >
       {children}
@@ -53,6 +54,7 @@ const header = {
   letterSpacing: 'smallcaps',
   fontFamily: 'heading',
   mt: [0, 0, 0],
+  mb: [2, 0, 0, 0],
   fontSize: [2, 2, 2, 3],
   gridColumnStart: [1, 1, 1, 1],
   gridColumnEnd: [7, 3, 3, 3],
