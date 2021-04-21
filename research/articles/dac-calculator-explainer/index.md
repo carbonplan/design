@@ -6,7 +6,6 @@ import Endnote from '../../components/endnote'
 import Inline from '../../components/inline'
 import Reference from '../../components/reference'
 import SectionBreak from '../../components/section-break'
-import Heading from './components/heading'
 import BoundaryCondition from './components/boundary-condition'
 import ParameterScenario from './components/parameter-scenario'
 import CostSummary from './components/cost-summary'
@@ -119,7 +118,7 @@ export const sidenotes = {
   },
 }
 
-<Heading>The cost of direct air capture</Heading>
+# The cost of direct air capture
 
 Direct air capture (DAC) is a technology that removes carbon dioxide (CO₂) from the air using chemicals. There are several types. Solid sorbent and liquid solvent DAC are in use today. Others are emerging, such as electro-swing, humidity-swing, and mineralization-based.
 

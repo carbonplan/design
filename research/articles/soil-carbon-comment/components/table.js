@@ -3,7 +3,7 @@ import { Text, Box, Grid } from 'theme-ui'
 const Row = ({ children }) => {
   return (
     <Grid
-      columns={[6, 6, 6, 6]}
+      columns={[6]}
       sx={{
         borderStyle: 'solid',
         borderWidth: '0px',
