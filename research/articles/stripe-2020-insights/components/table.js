@@ -83,7 +83,7 @@ const Table = () => {
   const order = ['forests', 'soil', 'biomass', 'dac', 'mineralization', 'ocean']
 
   return (
-    <Box sx={{mt: [6, 6, 6, 7], mb: [4, 4, 4, 5]}}>
+    <Box sx={{ mt: [6, 6, 6, 7], mb: [4, 4, 4, 5] }}>
       <Box
         sx={{
           mt: [7, 5, 5],

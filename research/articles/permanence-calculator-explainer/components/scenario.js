@@ -108,10 +108,10 @@ const Scenario = ({
             </Column>
             {showSparklines && (
               <Column start={[3]} width={[1]}>
-              <Sparkline
-                scales={{ x: [0, 100], y: [0, 100] }}
-                values={temporaryCost}
-              />
+                <Sparkline
+                  scales={{ x: [0, 100], y: [0, 100] }}
+                  values={temporaryCost}
+                />
               </Column>
             )}
           </Row>
@@ -147,10 +147,10 @@ const Scenario = ({
             </Column>
             {showSparklines && (
               <Column start={[3]} width={[1]}>
-              <Sparkline
-                scales={{ x: [0, 100], y: [0, 1000] }}
-                values={permanentCost}
-              />
+                <Sparkline
+                  scales={{ x: [0, 100], y: [0, 1000] }}
+                  values={permanentCost}
+                />
               </Column>
             )}
           </Row>
@@ -158,28 +158,26 @@ const Scenario = ({
       </Row>
       <Row columns={[6]} sx={{ ...sx.group, ...{ pb: [2], pt: [2] } }}>
         <Column start={[1]} width={[3]}>
-        <Box sx={{ ...sx.label, ...{ mt: ['12px'] } }}>
-          Net present value
-        </Box>
+          <Box sx={{ ...sx.label, ...{ mt: ['12px'] } }}>Net present value</Box>
         </Column>
         <Column start={[4]} width={[3]}>
-        <Box sx={{ ...sx.number, ...{ fontSize: [5, 5, 6] } }}>
-          ${netPresentValue.toFixed(0)}
-          {netPresentValueError && (
-            <>
-              <Box
-                sx={{
-                  display: 'inline-block',
-                  mx: [2],
-                }}
-              >
-                ±
-              </Box>
-              {netPresentValueError}
-            </>
-          )}
-          <Box sx={sx.units}>per tCO₂</Box>
-        </Box>
+          <Box sx={{ ...sx.number, ...{ fontSize: [5, 5, 6] } }}>
+            ${netPresentValue.toFixed(0)}
+            {netPresentValueError && (
+              <>
+                <Box
+                  sx={{
+                    display: 'inline-block',
+                    mx: [2],
+                  }}
+                >
+                  ±
+                </Box>
+                {netPresentValueError}
+              </>
+            )}
+            <Box sx={sx.units}>per tCO₂</Box>
+          </Box>
         </Column>
       </Row>
       <Divider sx={{ width: ['100%'] }} />

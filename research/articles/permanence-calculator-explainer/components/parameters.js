@@ -91,7 +91,6 @@ const sx = {
 }
 
 const Parameters = ({}) => {
-  
   return (
     <Box sx={{ my: [6, 6, 6, 7] }}>
       <Top>

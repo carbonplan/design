@@ -137,7 +137,7 @@ const Permanence = () => {
   const height = 250
 
   return (
-    <Box ref={container} sx={{ }}>
+    <Box ref={container} sx={{}}>
       <Vega
         width={width * 0.8 - 58}
         height={height}
