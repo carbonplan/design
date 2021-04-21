@@ -74,7 +74,12 @@ const Numbers = () => {
         </Box>
       </Grid>
       <Grid
-        sx={{ mt: [1, 4, 4], width: '100%', columnGap: [4, 5, 5, 6], rowGap: [1] }}
+        sx={{
+          mt: [1, 4, 4],
+          width: '100%',
+          columnGap: [4, 5, 5, 6],
+          rowGap: [1],
+        }}
         columns={[2, 4, 4]}
       >
         <Box sx={{ ...sx.group }}>

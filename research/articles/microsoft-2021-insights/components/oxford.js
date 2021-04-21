@@ -49,32 +49,54 @@ const data = {
 }
 
 const descriptions = {
-  'Type 1': <Box>Avoided emissions{' '}<Box as='br' sx={{display: ['initial', 'none', 'none', 'none']}} />without storage</Box>,
+  'Type 1': (
+    <Box>
+      Avoided emissions{' '}
+      <Box as='br' sx={{ display: ['initial', 'none', 'none', 'none'] }} />
+      without storage
+    </Box>
+  ),
   'Type 2': (
     <Box>
-      Avoided emissions with<Box as='br' sx={{display: ['initial', 'none', 'none', 'none']}} />{' '}
+      Avoided emissions with
+      <Box as='br' sx={{ display: ['initial', 'none', 'none', 'none'] }} />{' '}
       <Box sx={{ display: 'inline-block', color: 'text' }}>short</Box> storage
     </Box>
   ),
   'Type 3': (
     <Box>
-      Avoided emissions with<Box as='br' sx={{display: ['initial', 'none', 'none', 'none']}} />{' '}
+      Avoided emissions with
+      <Box as='br' sx={{ display: ['initial', 'none', 'none', 'none'] }} />{' '}
       <Box sx={{ display: 'inline-block', color: 'text' }}>long</Box> storage
     </Box>
   ),
   'Type 4': (
     <Box>
-      Carbon removal{' '}<Box as='br' sx={{display: ['none', 'none', 'none', 'initial']}} />{' '}with{' '}<Box as='br' sx={{display: ['initial', 'none', 'none', 'none']}} />{' '}
+      Carbon removal{' '}
+      <Box as='br' sx={{ display: ['none', 'none', 'none', 'initial'] }} /> with{' '}
+      <Box as='br' sx={{ display: ['initial', 'none', 'none', 'none'] }} />{' '}
       <Box sx={{ display: 'inline-block', color: 'text' }}>short</Box> storage
     </Box>
   ),
   'Type 5': (
     <Box>
-      Carbon removal{' '}<Box as='br' sx={{display: ['none', 'initial', 'initial', 'initial']}} />with<Box as='br' sx={{display: ['initial', 'none', 'none', 'none']}} />{' '}
+      Carbon removal{' '}
+      <Box
+        as='br'
+        sx={{ display: ['none', 'initial', 'initial', 'initial'] }}
+      />
+      with
+      <Box as='br' sx={{ display: ['initial', 'none', 'none', 'none'] }} />{' '}
       <Box sx={{ display: 'inline-block', color: 'text' }}>long</Box> storage
     </Box>
   ),
-  'Type 2/4': <Box>Cannot be confirmed{' '}<Box as='br' sx={{display: ['initial', 'none', 'none', 'none']}} />(e.g. IFM projects)</Box>,
+  'Type 2/4': (
+    <Box>
+      Cannot be confirmed{' '}
+      <Box as='br' sx={{ display: ['initial', 'none', 'none', 'none'] }} />
+      (e.g. IFM projects)
+    </Box>
+  ),
 }
 
 const types = ['Type 1', 'Type 2', 'Type 3', 'Type 4', 'Type 5', 'Type 2/4']

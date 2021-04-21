@@ -31,20 +31,18 @@ const sx = {
 const Table = ({ data, columns, start, width }) => {
   return (
     <Box>
-      {
-        data.map((d, i) => {
-          return (
-            <Row columns={columns} key={i} sx={sx.row}>
-              <Column start={start[0]} width={width[0]} sx={sx.index}>
-                {d[0]}
-              </Column>
-              <Column start={start[1]} width={width[1]} sx={sx.entry}>
-                {d[1]}
-              </Column>
-            </Row>
-          )
-        })
-      }
+      {data.map((d, i) => {
+        return (
+          <Row columns={columns} key={i} sx={sx.row}>
+            <Column start={start[0]} width={width[0]} sx={sx.index}>
+              {d[0]}
+            </Column>
+            <Column start={start[1]} width={width[1]} sx={sx.entry}>
+              {d[1]}
+            </Column>
+          </Row>
+        )
+      })}
     </Box>
   )
 }

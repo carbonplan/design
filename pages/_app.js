@@ -3,6 +3,7 @@ import { MDXProvider } from '@mdx-js/react'
 import theme from '../theme'
 import '../globals.css'
 import '../fonts.css'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 export default function App({ Component, pageProps }) {
   return (

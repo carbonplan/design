@@ -1,5 +1,6 @@
 import Article from '../../components/article'
 import Reference from '../../components/reference'
+import Endnote from '../../components/endnote'
 import PullQuote from '../../components/pull-quote'
 import SectionBreak from '../../components/section-break'
 import Cycle from './components/cycle'
@@ -365,7 +366,7 @@ Other sponsor organizations may be interested in supporting technologies that ha
 
 <SectionBreak />
 
-## Credits
+<Endnote label='Credits'>
 
 Danny, Jeremy, and Toly developed the concepts and typology. All authors developed the concept for the graphics (with input from Jonny Black of [Ordinary Things](https://ot.studio)). Jeremy implemented the graphics. All authors contributed to writing the article.
 
@@ -373,12 +374,12 @@ Please cite as:
 
 T Rinberg, D Cullenward, J Hamman, J Freeman (2020) “Carbon removal mechanisms” CarbonPlan <span style={{overflowWrap: 'break-word'}}>https://carbonplan.org/research/carbon-removal-mechanisms</span>
 
-## Terms of engagement
+</Endnote>
+
+<Endnote label='Terms'>
 
 CarbonPlan received no specific financial support for this work.
 
-### Questions? Interested in collaborating on these problems? Email us at [hello@carbonplan.org](mailto:hello@carbonplan.org)
-
-### Want to read more? Go back to our [research](/research)
+</Endnote>
 
 export default ({ children }) => <Article meta={meta}>{children}</Article>

@@ -8,6 +8,8 @@ import {
   Links,
 } from '@carbonplan/components'
 import QuickLook from './quick-look'
+import Closing from './closing'
+import SectionBreak from './section-break'
 import { formatDate } from '../../utils'
 
 const { BackButton } = Buttons
@@ -134,8 +136,14 @@ const Article = ({ children, meta }) => {
               </InternalLink>
             </Column>
           </Box>
-          <Column start={[1, 3]} width={[6, 6, 6, 6]}>
+          <Column
+            start={[1, 3]}
+            width={[6, 6, 6, 6]}
+            sx={{ mb: [8, 8, 9, 10] }}
+          >
             <Box>{children}</Box>
+            <SectionBreak />
+            <Closing />
           </Column>
           <QuickLook color={meta.color} start={9}>
             {meta.summary}

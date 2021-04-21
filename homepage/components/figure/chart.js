@@ -154,28 +154,6 @@ const Chart = ({ data, field, domain, ticks, bandwidth, log = false }) => {
           })}
         </Box>
       </Box>
-      <svg width={'100%'} height={11}>
-        {ticks.map((d, i) => {
-          return (
-            <text
-              key={'tick-' + field + '-' + i}
-              x={xTicks(d) + '%'}
-              y={11}
-              textAnchor={'middle'}
-              fontFamily={theme.fonts.mono}
-              fill={theme.colors.secondary}
-              fontSize={theme.fontSizes[2]}
-              style={{ userSelect: 'none' }}
-            >
-              {d === 1000 && field === 'permanence'
-                ? '1k+'
-                : d === 1000000 && field === 'volume'
-                ? '1M+'
-                : format('~s')(d)}
-            </text>
-          )
-        })}
-      </svg>
     </Box>
   )
 }

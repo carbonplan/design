@@ -9,6 +9,7 @@ import {
   Links,
 } from '@carbonplan/components'
 import Splash from '../homepage/components/splash'
+import Figure from '../homepage/components/figure'
 import { formatDate } from '../utils'
 import { research, highlights, press } from '../homepage/data/recent'
 
@@ -27,7 +28,7 @@ const sx = {
     fontFamily: 'heading',
     letterSpacing: 'smallcaps',
     textTransform: 'uppercase',
-    color: 'secondary'
+    color: 'secondary',
   },
 }
 
@@ -43,7 +44,7 @@ const Index = () => {
         <Splash />
       </Box>
       <Row sx={{ position: 'relative', mt: [1] }}>
-        <Column start={[1, 3, 6, 6]} width={[6, 5, 6, 6]}>
+        <Column start={[1, 4, 6, 6]} width={[6, 5, 6, 6]}>
           <Box
             sx={{
               fontFamily: 'heading',
@@ -56,7 +57,7 @@ const Index = () => {
         </Column>
       </Row>
       <Row sx={{ position: 'relative', mt: [4, 4, 4, 5] }}>
-        <Column start={[1, 3, 6, 6]} width={[5, 4, 4, 4]}>
+        <Column start={[1, 4, 6, 6]} width={[5, 4, 4, 4]}>
           <Box
             sx={{ fontSize: [3, 3, 3, 4], lineHeight: 'h3', mb: [2, 3, 0, 0] }}
           >
@@ -66,7 +67,7 @@ const Index = () => {
         </Column>
       </Row>
       <Row sx={{ mt: [4, 4, 4, 5] }}>
-        <Column start={[2, 3, 6, 6]} width={[4, 6, 6, 6]}>
+        <Column start={[1, 4, 6, 6]} width={[4, 5, 6, 6]}>
           <InternalNav href={'/about'}>About</InternalNav>
           <InternalNav href={'/research'}>Research</InternalNav>
           <InternalNav href={'/team'}>Team</InternalNav>
@@ -81,114 +82,54 @@ const Index = () => {
           start={[1, 2]}
           width={[6, 8, 10, 10]}
           sx={{
-            pt: [4, 5, 6, 7],
+            pt: [5, 6, 7, 8],
             ...sx.borderTop,
           }}
-        >
+        />
+      </Row>
+      <Row>
+        <Column start={[1, 2, 4, 4]} width={[6, 7]}>
           <Box
-            as='h2'
-            variant='styles.h2'
-            sx={{ mt: [2, 2, 2, 2], mb: [4, 4, 5, 6] }}
+            sx={{
+              ...sx.highlight,
+            }}
           >
             Recent research
           </Box>
+          <WrappedLink
+            href={'/research/cdr-database'}
+            sx={{
+              textDecoration: 'none',
+              display: 'block',
+              width: 'fit-content',
+            }}
+          >
+            <ArrowButton label='CDR Database' size='lg' fill='purple' />
+          </WrappedLink>
         </Column>
       </Row>
-      <Row sx={{ mb: [4, 5, 6, 7] }}>
-        <Column start={[1, 1, 2, 2]} width={[6, 4, 5, 5]}>
-          <Image
-            src='/CDR-Database.png'
-            sx={{ width: '100%', height: ['125px', '225px', '225px', '280px'] }}
-          />
-        </Column>
-        <Column start={[1, 5, 8, 8]} width={[5, 4]} sx={{}}>
-          <Box sx={{ width: '100%' }}>
-            <Box
-              sx={{
-                color: 'secondary',
-                fontFamily: 'mono',
-                letterSpacing: '0.05em',
-                fontSize: [1, 1, 1, 2],
-                userSelect: 'none',
-                textTransform: 'uppercase',
-                display: ['none', 'block', 'block', 'block'],
-              }}
-            >
-              {formatDate(research.date)}{' '}
-            </Box>
-            <Box
-              sx={{
-                mb: [4, 3, 3, 4],
-                ml: ['-1px'],
-                lineHeight: 'heading',
-                fontFamily: ['body', 'heading', 'heading', 'heading'],
-                fontSize: [4, 5, 5, 6],
-                mt: [4, 3, 3, 4],
-                color: research.color,
-              }}
-            >
-              {research.title}
-            </Box>
-            <Box
-              sx={{
-                color: 'secondary',
-                fontFamily: 'mono',
-                letterSpacing: '0.05em',
-                fontSize: [1, 1, 1, 2],
-                userSelect: 'none',
-                textTransform: 'uppercase',
-                display: ['block', 'none', 'none', 'none'],
-              }}
-            >
-              {formatDate(research.date)}{' '}
-            </Box>
-            <Box
-              sx={{
-                mt: [2],
-                mb: [1],
-                fontSize: [2, 2, 2, 3],
-                lineHeight: 1.35,
-              }}
-            >
-              {research.summary}
-              <Box
-                sx={{
-                  mt: ['12px'],
-                  fontSize: [2, 2, 2, 3],
-                  userSelect: 'none',
-                }}
-              >
-                <Box sx={{ mb: [-1] }}>
-                  {research.links.map((d, i) => {
-                    return (
-                      <WrappedLink
-                        key={i}
-                        href={d.href}
-                        sx={{
-                          display: 'inline-block',
-                          textDecoration: 'none',
-                          mr: [4, 4, 4, 5],
-                        }}
-                      >
-                        <ArrowButton
-                          key={i}
-                          label={d.label}
-                          color={'secondary'}
-                          fill={'secondary'}
-                          sx={{
-                            mb: ['6px'],
-                            mt: ['5px'],
-                          }}
-                        />
-                      </WrappedLink>
-                    )
-                  })}
-                </Box>
-              </Box>
-            </Box>
+      <Row sx={{ mt: [3] }}>
+        <Column start={[2]} width={[2]}>
+          <Box
+            sx={{
+              color: 'secondary',
+              fontFamily: 'mono',
+              letterSpacing: '0.05em',
+              fontSize: [1, 1, 1, 2],
+              mt: ['2px'],
+              userSelect: 'none',
+              textTransform: 'uppercase',
+              display: ['none', 'none', 'block', 'block'],
+            }}
+          >
+            {formatDate(research.date)}{' '}
           </Box>
         </Column>
+        <Column start={[1, 2, 4, 4]} width={[5]}>
+          <Box sx={{ fontSize: [2, 2, 2, 3] }}>{research.summary}</Box>
+        </Column>
       </Row>
+      <Figure />
       <Row sx={{ mt: [5, 6, 7, 8], mb: [8, 8, 9, 10], pb: [1] }}>
         <Column
           start={[1, 1, 2, 2]}
@@ -196,7 +137,7 @@ const Index = () => {
           sx={{ pt: [5, 6, 7, 8], ...sx.borderTop }}
         >
           <Row columns={[6, 8, 10, 10]}>
-            <Column start={[1, 3, 1, 1]} width={[5, 6, 3, 3]}>
+            <Column start={[1, 2, 1, 1]} width={[5, 4, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
@@ -226,7 +167,7 @@ const Index = () => {
                 </Box>
               </Box>
             </Column>
-            <Column start={[2, 3, 5, 5]} width={[5, 3, 3, 3]}>
+            <Column start={[2, 2, 5, 5]} width={[5, 3, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
@@ -252,7 +193,7 @@ const Index = () => {
                 ))}
               </Box>
             </Column>
-            <Column start={[1, 6, 8, 8]} width={[5, 3, 3, 3]}>
+            <Column start={[1, 5, 8, 8]} width={[5, 3, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
