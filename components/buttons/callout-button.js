@@ -11,9 +11,11 @@ const CalloutButton = ({ label, children, sx, ...props }) => {
         lineHeight: '1.2em',
         width: 'fit-content',
         mb: [1],
-        '&:hover > #container > #arrow': {
-          transform: 'rotate(45deg)',
-          fill: 'secondary',
+        '@media (hover: hover) and (pointer: fine)': {
+          '&:hover > #container > #arrow': {
+            transform: 'rotate(45deg)',
+            fill: 'secondary',
+          },
         },
         ...sx,
       }}

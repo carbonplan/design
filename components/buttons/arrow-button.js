@@ -91,16 +91,18 @@ const ArrowButton = ({
         width: 'fit-content',
         transition: 'color 0.15s',
         color: color,
-        '&:hover': {
-          color: color === 'secondary' ? 'primary' : 'secondary',
-        },
-        '&:hover > #span-1 > #container > #arrow': {
-          transform: 'rotate(45deg)',
-          fill: color === 'secondary' ? 'primary' : 'secondary',
-        },
-        '&:hover > #span-1 > #span-2 > #container > #arrow': {
-          transform: 'rotate(45deg)',
-          fill: color === 'secondary' ? 'primary' : 'secondary',
+        '@media (hover: hover) and (pointer: fine)': {
+          '&:hover': {
+            color: color === 'secondary' ? 'primary' : 'secondary',
+          },
+          '&:hover > #span-1 > #container > #arrow': {
+            transform: 'rotate(45deg)',
+            fill: color === 'secondary' ? 'primary' : 'secondary',
+          },
+          '&:hover > #span-1 > #span-2 > #container > #arrow': {
+            transform: 'rotate(45deg)',
+            fill: color === 'secondary' ? 'primary' : 'secondary',
+          },
         },
         ...sx,
       }}

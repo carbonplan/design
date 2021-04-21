@@ -74,6 +74,7 @@ const Press = () => {
     <Layout
       links={'homepage'}
       title={'press / carbonplan'}
+      dimmer={'bottom'}
       settings={{ value: expanded, onClick: () => setExpanded(!expanded) }}
     >
       <Guide />
@@ -85,7 +86,11 @@ const Press = () => {
         Press
       </Heading>
       <Tray expanded={expanded}>
-        <FilterContents />
+        <Row columns={[6]}>
+          <Column start={[1]} width={[6, 4, 4, 4]}>
+            <FilterContents />
+          </Column>
+        </Row>
       </Tray>
       <Row sx={{ mb: [8, 8, 9, 10] }}>
         <Column

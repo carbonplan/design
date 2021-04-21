@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import { Tag } from '@carbonplan/components'
+import Tag from './tag'
 
 const sx = {
   label: {

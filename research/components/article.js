@@ -120,7 +120,7 @@ const Article = ({ children, meta }) => {
         sx={{
           px: [0, 0, 0],
           pt: [0, 0, meta.background ? '275px' : '100px'],
-          mb: [3, 5, 7, 8],
+          mb: [8, 8, 9, 10],
         }}
       >
         <Row>
@@ -136,11 +136,7 @@ const Article = ({ children, meta }) => {
               </InternalLink>
             </Column>
           </Box>
-          <Column
-            start={[1, 3]}
-            width={[6, 6, 6, 6]}
-            sx={{ mb: [8, 8, 9, 10] }}
-          >
+          <Column start={[1, 3]} width={[6, 6, 6, 6]}>
             <Box>{children}</Box>
             <SectionBreak />
             <Closing />
