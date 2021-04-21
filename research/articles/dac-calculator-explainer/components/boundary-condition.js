@@ -1,4 +1,5 @@
 import { useThemeUI, Box, Divider, Text } from 'theme-ui'
+import { Row, Column } from '@carbonplan/components'
 
 const BoundaryCondition = () => {
   const context = useThemeUI()
@@ -7,9 +8,11 @@ const BoundaryCondition = () => {
   const { faux, heading } = context.theme.fonts
 
   return (
-    <Box sx={{ width: '100%', mt: [5], mb: [3] }}>
-      <Box sx={{ mb: [2, 2, 4], maxWidth: '550px', userSelect: 'none' }}>
-        <svg viewBox='0 0 831.7 629.4'>
+    <Box sx={{ width: '100%', mt: [6, 6, 6, 7], mb: [4, 4, 4, 5] }}>
+     <Row columns={[6]}>
+        <Column start={[1]} width={[6, 5, 5, 5]}>
+      <Box sx={{ mb: [2, 2, 4], userSelect: 'none' }}>
+        <svg viewBox='0 0 828.7 629.4'>
           <style type='text/css'>
             {`
             .st0{fill:${purple};stroke:${purple};stroke-miterlimit:10;}
@@ -292,6 +295,8 @@ const BoundaryCondition = () => {
           <line className='st1' x1='421.3' y1='83.9' x2='646' y2='83.9' />
         </svg>
       </Box>
+      </Column>
+      </Row>
     </Box>
   )
 }
