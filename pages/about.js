@@ -37,7 +37,7 @@ const About = () => {
                 flexWrap: 'wrap',
               }}
             >
-              <Box sx={{ width: '100%', mt: [0, 0, '-7px', '-13px'] }}>
+              <Box sx={{ width: '100%', mt: [0, 0, '-2px', '-4px'] }}>
                 <WelcomeArrow />
               </Box>
               <Box
@@ -373,10 +373,10 @@ function WelcomeArrow() {
   return (
     <Grid
       columns={[
+        '30px 1fr 30px',
+        '30px 1fr 30px',
+        '30px 1fr 30px',
         '40px 1fr 40px',
-        '40px 1fr 40px',
-        '40px 1fr 40px',
-        '60px 1fr 60px',
       ]}
       gap={[0]}
     >
@@ -385,8 +385,8 @@ function WelcomeArrow() {
           stroke: 'primary',
           display: 'inline-block',
           fill: 'none',
-          width: ['40px', '40px', '40px', '60px'],
-          height: ['40px', '40px', '40px', '60px'],
+          width: ['30px', '30px', '30px', '40px'],
+          height: ['30px', '30px', '30px', '40px'],
           strokeWidth: 1,
         }}
       >
@@ -400,10 +400,10 @@ function WelcomeArrow() {
           display: 'inline-block',
           fill: 'none',
           width: [
+            'calc(100% + 30px)',
             'calc(100% + 42px)',
+            'calc(100% + 32px)',
             'calc(100% + 42px)',
-            'calc(100% + 42px)',
-            'calc(100% + 62px)',
           ],
           ml: '-3px',
         }}
@@ -413,7 +413,7 @@ function WelcomeArrow() {
           x='0px'
           y='0px'
           width='100%'
-          sx={{ height: ['40px', '40px', '40px', '60px'] }}
+          sx={{ height: ['30px', '30px', '30px', '40px'] }}
         >
           <line x1='0' x2='100%' y1='50%' y2='50%' />
         </Box>
@@ -424,8 +424,8 @@ function WelcomeArrow() {
           float: 'right',
           stroke: 'primary',
           fill: 'none',
-          width: ['40px', '40px', '40px', '60px'],
-          height: ['40px', '40px', '40px', '60px'],
+          width: ['30px', '30px', '30px', '40px'],
+          height: ['30px', '30px', '30px', '40px'],
           strokeWidth: 1,
         }}
       >

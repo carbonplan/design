@@ -36,6 +36,10 @@ const unrestricted = [
     description: 'Individual',
   },
   {
+    name: 'Jacob Trefethen',
+    description: 'Individual',
+  },
+  {
     name: 'Incite labs',
     description: 'Corporate',
   },
@@ -90,7 +94,7 @@ const projectSpecific = [
   },
   {
     name: 'Microsoft AI for Earth',
-    description: 'Forest carbon risk mapping (coming soon)',
+    description: <Link href='/research/forest-risks'>Forest carbon risk mapping</Link>,
   },
 ]
 
