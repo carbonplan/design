@@ -15,7 +15,7 @@ import ScatterPlot from './scatter-plot'
 const height = ['75px', '125px', '75px', '110px']
 
 const delay = (i) => {
-  return i * 1000
+  return (i - 1) * 1000
 }
 
 const SplashRowDesktop = ({ components }) => {
