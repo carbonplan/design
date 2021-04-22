@@ -9,7 +9,7 @@ const Closing = ({ children }) => {
     <Row columns={[6]} sx={{ mt: [6, 6, 7, 8] }}>
       <Column start={[1]} width={[3, 3, 3, 3]}>
         <Link
-          href='https://github.com/carbonplan'
+          href='mailto:hello@carbonplan.org'
           sx={{ textDecoration: 'none' }}
         >
           <CalloutButton label={'email us'}>
@@ -18,14 +18,11 @@ const Closing = ({ children }) => {
         </Link>
       </Column>
       <Column start={[4, 5, 5, 5]} width={[3, 2, 2, 2]}>
-        <Link
-          href='https://github.com/carbonplan'
-          sx={{ textDecoration: 'none' }}
-        >
+        <InternalLink href='/research' sx={{ textDecoration: 'none' }}>
           <CalloutButton label={'research'}>
             Want to read more examples of our work?
           </CalloutButton>
-        </Link>
+        </InternalLink>
       </Column>
     </Row>
   )

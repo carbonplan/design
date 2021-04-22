@@ -78,6 +78,9 @@ const Donate = () => {
 
   const onClick = async (event, price) => {
     setStatus('processing')
+    setTimeout(() => {
+      setStatus(null)
+    }, 500)
     const stripe = await stripePromise
     try {
       const { error } = await stripe.redirectToCheckout({
@@ -91,9 +94,6 @@ const Donate = () => {
         successUrl: 'https://redesign.carbonplan.org/thanks',
         cancelUrl: 'https://redesign.carbonplan.org/donate',
       })
-      setTimeout(() => {
-        setStatus(null)
-      }, 500)
     } catch (err) {
       setStatus('error')
       setTimeout(() => {
@@ -123,7 +123,7 @@ const Donate = () => {
             >
               Thank you so much for considering supporting our work. Your
               donation will help us make progress on our mission, with complete
-              commitment and responsibility to the public's interest in a safe
+              commitment and responsibility to the public’s interest in a safe
               and stable climate. Our team will do our best to do right by your
               generosity.
             </Box>

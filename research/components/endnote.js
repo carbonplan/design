@@ -11,7 +11,7 @@ const Endnote = ({ label, children }) => {
       </Row>
       <Row columns={[6]}>
         <Column start={[2]} width={[5]}>
-          <Themed.p>{children}</Themed.p>
+          <Themed.p as='span'>{children}</Themed.p>
         </Column>
       </Row>
     </>

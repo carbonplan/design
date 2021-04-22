@@ -12,6 +12,7 @@ import Splash from '../homepage/components/splash'
 import Figure from '../homepage/components/figure'
 import { formatDate } from '../utils'
 import { research, highlights, press } from '../homepage/data/recent'
+import { keyframes } from '@emotion/react'
 
 const { ArrowButton } = Buttons
 const { WrappedLink } = Links
@@ -44,6 +45,16 @@ const Index = () => {
         <Splash />
       </Box>
       <Row sx={{ position: 'relative', mt: [1] }}>
+        <Column
+          start={[3]}
+          width={[1]}
+          sx={{
+            height: '100%',
+            display: ['none', 'initial', 'initial', 'initial'],
+          }}
+        >
+          <VerticalArrow />
+        </Column>
         <Column start={[1, 4, 6, 6]} width={[6, 5, 6, 6]}>
           <Box
             sx={{
@@ -54,27 +65,34 @@ const Index = () => {
           >
             Data and science for climate action
           </Box>
-        </Column>
-      </Row>
-      <Row sx={{ position: 'relative', mt: [4, 4, 4, 5] }}>
-        <Column start={[1, 4, 6, 6]} width={[5, 4, 4, 4]}>
-          <Box
-            sx={{ fontSize: [3, 3, 3, 4], lineHeight: 'h3', mb: [2, 3, 0, 0] }}
-          >
-            Improving the transparency and scientific integrity of carbon
-            removal and climate solutions through open data and tools
+          <Row columns={[6, 5, 6, 6]}>
+            <Column start={[1]} width={[5, 4, 4, 4]}>
+              <Box
+                sx={{
+                  fontSize: [3, 3, 3, 4],
+                  lineHeight: 'h3',
+                  mb: [2, 3, 0, 0],
+                  mt: [4, 4, 4, 5],
+                }}
+              >
+                Improving the transparency and scientific integrity of carbon
+                removal and climate solutions through open data and tools
+              </Box>
+            </Column>
+          </Row>
+          <Box sx={{ mt: [4, 4, 4, 5] }}>
+            <Row columns={[6, 5, 6, 6]}>
+              <Column start={[1]} width={[4, 4, 4, 4]}>
+                <InternalNav href={'/about'}>About</InternalNav>
+                <InternalNav href={'/research'}>Research</InternalNav>
+                <InternalNav href={'/team'}>Team</InternalNav>
+                <InternalNav href={'/faq'}>FAQ</InternalNav>
+                <InternalNav href={'/donate'} final>
+                  Donate
+                </InternalNav>
+              </Column>
+            </Row>
           </Box>
-        </Column>
-      </Row>
-      <Row sx={{ mt: [4, 4, 4, 5] }}>
-        <Column start={[1, 4, 6, 6]} width={[4, 5, 6, 6]}>
-          <InternalNav href={'/about'}>About</InternalNav>
-          <InternalNav href={'/research'}>Research</InternalNav>
-          <InternalNav href={'/team'}>Team</InternalNav>
-          <InternalNav href={'/faq'}>FAQ</InternalNav>
-          <InternalNav href={'/donate'} final>
-            Donate
-          </InternalNav>
         </Column>
       </Row>
       <Row sx={{ mt: [5, 7, 8, 9] }}>
@@ -137,7 +155,7 @@ const Index = () => {
           sx={{ pt: [5, 6, 7, 8], ...sx.borderTop }}
         >
           <Row columns={[6, 8, 10, 10]}>
-            <Column start={[1, 2, 1, 1]} width={[5, 4, 3, 3]}>
+            <Column start={[2, 2, 1, 1]} width={[5, 4, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
@@ -193,7 +211,7 @@ const Index = () => {
                 ))}
               </Box>
             </Column>
-            <Column start={[1, 5, 8, 8]} width={[5, 3, 3, 3]}>
+            <Column start={[2, 5, 8, 8]} width={[5, 3, 3, 3]}>
               <Box sx={{ fontSize: [3, 3, 3, 4] }}>
                 <Box
                   sx={{
@@ -255,6 +273,82 @@ function InternalNav({ children, href, final = false }) {
         {children}
       </Link>
     </NextLink>
+  )
+}
+
+const animate = keyframes({
+  '0%': {
+    transform: 'translateY(0px)',
+  },
+  '10%': {
+    transform: 'translateY(10px)',
+  },
+  '20%': {
+    transform: 'translateY(0px)',
+  },
+  '100%': {
+    transform: 'translateY(0px)',
+  },
+})
+
+function VerticalArrow() {
+  return (
+    <Box
+      sx={{
+        justifyContent: 'center',
+        alignContent: 'flex-end',
+        display: 'flex',
+        height: '100%',
+        mt: ['-10px'],
+      }}
+    >
+      <Box
+        sx={{
+          display: 'block',
+          alignSelf: 'flex-end',
+          transform: 'translateY(0px)',
+          animationDuration: '4000ms',
+          animationPlayState: 'running',
+          animationDelay: '1000ms',
+          animationName: animate.toString(),
+          animationIterationCount: 'infinite',
+        }}
+      >
+        <Box
+          sx={{
+            width: '100%',
+            height: '110px',
+            fill: 'none',
+            stroke: 'primary',
+          }}
+        >
+          <svg x='0px' y='0px' width='20px' height='100%'>
+            <circle vectorEffect='non-scaling-stroke' cx='10' cy='10' r='9' />
+            <line
+              vectorEffect='non-scaling-stroke'
+              x1='50%'
+              x2='50%'
+              y1='20'
+              y2='110'
+            />
+            <line
+              vectorEffect='non-scaling-stroke'
+              x1='0'
+              x2='10'
+              y1='100'
+              y2='110'
+            />
+            <line
+              vectorEffect='non-scaling-stroke'
+              x1='20'
+              x2='10'
+              y1='100'
+              y2='110'
+            />
+          </svg>
+        </Box>
+      </Box>
+    </Box>
   )
 }
 

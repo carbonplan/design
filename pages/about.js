@@ -60,7 +60,7 @@ const About = () => {
                 We need critical reductions in emissions. We also need
                 large-scale deployment of carbon removal. Our solutions need to
                 respect science and support just outcomes. And we no longer have
-                time for approaches that don't work.
+                time for approaches that don’t work.
               </Box>
               <Box as='p' variant='styles.p' sx={{ mb: [0] }}>
                 We work collaboratively to build open tools and resources for

@@ -1,3 +1,4 @@
+import { Box } from 'theme-ui'
 import { Links } from '@carbonplan/components'
 import Article from '../../components/article'
 import Reference from '../../components/reference'
@@ -23,7 +24,7 @@ export const meta = {
 
 export const sidenotes = {
   1: {
-    offset: -170,
+    offset: -240,
     number: 1,
     authors: 'J. Sanderman & J. A. Baldock',
     year: 2010,
@@ -33,7 +34,7 @@ export const sidenotes = {
     url: 'https://doi.org/10.1088/1748-9326/5/3/034003',
   },
   2: {
-    offset: -50,
+    offset: -100,
     number: 2,
     authors: 'C. Poeplau & A. Don',
     year: 2014,
@@ -43,7 +44,7 @@ export const sidenotes = {
     url: 'https://doi.org/10.1016/j.agee.2014.10.024',
   },
   3: {
-    offset: 50,
+    offset: 25,
     number: 3,
     authors: 'M. F. Cotrufo et al.',
     year: 2018,
@@ -54,7 +55,7 @@ export const sidenotes = {
   },
   4: {
     number: 4,
-    offset: 80,
+    offset: 70,
     authors: 'K. Paustian et al.',
     year: 2017,
     title:
@@ -64,7 +65,7 @@ export const sidenotes = {
   },
   5: {
     number: 5,
-    offset: 180,
+    offset: 190,
     authors: 'E. E. Campbell & K. Paustian',
     year: 2015,
     title:
@@ -83,7 +84,7 @@ export const sidenotes = {
     url: 'https://doi.org/10.1007/s11104-010-0567-z',
   },
   7: {
-    offset: 250,
+    offset: 265,
     number: 7,
     authors: 'A. Orgiazzi et al.',
     year: 2017,
@@ -93,7 +94,7 @@ export const sidenotes = {
     url: 'https://doi.org/10.1111/ejss.12499',
   },
   8: {
-    offset: 330,
+    offset: 340,
     number: 8,
     authors: 'P. Smith et al.',
     year: 2019,
@@ -181,15 +182,24 @@ Meanwhile, any efforts built around carbon offset credits should be transparent,
 
 <SectionBreak />
 
-## Updates
+<Endnote label='Updates'>
 
-### 08-25-2020
+<Box sx={{
+  color: 'secondary',
+  fontFamily: 'mono',
+  letterSpacing: 'mono',
+  fontSize: [2, 2, 2, 3]
+}}>
+AUG 25 2020
+</Box>
 
 After reviewing an updated version of the draft protocol, we submitted a second <Links.TaggedLink action='PDF' category='downloads' href='https://carbonplan-assets.s3.amazonaws.com/docs/Soil-Carbon-Comment-Letter-08-25-2020.pdf'>comment letter</Links.TaggedLink> on remaining concerns and additional issues.
 
+</Endnote>
+
 <SectionBreak />
 
-<Endnote label='credits'>
+<Endnote label='Credits'>
 
 Danny led the effort to write the comment letters and drafted the first version of this article. All authors contributed to writing the comment letters and the article. Collaborators Jane Zelikova and Grayson Badgley contributed to the comment letters, but were not involved in writing this article.
 
@@ -199,7 +209,7 @@ D Cullenward, J Hamman, J Freeman (2020) “Getting soil carbon right” CarbonP
 
 </Endnote>
 
-<Endnote label='terms'>
+<Endnote label='Terms'>
 
 CarbonPlan received no financial support for this work and has no financial conflicts of interest with the Climate Action Reserve or Indigo Ag.
 

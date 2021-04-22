@@ -58,8 +58,8 @@ const header = {
   letterSpacing: 'body',
   fontSize: [1],
   mt: [2],
-  ml: [2, 2, 0],
-  transform: ['rotate(-90deg)', 'rotate(-90deg)', 'rotate(0deg)'],
+  ml: [2, 2, 2],
+  transform: ['rotate(-45deg)', 'rotate(-45deg)', 'rotate(-45deg)'],
   transformOrigin: 'left',
 }
 
@@ -83,7 +83,7 @@ const Table = () => {
   const order = ['forests', 'soil', 'biomass', 'dac', 'mineralization', 'ocean']
 
   return (
-    <Box sx={{ mt: [6, 6, 6, 7], mb: [4, 4, 4, 5] }}>
+    <Box sx={{ mt: [8, 8, 8, '112px'], mb: [4, 4, 4, 5] }}>
       <Box
         sx={{
           mt: [7, 5, 5],
@@ -115,7 +115,7 @@ const Table = () => {
           })
           .map((project) => {
             const color = theme.colors[tags[project.tags[0]]]
-            const url = '/reports/?id=' + project.id + '&expand=true'
+            const url = '/research/cdr-database/project?id=' + project.id
             return (
               <Row key={project.id}>
                 {icons(
@@ -137,8 +137,8 @@ const Table = () => {
                     .rating,
                   color
                 )}
-                <Box sx={{ ml: [1, 0, 0], mt: ['5px', '-3px', '-3px'] }}>
-                  <Box sx={{ display: ['none', 'none', 'initial'] }}>
+                <Box sx={{ ml: [1, 0, 0], mt: ['-3px', '-3px', '-3px'] }}>
+                  <Box sx={{ display: ['initial', 'initial', 'initial'] }}>
                     <Squares
                       color={color}
                       data={
@@ -151,7 +151,7 @@ const Table = () => {
                   <Box
                     sx={{
                       fontFamily: 'mono',
-                      display: ['initial', 'initial', 'none'],
+                      display: ['none', 'none', 'none'],
                       color: color,
                     }}
                   >
@@ -159,8 +159,8 @@ const Table = () => {
                       .value + 1}
                   </Box>
                 </Box>
-                <Box sx={{ ml: [1, 0, 0], mt: ['5px', '-3px', '-3px'] }}>
-                  <Box sx={{ display: ['none', 'none', 'initial'] }}>
+                <Box sx={{ ml: [1, 0, 0], mt: ['-3px', '-3px', '-3px'] }}>
+                  <Box sx={{ display: ['initial', 'initial', 'initial'] }}>
                     <Squares
                       color={color}
                       data={
@@ -173,7 +173,7 @@ const Table = () => {
                   <Box
                     sx={{
                       fontFamily: 'mono',
-                      display: ['initial', 'initial', 'none'],
+                      display: ['none', 'none', 'none'],
                       color: color,
                     }}
                   >
@@ -181,11 +181,11 @@ const Table = () => {
                       .value + 1}
                   </Box>
                 </Box>
-                <Box sx={{ position: 'relative', top: '3px' }}>
+                <Box sx={{ position: 'relative', top: '5px' }}>
                   <Link
                     href={url}
-                    variant='arrow'
                     sx={{
+                      textDecoration: 'none',
                       color: 'secondary',
                       transition: '0.25s',
                       '&:hover': {

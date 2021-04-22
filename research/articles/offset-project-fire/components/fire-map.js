@@ -1,4 +1,4 @@
-import { Box, Text, Grid, Button, Slider, Divider } from 'theme-ui'
+import { useThemeUI, Box, Text, Grid, Button, Slider, Divider } from 'theme-ui'
 import { useState, useEffect, useRef } from 'react'
 import mapboxgl from 'mapbox-gl'
 import style from './style'
@@ -11,6 +11,10 @@ const FireMap = () => {
   const [time, setTime] = useState(36)
   const [centerZoomIn, setCenterZoomIn] = useState([])
   const [centerZoomOut, setCenterZoomOut] = useState([])
+
+  const {
+    theme: { rawColors: colors },
+  } = useThemeUI()
 
   const zoomOut = () => {
     map.flyTo({
@@ -110,7 +114,6 @@ const FireMap = () => {
             fontFamily: 'faux',
             letterSpacing: 'faux',
             color: 'primary',
-            display: ['none', 'none', 'inherit'],
           }}
         >
           DAY {dates[time]}
@@ -120,7 +123,7 @@ const FireMap = () => {
       <Grid
         gap={['0px']}
         columns={[
-          '60px 30px 40px',
+          '50px 1fr 60px 30px 40px',
           '50px 1fr 60px 30px 40px',
           '50px 1fr 60px 30px 40px',
         ]}
@@ -132,7 +135,6 @@ const FireMap = () => {
             fontSize: [2, 2, 2, 3],
             fontFamily: 'heading',
             letterSpacing: 'smallcaps',
-            display: ['none', 'inherit', 'inherit'],
           }}
         >
           TIME
@@ -143,14 +145,32 @@ const FireMap = () => {
           min='0'
           max='36'
           sx={{
-            display: ['none', 'inherit', 'inherit'],
-            width: 'calc(100% - 75px)',
+            width: [
+              'calc(84%)',
+              'calc(84%)',
+              'calc(100% - 75px)',
+              'calc(100% - 75px)',
+            ],
             ml: [1],
             mt: ['18px'],
             bg: 'secondary',
             color: 'red',
             '&:focus': {
               color: 'red',
+            },
+            '&::-webkit-slider-thumb': {
+              height: [18, 18, 16],
+              width: [18, 18, 16],
+              transition: '0.15s',
+            },
+            ':focus-visible': {
+              outline: 'none !important',
+              background: `${colors.secondary} !important`,
+            },
+            ':focus': {
+              '&::-webkit-slider-thumb': {
+                boxShadow: `0 0 0 4px ${colors.secondary}`,
+              },
             },
           }}
         />

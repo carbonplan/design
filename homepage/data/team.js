@@ -75,7 +75,7 @@ const collaborators = [
   },
   {
     name: 'Anna Trugman',
-    description: 'UC Ssanta Barbara',
+    description: 'UC Santa Barbara',
   },
   {
     name: 'Barbara Haya',

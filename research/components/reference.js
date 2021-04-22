@@ -36,11 +36,7 @@ const Reference = ({ color, data }) => {
           pr: [1],
           fontSize: ['17px'],
           cursor: 'pointer',
-          color: [
-            selectedMobile ? color : 'text',
-            selectedMobile ? color : 'text',
-            selected ? color : 'text',
-          ],
+          color: [color, color, selected ? color : 'text'],
           transition: 'color 0.2s ease-in-out',
         }}
       >
@@ -56,6 +52,7 @@ const Reference = ({ color, data }) => {
             position: ['initial', 'initial', 'relative'],
             mt: [3, 3, '-250px'],
             mb: [3, 3, 0],
+            ml: ['calc(100vw / 6 - 2px)', 'calc(100vw / 8 - 2px)', 0, 0],
             top: ['0px', '0px', `${250 + data.offset}px`],
             left: [
               '0px',
@@ -64,8 +61,8 @@ const Reference = ({ color, data }) => {
               'min(calc(7 * 100vw / 12 - 32px), 1085px)',
             ],
             width: [
-              '100%',
-              '100%',
+              'calc(5 * 100vw / 6 - 30px)',
+              'calc(5 * 100vw / 8 - 42px)',
               'calc(2 * 100vw / 12 - 18px)',
               'min(calc(2 * 100vw / 12 - 52px), 272px)',
             ],

@@ -71,7 +71,8 @@ const Scenario = ({
           sx={{
             stroke: 'pink',
             fill: 'none',
-            strokeWidth: 2,
+            strokeWidth: '2px',
+            vectorEffect: 'non-scaling-stroke',
           }}
           d={path(points)}
         ></path>

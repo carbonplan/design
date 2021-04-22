@@ -206,6 +206,7 @@ To model higher cost NGCC, we use parameters from a DAC facility described in a 
   naturalGas={41.576}
   capitalRecovery={340.47}
 />
+
 <FigureCaption number={3}>
   Summary for a higher cost NGCC scenario.
 </FigureCaption>
