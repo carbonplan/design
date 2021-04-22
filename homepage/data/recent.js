@@ -2,7 +2,7 @@ const research = {
   date: '03-03-2021',
   title: 'Database of carbon dioxide removal projects',
   summary:
-    'We analyzed project proposals submitted for Microsoft’s 2021 Carbon Removal Purchase. Explore our updated database of project reports or read the article for our takeaways and lessons learned.',
+    'We have analyzed project proposals submitted to multiple carbon removal procurement programs. Explore our database of project reports and read our articles for takeaways and lessons learned..',
   color: 'text',
   links: [
     {

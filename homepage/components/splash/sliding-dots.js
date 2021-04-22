@@ -52,6 +52,7 @@ const CircleLine = ({ start, end, delay, i, playState }) => {
           strokeWidth: '1px',
           vectorEffect: 'non-scaling-stroke',
           stroke: playState ? 'pink' : 'secondary',
+          strokeLinecap: 'round',
         }}
       />
     </g>

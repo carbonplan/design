@@ -76,11 +76,12 @@ const ScatterPlot = ({ height, delay = 0 }) => {
         x1='0.5%'
         x2='0.5%'
         y1='0%'
-        y2='100%'
+        y2='99%'
         sx={{
           transition: 'stroke 0.5s ease-out',
           strokeWidth: '1px',
           stroke: playState ? 'teal' : 'secondary',
+          strokeLinecap: 'round',
         }}
       />
       <Box
@@ -93,6 +94,7 @@ const ScatterPlot = ({ height, delay = 0 }) => {
           transition: 'stroke 0.5s ease-out',
           strokeWidth: '1px',
           stroke: playState ? 'teal' : 'secondary',
+          strokeLinecap: 'round',
         }}
       />
     </Box>

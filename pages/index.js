@@ -26,6 +26,7 @@ const sx = {
   },
   highlight: {
     mb: [3],
+    fontSize: [3, 3, 3, 4],
     fontFamily: 'heading',
     letterSpacing: 'smallcaps',
     textTransform: 'uppercase',
