@@ -1,4 +1,4 @@
-import { useState, memo } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { Box, Themed, Text, Link } from 'theme-ui'
 import { default as NextLink } from 'next/link'
 import { loadStripe } from '@stripe/stripe-js'
@@ -80,7 +80,7 @@ const Donate = () => {
     setStatus('processing')
     setTimeout(() => {
       setStatus(null)
-    }, 500)
+    }, 1200)
     const stripe = await stripePromise
     try {
       const { error } = await stripe.redirectToCheckout({
