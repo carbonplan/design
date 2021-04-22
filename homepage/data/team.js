@@ -67,7 +67,11 @@ const board = [
 const collaborators = [
   {
     name: 'Grayson Badgley',
-    description: 'Black Rock Forest Consortium + Columbia University',
+    description: (
+      <span>
+        Black Rock Forest Consortium + <br /> Columbia University
+      </span>
+    ),
   },
   {
     name: 'Bill Anderegg',

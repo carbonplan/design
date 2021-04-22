@@ -318,33 +318,33 @@ function VerticalArrow() {
         <Box
           sx={{
             width: '100%',
-            height: '110px',
+            height: '112px',
             fill: 'none',
             stroke: 'primary',
           }}
         >
-          <svg x='0px' y='0px' width='20px' height='100%'>
-            <circle vectorEffect='non-scaling-stroke' cx='10' cy='10' r='9' />
+          <svg x='0px' y='0px' width='27px' height='100%'>
+            <circle vectorEffect='non-scaling-stroke' cx='13' cy='11' r='9' />
             <line
               vectorEffect='non-scaling-stroke'
-              x1='50%'
-              x2='50%'
+              x1='13'
+              x2='13'
               y1='20'
-              y2='110'
+              y2='111'
             />
             <line
               vectorEffect='non-scaling-stroke'
-              x1='0'
-              x2='10'
+              x1='2'
+              x2='13'
               y1='100'
-              y2='110'
+              y2='111'
             />
             <line
               vectorEffect='non-scaling-stroke'
-              x1='20'
-              x2='10'
+              x1='24'
+              x2='13'
               y1='100'
-              y2='110'
+              y2='111'
             />
           </svg>
         </Box>
