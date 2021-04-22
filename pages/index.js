@@ -300,7 +300,7 @@ function VerticalArrow() {
         display: 'flex',
         height: '100%',
         mt: ['-10px', '-10px', '-10px', '-81px'],
-        transform: ['none', 'none', 'none', 'scale(1.4)']
+        transform: ['none', 'none', 'none', 'scale(1.4)'],
       }}
     >
       <Box

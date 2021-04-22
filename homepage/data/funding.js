@@ -94,7 +94,9 @@ const projectSpecific = [
   },
   {
     name: 'Microsoft AI for Earth',
-    description: <Link href='/research/forest-risks'>Forest carbon risk mapping</Link>,
+    description: (
+      <Link href='/research/forest-risks'>Forest carbon risk mapping</Link>
+    ),
   },
 ]
 
