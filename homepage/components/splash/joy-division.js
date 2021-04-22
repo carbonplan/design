@@ -16,7 +16,7 @@ const Path = ({ start, end, times, i, playState }) => {
         strokeWidth: '3px',
         vectorEffect: 'non-scaling-stroke',
         fill: 'none',
-        stroke: playState ? 'yellow' : 'secondary',
+        stroke: playState ? 'blue' : 'secondary',
       }}
     >
       <animate

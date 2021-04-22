@@ -34,7 +34,7 @@ const Circle = ({ start, end, cx, delay, playState, i }) => {
         opacity: 1,
         transition: 'fill 0.5s ease-out',
         animationPlayState: playState ? 'running' : 'paused',
-        fill: playState ? 'blue' : 'secondary',
+        fill: playState ? 'teal' : 'secondary',
       }}
     />
   )
@@ -80,7 +80,7 @@ const ScatterPlot = ({ height, delay = 0 }) => {
         sx={{
           transition: 'stroke 0.5s ease-out',
           strokeWidth: '1px',
-          stroke: playState ? 'blue' : 'secondary',
+          stroke: playState ? 'teal' : 'secondary',
         }}
       />
       <Box
@@ -92,7 +92,7 @@ const ScatterPlot = ({ height, delay = 0 }) => {
         sx={{
           transition: 'stroke 0.5s ease-out',
           strokeWidth: '1px',
-          stroke: playState ? 'blue' : 'secondary',
+          stroke: playState ? 'teal' : 'secondary',
         }}
       />
     </Box>

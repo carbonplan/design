@@ -24,6 +24,8 @@ const useAnimation = ({ duration = 4000, delay = 0 } = {}) => {
 
   useEffect(() => {
     setTimeout(() => {
+      console.log('starting')
+      setRepeating(true)
       const interval = setInterval(() => {
         setRepeating((prev) => !prev)
       }, duration)

@@ -53,13 +53,13 @@ const Bar = ({ start, end, delay, group, opacity, i, playState }) => {
 }
 
 const opacity = [1, 0.6, 0.3]
-const delay = [10, 20, 30]
+const delays = [10, 20, 30]
 
 const start = [100, 70, 40, 55, 70, 50, 75, 85, 75, 20, 70, 100, 50, 25, 70]
 const end = [20, 25, 70, 75, 20, 50, 20, 30, 15, 60, 25, 35, 60, 50, 25]
 const group = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4]
 
-const GroupedBars = ({ height }) => {
+const GroupedBars = ({ height, delay }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -80,7 +80,7 @@ const GroupedBars = ({ height }) => {
               key={i}
               start={start[i]}
               end={end[i]}
-              delay={delay[i % 3]}
+              delay={delays[i % 3]}
               group={group[i]}
               i={i}
               opacity={opacity[i % 3]}
