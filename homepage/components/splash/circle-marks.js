@@ -55,7 +55,7 @@ const CircleMarks = ({ height, color, delay = 0 }) => {
       {Array(6)
         .fill(0)
         .map((d, i) => {
-          return <Circle i={i} color={color} playState={playState} />
+          return <Circle key={i} i={i} color={color} playState={playState} />
         })}
     </Box>
   )

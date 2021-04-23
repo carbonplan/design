@@ -71,7 +71,7 @@ const CheckMarks = ({ height, color, delay = 0 }) => {
       {Array(5)
         .fill(0)
         .map((d, i) => {
-          return <Check i={i} color={color} playState={playState} />
+          return <Check key={i} i={i} color={color} playState={playState} />
         })}
     </Box>
   )

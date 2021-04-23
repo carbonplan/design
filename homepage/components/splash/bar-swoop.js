@@ -73,6 +73,7 @@ const BarSwoop = ({ height, color, delay = 0 }) => {
         .map((d, i) => {
           return (
             <Bar
+              key={i}
               start={start[i]}
               end={end[i]}
               delay={delays[i]}
