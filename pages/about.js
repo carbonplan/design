@@ -76,7 +76,7 @@ const About = () => {
       </Box>
       <Box sx={{ display: ['initial', 'initial', 'none', 'none'] }}>
         <Row>
-          <Column start={[1, 2]} width={[6, 3]}>
+          <Column start={[1, 1, 2, 2]} width={[6, 3]}>
             <Box
               as='h2'
               variant='styles.h2'
@@ -87,7 +87,7 @@ const About = () => {
           </Column>
         </Row>
         <Row sx={{ mb: [4, 5, 6, 7] }}>
-          <Column start={[1, 1, 1, 1]} width={[6, 6, 5, 5]}>
+          <Column start={[1, 2, 1, 1]} width={[6, 5, 5, 5]}>
             <Box sx={{ pb: [1] }}>
               <Box as='p' variant='styles.p' sx={{ mb: [4, 5, 6, 7] }}>
                 Addressing the climate crisis requires action on several fronts.
@@ -100,10 +100,10 @@ const About = () => {
           </Column>
         </Row>
         <Row sx={{ mb: [3, 5, 6, 7] }}>
-          <Column start={[1]} width={[1]}>
+          <Column start={[2]} width={[1]}>
             <WelcomeArrowMobile />
           </Column>
-          <Column start={[2, 2, 2, 2]} width={[5, 4, 3, 3]}>
+          <Column start={[2, 3, 2, 2]} width={[5, 4, 3, 3]}>
             <Box
               sx={{
                 width: '100%',
@@ -118,7 +118,7 @@ const About = () => {
           </Column>
         </Row>
         <Row sx={{ mb: [4, 5, 6, 7] }}>
-          <Column start={[1, 1, 1, 1]} width={[6, 6, 5, 5]}>
+          <Column start={[1, 2, 1, 1]} width={[6, 5, 5, 5]}>
             <Box sx={{ pb: [1] }}>
               <Box as='p' variant='styles.p' sx={{ mb: [2] }}>
                 We work collaboratively to build open tools and resources for

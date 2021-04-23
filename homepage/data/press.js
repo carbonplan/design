@@ -1,5 +1,13 @@
 const press = [
   {
+    source: 'Bloomberg',
+    href:
+      'https://www.bloomberg.com/news/articles/2021-04-13/how-to-think-about-negative-emissions-in-the-climate-fight',
+    title: 'How to think about negative emissions in the climate fight',
+    authors: ['Akshat Rathi'],
+    date: '04-13-2021',
+  },
+  {
     source: 'GreenBiz',
     href:
       'https://www.greenbiz.com/article/digging-complex-confusing-and-contentious-world-soil-carbon-offsets',
@@ -54,7 +62,7 @@ const press = [
     authors: ['Al Gore'],
   },
   {
-    source: 'Bloomberg Green',
+    source: 'Bloomberg',
     href:
       'https://www.bloomberg.com/features/2020-nature-conservancy-carbon-offsets-trees/',
     date: '12-09-2020',

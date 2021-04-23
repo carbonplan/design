@@ -15,7 +15,9 @@ import { alpha } from '@theme-ui/color'
 import Heading from '../homepage/components/heading'
 import { press } from '../homepage/data/press'
 
-const sources = [...new Set(press.map((d) => d.source))]
+const sources = [...new Set(press.map((d) => d.source))].sort((a, b) =>
+  a.localeCompare(b)
+)
 
 const sourceColors = {}
 const initSource = {}
