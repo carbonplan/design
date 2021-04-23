@@ -10,7 +10,7 @@ const Heading = ({ children, sidenote, description }) => {
         </Box>
       </Column>
       {description && (
-        <Column start={[1, 4, 6, 6]} width={[6, 4, 4, 4]}>
+        <Column start={[1, 4, 6, 6]} width={[6, 5, 5, 5]}>
           <Box
             sx={{
               mt: [4, '6px', '21px', '31px'],

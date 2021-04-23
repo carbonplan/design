@@ -36,7 +36,7 @@ const Main = ({ expanded }) => {
     <Box sx={{ mb: [8, 8, 9, 10] }}>
       <Heading
         description={
-          'Articles, tools, and commentary on carbon removal and climate solutions.'
+          <span>Articles, tools, and commentary on carbon<Box as='br' sx={{display: ['none', 'initial', 'initial', 'initial']}}/> removal and climate solutions.</span>
         }
       >
         Research

@@ -8,7 +8,7 @@ import { unrestricted, projectSpecific } from '../homepage/data/funding'
 const Funding = () => {
   return (
     <Layout links={'homepage'} title={'funding / carbonplan'}>
-      <Guide />
+      <Guide color='rainbow'/>
       <Box sx={{ mb: [5, 6, 7, 8] }}>
         <Heading
           sidenote={

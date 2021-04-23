@@ -1,5 +1,12 @@
 const press = [
   {
+    source: 'National Geographic',
+    href: 'https://www.nationalgeographic.com/environment/article/biden-wants-to-cut-us-climate-pollution-in-half-heres-how',
+    title: 'Biden wants to cut U.S. climate pollution in half—here’s how',
+    authors: ['Madeleine Stone'],
+    date: '04-22-2021'
+  },
+  {
     source: 'Bloomberg',
     href:
       'https://www.bloomberg.com/news/articles/2021-04-13/how-to-think-about-negative-emissions-in-the-climate-fight',
@@ -43,7 +50,7 @@ const press = [
       'https://www.bloomberg.com/news/audio/2020-12-21/cullenward-the-jury-is-still-out-on-carbon-credits',
     date: '12-21-2020',
     title: 'The jury is still out on carbon credits',
-    authors: [],
+    authors: ['Caroline Hepker', 'Roger Hearing'],
   },
   {
     source: 'Bloomberg',

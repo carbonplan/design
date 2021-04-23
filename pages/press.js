@@ -82,7 +82,7 @@ const Press = () => {
       <Guide />
       <Heading
         description={
-          'A complete list of press that has either covered our work or featured members of our team.'
+          <span>A complete list of press that has either covered<Box as='br' sx={{display: ['none', 'initial', 'initial', 'initial']}}/> our work or featured members of our team.</span>
         }
       >
         Press
