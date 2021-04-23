@@ -17,7 +17,7 @@ const animatePosition = (start, end, delay) => {
   return keyframes(keys)
 }
 
-const Circle = ({ start, end, cx, delay, playState, i }) => {
+const Circle = ({ start, end, cx, color, delay, playState, i }) => {
   const animation = animatePosition(start, end, delay)
 
   return (
@@ -34,7 +34,7 @@ const Circle = ({ start, end, cx, delay, playState, i }) => {
         opacity: 1,
         transition: 'fill 0.5s ease-out',
         animationPlayState: playState ? 'running' : 'paused',
-        fill: playState ? 'teal' : 'secondary',
+        fill: playState ? color : 'secondary',
       }}
     />
   )
@@ -45,7 +45,7 @@ const end = [50, 20, 30, 80, 70, 95, 40, 50]
 const cx = [5, 20, 25, 50, 60, 75, 80, 90]
 const delays = [0, 5, 10, 15, 20, 25, 30, 35]
 
-const ScatterPlot = ({ height, delay = 0 }) => {
+const ScatterPlot = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -68,6 +68,7 @@ const ScatterPlot = ({ height, delay = 0 }) => {
               delay={delays[i]}
               i={i}
               playState={playState}
+              color={color}
             />
           )
         })}
@@ -80,7 +81,7 @@ const ScatterPlot = ({ height, delay = 0 }) => {
         sx={{
           transition: 'stroke 0.5s ease-out',
           strokeWidth: '1px',
-          stroke: playState ? 'teal' : 'secondary',
+          stroke: playState ? color : 'secondary',
           strokeLinecap: 'round',
         }}
       />
@@ -93,7 +94,7 @@ const ScatterPlot = ({ height, delay = 0 }) => {
         sx={{
           transition: 'stroke 0.5s ease-out',
           strokeWidth: '1px',
-          stroke: playState ? 'teal' : 'secondary',
+          stroke: playState ? color : 'secondary',
           strokeLinecap: 'round',
         }}
       />

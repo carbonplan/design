@@ -20,7 +20,7 @@ const animateWidth = () => {
   return keyframes(keys)
 }
 
-const AnimatedBar = ({ playState }) => {
+const AnimatedBar = ({ playState, color }) => {
   const animation = animateWidth()
 
   return (
@@ -36,7 +36,7 @@ const AnimatedBar = ({ playState }) => {
         animationDuration: '2000ms',
         animationIterationCount: 'infinite',
         animationPlayState: playState ? 'running' : 'paused',
-        fill: playState ? 'blue' : 'secondary',
+        fill: playState ? color : 'secondary',
         opacity: 1,
         transition: 'fill 0.5s ease-out',
       }}
@@ -44,7 +44,7 @@ const AnimatedBar = ({ playState }) => {
   )
 }
 
-const Bar = ({ start, end, playState }) => {
+const Bar = ({ start, end, color, playState }) => {
   return (
     <Box
       as='rect'
@@ -54,14 +54,14 @@ const Bar = ({ start, end, playState }) => {
       height={'24%'}
       sx={{
         opacity: 0.5,
-        fill: playState ? 'blue' : 'secondary',
+        fill: playState ? color : 'secondary',
         transition: 'fill 0.5s ease-out',
       }}
     />
   )
 }
 
-const SingleBar = ({ height, delay = 0 }) => {
+const SingleBar = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -72,8 +72,8 @@ const SingleBar = ({ height, delay = 0 }) => {
       width='100%'
       sx={{ height: height }}
     >
-      <Bar playState={playState} />
-      <AnimatedBar playState={playState} />
+      <Bar color={color} playState={playState} />
+      <AnimatedBar color={color} playState={playState} />
     </Box>
   )
 }

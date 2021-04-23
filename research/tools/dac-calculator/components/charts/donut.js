@@ -34,7 +34,7 @@ const Donut = ({ params }) => {
           type: 'quantitative',
           scale: { domain: [0, 1] },
         },
-        opacity: {
+        fillOpacity: {
           field: 'index',
           type: 'quantitative',
           scale: { domain: [0, 3], range: [0.3, 0.9] },

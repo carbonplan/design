@@ -141,14 +141,14 @@ const Control = ({
                 color: active ? 'pink' : 'secondary',
               },
               '&:active': {
-                color: active ? darken('pink', 0.03) : 'muted',
+                color: active ? 'pink' : 'muted',
               },
-              transition: '0.2s',
+              transition: 'all 0.15s',
               pointerEvents: active ? 'all' : 'none',
               '&::-webkit-slider-thumb': {
                 height: [24, 24, 16],
                 width: [24, 24, 16],
-                transition: '0.15s',
+                transition: 'box-shadow .15s',
               },
               ':focus-visible': {
                 outline: 'none !important',

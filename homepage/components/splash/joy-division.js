@@ -3,7 +3,7 @@ import { Box } from 'theme-ui'
 import { keyframes } from '@emotion/react'
 import useAnimation from './use-animation'
 
-const Path = ({ start, end, times, i, playState }) => {
+const Path = ({ start, end, times, color, i, playState }) => {
   return (
     <Box
       className='line'
@@ -16,7 +16,7 @@ const Path = ({ start, end, times, i, playState }) => {
         strokeWidth: '3px',
         vectorEffect: 'non-scaling-stroke',
         fill: 'none',
-        stroke: playState ? 'blue' : 'secondary',
+        stroke: playState ? color : 'secondary',
       }}
     >
       <animate
@@ -32,7 +32,7 @@ const Path = ({ start, end, times, i, playState }) => {
   )
 }
 
-const JoyDivision = ({ height, delay = 0 }) => {
+const JoyDivision = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   const ref = useRef(null)
@@ -70,6 +70,7 @@ const JoyDivision = ({ height, delay = 0 }) => {
         }
         times={[0, 0, 0.15, 0.8, 0.95, 1].join(';')}
         i={0}
+        color={color}
         playState={playState}
       />
       <Path
@@ -81,6 +82,7 @@ const JoyDivision = ({ height, delay = 0 }) => {
         }
         times={[0, 0.15, 0.3, 0.65, 0.8, 1].join(';')}
         i={0}
+        color={color}
         playState={playState}
       />
       <Path
@@ -92,6 +94,7 @@ const JoyDivision = ({ height, delay = 0 }) => {
         }
         times={[0, 0.3, 0.45, 0.5, 0.65, 1].join(';')}
         i={0}
+        color={color}
         playState={playState}
       />
     </Box>

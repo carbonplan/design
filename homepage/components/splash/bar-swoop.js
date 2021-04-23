@@ -27,7 +27,7 @@ const animateHeight = (start, end, delay) => {
   return keyframes(keys)
 }
 
-const Bar = ({ start, end, delay, opacity, i, playState }) => {
+const Bar = ({ start, end, delay, opacity, color, i, playState }) => {
   const animationHeight = animateHeight(start, end, delay)
 
   return (
@@ -46,14 +46,19 @@ const Bar = ({ start, end, delay, opacity, i, playState }) => {
         opacity: opacity || 1,
         transition: 'fill 0.5s ease-out',
         animationPlayState: playState ? 'running' : 'paused',
-        fill: playState ? 'green' : 'secondary',
+        fill: playState ? color : 'secondary',
       }}
     />
   )
 }
 
-const BarSwoop = ({ height, delay = 0 }) => {
+const BarSwoop = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
+
+  const start = [-25, -50, -25, -15, 25, 50, 25, 15]
+  const end = [0, 0, 0, 0, 0, 0, 0, 0]
+  const delays = [0, 5, 10, 15, 20, 25, 30, 25]
+  const opacity = [0.5, 0.5, 0.5, 0.5, 1, 1, 1, 1]
 
   return (
     <Box
@@ -63,42 +68,21 @@ const BarSwoop = ({ height, delay = 0 }) => {
       onMouseLeave={mouseLeave}
       sx={{ height: height }}
     >
-      <Bar
-        start={-25}
-        end={0}
-        delay={0}
-        i={0}
-        opacity={0.5}
-        playState={playState}
-      />
-      <Bar
-        start={-50}
-        end={0}
-        delay={5}
-        i={1}
-        opacity={0.5}
-        playState={playState}
-      />
-      <Bar
-        start={-25}
-        end={0}
-        delay={10}
-        i={2}
-        opacity={0.5}
-        playState={playState}
-      />
-      <Bar
-        start={-15}
-        end={0}
-        delay={15}
-        i={3}
-        opacity={0.5}
-        playState={playState}
-      />
-      <Bar start={25} end={0} delay={20} i={4} playState={playState} />
-      <Bar start={50} end={0} delay={25} i={5} playState={playState} />
-      <Bar start={25} end={0} delay={30} i={6} playState={playState} />
-      <Bar start={15} end={0} delay={35} i={7} playState={playState} />
+      {Array(8)
+        .fill(0)
+        .map((d, i) => {
+          return (
+            <Bar
+              start={start[i]}
+              end={end[i]}
+              delay={delays[i]}
+              i={i}
+              opacity={opacity[i]}
+              color={color}
+              playState={playState}
+            />
+          )
+        })}
       <Box
         as='line'
         x1={'0%'}
@@ -106,7 +90,7 @@ const BarSwoop = ({ height, delay = 0 }) => {
         y1={'50%'}
         y2={'50%'}
         sx={{
-          stroke: playState ? 'green' : 'secondary',
+          stroke: playState ? color : 'secondary',
           transition: 'stroke 0.5s ease-out',
         }}
       />

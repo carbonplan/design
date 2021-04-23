@@ -17,7 +17,7 @@ const animateOpacity = (delay) => {
   return keyframes(keys)
 }
 
-const Check = ({ playState, i }) => {
+const Check = ({ playState, color, i }) => {
   const animation = animateOpacity(i * 5)
 
   return (
@@ -44,8 +44,8 @@ const Check = ({ playState, i }) => {
           animationPlayState: playState ? 'running' : 'paused',
           vectorEffect: 'non-scaling-stroke',
           strokeWidth: '1px',
-          stroke: playState ? 'purple' : 'secondary',
-          fill: playState ? 'purple' : 'secondary',
+          stroke: playState ? color : 'secondary',
+          fill: playState ? color : 'secondary',
           opacity: 1,
           transition:
             'stroke 0.5s ease-out, fill 0.5s ease-out, opacity 0.5s ease-out',
@@ -55,7 +55,7 @@ const Check = ({ playState, i }) => {
   )
 }
 
-const CheckMarks = ({ height, delay = 0 }) => {
+const CheckMarks = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -68,11 +68,11 @@ const CheckMarks = ({ height, delay = 0 }) => {
       preserveAspectRatio='none'
       sx={{ height: height }}
     >
-      <Check i={0} playState={playState} />
-      <Check i={1} playState={playState} />
-      <Check i={2} playState={playState} />
-      <Check i={3} playState={playState} />
-      <Check i={4} playState={playState} />
+      {Array(5)
+        .fill(0)
+        .map((d, i) => {
+          return <Check i={i} color={color} playState={playState} />
+        })}
     </Box>
   )
 }

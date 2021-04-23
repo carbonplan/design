@@ -19,7 +19,7 @@ const animateHeight = (start, end, delay) => {
   return keyframes(keys)
 }
 
-const Bar = ({ start, end, delay, opacity, i, playState }) => {
+const Bar = ({ start, end, delay, opacity, color, i, playState }) => {
   const animationHeight = animateHeight(start, end, delay)
 
   return (
@@ -34,7 +34,7 @@ const Bar = ({ start, end, delay, opacity, i, playState }) => {
         animationDelay: '0ms',
         animationDuration: '2000ms',
         animationIterationCount: 'infinite',
-        fill: playState ? 'red' : 'secondary',
+        fill: playState ? color : 'secondary',
         opacity: opacity || 1,
         transition: 'fill 0.5s ease-out',
         animationPlayState: playState ? 'running' : 'paused',
@@ -43,7 +43,7 @@ const Bar = ({ start, end, delay, opacity, i, playState }) => {
   )
 }
 
-const WideBars = ({ height, delay = 0 }) => {
+const WideBars = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -54,25 +54,48 @@ const WideBars = ({ height, delay = 0 }) => {
       width='100%'
       sx={{ height: height }}
     >
-      <Bar start={50} end={10} delay={0} i={0} playState={playState} />
+      <Bar
+        start={50}
+        end={10}
+        delay={0}
+        i={0}
+        color={color}
+        playState={playState}
+      />
       <Bar
         start={100}
         end={10}
         delay={5}
         i={1}
         opacity={0.5}
+        color={color}
         playState={playState}
       />
-      <Bar start={10} end={40} delay={10} i={2} playState={playState} />
+      <Bar
+        start={10}
+        end={40}
+        delay={10}
+        i={2}
+        color={color}
+        playState={playState}
+      />
       <Bar
         start={30}
         end={60}
         delay={15}
         i={3}
         opacity={0.5}
+        color={color}
         playState={playState}
       />
-      <Bar start={50} end={20} delay={20} i={4} playState={playState} />
+      <Bar
+        start={50}
+        end={20}
+        delay={20}
+        i={4}
+        color={color}
+        playState={playState}
+      />
     </Box>
   )
 }

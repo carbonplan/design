@@ -32,7 +32,7 @@ const Dot = ({ x, y }) => {
   )
 }
 
-const Dots = ({ playState }) => {
+const Dots = ({ playState, color }) => {
   const random = seed('1')
 
   const animation1 = animateOpacity(1, 0.2)
@@ -70,7 +70,7 @@ const Dots = ({ playState }) => {
           opacity: 1,
           transition: 'fill 0.5s ease-out',
           animationPlayState: playState ? 'running' : 'paused',
-          fill: playState ? 'green' : 'secondary',
+          fill: playState ? color : 'secondary',
         }}
       >
         {dots1}
@@ -85,7 +85,7 @@ const Dots = ({ playState }) => {
           opacity: 0.2,
           transition: 'fill 0.5s ease-out',
           animationPlayState: playState ? 'running' : 'paused',
-          fill: playState ? 'green' : 'secondary',
+          fill: playState ? color : 'secondary',
         }}
       >
         {dots2}
@@ -94,7 +94,7 @@ const Dots = ({ playState }) => {
   )
 }
 
-const DotGrid = ({ height, delay = 0 }) => {
+const DotGrid = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -105,7 +105,7 @@ const DotGrid = ({ height, delay = 0 }) => {
       width='100%'
       sx={{ height: height }}
     >
-      <Dots playState={playState} />
+      <Dots color={color} playState={playState} />
     </Box>
   )
 }

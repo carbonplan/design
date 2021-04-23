@@ -27,7 +27,7 @@ const animateHeight = (start, end, delay) => {
   return keyframes(keys)
 }
 
-const Bar = ({ start, end, delay, group, opacity, i, playState }) => {
+const Bar = ({ start, end, delay, group, color, opacity, i, playState }) => {
   const animationHeight = animateHeight(start, end, delay)
 
   return (
@@ -46,7 +46,7 @@ const Bar = ({ start, end, delay, group, opacity, i, playState }) => {
         opacity: opacity || 1,
         transition: 'fill 0.5s ease-out',
         animationPlayState: playState ? 'running' : 'paused',
-        fill: playState ? 'red' : 'secondary',
+        fill: playState ? color : 'secondary',
       }}
     />
   )
@@ -59,7 +59,7 @@ const start = [100, 70, 40, 55, 70, 50, 75, 85, 75, 20, 70, 100, 50, 25, 70]
 const end = [20, 25, 70, 75, 20, 50, 20, 30, 15, 60, 25, 35, 60, 50, 25]
 const group = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4]
 
-const GroupedBars = ({ height, delay }) => {
+const GroupedBars = ({ height, color, delay }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -83,6 +83,7 @@ const GroupedBars = ({ height, delay }) => {
               delay={delays[i % 3]}
               group={group[i]}
               i={i}
+              color={color}
               opacity={opacity[i % 3]}
               playState={playState}
             />

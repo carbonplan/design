@@ -64,7 +64,9 @@ const Parameter = ({ param, data, state }) => {
               sx={{
                 textAlign: 'left',
                 color: 'purple',
-                fontSize: [4],
+                fontSize: [4, 4, 4, 5],
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
                 borderStyle: 'solid',
                 borderColor: inputFocus ? 'primary' : 'secondary',
                 borderWidth: '0px',
@@ -155,9 +157,9 @@ const Parameter = ({ param, data, state }) => {
               <Box
                 sx={{
                   maxWidth: '600px',
-                  fontSize: [2],
+                  fontSize: [2, 2, 2, 3],
                   color: 'purple',
-                  mt: [2],
+                  mt: [2, 2, 2, 3],
                 }}
               >
                 {param.description}

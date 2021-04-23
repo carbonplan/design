@@ -17,7 +17,7 @@ const animateOpacity = (delay) => {
   return keyframes(keys)
 }
 
-const Circle = ({ playState, i }) => {
+const Circle = ({ playState, color, i }) => {
   const animation = animateOpacity(i * 5)
 
   return (
@@ -32,7 +32,7 @@ const Circle = ({ playState, i }) => {
         animationDuration: '2000ms',
         animationIterationCount: 'infinite',
         animationPlayState: playState ? 'running' : 'paused',
-        fill: playState ? 'orange' : 'secondary',
+        fill: playState ? color : 'secondary',
         opacity: 1,
         transition: 'fill 0.5s ease-out, opacity 0.5s ease-out',
       }}
@@ -40,7 +40,7 @@ const Circle = ({ playState, i }) => {
   )
 }
 
-const CircleMarks = ({ height, delay = 0 }) => {
+const CircleMarks = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -52,12 +52,11 @@ const CircleMarks = ({ height, delay = 0 }) => {
       preserveAspectRatio='none'
       sx={{ height: height }}
     >
-      <Circle i={0} playState={playState} />
-      <Circle i={1} playState={playState} />
-      <Circle i={2} playState={playState} />
-      <Circle i={3} playState={playState} />
-      <Circle i={4} playState={playState} />
-      <Circle i={5} playState={playState} />
+      {Array(6)
+        .fill(0)
+        .map((d, i) => {
+          return <Circle i={i} color={color} playState={playState} />
+        })}
     </Box>
   )
 }

@@ -56,40 +56,40 @@ const Splash = () => {
       <Box sx={{ display: ['none', 'none', 'initial', 'initial'] }}>
         <SplashRowDesktop
           components={[
-            <WideBars height={height} delay={delay(6)} />,
-            <SingleLine height={height} delay={delay(12)} />,
-            <BarSwoop height={height} delay={delay(7)} />,
-            <ScatterPlot height={height} delay={delay(3)} />,
+            <WideBars height={height} color='red' delay={delay(6)} />,
+            <SingleLine height={height} color='orange' delay={delay(12)} />,
+            <BarSwoop height={height} color='green' delay={delay(7)} />,
+            <ScatterPlot height={height} color='teal' delay={delay(3)} />,
           ]}
         />
         <SplashRowDesktop
           components={[
-            <WideBars height={height} delay={delay(10)} />,
-            <SingleBar height={height} delay={delay(2)} />,
-            <CheckMarks height={height} delay={delay(5)} />,
-            <CircleMarks height={height} delay={delay(9)} />,
+            <WideBars height={height} color='red' delay={delay(10)} />,
+            <SingleBar height={height} color='blue' delay={delay(2)} />,
+            <CheckMarks height={height} color='purple' delay={delay(5)} />,
+            <CircleMarks height={height} color='orange' delay={delay(9)} />,
           ]}
         />
         <SplashRowDesktop
           components={[
-            <DotGrid height={height} delay={delay(4)} />,
-            <SlidingDots height={height} delay={delay(8)} />,
-            <GroupedBars height={height} delay={delay(1)} />,
-            <JoyDivision height={height} delay={delay(11)} />,
+            <DotGrid height={height} color='green' delay={delay(4)} />,
+            <SlidingDots height={height} color='pink' delay={delay(8)} />,
+            <GroupedBars height={height} color='red' delay={delay(1)} />,
+            <JoyDivision height={height} color='blue' delay={delay(11)} />,
           ]}
         />
       </Box>
       <Box sx={{ display: ['initial', 'initial', 'none', 'none'] }}>
         <SplashRowMobile
           components={[
-            <GroupedBars height={height} delay={delay(1)} />,
-            <JoyDivision height={height} delay={delay(4)} />,
+            <GroupedBars height={height} delay={delay(1)} color='red' />,
+            <JoyDivision height={height} delay={delay(4)} color='blue' />,
           ]}
         />
         <SplashRowMobile
           components={[
-            <SlidingDots height={height} delay={delay(2)} />,
-            <BarSwoop height={height} delay={delay(3)} />,
+            <SlidingDots height={height} delay={delay(2)} color='pink' />,
+            <BarSwoop height={height} delay={delay(3)} color='green' />,
           ]}
         />
       </Box>

@@ -188,7 +188,9 @@ const Calculator = () => {
                     sx={{
                       textAlign: 'left',
                       color: cost < 0 ? 'secondary' : 'purple',
-                      fontSize: [6],
+                      fontSize: [6, 6, 6, 6],
+                      fontFamily: 'mono',
+                      letterSpacing: '0.01em',
                     }}
                   >
                     ${cost < 0 ? 'N/A' : cost}

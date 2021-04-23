@@ -102,7 +102,7 @@ const ParameterScenario = ({
           </Box>
           <Box
             sx={{
-              mt: leakage ? [0, 0, '59px'] : [0, 0, '-2px'],
+              mt: leakage ? [0, '56px', '59px'] : [0, '-2px', '-2px'],
             }}
           >
             <LegendWithValues results={results} />

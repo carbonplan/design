@@ -19,7 +19,7 @@ const animatePosition = (start, end, delay) => {
   return keyframes(keys)
 }
 
-const CircleLine = ({ start, end, delay, i, playState }) => {
+const CircleLine = ({ start, end, delay, color, i, playState }) => {
   const animation = animatePosition(start, end, delay)
 
   return (
@@ -37,7 +37,7 @@ const CircleLine = ({ start, end, delay, i, playState }) => {
           opacity: 1,
           transition: 'fill 0.5s ease-out',
           animationPlayState: playState ? 'running' : 'paused',
-          fill: playState ? 'pink' : 'secondary',
+          fill: playState ? color : 'secondary',
         }}
       />
       <Box
@@ -51,7 +51,7 @@ const CircleLine = ({ start, end, delay, i, playState }) => {
           opacity: 0.5,
           strokeWidth: '1px',
           vectorEffect: 'non-scaling-stroke',
-          stroke: playState ? 'pink' : 'secondary',
+          stroke: playState ? color : 'secondary',
           strokeLinecap: 'round',
         }}
       />
@@ -59,7 +59,7 @@ const CircleLine = ({ start, end, delay, i, playState }) => {
   )
 }
 
-const SlidingDots = ({ height, delay = 0 }) => {
+const SlidingDots = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   return (
@@ -70,10 +70,38 @@ const SlidingDots = ({ height, delay = 0 }) => {
       width='100%'
       sx={{ height: height }}
     >
-      <CircleLine start={20} end={50} delay={0} i={0} playState={playState} />
-      <CircleLine start={5} end={25} delay={5} i={1} playState={playState} />
-      <CircleLine start={40} end={5} delay={10} i={2} playState={playState} />
-      <CircleLine start={90} end={50} delay={15} i={3} playState={playState} />
+      <CircleLine
+        start={20}
+        end={50}
+        delay={0}
+        i={0}
+        color={color}
+        playState={playState}
+      />
+      <CircleLine
+        start={5}
+        end={25}
+        delay={5}
+        i={1}
+        color={color}
+        playState={playState}
+      />
+      <CircleLine
+        start={40}
+        end={5}
+        delay={10}
+        i={2}
+        color={color}
+        playState={playState}
+      />
+      <CircleLine
+        start={90}
+        end={50}
+        delay={15}
+        i={3}
+        color={color}
+        playState={playState}
+      />
     </Box>
   )
 }

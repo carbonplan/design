@@ -31,7 +31,7 @@ const Energy = ({ params, reset }) => {
       </Box>
       <Box
         sx={{
-          fontSize: [3],
+          fontSize: [3, 3, 3, 4],
         }}
       >
         <Box as='span' sx={{ display: ['none', 'none', 'initial'] }}>

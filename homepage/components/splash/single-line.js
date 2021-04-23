@@ -3,7 +3,7 @@ import { Box } from 'theme-ui'
 import { keyframes } from '@emotion/react'
 import useAnimation from './use-animation'
 
-const Path = ({ start, step1, step2, step3, opacity, i, playState }) => {
+const Path = ({ start, step1, step2, step3, opacity, color, i, playState }) => {
   return (
     <Box
       as='polyline'
@@ -12,7 +12,7 @@ const Path = ({ start, step1, step2, step3, opacity, i, playState }) => {
       sx={{
         pointerEvents: 'none',
         opacity: opacity || 1,
-        stroke: playState ? 'orange' : 'secondary',
+        stroke: playState ? color : 'secondary',
         fill: 'none',
         strokeWidth: '3px',
         vectorEffect: 'non-scaling-stroke',
@@ -32,7 +32,7 @@ const Path = ({ start, step1, step2, step3, opacity, i, playState }) => {
   )
 }
 
-const Line = ({ height, delay = 0 }) => {
+const Line = ({ height, color, delay = 0 }) => {
   const { mouseEnter, mouseLeave, playState } = useAnimation({ delay: delay })
 
   const ref = useRef(null)
@@ -74,6 +74,7 @@ const Line = ({ height, delay = 0 }) => {
         step3={
           '281.35,2.18 229.33,13.4 208.72,37.74 185.58,37.74 163.88,65.11 134.03,54.31 95.99,38.98 45.21,60.08 1.65,72.82'
         }
+        color={color}
         playState={playState}
       />
     </Box>

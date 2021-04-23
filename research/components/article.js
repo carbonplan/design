@@ -31,11 +31,13 @@ const Article = ({ children, meta }) => {
       <Box
         sx={{
           backgroundColor: meta.color,
-          height: ['auto', 'auto', meta.background ? '275px' : 'auto'],
+          height: [
+            meta.background ? '150px' : 'auto',
+            meta.background ? '200px' : 'auto',
+            meta.background ? '275px' : 'auto',
+          ],
           position: ['relative', 'relative', 'absolute'],
           backgroundImage: [
-            'none',
-            'none',
             meta.background ? `url(${prefix}/${meta.background}.png)` : 'none',
           ],
           width: ['calc(100vw)'],
@@ -48,65 +50,78 @@ const Article = ({ children, meta }) => {
       >
         <Box
           sx={{
-            position: [
-              'intial',
-              'initial',
-              meta.background ? 'absolute' : 'relative',
-            ],
+            position: [meta.background ? 'absolute' : 'relative'],
+            display: ['none', 'initial', 'initial'],
             bottom: 0,
-            pb: ['2px', '2px', meta.background ? 3 : 0],
+            pb: [meta.background ? 3 : 0],
             width: '100%',
-            color: ['#1b1e23', '#1b1e23', meta.invert ? '#1b1e23' : '#ebebec'],
+            color: [meta.invert ? '#1b1e23' : '#ebebec'],
           }}
         >
           <Container>
             <Row>
-              <Column start={[1, 1]} width={[6, 1]}>
-                <Text
+              <Column start={[1]} width={[6, 1, 1, 1]}>
+                <Box
                   sx={{
                     fontFamily: 'mono',
                     letterSpacing: 'mono',
                     textTransform: 'uppercase',
-                    fontSize: [2, 2, 2, 3],
+                    fontSize: [1, 1, 2, 3],
+                    mt: ['3px'],
+                    display: ['none', 'initial', 'none', 'none'],
+                  }}
+                >
+                  ({meta.number})
+                </Box>
+                <Box
+                  sx={{
+                    fontFamily: 'mono',
+                    letterSpacing: 'mono',
+                    textTransform: 'uppercase',
+                    fontSize: [1, 1, 2, 3],
+                    mt: ['3px'],
+                    display: ['none', 'none', 'initial', 'initial'],
                   }}
                 >
                   ARTICLE({meta.number})
-                </Text>
+                </Box>
               </Column>
-              <Column start={[1, 3]} width={[6, 6, 6, 6]}>
+              <Column start={[1, 2, 3, 3]} width={[6, 5, 6, 6]}>
+                <Box sx={{ lineHeight: [1.15, 1.15, 1.35, 1.35] }}>
+                  <Text
+                    sx={{
+                      fontFamily: 'mono',
+                      letterSpacing: 'mono',
+                      textTransform: 'uppercase',
+                      fontSize: [1, 1, 2, 3],
+                    }}
+                  >
+                    by{' '}
+                    {meta.authors.map((author, ix) => (
+                      <Text
+                        key={author}
+                        sx={{
+                          display: 'inline-block',
+                          mr: [2],
+                          fontFamily: 'mono',
+                          letterSpacing: 'mono',
+                          fontSize: [1, 1, 2, 3],
+                        }}
+                      >
+                        {author.replace(/ /g, '\u00a0')}{' '}
+                        {ix < meta.authors.length - 1 ? '+' : ''}
+                      </Text>
+                    ))}
+                  </Text>
+                </Box>
+              </Column>
+              <Column start={[1, 7, 10, 10]} width={[6, 2, 2, 2]}>
                 <Text
                   sx={{
                     fontFamily: 'mono',
                     letterSpacing: 'mono',
                     textTransform: 'uppercase',
-                    fontSize: [2, 2, 2, 3],
-                  }}
-                >
-                  by{' '}
-                  {meta.authors.map((author, ix) => (
-                    <Text
-                      key={author}
-                      sx={{
-                        display: 'inline-block',
-                        mr: [2],
-                        fontFamily: 'mono',
-                        letterSpacing: 'mono',
-                        fontSize: [2, 2, 2, 3],
-                      }}
-                    >
-                      {author.replace(/ /g, '\u00a0')}{' '}
-                      {ix < meta.authors.length - 1 ? '+' : ''}
-                    </Text>
-                  ))}
-                </Text>
-              </Column>
-              <Column start={[1, 10]} width={[6, 2]}>
-                <Text
-                  sx={{
-                    fontFamily: 'mono',
-                    letterSpacing: 'mono',
-                    textTransform: 'uppercase',
-                    fontSize: [2, 2, 2, 3],
+                    fontSize: [1, 1, 2, 3],
                   }}
                 >
                   {formatDate(meta.date)}
@@ -124,19 +139,91 @@ const Article = ({ children, meta }) => {
         }}
       >
         <Row>
-          <Box sx={{ display: ['initial', 'initial', 'initial', 'initial'] }}>
-            <Column
-              start={[1, 1]}
-              width={[2]}
-              dr={1}
-              sx={{ mb: [-3, -4, 0, 0], mt: [3, 3, '104px', '117px'] }}
+          <Column
+            start={[1, 1]}
+            width={[2]}
+            dr={1}
+            sx={{ mb: [-3, -4, 0, 0], mt: [3, 3, '104px', '117px'] }}
+          >
+            <InternalLink href={'/research'}>
+              <BackButton sx={{ ml: ['-2px', '-2px', '-2px', '-2px'] }} />
+            </InternalLink>
+          </Column>
+          <Column
+            start={[3, 4, 3, 3]}
+            width={[2]}
+            sx={{
+              display: ['initial', 'none', 'none', 'none'],
+            }}
+          >
+            <Box
+              sx={{
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
+                textTransform: 'uppercase',
+                fontSize: [1, 1, 1, 2],
+                mt: ['21px'],
+              }}
             >
-              <InternalLink href={'/research'}>
-                <BackButton sx={{ ml: ['-2px', '-2px', '-2px', '-2px'] }} />
-              </InternalLink>
-            </Column>
-          </Box>
-          <Column start={[1, 3]} width={[6, 6, 6, 6]}>
+              ARTICLE({meta.number})
+            </Box>
+          </Column>
+          <Column
+            start={[5, 7, 5, 5]}
+            width={[2]}
+            sx={{
+              display: ['initial', 'none', 'none', 'none'],
+            }}
+          >
+            <Box
+              sx={{
+                fontFamily: 'mono',
+                letterSpacing: 'mono',
+                textTransform: 'uppercase',
+                fontSize: [1, 1, 1, 2],
+                mt: ['21px'],
+              }}
+            >
+              {formatDate(meta.date)}
+            </Box>
+          </Column>
+          <Column start={[1, 2, 3, 3]} width={[6, 6, 6, 6]}>
+            <Row
+              columns={[6, 6, 6, 6]}
+              sx={{ display: ['grid', 'none', 'none', 'none'] }}
+            >
+              <Column start={[3, 3, 6, 6]} width={[4, 4, 3, 3]}>
+                <Box sx={{ lineHeight: [1.4, 1.4, 1.35, 1.35] }}>
+                  <Box
+                    sx={{
+                      fontFamily: 'mono',
+                      letterSpacing: 'mono',
+                      textTransform: 'uppercase',
+                      fontSize: [1, 1, 1, 2],
+                      mt: [3, 4, 4, 4],
+                      mb: [5, 5, 5, 5],
+                    }}
+                  >
+                    by{' '}
+                    {meta.authors.map((author, ix) => (
+                      <Text
+                        key={author}
+                        sx={{
+                          display: 'inline-block',
+                          mr: [2],
+                          fontFamily: 'mono',
+                          letterSpacing: 'mono',
+                          fontSize: [1, 1, 1, 2],
+                        }}
+                      >
+                        {author.replace(/ /g, '\u00a0')}{' '}
+                        {ix < meta.authors.length - 1 ? '+' : ''}
+                      </Text>
+                    ))}
+                  </Box>
+                </Box>
+              </Column>
+            </Row>
             <Box>{children}</Box>
             <SectionBreak />
             <Closing />

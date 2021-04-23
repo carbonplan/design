@@ -116,7 +116,7 @@ const ParamChart = ({ param, data }) => {
             format: '$0f',
           },
         },
-        opacity: {
+        fillOpacity: {
           field: 'o',
           type: 'quantitative',
           scale: { domain: [0, 3], range: [0.3, 0.9] },
