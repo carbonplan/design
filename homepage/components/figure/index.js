@@ -32,18 +32,8 @@ const sx = {
 const Figure = () => {
   return (
     <Row sx={{ mt: [4, 5, 6, 7], mb: [4, 4, 4, 5] }}>
-      <Column start={[1, 1, 2, 2]} width={[6, 4, 5, 5]}>
-        <Chart
-          data={projects}
-          field={'volume'}
-          ticks={[10, 100, 1000, 10000, 100000, 1000000]}
-          domain={[10, 1000000]}
-          bandwidth={0.2}
-          log={true}
-        />
-      </Column>
       <Column
-        start={[1, 5, 7, 7]}
+        start={[1, 1, 2, 2]}
         width={[6, 4, 5, 5]}
         sx={{ display: ['none', 'initial', 'initial', 'initial'] }}
       >
@@ -53,6 +43,16 @@ const Figure = () => {
           ticks={[1, 10, 100, 1000]}
           domain={[1, 1000]}
           bandwidth={0.1}
+          log={true}
+        />
+      </Column>
+      <Column start={[1, 5, 7, 7]} width={[6, 4, 5, 5]}>
+        <Chart
+          data={projects}
+          field={'volume'}
+          ticks={[10, 100, 1000, 10000, 100000, 1000000]}
+          domain={[10, 1000000]}
+          bandwidth={0.2}
           log={true}
         />
       </Column>

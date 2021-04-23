@@ -47,7 +47,7 @@ const Index = () => {
       </Box>
       <Row sx={{ position: 'relative', mt: [1] }}>
         <Column
-          start={[3]}
+          start={[2, 2, 3, 3]}
           width={[1]}
           sx={{
             height: '100%',

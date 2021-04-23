@@ -1,10 +1,11 @@
 const press = [
   {
     source: 'National Geographic',
-    href: 'https://www.nationalgeographic.com/environment/article/biden-wants-to-cut-us-climate-pollution-in-half-heres-how',
+    href:
+      'https://www.nationalgeographic.com/environment/article/biden-wants-to-cut-us-climate-pollution-in-half-heres-how',
     title: 'Biden wants to cut U.S. climate pollution in half—here’s how',
     authors: ['Madeleine Stone'],
-    date: '04-22-2021'
+    date: '04-22-2021',
   },
   {
     source: 'Bloomberg',
