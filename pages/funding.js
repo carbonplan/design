@@ -9,7 +9,7 @@ const Funding = () => {
   return (
     <Layout links={'homepage'} title={'funding / carbonplan'}>
       <Guide color='rainbow' />
-      <Box sx={{ mb: [5, 6, 7, 8] }}>
+      <Box sx={{ mb: [8, 8, 9, 10] }}>
         <Heading
           sidenote={
             <span>
