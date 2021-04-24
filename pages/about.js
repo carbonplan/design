@@ -10,6 +10,7 @@ import {
 } from '@carbonplan/components'
 import Heading from '../homepage/components/heading'
 import { highlights, press } from '../homepage/data/recent'
+import { keyframes } from '@emotion/react'
 
 const { ArrowButton, CalloutButton } = Buttons
 const { WrappedLink } = Links
@@ -100,7 +101,7 @@ const About = () => {
           </Column>
         </Row>
         <Row sx={{ mb: [3, 5, 6, 7] }}>
-          <Column start={[2]} width={[1]}>
+          <Column start={[1, 2, 2, 2]} width={[1]}>
             <WelcomeArrowMobile />
           </Column>
           <Column start={[2, 3, 2, 2]} width={[5, 4, 3, 3]}>
@@ -237,18 +238,13 @@ const About = () => {
         </Column>
         <Column start={[1, 5, 7, 7]} width={[6, 4, 5, 5]}>
           <Box sx={{ fontSize: [6] }}>
-            <WrappedLink
-              href={
-                'https://carbonplan-assets.s3.amazonaws.com/docs/CarbonPlan-Annual-Report-2020.pdf'
-              }
-              sx={sx.link}
-            >
+            <WrappedLink href={'/press'} sx={sx.link}>
               <ArrowButton
                 size={'lg'}
                 fill={'yellow'}
                 label={
                   <span>
-                    Download 2020 <br /> annual report
+                    Read our <br /> recent press
                   </span>
                 }
               />
@@ -339,9 +335,13 @@ const About = () => {
         </Column>
         <Column start={[4, 5, 5, 5]} width={[3, 4, 2, 2]}>
           <Box sx={{ fontSize: [3, 3, 3, 4], mb: [3, 3, 0] }}>
-            <WrappedLink href='/press' sx={sx.link}>
-              <CalloutButton label={'press'}>
-                View a list of press about our work
+            <WrappedLink
+              href='https://carbonplan-assets.s3.amazonaws.com/docs/CarbonPlan-Annual-Report-2020.pdf'
+              sx={sx.link}
+            >
+              <CalloutButton label={'report'}>
+                Read our latest
+                <br /> annual report
               </CalloutButton>
             </WrappedLink>
           </Box>
@@ -369,6 +369,36 @@ const About = () => {
   )
 }
 
+const animateRight = keyframes({
+  '0%': {
+    transform: 'translateX(0px)',
+  },
+  '10%': {
+    transform: 'translateX(10px)',
+  },
+  '20%': {
+    transform: 'translateX(0px)',
+  },
+  '100%': {
+    transform: 'translateX(0px)',
+  },
+})
+
+const animateDown = keyframes({
+  '0%': {
+    transform: 'translateY(0px)',
+  },
+  '10%': {
+    transform: 'translateY(10px)',
+  },
+  '20%': {
+    transform: 'translateY(0px)',
+  },
+  '100%': {
+    transform: 'translateY(0px)',
+  },
+})
+
 function WelcomeArrow() {
   return (
     <Grid
@@ -379,6 +409,13 @@ function WelcomeArrow() {
         '40px 1fr 40px',
       ]}
       gap={[0]}
+      sx={{
+        animationDuration: '4000ms',
+        animationPlayState: 'running',
+        animationDelay: '1000ms',
+        animationName: animateRight.toString(),
+        animationIterationCount: 'infinite',
+      }}
     >
       <Box
         sx={{
@@ -459,6 +496,11 @@ function WelcomeArrowMobile() {
         alignContent: 'space-between',
         height: '100%',
         display: 'flex',
+        animationDuration: '4000ms',
+        animationPlayState: 'running',
+        animationDelay: '1000ms',
+        animationName: animateDown.toString(),
+        animationIterationCount: 'infinite',
       }}
     >
       <Box sx={{ width: '100%', height: '20px' }}>
