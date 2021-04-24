@@ -10,6 +10,7 @@ import SlidingDots from './sliding-dots'
 import DotGrid from './dot-grid'
 import CheckMarks from './check-marks'
 import CircleMarks from './circle-marks'
+import DonutMarks from './donut-marks'
 import ScatterPlot from './scatter-plot'
 
 const height = ['75px', '125px', '75px', '110px']
@@ -64,7 +65,7 @@ const Splash = () => {
         />
         <SplashRowDesktop
           components={[
-            <WideBars height={height} color='red' delay={delay(10)} />,
+            <DonutMarks height={height} color='teal' delay={delay(10)} />,
             <SingleBar height={height} color='blue' delay={delay(2)} />,
             <CheckMarks height={height} color='purple' delay={delay(5)} />,
             <CircleMarks height={height} color='orange' delay={delay(9)} />,

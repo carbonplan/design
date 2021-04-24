@@ -244,7 +244,7 @@ const About = () => {
                 fill={'yellow'}
                 label={
                   <span>
-                    Read our press <br/> coverage
+                    Read our press <br /> coverage
                   </span>
                 }
               />
