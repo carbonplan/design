@@ -319,7 +319,7 @@ const About = () => {
       <Row sx={{ mt: [4, 5, 6, 7] }}>
         <Column start={[1, 2]} width={[6, 10]}>
           <Box as='h2' variant='styles.h2' sx={{ my: [0, 0, 0] }}>
-            Read more
+            Explore more
           </Box>
         </Column>
       </Row>
