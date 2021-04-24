@@ -61,9 +61,14 @@ const FAQ = () => {
         <Answer>
           We've been working with{' '}
           <Link href='https://ot.studio/'>Ordinary Things</Link> (formerly known
-          as Cast Iron Design). They are incredible. They developed the brand
-          and design system and we work collaboratively on site design and
-          implementation. Talk to them about your next project. Seriously.
+          as Cast Iron Design). They are incredible. They developed the initial brand
+          and we have worked collaboratively since on the design system and
+          implementation. Talk to them about your next project. Seriously. Our
+          web development leverages great open-source tools like{' '}
+          <Link href='https://github.com/system-ui/theme-ui'>Theme UI</Link> and <Link href='https://github.com/vercel/next.js/'>Next.js</Link>,
+          and the code powering all of our sites is MIT licensed and on GitHub. 
+          If you want to learn more check out our <Link href='https://github.com/carbonplan/design'>design system</Link>{' '}
+          or <Link href='https://github.com/carbonplan/components'>component library</Link>.
         </Answer>
       </Box>
     </Layout>
