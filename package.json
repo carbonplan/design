@@ -16,27 +16,13 @@
   "author": "freeman-lab",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.13.1",
-    "@carbonplan/components": "^6.1.2",
+    "@carbonplan/components": "^7.1.1",
     "@carbonplan/theme": "^5.0.0",
-    "@mdx-js/loader": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "@next/mdx": "^10.1.2",
-    "@stripe/stripe-js": "^1.13.2",
     "@theme-ui/color": "^0.7.2",
-    "d3-drag": "^2.0.0",
-    "d3-random": "^2.2.2",
-    "mapbox-gl": "^1.13.1",
-    "math-random-seed": "^2.0.0",
-    "next": "^10.0.6",
-    "react": "^16.14.0",
+    "next": "^10.1.3",
+    "react": "^17.0.2",
     "react-animate-height": "^2.0.23",
-    "react-dom": "^16.14.0",
-    "react-vega": "^7.4.2",
-    "rehype-slug": "^4.0.1",
-    "theme-ui": "^0.7.2",
-    "vega": "^5.20.2",
-    "vega-lite": "5.0.0"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
