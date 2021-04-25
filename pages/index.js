@@ -37,9 +37,13 @@ function Index() {
   return (
     <Layout title='design / carbonplan'>
       <Guide />
-      <Row sx={{ mb: [4, 5, 6, 7] }}>
-        <Column start={[1, 3]} width={[6, 7]}>
-          <Box as='h1' variant='styles.h1' sx={{ mt: [5, 6, 7, 8] }}>
+      <Row sx={{ mb: [8, 8, 9, 10] }}>
+        <Column start={[1, 2, 3, 3]} width={[6, 7]}>
+          <Box
+            as='h1'
+            variant='styles.h1'
+            sx={{ mt: [5, 6, 7, 8], mb: [5, 6, 7, 8] }}
+          >
             CarbonPlan Design
           </Box>
           <Themed.p>
@@ -76,7 +80,6 @@ function Index() {
             </Link>{' '}
             are good examples of how to use the system.
           </Themed.p>
-
           <Themed.h2>Logo</Themed.h2>
           <Themed.p>
             Our logo is built around our core font and the concepts of
