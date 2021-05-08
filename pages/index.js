@@ -12,10 +12,12 @@ import {
   Icons,
   Row,
   Column,
-  Guide,
+  Buttons,
+  Table,
 } from '@carbonplan/components'
 
 const { Check, Question, Info } = Icons
+const { ArrowButton, BackButton, CalloutButton } = Buttons
 
 const colors = [
   'red',
@@ -36,7 +38,6 @@ function Index() {
 
   return (
     <Layout title='design / carbonplan'>
-      <Guide />
       <Row sx={{ mb: [8, 8, 9, 10] }}>
         <Column start={[1, 2, 3, 3]} width={[6, 7]}>
           <Box
@@ -52,9 +53,10 @@ function Index() {
             <Link href='https://ot.studio' target='_blank' rel='noreferrer'>
               Oridnary Things
             </Link>{' '}
-            in Spring 2020, and the system has evolved since. (They are amazing,
-            by the way. Definitely talk to them about your next project.) Most
-            components of the system can be used from our javascript packages{' '}
+            in Spring 2020, we revamped the system in Spring 2021, and we are
+            continuing to evolve it. (They are amazing, by the way. Definitely
+            talk to them about your next project.) Most components of the system
+            can be used from our javascript packages{' '}
             <Link
               href='https://github.com/carbonplan/theme'
               target='_blank'
@@ -262,12 +264,12 @@ function Index() {
           <Themed.h2>Layout</Themed.h2>
           <Themed.p>
             We provide a core layout that is shared acros many of our sites,
-            though some sites and apps may use custom layouts (e.g. maps,
-            dashboards, databases). The core layout is used on the site you are
-            looking at now, and has two primary options: whether to include a
-            header (with our menu), and whether to include a footer. The header
-            additionally supports authentication status if you are wrapping a
-            site with the{' '}
+            though some very specific apps may use a slightly modified version).
+            The core layout is used on the site you are looking at now, and has
+            several options, including: whether to include a header (with our
+            menu), and whether to include a footer, the origin for links in the
+            main menu nav, and more. The header additionally supports a status
+            indicator, which is useful if you are wrapping a site with the{' '}
             <Link href='https://github.com/carbonplan/auth'>
               @carbonplan/auth
             </Link>{' '}
@@ -280,7 +282,7 @@ function Index() {
           </Themed.p>
           <Themed.h2>Base colors</Themed.h2>
           <Themed.p>Our primary colors are Carbon and Chalk.</Themed.p>
-          <Box>
+          <Box sx={{ my: [5] }}>
             <ColorSample color='#1b1e23' hex='1b1e23' label='carbon' border />
             <ColorSample color='#ebebec' hex='ebebec' label='chalk' border />
           </Box>
@@ -289,7 +291,8 @@ function Index() {
             to light mode reverts it to Carbon on White (we use pure White
             rather than Chalk in light mode for improved contrast). You can use
             the light dimmer to change the theme. In the default layout it's in
-            the lower right. You can also embed it elsewhere, like here:
+            the lower right on desktop, and in the menu on mobile or tablet. You
+            can also embed it elsewhere, like here:
           </Themed.p>
           <Dimmer />
           <Themed.p>
@@ -329,17 +332,17 @@ function Index() {
           </Box>
           <Themed.h2>Accent colors</Themed.h2>
           <Themed.p>
-            We have a series of accent colors. Typically they play a semantic
+            We have a series of accent colors. Sometimes they play a semantic
             purpose, e.g. green for forests, orange for soil, and cool gray for
             mineralization. Although semantic consistency is not strictly
             required, within a given context, colors should be chosen for
-            semantic purposes, or purely aesthetic purposes, but never both! For
-            example, we should never use orange to represent one CDR category on
-            one site, and a different CDR category on another site. But picking
-            a subset of colors purely for aesthetic purposes in an isolated
-            setting may be acceptable.
+            semantic purposes, or purely aesthetic purposes, but not both! For
+            example, we would never use pink to represent direct air capture on
+            one site, and then use it to represent an energy systems on another
+            site. But picking a subset of colors purely for aesthetic purposes
+            in an isolated setting may be acceptable.
           </Themed.p>
-          <Box sx={{ mt: [6], mb: [0] }}>
+          <Box sx={{ my: [5] }}>
             <ColorSample color='red' hex='f16f71' />
             <ColorSample color='orange' hex='eb9755' />
             <ColorSample color='yellow' hex='d4c05d' />
@@ -350,6 +353,298 @@ function Index() {
             <ColorSample color='pink' hex='e487b5' />
             <ColorSample color='grey' hex='a9b4c5' />
           </Box>
+          <Themed.p>
+            When using colors purely to enhance a design, rather than use the
+            full subset, we generally pick one of several thematic combinations
+            as a color "cycle", and then cycle through those colors across the
+            page. For example, this triad
+          </Themed.p>
+          <Box sx={{ my: [5] }}>
+            <ColorSample color='red' hex='f16f71' />
+            <ColorSample color='yellow' hex='eb9755' />
+            <ColorSample color='teal' hex='d4c05d' />
+          </Box>
+          <Themed.p>Or the warm quartet</Themed.p>
+          <Box sx={{ my: [5] }}>
+            <ColorSample color='pink' hex='f16f71' />
+            <ColorSample color='red' hex='f16f71' />
+            <ColorSample color='orange' hex='eb9755' />
+            <ColorSample color='yellow' hex='d4c05d' />
+          </Box>
+          <Themed.p>Or the cool quartet</Themed.p>
+          <Box sx={{ my: [5] }}>
+            <ColorSample color='green' hex='f16f71' />
+            <ColorSample color='teal' hex='f16f71' />
+            <ColorSample color='blue' hex='eb9755' />
+            <ColorSample color='purple' hex='d4c05d' />
+          </Box>
+          <Themed.h2>Grid</Themed.h2>
+          <Themed.p>
+            Our design system makes extensive use of a grid. For a good
+            reference on grid systems in design, we recommend{' '}
+            <Link href='https://bookshop.org/books/grid-systems-in-graphic-design-a-visual-communication-manual-for-graphic-designers-typographers-and-three-dimensional-designers/9783721201451'>
+              this book
+            </Link>{' '}
+            by Josef Müller-Brockmann. Extra special thanks to Jonny Black for
+            teaching our team grid systems in the Spring of 2021, using this
+            book as a reference.
+          </Themed.p>
+          <Themed.p>
+            Our system uses two custom components to power the grid, Row and
+            Column, both of which are fairly simple wrappers around the built in
+            CSS Grid layout engine. You can see the grid behind our design on
+            all our sites by pressing ⌘ + ; (command + semicolon).
+          </Themed.p>
+          <Themed.p>
+            The Row component builds in our standard set of column counts and
+            gutter spacings across desktop, tablet, and mobile. We use 12
+            columns on desktop, 8 on tablet, and 6 on mobile. Columns then
+            specify start locations and widths. Rows can be nested within other
+            rows, just make sure you use the correct number of columns. For
+            example, the text you are currently reading is contained within a 7
+            width column in a 7 column row nested in a 12 column row.
+          </Themed.p>
+          <Themed.p>
+            Below we'll use our components to create a 6 column row, and inside
+            it we'll create three rows with 6, 3, and 2 columns respectively.
+            Turn on the background grid to confirm alignment.
+          </Themed.p>
+          <Row columns={[6, 7, 7, 7]} sx={{ my: [5] }}>
+            <Column start={[1]} width={[6]}>
+              <Row columns={[6]}>
+                <Column start={[1]} width={[1]}>
+                  <GridSample>1</GridSample>
+                </Column>
+                <Column start={[2]} width={[1]}>
+                  <GridSample>2</GridSample>
+                </Column>
+                <Column start={[3]} width={[1]}>
+                  <GridSample>3</GridSample>
+                </Column>
+                <Column start={[4]} width={[1]}>
+                  <GridSample>4</GridSample>
+                </Column>
+                <Column start={[5]} width={[1]}>
+                  <GridSample>5</GridSample>
+                </Column>
+                <Column start={[6]} width={[1]}>
+                  <GridSample>6</GridSample>
+                </Column>
+              </Row>
+              <Row columns={[6]}>
+                <Column start={[1]} width={[2]}>
+                  <GridSample>1</GridSample>
+                </Column>
+                <Column start={[3]} width={[2]}>
+                  <GridSample>2</GridSample>
+                </Column>
+                <Column start={[5]} width={[2]}>
+                  <GridSample>3</GridSample>
+                </Column>
+              </Row>
+              <Row columns={[6]}>
+                <Column start={[1]} width={[3]}>
+                  <GridSample>1</GridSample>
+                </Column>
+                <Column start={[4]} width={[3]}>
+                  <GridSample>2</GridSample>
+                </Column>
+              </Row>
+            </Column>
+          </Row>
+          <Themed.p>
+            The most important rule of grids is to never, ever cheat. Everything
+            should live on the grid. Exceptions should be exceedingly rare, and
+            intentional. Also, if you want a styled table, checkout the Table
+            component (which is itself built on the grid), rather than using the
+            Row and Column components directly. Those should be used for primary
+            layout composition.
+          </Themed.p>
+          <Themed.h2>Buttons</Themed.h2>
+          <Themed.p>
+            We have a variety of buttons that combine text with arrows to
+            indicate actions. They can be used for links or for navigation
+            around the site.
+          </Themed.p>
+          <Themed.h3>Arrow button</Themed.h3>
+          <Themed.p>
+            These are for external links and other kinds of forward navigation.
+            They can be styled with color and come in several sizes. We most
+            commonly use it in extra small with gray color for groups of links.
+          </Themed.p>
+          <ArrowButton
+            label='Link one'
+            fill='secondary'
+            color='secondary'
+            size='xs'
+            sx={{ display: 'inline-block', mr: [3], my: [2] }}
+          />
+          <ArrowButton
+            label='Link two'
+            fill='secondary'
+            color='secondary'
+            size='xs'
+            sx={{ display: 'inline-block', mr: [3], my: [2] }}
+          />
+          <ArrowButton
+            label='Link three'
+            fill='secondary'
+            color='secondary'
+            size='xs'
+            sx={{ display: 'inline-block', mr: [3], my: [2] }}
+          />
+          <Themed.p>There are several sizes available.</Themed.p>
+          <ArrowButton
+            label='Extra small'
+            size='xs'
+            fill='secondary'
+            color='secondary'
+            sx={{ my: [2], mt: [4] }}
+          />
+          <ArrowButton
+            label='Small'
+            size='sm'
+            fill='secondary'
+            color='secondary'
+            sx={{ my: [2] }}
+          />
+          <ArrowButton
+            label='Medium'
+            size='md'
+            fill='secondary'
+            color='secondary'
+            sx={{ my: [2] }}
+          />
+          <ArrowButton
+            label='Large'
+            size='lg'
+            fill='secondary'
+            color='secondary'
+            sx={{ my: [2] }}
+          />
+          <ArrowButton
+            label='Extra large'
+            size='xl'
+            fill='secondary'
+            color='secondary'
+            sx={{ my: [2], mb: [4] }}
+          />
+          <Themed.p>
+            Along with the gray, we often use the large size with colored
+            arrows.
+          </Themed.p>
+          <ArrowButton
+            label='Red'
+            size='lg'
+            fill='red'
+            color='primary'
+            sx={{ my: [2], mt: [4] }}
+          />
+          <ArrowButton
+            label='Teal'
+            size='lg'
+            fill='teal'
+            color='primary'
+            sx={{ my: [2] }}
+          />
+          <ArrowButton
+            label='Yellow'
+            size='lg'
+            fill='yellow'
+            color='primary'
+            sx={{ my: [2], mb: [4] }}
+          />
+          <Themed.p>And we use the small size with full color.</Themed.p>
+          <ArrowButton
+            label='Link one'
+            fill='red'
+            color='red'
+            size='xs'
+            sx={{ display: 'inline-block', mr: [3], my: [2] }}
+          />
+          <ArrowButton
+            label='Link two'
+            fill='teal'
+            color='teal'
+            size='xs'
+            sx={{ display: 'inline-block', mr: [3], my: [2] }}
+          />
+          <ArrowButton
+            label='Link three'
+            fill='yellow'
+            color='yellow'
+            size='xs'
+            sx={{ display: 'inline-block', mr: [3], my: [2] }}
+          />
+          <Themed.p>
+            Feel free to get creative with different combinations.
+          </Themed.p>
+          <Themed.h3>Back button</Themed.h3>
+          <Themed.p>
+            This small button indicates going backwards (e.g. to a previous page
+            or UI element). The default label is 'Back' but you can also
+            customize it. This button is currently only available in gray and in
+            one size (small).
+          </Themed.p>
+          <BackButton sx={{ my: [2], mr: [3] }} />
+          <BackButton label='Customized' sx={{ my: [2], mr: [3] }} />
+          <Themed.h3>Callout button</Themed.h3>
+          <Themed.p>
+            This button is for calling out a link or similar with a combination
+            of both a text description and a labeled arrow.
+          </Themed.p>
+          <CalloutButton label='Click me' sx={{ maxWidth: '250px', my: [5] }}>
+            This is a short description of what we're linking to
+          </CalloutButton>
+          <Themed.p>
+            Two of more of these side by side create a nice panel of external
+            links at the end of a section.
+          </Themed.p>
+          <Themed.h2>Table</Themed.h2>
+          <Themed.p>
+            This component provides a standardized design for tables powered by
+            a simple tabular data structure, with several styling options. This
+            is the default style, which includes a styled index column.
+          </Themed.p>
+          <Table
+            columns={[6, 7, 7, 7]}
+            start={[[1], [1, 3, 3, 3], [1, 5, 5, 5]]}
+            width={[
+              [6, 2, 2, 2],
+              [6, 2, 2, 2],
+              [6, 2, 2, 2],
+            ]}
+            data={[
+              ['Row 0', 'Row 0 column 1', 'Row 0 column 2'],
+              ['Row 1', 'Row 1 column 1', 'Row 1 column 2'],
+            ]}
+            sx={{ my: [5] }}
+          />
+          <Themed.p>
+            As examples of some of the options, you can add a header with a
+            color, remove the index styling, and turn the top and bottom borders
+            off, which usually looks more elegant unless the borders are
+            especially helpful for dividing content, e.g. in an article.
+          </Themed.p>
+          <Table
+            header={'Header'}
+            color={'secondary'}
+            columns={[6, 7, 7, 7]}
+            start={[[1], [1, 3, 3, 3], [1, 5, 5, 5]]}
+            width={[
+              [6, 2, 2, 2],
+              [6, 2, 2, 2],
+              [6, 2, 2, 2],
+            ]}
+            data={[
+              ['Row 0', 'Row 0 column 1', 'Row 0 column 2'],
+              ['Row 1', 'Row 1 column 1', 'Row 1 column 2'],
+            ]}
+            borderTop={false}
+            borderBottom={false}
+            index={false}
+            sx={{ my: [3] }}
+          />
           <Themed.h2>Controls</Themed.h2>
           <Themed.p>
             These elements are useful for providing interactivity.
@@ -360,7 +655,7 @@ function Index() {
             toggle method. There are useful for filters on lists, map layers,
             etc.
           </Themed.p>
-          <Box sx={{ mb: [2] }}>
+          <Box sx={{ my: [2] }}>
             <Tag
               label={'Click me'}
               value={tag}
@@ -506,14 +801,36 @@ function Index() {
               )}
             </Box>
           </Box>
-          <Themed.h2>Demos</Themed.h2>
           <Themed.p>
-            Showing the use of these components in real applications (coming
-            soon...)
+            Although not used here, we usually use expanders with{' '}
+            <Link href='https://github.com/Stanko/react-animate-height'>
+              react-animate-height
+            </Link>{' '}
+            to animate the change in height during expansion and contraction.
           </Themed.p>
         </Column>
       </Row>
     </Layout>
+  )
+}
+
+function GridSample({ children }) {
+  return (
+    <Box
+      sx={{
+        borderStyle: 'solid',
+        borderColor: 'muted',
+        borderWidth: '1px',
+        py: [3],
+        my: [2],
+        display: 'flex',
+        justifyContent: 'center',
+        fontFamily: 'mono',
+        fontSize: [2, 2, 2, 3],
+      }}
+    >
+      {children}
+    </Box>
   )
 }
 
