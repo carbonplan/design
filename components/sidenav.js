@@ -17,7 +17,7 @@ const Sidenav = ({ active, expanded }) => {
           display: ['initial', 'initial', 'none', 'none'],
           bg: ['background', 'background', 'transparent', 'transparent'],
           zIndex: [500, 500, 'initial', 'initial'],
-          pointerEvents: expanded ? 'all' : 'none'
+          pointerEvents: expanded ? 'all' : 'none',
         }}
       />
       <Box
