@@ -27,9 +27,7 @@ npm run dev
 
 ## local linking
 
-For development purposes, it's useful to use this repo as a place to test out updates to some of our design-related packages.
-
-In general, we do this through the following steps. Let's say you have a local versions of `components` that you want to test in `design`.
+For development purposes, it's useful to use this repo as a place to test out updates to some of our design-related packages. In general, we do this through the following steps. Let's say you have a local versions of `components` that you want to test in `design`.
 
 First, go into the `components` folder and type
 
@@ -37,9 +35,7 @@ First, go into the `components` folder and type
 npm link
 ```
 
-You may need to use `sudo` here. This creates a symlink in a global folder. You can read more about it [here](https://docs.npmjs.com/cli/v7/commands/npm-link).
-
-Then, in the same folder, run
+You may need to use `sudo` here. This creates a symlink in a global folder. You can read more about it [here](https://docs.npmjs.com/cli/v7/commands/npm-link). Then, in the same folder, run
 
 ```js
 npm run watch
@@ -66,7 +62,7 @@ module.exports = {
 ```
 
 This config tells webpack to use only one version of `react` and `theme-ui`.
-In some cases, this will need to live alongisde other configuration options, e.g. those related to MDX. For example, your complete config might look like this.
+In some cases, this will need to be composed with other configuration options, e.g. those related to MDX. For example, your complete config might look like this.
 
 ```js
 const path = require('path')
@@ -93,13 +89,15 @@ Finally, navigate to `design`, and run the following.
 npm link @carbonplan/components
 ```
 
-If you now start the development server in `design` with `npm run dev` you should see that changes to `components` are reflected.
+If you now start the development server in `design` with `npm run dev` and make a change in `components` you should see that change reflected.
 
 This process can be repeated for additional packages, just make sure to do them at the same time. For example, to test `components` and `icons` at the same time use
 
 ```js
 npm link @carbonplan/components @carbonplan/icons
 ```
+
+Remember that linked packages are not saved, so if you do a clean install, you need to run the `link` command again.
 
 ## license
 
