@@ -6,6 +6,7 @@ export const contents = {
     'Callout',
     'Dimmer',
     'Expander',
+    'Input',
     'Select',
     'Slider',
     'Table',
