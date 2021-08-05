@@ -23,7 +23,6 @@ const Sidenav = ({ active, expanded }) => {
       <Box
         sx={{
           fontSize: [3, 3, 3, 4],
-          mb: [8, 8, 9, 10],
           overflow: 'scroll',
           position: ['fixed', 'fixed', 'sticky', 'sticky'],
           height: [
