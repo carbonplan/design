@@ -5,7 +5,7 @@ import { ColormapSample } from '../components/samples'
 
 # Colormaps
 
-We use colormaps for a variety of data visualization needs at CarbonPlan, especially maps. They are available in the [`@carbonplan/colormaps`](https://github.com/carbonplan/colormaps) package. Here we document a family of colormaps we have been developing. Are all designed for use with both light and dark mode. They attempt to be both aesthetically pleasing and perceptually well-blanaced.
+We use colormaps for a variety of data visualization needs at CarbonPlan, especially maps. They are available in the [`@carbonplan/colormaps`](https://github.com/carbonplan/colormaps) package. Here we document a family of colormaps we have been developing. They are all derived from a variant of the primary CarbonPlan color palette, modified slightly for better balance in hue and luminance, and further refined using bezier interpolation and brightness correction from the `chroma-js` library. Are all designed for use with both light and dark mode. They attempt to be both aesthetically pleasing and perceptually well-balanced.
 
 ## Sequential single-hue
 
