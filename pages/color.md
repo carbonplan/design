@@ -69,7 +69,7 @@ Or the cool quartet:
 <Box sx={{ my: [5] }}>
   <ColorSample color='green' hex='f16f71' />
   <ColorSample color='teal' hex='f16f71' />
-  <ColorSample color='blue' hex='eb9755' />
+  <ColorSample color='blue' hex='8b9fd1' />
   <ColorSample color='purple' hex='d4c05d' />
 </Box>
 
