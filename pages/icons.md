@@ -2,7 +2,7 @@ import Section from '../components/section'
 
 # Icons
 
-A family of simple icons are useful for basic UX elements.
+A family of simple icons are useful for basic UX elements. They are available in the [`@carbonplan/icons`](https://github.com/carbonplan/icons) package.
 
 ```jsx live=True
 <Check />
