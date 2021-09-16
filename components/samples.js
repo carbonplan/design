@@ -1,5 +1,17 @@
+import React, { useState } from 'react'
 import { Box, Themed } from 'theme-ui'
 import { useColormap } from '@carbonplan/colormaps'
+import chroma from 'chroma-js'
+import {
+  Chart,
+  Grid,
+  Ticks,
+  TickLabels,
+  AxisLabel,
+  Plot,
+  Line,
+} from '@carbonplan/charts'
+import { Row, Column, Expander } from '@carbonplan/components'
 
 const GridSample = ({ children }) => {
   return (
@@ -86,8 +98,61 @@ const ColorSample = ({ color, hex, label, border }) => {
   )
 }
 
+const ColormapChart = ({ chartData, ranges, label }) => {
+  return (
+    <Box sx={{ width: '100%', height: '200px' }}>
+      <Chart x={ranges.x} y={ranges.y}>
+        <Grid vertical horizontal />
+        <Ticks left bottom />
+        <TickLabels left bottom />
+        <AxisLabel left>{label}</AxisLabel>
+        <Plot>
+          <Line data={chartData} />
+        </Plot>
+      </Chart>
+    </Box>
+  )
+}
+
+const ColormapAnalysis = ({ colors, expanded }) => {
+  const lchValues = colors.map((d, i) => chroma(d).lch())
+
+  const labels = ['lightness', 'saturation', 'hue']
+  const ranges = {
+    lightness: { x: [0, lchValues.length], y: [0, 100] },
+    saturation: { x: [0, lchValues.length], y: [0, 80] },
+    hue: { x: [0, lchValues.length], y: [0, 400] },
+  }
+
+  const chartData = {}
+  chartData['lightness'] = lchValues.map((v, i) => [i, v[0]])
+  chartData['saturation'] = lchValues.map((v, i) => [i, v[1]])
+  chartData['hue'] = lchValues.map((v, i) => [i, v[2]])
+  console.log(chartData)
+
+  if (expanded) {
+    return (
+      <Row columns={[3]}>
+        {labels.map((l, i) => (
+          <Column key={l} start={[i + 1]} width={[1]}>
+            <ColormapChart
+              chartData={chartData[l]}
+              ranges={ranges[l]}
+              label={l}
+            />
+          </Column>
+        ))}
+      </Row>
+    )
+  } else {
+    return <Box></Box>
+  }
+}
+
 const ColormapSample = ({ name, discrete }) => {
   let values, colors
+
+  const [expanded, setExpanded] = useState(false)
 
   if (discrete) {
     const count = 9
@@ -108,6 +173,11 @@ const ColormapSample = ({ name, discrete }) => {
   return (
     <Box>
       <Themed.inlineCode>{name}</Themed.inlineCode>
+      <Expander
+        value={expanded}
+        onClick={() => setExpanded(!expanded)}
+        sx={{ position: 'relative', top: ['2px'] }}
+      />
       <Box
         sx={{
           mt: [2, 2, 2, 3],
@@ -118,6 +188,7 @@ const ColormapSample = ({ name, discrete }) => {
           background: css,
         }}
       />
+      <ColormapAnalysis colors={colors} expanded={expanded} />
     </Box>
   )
 }

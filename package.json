@@ -16,6 +16,7 @@
   "author": "freeman-lab",
   "license": "MIT",
   "dependencies": {
+    "@carbonplan/charts": "^2.0.0",
     "@carbonplan/colormaps": "^1.0.0",
     "@carbonplan/components": "^8.1.1",
     "@carbonplan/emoji": "^1.0.0",
@@ -25,6 +26,7 @@
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.2.3",
     "@theme-ui/color": "^0.10.0",
+    "chroma-js": "^2.1.2",
     "next": "^10.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

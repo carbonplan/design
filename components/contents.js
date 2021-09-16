@@ -1,5 +1,14 @@
 export const contents = {
-  Foundations: ['Logo', 'Font', 'Color', 'Colormaps', 'Grid', 'Icons', 'Emoji', 'Markdown'],
+  Foundations: [
+    'Logo',
+    'Font',
+    'Color',
+    'Colormaps',
+    'Grid',
+    'Icons',
+    'Emoji',
+    'Markdown',
+  ],
   Components: [
     'Badge',
     'Button',
