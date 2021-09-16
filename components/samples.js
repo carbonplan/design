@@ -128,7 +128,6 @@ const ColormapAnalysis = ({ colors, expanded }) => {
   chartData['lightness'] = lchValues.map((v, i) => [i, v[0]])
   chartData['saturation'] = lchValues.map((v, i) => [i, v[1]])
   chartData['hue'] = lchValues.map((v, i) => [i, v[2]])
-  console.log(chartData)
 
   if (expanded) {
     return (
