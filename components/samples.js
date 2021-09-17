@@ -130,6 +130,8 @@ const ColormapAnalysis = ({ colors, expanded }) => {
   chartData['hue'] = lchValues.map((v, i) => [i, v[2]])
 
   if (expanded) {
+    console.log(colors)
+    console.log(chartData)
     return (
       <Row columns={[3]}>
         {labels.map((l, i) => (
