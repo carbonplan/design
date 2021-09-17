@@ -103,11 +103,13 @@ const ColormapChart = ({ chartData, ranges, label }) => {
   const data = chartData.filter((d) => !Number.isNaN(d[1]))
   return (
     <Box sx={{ width: '100%', height: '200px' }}>
-      <Chart x={ranges.x} y={ranges.y}>
+      <Chart x={ranges.x} y={ranges.y} padding={{ left: 55, bottom: 55 }}>
         <Grid vertical horizontal />
         <Ticks left bottom />
         <TickLabels left bottom />
-        <AxisLabel left>{label}</AxisLabel>
+        <AxisLabel left align='left'>
+          {label}
+        </AxisLabel>
         <Plot>
           <Line data={data} />
         </Plot>
