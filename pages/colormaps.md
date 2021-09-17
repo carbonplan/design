@@ -11,7 +11,7 @@ We use colormaps for a variety of data visualization needs at CarbonPlan, especi
 
 <Box>
   {colormaps.filter(d => d.type === 'sequentialSingleHue').map((d) => (
-    <ColormapSample key={d} name={d.name} />
+    <ColormapSample key={d.name} name={d.name} />
   ))}
 </Box>
 
@@ -20,7 +20,7 @@ We use colormaps for a variety of data visualization needs at CarbonPlan, especi
 <Box>
   {colormaps.filter(d => d.type === 'sequentialMultiHue').map(
     (d) => (
-      <ColormapSample key={d} name={d.name} />
+      <ColormapSample key={d.name} name={d.name} />
     )
   )}
 </Box>
@@ -29,7 +29,7 @@ We use colormaps for a variety of data visualization needs at CarbonPlan, especi
 
 <Box>
   {colormaps.filter(d => d.type === 'diverging').map((d) => (
-    <ColormapSample key={d} name={d.name} />
+    <ColormapSample key={d.name} name={d.name} />
   ))}
 </Box>
 
@@ -37,7 +37,7 @@ We use colormaps for a variety of data visualization needs at CarbonPlan, especi
 
 <Box>
   {colormaps.filter(d => d.type === 'cyclical').map((d) => (
-    <ColormapSample key={d} name={d.name} />
+    <ColormapSample key={d.name} name={d.name} />
   ))}
 </Box>
 
