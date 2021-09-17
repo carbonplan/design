@@ -99,6 +99,8 @@ const ColorSample = ({ color, hex, label, border }) => {
 }
 
 const ColormapChart = ({ chartData, ranges, label }) => {
+  // remove nans in the y-column
+  const data = chartData.filter((d) => !Number.isNaN(d[1]))
   return (
     <Box sx={{ width: '100%', height: '200px' }}>
       <Chart x={ranges.x} y={ranges.y}>
@@ -107,7 +109,7 @@ const ColormapChart = ({ chartData, ranges, label }) => {
         <TickLabels left bottom />
         <AxisLabel left>{label}</AxisLabel>
         <Plot>
-          <Line data={chartData} />
+          <Line data={data} />
         </Plot>
       </Chart>
     </Box>
@@ -121,7 +123,7 @@ const ColormapAnalysis = ({ colors, expanded }) => {
   const ranges = {
     lightness: { x: [0, lchValues.length], y: [0, 100] },
     saturation: { x: [0, lchValues.length], y: [0, 80] },
-    hue: { x: [0, lchValues.length], y: [0, 400] },
+    hue: { x: [0, lchValues.length], y: [0, 360] },
   }
 
   const chartData = {}
@@ -130,8 +132,6 @@ const ColormapAnalysis = ({ colors, expanded }) => {
   chartData['hue'] = lchValues.map((v, i) => [i, v[2]])
 
   if (expanded) {
-    console.log(colors)
-    console.log(chartData)
     return (
       <Row columns={[3]}>
         {labels.map((l, i) => (
@@ -146,7 +146,7 @@ const ColormapAnalysis = ({ colors, expanded }) => {
       </Row>
     )
   } else {
-    return <Box></Box>
+    return <></>
   }
 }
 
@@ -177,7 +177,7 @@ const ColormapSample = ({ name, discrete }) => {
       <Expander
         value={expanded}
         onClick={() => setExpanded(!expanded)}
-        sx={{ position: 'relative', top: ['2px'] }}
+        sx={{ position: 'relative', top: ['2px'], ml: [1] }}
       />
       <Box
         sx={{
