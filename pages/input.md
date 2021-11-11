@@ -12,6 +12,4 @@ A component for simple text inputs available at multiple sizes.
 <Input size='xl' placeholder='Extra large'/>
 ```
 
-export default ({children}) => <Section name='input'>{children}</Section
-
->
+export default ({children}) => <Section name='input'>{children}</Section>

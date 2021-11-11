@@ -5,7 +5,7 @@ import Section from '../components/section'
 Basic responsive slider. All the usual props can be added.
 
 ```jsx live
-;() => {
+() => {
   const [value, setValue] = useState(5)
   return (
     <>
@@ -30,6 +30,4 @@ A color can be specified.
 }
 ```
 
-export default ({children}) => <Section name='slider'>{children}</Section
-
->
+export default ({children}) => <Section name='slider'>{children}</Section>

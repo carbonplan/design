@@ -38,6 +38,4 @@ Similar to buttons, we can invert the color scheme for a more subtle callout.
 </Callout>
 ```
 
-export default ({children}) => <Section name='callout'>{children}</Section
-
->
+export default ({children}) => <Section name='callout'>{children}</Section>

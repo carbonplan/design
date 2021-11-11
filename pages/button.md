@@ -67,6 +67,4 @@ You can pass an `href` to render a link using the same styling as our buttons. T
 </Button>
 ```
 
-export default ({children}) => <Section name='button'>{children}</Section
-
->
+export default ({children}) => <Section name='button'>{children}</Section>

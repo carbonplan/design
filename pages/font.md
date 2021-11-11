@@ -88,6 +88,4 @@ Mono should generally only be used for numbers (e.g. in dashboards), axis labels
 </Box>
 ```
 
-export default ({children}) => <Section name='font'>{children}</Section
-
->
+export default ({children}) => <Section name='font'>{children}</Section>

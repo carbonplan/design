@@ -98,6 +98,4 @@ x = len('abc')
 print(f.__doc__)
 ```
 
-export default ({children}) => <Section name='markdown'>{children}</Section
-
->
+export default ({children}) => <Section name='markdown'>{children}</Section>
