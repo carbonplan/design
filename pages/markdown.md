@@ -21,11 +21,13 @@ This is body copy.
 This is more body copy.
 
 This is a list
+
 - item 1
 - item 2
 - item 3
 
 This is an ordered list
+
 1. item 1
 2. item 2
 3. item 3
@@ -36,7 +38,7 @@ This text uses **strong** formatting.
 
 This text uses ~~strikethrough~~ formatting.
 
-***
+---
 
 This is a [link](/markdown)
 
@@ -46,7 +48,7 @@ This is a code block.
 const a = 2
 ```
 
-This is body copy that includes `inline code`. 
+This is body copy that includes `inline code`.
 
 This is a code block with a live editor.
 
@@ -64,14 +66,10 @@ function formatName(user) {
 
 const user = {
   firstName: 'Harper',
-  lastName: 'Perez'
+  lastName: 'Perez',
 }
 
-const element = (
-  <h1>
-    Hello, {formatName(user)}!
-  </h1>
-)
+const element = <h1>Hello, {formatName(user)}!</h1>
 ```
 
 This is a code block with `python` syntax highlighting.
@@ -100,4 +98,4 @@ x = len('abc')
 print(f.__doc__)
 ```
 
-export default ({children}) => <Section name='markdown'>{children}</Section>
+export default ({ children }) => <Section name='markdown'>{children}</Section>

@@ -8,4 +8,4 @@ You can use the light dimmer to change the theme. In the default layout it's in 
 <Dimmer />
 ```
 
-export default ({children}) => <Section name='dimmer'>{children}</Section>
+export default ({ children }) => <Section name='dimmer'>{children}</Section>

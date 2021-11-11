@@ -2,38 +2,37 @@ import Section from '../components/section'
 
 # Toggle
 
-Used for binary options. 
+Used for binary options.
 
+<!-- prettier-ignore -->
 ```jsx live
 () => {
   const [toggle, setToggle] = useState(true)
-  return <Toggle 
-    value={toggle} 
-    onClick={() => setToggle(!toggle)}
-  />
+  return <Toggle value={toggle} onClick={() => setToggle(!toggle)} />
 }
 ```
 
 Can be disabled.
 
 ```jsx live
-<Toggle disabled/>
+<Toggle disabled />
 ```
 
 Can also have a custom color.
 
+<!-- prettier-ignore -->
 ```jsx live
 () => {
   const [toggle, setToggle] = useState(true)
-  return colors.map(color => (
-    <Toggle 
+  return colors.map((color) => (
+    <Toggle
       key={color}
-      value={toggle} 
-      sx={{color: color, mr: [2]}}
+      value={toggle}
+      sx={{ color: color, mr: [2] }}
       onClick={() => setToggle(!toggle)}
     />
   ))
 }
 ```
 
-export default ({children}) => <Section name='toggle'>{children}</Section>
+export default ({ children }) => <Section name='toggle'>{children}</Section>

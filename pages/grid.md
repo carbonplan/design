@@ -8,7 +8,7 @@ Our system uses two custom components to power the grid, `Row` and `Column`, bot
 
 The Row component builds in our standard set of column counts and gutter spacings across desktop, tablet, and mobile. We use 12 columns on desktop, 8 on tablet, and 6 on mobile. Columns then specify start locations and widths. Rows can be nested within other rows, just make sure you use the correct number of columns. For example, the text you are currently reading is contained within a 6 width column in a 6 column row nested in a 12 column row.
 
-Below we'll use our components to create a few 6 column Rows, and within each create different column combnations with varied starts and widths. 
+Below we'll use our components to create a few 6 column Rows, and within each create different column combnations with varied starts and widths.
 
 ```jsx live
 <Row columns={[6]}>
@@ -86,4 +86,4 @@ Below we'll use our components to create a few 6 column Rows, and within each cr
 </Row>
 ```
 
-export default ({children}) => <Section name='grid'>{children}</Section>
+export default ({ children }) => <Section name='grid'>{children}</Section>

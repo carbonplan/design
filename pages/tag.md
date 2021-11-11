@@ -17,26 +17,28 @@ Here are two, one of which is set to on and the other off.
 
 They can be made clickable by adding a toggle method. Here's an example where we add state.
 
+<!-- prettier-ignore -->
 ```jsx live=True
 () => {
   const [value, setValue] = useState(true)
-  return <Tag
-    value={value}
-    onClick={() => setValue(prev => !prev)}
-  >
-    Click me
-  </Tag>
+  return (
+    <Tag value={value} onClick={() => setValue((prev) => !prev)}>
+      Click me
+    </Tag>
+  )
 }
 ```
 
 Here are a bunch in different colors.
 
 ```jsx live=True
-{colors.map(color => (
-  <Tag key={color} sx={{ color: color, mr: [2] }}>
-    {color}
-  </Tag>
-))}
+{
+  colors.map((color) => (
+    <Tag key={color} sx={{ color: color, mr: [2] }}>
+      {color}
+    </Tag>
+  ))
+}
 ```
 
-export default ({children}) => <Section name='tag'>{children}</Section>
+export default ({ children }) => <Section name='tag'>{children}</Section>

@@ -34,31 +34,37 @@ The default button is in `primary` and transitions to `secondary`. You can use `
 You can also specify the color of the button as a whole.
 
 ```jsx live=True
-{colors.map(color => (
-  <Button key={color} sx={{color: color}} suffix={<RotatingArrow/>}>
-    <Box as='span' sx={{textTransform: 'capitalize'}}>
-      {color}
-    </Box>
-  </Button>
-))}
+{
+  colors.map((color) => (
+    <Button key={color} sx={{ color: color }} suffix={<RotatingArrow />}>
+      <Box as='span' sx={{ textTransform: 'capitalize' }}>
+        {color}
+      </Box>
+    </Button>
+  ))
+}
 ```
 
 Or just specify the color for the icon.
 
 ```jsx live=True
-{colors.map(color => (
-  <Button key={color} suffix={<RotatingArrow sx={{color: color}}/>}>
-    <Box as='span' sx={{textTransform: 'capitalize'}}>
-      {color}
-    </Box>
-  </Button>
-))}
+{
+  colors.map((color) => (
+    <Button key={color} suffix={<RotatingArrow sx={{ color: color }} />}>
+      <Box as='span' sx={{ textTransform: 'capitalize' }}>
+        {color}
+      </Box>
+    </Button>
+  ))
+}
 ```
 
 You can pass an `href` to render a link using the same styling as our buttons. This will be rendered as an `<a>` element rather than a `<button>`. When using an `href` you can also pass the extra `internal` and `tracking` options used by the `Link` component.
 
 ```jsx live=True
-<Button href='/button' suffix={<RotatingArrow/>}>This is a link</Button>
+<Button href='/button' suffix={<RotatingArrow />}>
+  This is a link
+</Button>
 ```
 
-export default ({children}) => <Section name='button'>{children}</Section>
+export default ({ children }) => <Section name='button'>{children}</Section>
