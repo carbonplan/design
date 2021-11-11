@@ -8,10 +8,13 @@ A family of simple icons are useful for basic UX elements. They are available in
 <Check />
 <Question />
 <X />
+<ArrowThin />
 <CheckCircle />
 <QuestionCircle />
 <XCircle />
 <Info />
+<Globe  />
+<Search />
 <Triangle />
 <Reset />
 <Sun />
