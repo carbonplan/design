@@ -13,7 +13,7 @@ Our design system is built around four fonts from the family [Relative](https://
     letterSpacing: 'body',
     letterSpacing: '0em',
   }}
-  >
+>
   Relative Pro Book
 </Box>
 <Box
@@ -88,4 +88,6 @@ Mono should generally only be used for numbers (e.g. in dashboards), axis labels
 </Box>
 ```
 
-export default ({children}) => <Section name='font'>{children}</Section>
+export default ({children}) => <Section name='font'>{children}</Section
+
+>

@@ -24,4 +24,6 @@ Our monogram is narrower than the logo and useful for social media cards, favico
 <Monogram sx={{ width: 120, dispaly: 'block' }} />
 ```
 
-export default ({children}) => <Section name='logo'>{children}</Section>
+export default ({children}) => <Section name='logo'>{children}</Section
+
+>

@@ -14,22 +14,22 @@ Our primary colors are Carbon and Chalk.
 
 The core design is built around Chalk on Carbon. Changing the theme to light mode reverts it to Carbon on White (we use pure White rather than Chalk in light mode for improved contrast). These two colors are available in our theme as `primary` and `background` depending on whether you are in `light` more or `dark` mode. You can use the light dimmer to change the theme.
 
-<Dimmer/>
+<Dimmer />
 
 We also have additional shades for accenting: `primary` `secondary` `muted` and `hinted`. Here is text in a few sizes and fonts rendered in those shades.
 
-<FontSample color='primary' label='Primary'/>
-<FontSample color='secondary' label='Secondary'/>
-<FontSample color='muted' label='Muted'/>
-<FontSample color='hinted' label='Hinted'/>
+<FontSample color='primary' label='Primary' />
+<FontSample color='secondary' label='Secondary' />
+<FontSample color='muted' label='Muted' />
+<FontSample color='hinted' label='Hinted' />
 
-The `hinted` shade should almost never be used for text and should instead be used to provide a minimal background. 
+The `hinted` shade should almost never be used for text and should instead be used to provide a minimal background.
 
 > It is used, for example, as the background for code block and blockquote elements, like this one.
 
 ## Accent colors
 
-We have a series of accent colors. Sometimes they play a semantic purpose, e.g. green for forests, orange for soil, and cool gray for mineralization. Although semantic consistency is not strictly required, within a given context, colors should be chosen for semantic purposes, or purely aesthetic purposes, but not both! 
+We have a series of accent colors. Sometimes they play a semantic purpose, e.g. green for forests, orange for soil, and cool gray for mineralization. Although semantic consistency is not strictly required, within a given context, colors should be chosen for semantic purposes, or purely aesthetic purposes, but not both!
 
 For example, we would never use pink to represent direct air capture on one site, and then use it to represent energy systems on another site. But a subset of colors can be used purely for aesthetic purposes in an isolated setting.
 
@@ -45,7 +45,7 @@ For example, we would never use pink to represent direct air capture on one site
   <ColorSample color='grey' hex='a9b4c5' />
 </Box>
 
-When using colors to enhance a design without semantic meaning, rather than use the full subset, we generally pick one of several thematic combinations as a color "cycle", and then cycle through those colors across the page. 
+When using colors to enhance a design without semantic meaning, rather than use the full subset, we generally pick one of several thematic combinations as a color "cycle", and then cycle through those colors across the page.
 
 For example, this triad:
 
@@ -73,4 +73,4 @@ Or the cool quartet:
   <ColorSample color='purple' hex='d4c05d' />
 </Box>
 
-export default ({children}) => <Section name='color'>{children}</Section>
+export default ({ children }) => <Section name='color'>{children}</Section>

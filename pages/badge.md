@@ -17,11 +17,15 @@ Used for numbers and counters with lots of color options.
 ```
 
 ```jsx live
-{colors.map((color, index) => (
-  <Badge key={color} sx={{ mr: [2], color: color }}>
-    {index}
-  </Badge>
-))}
+{
+  colors.map((color, index) => (
+    <Badge key={color} sx={{ mr: [2], color: color }}>
+      {index}
+    </Badge>
+  ))
+}
 ```
 
-export default ({children}) => <Section name='badge'>{children}</Section>
+export default ({children}) => <Section name='badge'>{children}</Section
+
+>

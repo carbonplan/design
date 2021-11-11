@@ -17,9 +17,7 @@ We often use a horizontal series of callouts, e.g. to highlight additional conte
 ```jsx live
 <Row columns={6}>
   <Column start={1} width={2}>
-    <Callout label='callout 1'>
-      This is a description of the first link
-    </Callout>
+    <Callout label='callout 1'>This is a description of the first link</Callout>
   </Column>
   <Column start={3} width={2}>
     <Callout label='callout 2'>
@@ -27,9 +25,7 @@ We often use a horizontal series of callouts, e.g. to highlight additional conte
     </Callout>
   </Column>
   <Column start={5} width={2}>
-    <Callout label='callout 2'>
-      This is a description of a third link
-    </Callout>
+    <Callout label='callout 2'>This is a description of a third link</Callout>
   </Column>
 </Row>
 ```
@@ -42,4 +38,6 @@ Similar to buttons, we can invert the color scheme for a more subtle callout.
 </Callout>
 ```
 
-export default ({children}) => <Section name='callout'>{children}</Section>
+export default ({children}) => <Section name='callout'>{children}</Section
+
+>
