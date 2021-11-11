@@ -17,6 +17,7 @@ Here are two, one of which is set to on and the other off.
 
 They can be made clickable by adding a toggle method. Here's an example where we add state.
 
+<!-- prettier-ignore -->
 ```jsx live=True
 () => {
   const [value, setValue] = useState(true)
@@ -40,4 +41,4 @@ Here are a bunch in different colors.
 }
 ```
 
-export default ({children}) => <Section name='tag'>{children}</Section>
+export default ({ children }) => <Section name='tag'>{children}</Section>

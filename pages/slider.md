@@ -4,6 +4,7 @@ import Section from '../components/section'
 
 Basic responsive slider. All the usual props can be added.
 
+<!-- prettier-ignore -->
 ```jsx live
 () => {
   const [value, setValue] = useState(5)
@@ -30,4 +31,4 @@ A color can be specified.
 }
 ```
 
-export default ({children}) => <Section name='slider'>{children}</Section>
+export default ({ children }) => <Section name='slider'>{children}</Section>

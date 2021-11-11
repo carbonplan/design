@@ -45,4 +45,4 @@ You can add a header with a color, remove the index styling, and turn the top an
 />
 ```
 
-export default ({children}) => <Section name='table'>{children}</Section>
+export default ({ children }) => <Section name='table'>{children}</Section>

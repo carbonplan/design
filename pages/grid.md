@@ -86,4 +86,4 @@ Below we'll use our components to create a few 6 column Rows, and within each cr
 </Row>
 ```
 
-export default ({children}) => <Section name='grid'>{children}</Section>
+export default ({ children }) => <Section name='grid'>{children}</Section>

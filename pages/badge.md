@@ -26,4 +26,4 @@ Used for numbers and counters with lots of color options.
 }
 ```
 
-export default ({children}) => <Section name='badge'>{children}</Section>
+export default ({ children }) => <Section name='badge'>{children}</Section>

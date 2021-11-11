@@ -14,6 +14,7 @@ Combine with options to create a menu for selection.
 
 Available in different sizes.
 
+<!-- prettier-ignore -->
 ```jsx live
 {
   ['xs', 'sm', 'md'].map((size) => (
@@ -25,4 +26,4 @@ Available in different sizes.
 }
 ```
 
-export default ({children}) => <Section name='select'>{children}</Section>
+export default ({ children }) => <Section name='select'>{children}</Section>

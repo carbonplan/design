@@ -4,6 +4,7 @@ import Section from '../components/section'
 
 Used for binary options.
 
+<!-- prettier-ignore -->
 ```jsx live
 () => {
   const [toggle, setToggle] = useState(true)
@@ -19,6 +20,7 @@ Can be disabled.
 
 Can also have a custom color.
 
+<!-- prettier-ignore -->
 ```jsx live
 () => {
   const [toggle, setToggle] = useState(true)
@@ -33,4 +35,4 @@ Can also have a custom color.
 }
 ```
 
-export default ({children}) => <Section name='toggle'>{children}</Section>
+export default ({ children }) => <Section name='toggle'>{children}</Section>

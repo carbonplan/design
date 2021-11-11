@@ -10,4 +10,4 @@ We used stylized dot emojis for fun and a bit of humor. They are available in th
 
 For example usage, see our `Custom404` component.
 
-export default ({children}) => <Section name='emoji'>{children}</Section>
+export default ({ children }) => <Section name='emoji'>{children}</Section>
