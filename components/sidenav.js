@@ -49,7 +49,7 @@ const Sidenav = ({ active, expanded }) => {
             'none',
           ],
           width: [
-            'calc(3/6 * 100vw - 28px)',
+            'calc(4/6 * 100vw - 28px)',
             'calc(3/8 * 100vw - 40px)',
             'auto',
             'auto',
