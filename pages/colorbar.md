@@ -6,8 +6,9 @@ A colorbar useful for labeling graphics, maps, and any other places where we use
 
 There are several options for styling, including making it `horizontal`, using `discrete` values, and setting the `width` and `height`.
 
+<!-- prettier-ignore -->
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm', { count: 5 })
   return (
     <>
@@ -22,8 +23,9 @@ There are several options for styling, including making it `horizontal`, using `
 
 You can also add a label (with optional units) and limit values, in either vertical or horizontal orientation. These are typically used for figure or map legends.
 
+<!-- prettier-ignore -->
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm')
   return (
     <Colorbar
@@ -36,8 +38,9 @@ You can also add a label (with optional units) and limit values, in either verti
 }
 ```
 
+<!-- prettier-ignore -->
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm')
   return (
     <Colorbar
@@ -51,6 +54,4 @@ You can also add a label (with optional units) and limit values, in either verti
 }
 ```
 
-export default ({ children }) => <Section name='colorbar'>{children}</Section
-
->
+export default ({ children }) => <Section name='colorbar'>{children}</Section>
