@@ -1,5 +1,5 @@
 import { Box, Themed } from 'theme-ui'
-import { useColormap } from '@carbonplan/colormaps'
+import { useThemedColormap } from '@carbonplan/colormaps'
 
 const GridSample = ({ children }) => {
   return (
@@ -91,7 +91,7 @@ const ColormapSample = ({ name, discrete }) => {
 
   if (discrete) {
     const count = 9
-    colors = useColormap(name, count)
+    colors = useThemedColormap(name, { count: count })
     values = colors.map((d, i) => {
       if (i == 0) return `rgb(${d}) ${Math.round(100 / count)}%`
       if (i == count - 1) return `rgb(${d}) ${Math.round(100 - 100 / count)}%`
@@ -100,7 +100,7 @@ const ColormapSample = ({ name, discrete }) => {
       )}%`
     })
   } else {
-    colors = useColormap(name, 255)
+    colors = useThemedColormap(name, { count: 255 })
     values = colors.map((d, i) => `rgb(${d}) ${(i / 255) * 100}%`)
   }
 

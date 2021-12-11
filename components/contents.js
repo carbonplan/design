@@ -13,6 +13,7 @@ export const contents = {
     'Badge',
     'Button',
     'Callout',
+    'Colorbar',
     'Dimmer',
     'Expander',
     'Input',
