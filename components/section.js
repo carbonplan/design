@@ -7,6 +7,7 @@ import * as carbonPlanEmoji from '@carbonplan/emoji'
 import { Layout, Row, Column, FadeIn, Tray } from '@carbonplan/components'
 import { Code, LiveCode, Pre } from '@carbonplan/prism'
 import Sidenav from './sidenav'
+import { useThemedColormap } from '@carbonplan/colormaps'
 import { ColorSample, GridSample } from './samples'
 
 const colors = [
@@ -37,6 +38,7 @@ const scope = {
   useState,
   ColorSample,
   GridSample,
+  useThemedColormap,
   colors,
 }
 
