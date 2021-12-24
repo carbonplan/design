@@ -54,4 +54,62 @@ You can also add a label (with optional units) and limit values, in either verti
 }
 ```
 
+If you provide a `setClim` prop, the colorbar becomes modifiable, allowing you to click and drag the numbers to change the limits of the color scale.
+
+<!-- prettier-ignore -->
+```jsx live
+() => {
+  const colormap = useThemedColormap('warm')
+  const [clim, setClim] = useState([0, 10])
+  return (
+    <Colorbar
+      colormap={colormap}
+      units={'units'}
+      label={'Label'}
+      clim={clim}
+      setClim={setClim}
+    />
+  )
+}
+```
+
+<!-- prettier-ignore -->
+```jsx live
+() => {
+  const colormap = useThemedColormap('warm')
+  const [clim, setClim] = useState([0, 10])
+  return (
+    <Colorbar
+      colormap={colormap}
+      units={'units'}
+      label={'Label'}
+      clim={clim}
+      setClim={setClim}
+      horizontal
+    />
+  )
+}
+```
+
+A couple other style configurations are possible. For example, here's a version that moves the color limits to the bottom with adjustability, increases their size, removes the label, and fills the width.
+
+<!-- prettier-ignore -->
+```jsx live
+() => {
+  const colormap = useThemedColormap('warm')
+  const [clim, setClim] = useState([0, 10])
+  return (
+    <Colorbar
+      colormap={colormap}
+      width={'100%'}
+      clim={clim}
+      setClim={setClim}
+      sxClim={{fontSize: [1, 1, 1, 2], pt: [1]}}
+      horizontal
+      bottom
+    />
+  )
+}
+```
+
 export default ({ children }) => <Section name='colorbar'>{children}</Section>

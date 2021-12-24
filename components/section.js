@@ -70,7 +70,7 @@ const Section = ({ children, name }) => {
           <Column start={[1, 1, 2, 2]} width={[4, 4, 2, 2]}>
             <Sidenav active={name} expanded={expanded} />
           </Column>
-          <Column start={[1, 2, 5, 5]} width={[6]} sx={{ mb: [8, 8, 9, 10] }}>
+          <Column start={[1, 2, 5, 5]} width={[6]}>
             <FadeIn>{children}</FadeIn>
           </Column>
         </Row>
