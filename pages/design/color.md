@@ -1,7 +1,7 @@
 import { Box } from 'theme-ui'
-import Section from '../components/section'
-import { ColorSample, FontSample } from '../components/samples'
 import { Dimmer } from '@carbonplan/components'
+import { ColorSample, FontSample } from '../../components/samples'
+import Section from '../../components/section'
 
 # Color
 

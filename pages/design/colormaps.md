@@ -1,7 +1,7 @@
 import { Box } from 'theme-ui'
-import Section from '../components/section'
 import { colormaps } from '@carbonplan/colormaps'
-import { ColormapSample } from '../components/samples'
+import { ColormapSample } from '../../components/samples'
+import Section from '../../components/section'
 
 # Colormaps
 

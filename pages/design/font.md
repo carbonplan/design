@@ -1,6 +1,6 @@
 import { Box } from 'theme-ui'
-import Section from '../components/section'
-import { FontSample } from '../components/samples'
+import { FontSample } from '../../components/samples'
+import Section from '../../components/section'
 
 # Font
 

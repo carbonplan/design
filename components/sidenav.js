@@ -60,7 +60,7 @@ const Sidenav = ({ active, expanded }) => {
         }}
       >
         <Link
-          href={'/'}
+          href={'/design'}
           sx={{
             width: 'fit-content',
             display: 'block',
@@ -94,7 +94,7 @@ const Sidenav = ({ active, expanded }) => {
                   return (
                     <Link
                       key={e}
-                      href={'/' + e.toLowerCase()}
+                      href={'/design/' + e.toLowerCase()}
                       sx={{
                         width: 'fit-content',
                         display: 'block',
