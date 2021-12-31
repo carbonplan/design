@@ -1,7 +1,7 @@
 import { Box } from 'theme-ui'
 import { useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import { Section as SectionInner } from '@carbonplan/layouts/docs'
+import { NavSection } from '@carbonplan/layouts'
 import { Code, LiveCode, Pre } from '@carbonplan/prism'
 import { useThemedColormap } from '@carbonplan/colormaps'
 import * as carbonPlanComponents from '@carbonplan/components'
@@ -57,12 +57,9 @@ const components = {
 const Section = ({ children, name }) => {
   return (
     <MDXProvider components={components}>
-      <SectionInner
-        name={name}
-        sidenav={{ contents: contents, prefix: '/design' }}
-      >
+      <NavSection name={name} menu={{ contents: contents, prefix: '/design' }}>
         {children}
-      </SectionInner>
+      </NavSection>
     </MDXProvider>
   )
 }

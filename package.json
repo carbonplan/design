@@ -20,7 +20,7 @@
     "@carbonplan/components": "^11.0.6",
     "@carbonplan/emoji": "^1.0.0",
     "@carbonplan/icons": "^1.1.0",
-    "@carbonplan/layouts": "1.0.0-develop.15",
+    "@carbonplan/layouts": "1.0.0-develop.22",
     "@carbonplan/prism": "^1.0.4",
     "@carbonplan/theme": "^7.0.0",
     "@mdx-js/loader": "^1.6.22",
