@@ -1,14 +1,14 @@
+import { Box } from 'theme-ui'
 import { useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import { Box } from 'theme-ui'
+import { Section as SectionInner } from '@carbonplan/layouts/docs'
+import { Code, LiveCode, Pre } from '@carbonplan/prism'
+import { useThemedColormap } from '@carbonplan/colormaps'
 import * as carbonPlanComponents from '@carbonplan/components'
 import * as carbonPlanIcons from '@carbonplan/icons'
 import * as carbonPlanEmoji from '@carbonplan/emoji'
-import { Layout, Row, Column, FadeIn, Tray } from '@carbonplan/components'
-import { Code, LiveCode, Pre } from '@carbonplan/prism'
-import Sidenav from './sidenav'
-import { useThemedColormap } from '@carbonplan/colormaps'
 import { ColorSample, GridSample } from './samples'
+import { contents } from './contents'
 
 const colors = [
   'red',
@@ -55,26 +55,14 @@ const components = {
 }
 
 const Section = ({ children, name }) => {
-  const [expanded, setExpanded] = useState(false)
-
   return (
     <MDXProvider components={components}>
-      <Layout
-        fade={false}
-        settings={{
-          value: expanded,
-          onClick: () => setExpanded((prev) => !prev),
-        }}
+      <SectionInner
+        name={name}
+        sidenav={{ contents: contents, prefix: '/design' }}
       >
-        <Row>
-          <Column start={[1, 1, 2, 2]} width={[4, 4, 2, 2]}>
-            <Sidenav active={name} expanded={expanded} />
-          </Column>
-          <Column start={[1, 2, 5, 5]} width={[6]}>
-            <FadeIn>{children}</FadeIn>
-          </Column>
-        </Row>
-      </Layout>
+        {children}
+      </SectionInner>
     </MDXProvider>
   )
 }
