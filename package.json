@@ -16,7 +16,7 @@
   "author": "freeman-lab",
   "license": "MIT",
   "dependencies": {
-    "@carbonplan/colormaps": "^3.0.0",
+    "@carbonplan/colormaps": "^3.0.1",
     "@carbonplan/components": "^11.0.6",
     "@carbonplan/emoji": "^1.0.0",
     "@carbonplan/icons": "^1.1.0",
