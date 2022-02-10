@@ -35,6 +35,7 @@
     "theme-ui": "^0.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.2",
     "prettier": "^2.5.1"
   }
 }
