@@ -1,8 +1,11 @@
+import { Blockquote } from '@carbonplan/components'
 import Section from '../../components/section'
 
 # Markdown
 
 This section demonstrates our styling of markdown content.
+
+# This is a heading 1
 
 ## This is a heading 2
 
@@ -16,7 +19,12 @@ This section demonstrates our styling of markdown content.
 
 This is body copy.
 
-> This is a block quote
+> This is a basic block quote
+
+<Blockquote>
+  “This is blockquote rendered with our custom component that hangs when the
+  first character is a single or double quotation mark.”
+</Blockquote>
 
 This is more body copy.
 

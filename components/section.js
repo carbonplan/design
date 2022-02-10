@@ -55,9 +55,19 @@ const components = {
 }
 
 const Section = ({ children, name }) => {
+  console.log(name)
   return (
     <MDXProvider components={components}>
-      <NavSection name={name} menu={{ contents: contents, prefix: '/design' }}>
+      <NavSection
+        name={name}
+        menu={{ contents: contents, prefix: '/design' }}
+        title={`${
+          name === 'intro' ? 'Design' : name[0].toUpperCase() + name.slice(1)
+        } – CarbonPlan`}
+        description={
+          'Documentation for our design system and component library.'
+        }
+      >
         {children}
       </NavSection>
     </MDXProvider>

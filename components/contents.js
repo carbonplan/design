@@ -10,6 +10,7 @@ export const contents = {
     'Markdown',
   ],
   Components: [
+    'Avatar',
     'Badge',
     'Button',
     'Callout',

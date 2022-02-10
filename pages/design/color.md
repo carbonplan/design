@@ -73,4 +73,18 @@ Or the cool quartet:
   <ColorSample color='purple' hex='d4c05d' />
 </Box>
 
+## Usage
+
+String names can be used to reference colors via `theme-ui`, for example
+
+```jsx live
+<Box sx={{ color: 'red' }}>This is red</Box>
+```
+
+You can also use the `Colors` component to quickly get an inline color
+
+```jsx live
+<Colors.Red>This is red</Colors.Red>
+```
+
 export default ({ children }) => <Section name='color'>{children}</Section>
