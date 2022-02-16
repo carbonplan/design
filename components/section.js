@@ -55,7 +55,6 @@ const components = {
 }
 
 const Section = ({ children, name }) => {
-  console.log(name)
   return (
     <MDXProvider components={components}>
       <NavSection
