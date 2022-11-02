@@ -1,4 +1,4 @@
-import { Box, Themed } from 'theme-ui'
+import { Box, useThemeUI } from 'theme-ui'
 import { useThemedColormap } from '@carbonplan/colormaps'
 
 const GridSample = ({ children }) => {
@@ -40,6 +40,7 @@ const FontSample = ({ color, label }) => {
 }
 
 const ColorSample = ({ color, hex, label, border }) => {
+  const { theme } = useThemeUI()
   return (
     <Box
       sx={{
@@ -80,7 +81,7 @@ const ColorSample = ({ color, hex, label, border }) => {
           textTransform: 'uppercase',
         }}
       >
-        #{hex}
+        {hex ? `#${hex}` : theme.rawColors[color]}
       </Box>
     </Box>
   )

@@ -34,15 +34,15 @@ We have a series of accent colors. Sometimes they play a semantic purpose, e.g. 
 For example, we would never use pink to represent direct air capture on one site, and then use it to represent energy systems on another site. But a subset of colors can be used purely for aesthetic purposes in an isolated setting.
 
 <Box sx={{ my: [5] }}>
-  <ColorSample color='red' hex='f16f71' />
-  <ColorSample color='orange' hex='eb9755' />
-  <ColorSample color='yellow' hex='d4c05d' />
-  <ColorSample color='green' hex='7db269' />
-  <ColorSample color='teal' hex='65b9c4' />
-  <ColorSample color='blue' hex='8b9fd1' />
-  <ColorSample color='purple' hex='b386bc' />
-  <ColorSample color='pink' hex='e487b5' />
-  <ColorSample color='grey' hex='a9b4c5' />
+  <ColorSample color='red' />
+  <ColorSample color='orange' />
+  <ColorSample color='yellow' />
+  <ColorSample color='green' />
+  <ColorSample color='teal' />
+  <ColorSample color='blue' />
+  <ColorSample color='purple' />
+  <ColorSample color='pink' />
+  <ColorSample color='grey' />
 </Box>
 
 When using colors to enhance a design without semantic meaning, rather than use the full subset, we generally pick one of several thematic combinations as a color "cycle", and then cycle through those colors across the page.
@@ -50,27 +50,27 @@ When using colors to enhance a design without semantic meaning, rather than use 
 For example, this triad:
 
 <Box sx={{ my: [5] }}>
-  <ColorSample color='red' hex='f16f71' />
-  <ColorSample color='yellow' hex='eb9755' />
-  <ColorSample color='teal' hex='d4c05d' />
+  <ColorSample color='red' />
+  <ColorSample color='yellow' />
+  <ColorSample color='teal' />
 </Box>
 
 Or the warm quartet:
 
 <Box sx={{ my: [5] }}>
-  <ColorSample color='pink' hex='f16f71' />
-  <ColorSample color='red' hex='f16f71' />
-  <ColorSample color='orange' hex='eb9755' />
-  <ColorSample color='yellow' hex='d4c05d' />
+  <ColorSample color='pink' />
+  <ColorSample color='red' />
+  <ColorSample color='orange' />
+  <ColorSample color='yellow' />
 </Box>
 
 Or the cool quartet:
 
 <Box sx={{ my: [5] }}>
-  <ColorSample color='green' hex='f16f71' />
-  <ColorSample color='teal' hex='f16f71' />
-  <ColorSample color='blue' hex='8b9fd1' />
-  <ColorSample color='purple' hex='d4c05d' />
+  <ColorSample color='green' />
+  <ColorSample color='teal' />
+  <ColorSample color='blue' />
+  <ColorSample color='purple' />
 </Box>
 
 ## Usage
