@@ -44,8 +44,6 @@ This text uses _emphasize_ formatting.
 
 This text uses **strong** formatting.
 
-This text uses ~~strikethrough~~ formatting.
-
 ---
 
 This is a [link](/markdown)
