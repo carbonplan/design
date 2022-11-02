@@ -4,8 +4,9 @@ import Section from '../../components/section'
 
 Used for binary options.
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const [toggle, setToggle] = useState(true)
   return <Toggle value={toggle} onClick={() => setToggle(!toggle)} />
 }
@@ -19,8 +20,9 @@ Can be disabled.
 
 Can also have a custom color.
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const [toggle, setToggle] = useState(true)
   return colors.map((color) => (
     <Toggle

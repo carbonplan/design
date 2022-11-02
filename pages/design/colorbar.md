@@ -6,8 +6,9 @@ A colorbar useful for labeling graphics, maps, and any other places where we use
 
 There are several options for styling, including making it `horizontal`, using `discrete` values, and setting the `width` and `height`.
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm', { count: 5 })
   return (
     <>
@@ -22,8 +23,9 @@ There are several options for styling, including making it `horizontal`, using `
 
 You can also add a label (with optional units) and limit values, in either vertical or horizontal orientation. These are typically used for figure or map legends.
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm')
   return (
     <Colorbar
@@ -36,8 +38,9 @@ You can also add a label (with optional units) and limit values, in either verti
 }
 ```
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm')
   return (
     <Colorbar
@@ -53,8 +56,9 @@ You can also add a label (with optional units) and limit values, in either verti
 
 If you provide a `setClim` prop, the colorbar becomes modifiable, allowing you to click and drag the numbers to change the limits of the color scale.
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm')
   const [clim, setClim] = useState([0, 10])
   return (
@@ -69,8 +73,9 @@ If you provide a `setClim` prop, the colorbar becomes modifiable, allowing you t
 }
 ```
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm')
   const [clim, setClim] = useState([0, 10])
   return (
@@ -88,8 +93,9 @@ If you provide a `setClim` prop, the colorbar becomes modifiable, allowing you t
 
 A couple other style configurations are possible. For example, here's a version that moves the color limits to the bottom with adjustability, increases their size, removes the label, and fills the width.
 
+{/* prettier-ignore */}
 ```jsx live
-;() => {
+() => {
   const colormap = useThemedColormap('warm')
   const [clim, setClim] = useState([0, 10])
   return (

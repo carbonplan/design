@@ -14,9 +14,10 @@ Combine with options to create a menu for selection.
 
 Available in different sizes.
 
+{/* prettier-ignore */}
 ```jsx live
 {
-  ;['xs', 'sm', 'md'].map((size) => (
+  ['xs', 'sm', 'md'].map((size) => (
     <Select size={size} sx={{ display: 'block', mb: [3] }}>
       <option>First option</option>
       <option>Second option</option>
