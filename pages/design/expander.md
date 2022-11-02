@@ -5,7 +5,7 @@ import Section from '../../components/section'
 Used to expand panels and such.
 
 ```jsx live
-() => {
+;() => {
   const [expanded, setExpanded] = useState(false)
   return (
     <Box sx={{ p: [3], bg: 'hinted', mr: [2], fontSize: [3] }}>

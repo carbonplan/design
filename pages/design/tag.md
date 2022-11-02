@@ -18,7 +18,7 @@ Here are two, one of which is set to on and the other off.
 They can be made clickable by adding a toggle method. Here's an example where we add state.
 
 ```jsx live
-() => {
+;() => {
   const [value, setValue] = useState(true)
   return (
     <Tag value={value} onClick={() => setValue((prev) => !prev)}>
