@@ -6,7 +6,7 @@ Combine text with icons to form buttons.
 
 Available in five sizes that leverage our font size scale.
 
-```jsx live=True
+```jsx live
 <Button size='xs' prefix={<Up/>}>Button</Button>
 <Button size='sm' prefix={<Up/>}>Button</Button>
 <Button size='md' prefix={<Up/>}>Button</Button>
@@ -16,7 +16,7 @@ Available in five sizes that leverage our font size scale.
 
 You can put an icon at the front, or back, or both.
 
-```jsx live=True
+```jsx live
 <Button prefix={<Reset/>}>Reset</Button>
 <Button prefix={<Left/>}>Back</Button>
 <Button suffix={<Right/>}>Forward</Button>
@@ -26,14 +26,14 @@ You can put an icon at the front, or back, or both.
 
 The default button is in `primary` and transitions to `secondary`. You can use `inverted` to flip it.
 
-```jsx live=True
+```jsx live
 <Button prefix={<Up/>}>Button</Button>
 <Button prefix={<Up/>} inverted>Inverted button</Button>
 ```
 
 You can also specify the color of the button as a whole.
 
-```jsx live=True
+```jsx live
 {
   colors.map((color) => (
     <Button key={color} sx={{ color: color }} suffix={<RotatingArrow />}>
@@ -47,7 +47,7 @@ You can also specify the color of the button as a whole.
 
 Or just specify the color for the icon.
 
-```jsx live=True
+```jsx live
 {
   colors.map((color) => (
     <Button key={color} suffix={<RotatingArrow sx={{ color: color }} />}>
@@ -61,7 +61,7 @@ Or just specify the color for the icon.
 
 You can pass an `href` to render a link using the same styling as our buttons. This will be rendered as an `<a>` element rather than a `<button>`. When using an `href` you can also pass the extra `internal` and `tracking` options used by the `Link` component.
 
-```jsx live=True
+```jsx live
 <Button href='/button' suffix={<RotatingArrow />}>
   This is a link
 </Button>

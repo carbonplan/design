@@ -4,7 +4,7 @@ import Section from '../../components/section'
 
 A family of simple icons are useful for basic UX elements. They are available in the [`@carbonplan/icons`](https://github.com/carbonplan/icons) package.
 
-```jsx live=True
+```jsx live
 <Check />
 <Question />
 <X />
@@ -22,7 +22,7 @@ A family of simple icons are useful for basic UX elements. They are available in
 
 We use arrows extensively, both to indicate the directionality of content (e.g. in buttons and links), and to add visual interest.
 
-```jsx live=True
+```jsx live
 <Arrow />
 <Left />
 <Up />

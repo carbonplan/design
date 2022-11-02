@@ -4,7 +4,6 @@ import Section from '../../components/section'
 
 Used to expand panels and such.
 
-<!-- prettier-ignore -->
 ```jsx live
 () => {
   const [expanded, setExpanded] = useState(false)

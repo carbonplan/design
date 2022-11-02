@@ -4,7 +4,6 @@ import Section from '../../components/section'
 
 Basic responsive slider. All the usual props can be added.
 
-<!-- prettier-ignore -->
 ```jsx live
 () => {
   const [value, setValue] = useState(5)
