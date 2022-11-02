@@ -1,6 +1,7 @@
 import { Box } from 'theme-ui'
 import { useState } from 'react'
-import { MDXProvider } from '@mdx-js/react'
+import { MDXProvider, useMDXComponents } from '@mdx-js/react'
+import { useThemedStylesWithMdx } from '@theme-ui/mdx'
 import { NavSection } from '@carbonplan/layouts'
 import { Code, LiveCode, Pre } from '@carbonplan/prism'
 import { useThemedColormap } from '@carbonplan/colormaps'
@@ -43,7 +44,7 @@ const scope = {
 }
 
 const components = {
-  code: ({ ...props }) => (
+  pre: ({ ...props }) => (
     <LiveCode
       theme={'monochrome'}
       transform={transform}
@@ -51,12 +52,15 @@ const components = {
       {...props}
     />
   ),
-  pre: Pre,
 }
 
 const Section = ({ children, name }) => {
+  const componentsWithStyles = useThemedStylesWithMdx(
+    useMDXComponents(components)
+  )
+
   return (
-    <MDXProvider components={components}>
+    <MDXProvider components={componentsWithStyles}>
       <NavSection
         name={name}
         menu={{ contents: contents, prefix: '/design' }}

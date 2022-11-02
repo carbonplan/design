@@ -107,7 +107,9 @@ const ColormapSample = ({ name, discrete }) => {
   const css = `linear-gradient(to right, ${values.join(',')})`
   return (
     <Box>
-      <Themed.inlineCode>{name}</Themed.inlineCode>
+      <Box as='code' variant='styles.code'>
+        {name}
+      </Box>
       <Box
         sx={{
           mt: [2, 2, 2, 3],
