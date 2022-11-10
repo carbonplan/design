@@ -4,7 +4,7 @@ import Section from '../../components/section'
 
 Used for binary options.
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```jsx live
 () => {
   const [toggle, setToggle] = useState(true)
@@ -20,7 +20,7 @@ Can be disabled.
 
 Can also have a custom color.
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```jsx live
 () => {
   const [toggle, setToggle] = useState(true)

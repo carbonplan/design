@@ -6,7 +6,7 @@ Use to indicate a binary option. Useful for filters on lists, map layers, etc.
 
 Here are two, one of which is set to on and the other off.
 
-```jsx live=True
+```jsx live
 <Tag label={'Always on'} value={true} sx={{ mr: [2] }}>
   Always on
 </Tag>
@@ -17,8 +17,8 @@ Here are two, one of which is set to on and the other off.
 
 They can be made clickable by adding a toggle method. Here's an example where we add state.
 
-<!-- prettier-ignore -->
-```jsx live=True
+{/* prettier-ignore */}
+```jsx live
 () => {
   const [value, setValue] = useState(true)
   return (
@@ -31,7 +31,7 @@ They can be made clickable by adding a toggle method. Here's an example where we
 
 Here are a bunch in different colors.
 
-```jsx live=True
+```jsx live
 {
   colors.map((color) => (
     <Tag key={color} sx={{ color: color, mr: [2] }}>

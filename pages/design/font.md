@@ -6,46 +6,49 @@ import Section from '../../components/section'
 
 Our design system is built around four fonts from the family [Relative](https://www.colophon-foundry.org/typefaces/relative/).
 
-<Box
-  sx={{
-    fontSize: [6],
-    fontFamily: 'body',
-    letterSpacing: 'body',
-    letterSpacing: '0em',
-  }}
->
-  Relative Pro Book
-</Box>
-<Box
-  sx={{
-    fontSize: [6],
-    fontFamily: 'heading',
-    letterSpacing: 'heading',
-    letterSpacing: '0em',
-  }}
->
-  Relative Pro Medium
-</Box>
-<Box
-  sx={{
-    fontSize: [6],
-    fontFamily: 'faux',
-    letterSpacing: 'faux',
-    letterSpacing: '0em',
-  }}
->
-  Relative Pro Faux Mono
-</Box>
-<Box
-  sx={{
-    fontSize: [6],
-    fontFamily: 'mono',
-    letterSpacing: 'mono',
-    letterSpacing: '0em',
-  }}
->
-  Relative Pro Mono
-</Box>
+{<>
+
+  <Box
+    sx={{
+      fontSize: [6],
+      fontFamily: 'body',
+      letterSpacing: 'body',
+      letterSpacing: '0em',
+    }}
+  >
+    Relative Pro Book
+  </Box>
+  <Box
+    sx={{
+      fontSize: [6],
+      fontFamily: 'heading',
+      letterSpacing: 'heading',
+      letterSpacing: '0em',
+    }}
+  >
+    Relative Pro Medium
+  </Box>
+  <Box
+    sx={{
+      fontSize: [6],
+      fontFamily: 'faux',
+      letterSpacing: 'faux',
+      letterSpacing: '0em',
+    }}
+  >
+    Relative Pro Faux Mono
+  </Box>
+  <Box
+    sx={{
+      fontSize: [6],
+      fontFamily: 'mono',
+      letterSpacing: 'mono',
+      letterSpacing: '0em',
+    }}
+  >
+    Relative Pro Mono
+  </Box>
+</>}
 
 These four fonts can be specified using the keys `body` `heading` `faux` or `mono` for both the `fontFamily` and `letterSpacing` properties.
 

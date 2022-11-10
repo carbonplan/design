@@ -8,9 +8,9 @@ You can specify the image directly with a URL (`src`). We have also created stan
 
 ```jsx live
 <Group direction='horizontal' spacing={2}>
-  <Avatar name={'Joe Hamman'} />
-  <Avatar src={'https://images.carbonplan.org/team/joe-hamman.png'} />
-  <Avatar github={'jhamman'} />
+  <Avatar name={'Jeremy Freeman'} />
+  <Avatar src={'https://images.carbonplan.org/team/jeremy-freeman.png'} />
+  <Avatar github={'freeman-lab'} />
 </Group>
 ```
 
@@ -18,10 +18,10 @@ You can vary the width.
 
 ```jsx live
 <Group direction='horizontal' spacing={2}>
-  <Avatar width={90} name={'Joe Hamman'} />
-  <Avatar width={60} name={'Joe Hamman'} />
-  <Avatar width={30} name={'Joe Hamman'} />
-  <Avatar width={20} name={'Joe Hamman'} />
+  <Avatar width={90} name={'Jeremy Freeman'} />
+  <Avatar width={60} name={'Jeremy Freeman'} />
+  <Avatar width={30} name={'Jeremy Freeman'} />
+  <Avatar width={20} name={'Jeremy Freeman'} />
 </Group>
 ```
 
@@ -35,7 +35,7 @@ And you can add a color overlay, which additionally applies a crushed black and 
       color={color}
       width={90}
       sx={{ mr: 2, mb: 2 }}
-      name={'Joe Hamman'}
+      name={'Jeremy Freeman'}
     />
   ))
 }
@@ -51,10 +51,10 @@ Here's a simple horizontal group with fixed width and spacing.
   width={90}
   spacing={2}
   members={[
-    { name: 'Joe Hamman', color: 'red' },
-    { name: 'Joe Hamman', color: 'orange' },
-    { name: 'Joe Hamman', color: 'yellow' },
-    { name: 'Joe Hamman', color: 'pink' },
+    { name: 'Jeremy Freeman', color: 'red' },
+    { name: 'Jeremy Freeman', color: 'orange' },
+    { name: 'Jeremy Freeman', color: 'yellow' },
+    { name: 'Jeremy Freeman', color: 'pink' },
   ]}
 />
 ```
@@ -68,8 +68,8 @@ Here is a fixed count group designed for up to 6 avatars where each avatar scale
   width={'100%'}
   align={['right', 'right', 'left', 'left']}
   members={[
-    { name: 'Joe Hamman', color: 'red' },
-    { name: 'Joe Hamman', color: 'orange' },
+    { name: 'Jeremy Freeman', color: 'red' },
+    { name: 'Jeremy Freeman', color: 'orange' },
   ]}
 />
 ```
