@@ -38,7 +38,7 @@
     "theme-ui": "^0.15.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.2",
+    "@babel/core": "^7.20.7",
     "@carbonplan/prettier": "^1.2.0",
     "prettier": "^2.5.1"
   }
