@@ -2,7 +2,7 @@ import Section from '../../components/section'
 
 # Logo
 
-Below we show how to embed our logo and monogram via our React components. You can also [download the assets]() directly in SVG and PNG formats with both light and dark modes.
+Below we show how to embed our logo and monogram via our React components. You can also [download the assets](http://images.carbonplan.org/logos.zip) directly in SVG and PNG formats with both light and dark modes.
 
 ## Wordmark
 
