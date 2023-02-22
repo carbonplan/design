@@ -17,6 +17,7 @@ export const contents = {
     'Colorbar',
     'Dimmer',
     'Expander',
+    'Filter',
     'Input',
     'Select',
     'Slider',
