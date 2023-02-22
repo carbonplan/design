@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { ThemeProvider } from 'theme-ui'
 import theme from '@carbonplan/theme'
 import '@carbonplan/components/globals.css'
