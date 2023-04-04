@@ -32,5 +32,5 @@ export default withMDX({
     )
     return config
   },
-  assetPrefix: isDev ? '' : 'https://design.carbonplan.org',
+  assetPrefix: isDev ? undefined : 'https://design.carbonplan.org',
 })
