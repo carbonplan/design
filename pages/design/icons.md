@@ -31,6 +31,6 @@ We use arrows extensively, both to indicate the directionality of content (e.g. 
 <RotatingArrow />
 ```
 
-Icons can easily be wrapped in the `IconButton` from `theme-ui` to create buttons. See the [Dimmer](/dimmer) component as an example.
+Icons can easily be wrapped in the `IconButton` from `theme-ui` to create buttons. See the [Dimmer](/design/dimmer) component as an example.
 
 export default ({ children }) => <Section name='icons'>{children}</Section>

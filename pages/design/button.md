@@ -62,7 +62,7 @@ Or just specify the color for the icon.
 You can pass an `href` to render a link using the same styling as our buttons. This will be rendered as an `<a>` element rather than a `<button>`. When using an `href` you can also pass the extra `internal` and `tracking` options used by the `Link` component.
 
 ```jsx live
-<Button href='/button' suffix={<RotatingArrow />}>
+<Button href='/design/button' suffix={<RotatingArrow />}>
   This is a link
 </Button>
 ```

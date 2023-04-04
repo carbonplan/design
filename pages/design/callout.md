@@ -5,7 +5,7 @@ import Section from '../../components/section'
 A simple combination of text and label for calling out content.
 
 ```jsx live
-<Callout label='callout' href='/callout'>
+<Callout label='callout' href='/design/callout'>
   This is a description of a link
 </Callout>
 ```
