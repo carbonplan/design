@@ -34,7 +34,7 @@ You can set the multiSelect property to false to get radio-like behavior.
 }
 ```
 
-Additional props, `label` and `colors`, are available for styling.
+Additional props, `label`, `labels`, and `colors`, are available for styling.
 
 {/* prettier-ignore */}
 ```jsx live
@@ -46,6 +46,7 @@ Additional props, `label` and `colors`, are available for styling.
       setValues={setValues}
       showAll
       label='Quantity'
+      labels={{One: '01', Two: '02', Three: '03'}}
       colors={{One: 'red', Two: 'yellow', Three: 'teal'}}
     />
   )
