@@ -45,4 +45,11 @@ You can add a header with a color, remove the index styling, and turn the top an
 />
 ```
 
+Some `Table` properties use arrays to configure grid system columns, others to configure `table` columns and rows, and some to configure both. Here's a brief explanation of how each property pertains to column definition:
+
+- `columns`: how many grid columns the `Table` spans across four screen breakpoints
+- `start`: grid column from which each `Table` column begins; nested arrays can be used to vary `start` across breakpoints
+- `width`: number of grid columns each `Table` column occupies; nested arrays can be used to vary `width` across breakpoints
+- `data`: a representation of the tabular data where each array corresponds to a row with elements each corresponding to a `td` in that row
+
 export default ({ children }) => <Section name='table'>{children}</Section>
