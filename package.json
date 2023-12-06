@@ -18,7 +18,7 @@
   "prettier": "@carbonplan/prettier",
   "dependencies": {
     "@carbonplan/colormaps": "^4.0.0",
-    "@carbonplan/components": "^12.4.0",
+    "@carbonplan/components": "^12.5.0",
     "@carbonplan/emoji": "^2.0.0",
     "@carbonplan/icons": "^2.0.0",
     "@carbonplan/layouts": "^4.0.0",
