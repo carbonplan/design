@@ -1,28 +1,17 @@
-<p align='left'>
-  <a href='https://carbonplan.org/#gh-light-mode-only'>
-    <img
-      src='https://carbonplan-assets.s3.amazonaws.com/monogram/dark-small.png'
-      height='48px'
-    />
-  </a>
-  <a href='https://carbonplan.org/#gh-dark-mode-only'>
-    <img
-      src='https://carbonplan-assets.s3.amazonaws.com/monogram/light-small.png'
-      height='48px'
-    />
-  </a>
+<p align="left" >
+<a href='https://carbonplan.org'>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://carbonplan-assets.s3.amazonaws.com/monogram/light-small.png">
+  <img alt="CarbonPlan monogram." height="48" src="https://carbonplan-assets.s3.amazonaws.com/monogram/dark-small.png">
+</picture>
+</a>
 </p>
 
 # carbonplan / design
 
 **demoing our design system**
 
-[![GitHub][github-badge]][github]
-![MIT License][]
-
-[github]: https://github.com/carbonplan/design
-[github-badge]: https://flat.badgen.net/badge/-/github?icon=github&label
-[mit license]: https://flat.badgen.net/badge/license/MIT/blue
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 This website demos our [`theme`](https://github.com/carbonplan/theme) and [`components`](https://github.com/carbonplan/components) packages, which together form our design system. It's useful for exploring the design system and also serves as a "test suite" for testing and optimizing the components.
 
@@ -130,8 +119,8 @@ Remember that linked packages are not saved, so if you do a clean install, you n
 
 ## license
 
-All the code in this repository is [MIT](https://choosealicense.com/licenses/mit/) licensed, but we request that you please provide attribution if reusing any of our digital content (graphics, logo, articles, etc.).
+All the code in this repository is [MIT](https://choosealicense.com/licenses/mit/)-licensed, but we request that you please provide attribution if reusing any of our digital content (graphics, logo, articles, etc.).
 
 ## about us
 
-CarbonPlan is a non-profit organization that uses data and science for climate action. We aim to improve the transparency and scientific integrity of climate solutions with open data and tools. Find out more at [carbonplan.org](https://carbonplan.org/) or get in touch by [opening an issue](https://github.com/carbonplan/design/issues/new) or [sending us an email](mailto:hello@carbonplan.org).
+CarbonPlan is a nonprofit organization that uses data and science for climate action. We aim to improve the transparency and scientific integrity of climate solutions with open data and tools. Find out more at [carbonplan.org](https://carbonplan.org/) or get in touch by [opening an issue](https://github.com/carbonplan/design/issues/new) or [sending us an email](mailto:hello@carbonplan.org).
