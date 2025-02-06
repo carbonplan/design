@@ -1,5 +1,5 @@
 import React from 'react'
-import PlausibleProvider from 'next-plausible'
+import Script from 'next/script'
 import { ThemeProvider } from 'theme-ui'
 import theme from '@carbonplan/theme'
 import '@carbonplan/components/globals.css'
@@ -7,10 +7,16 @@ import '@carbonplan/components/fonts.css'
 
 export default function App({ Component, pageProps }) {
   return (
-    <PlausibleProvider domain='carbonplan.org'>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </PlausibleProvider>
+    <ThemeProvider theme={theme}>
+      {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' && (
+        <Script
+          strategy='lazyOnload'
+          data-domain='carbonplan.org'
+          data-api='https://carbonplan.org/proxy/api/event'
+          src='https://carbonplan.org/js/script.js'
+        />
+      )}
+      <Component {...pageProps} />
+    </ThemeProvider>
   )
 }
