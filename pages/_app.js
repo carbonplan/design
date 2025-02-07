@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
           strategy='lazyOnload'
           data-domain='carbonplan.org'
           data-api='https://carbonplan.org/proxy/api/event'
-          src='https://carbonplan.org/js/script.js'
+          src='https://carbonplan.org/js/script.file-downloads.outbound-links.js'
         />
       )}
       <Component {...pageProps} />
