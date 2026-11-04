@@ -71,7 +71,6 @@ When custom fonts aren't available (e.g., Google Docs, Mailchimp), we should use
 
 {<>
 
-{' '}
 <style>{`@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');`}</style>
 
   <Row columns={[6]} sx={{ mb: 3 }}>
