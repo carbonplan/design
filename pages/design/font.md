@@ -9,6 +9,7 @@ import Section from '../../components/section'
 Our design system is built around four fonts from the family [Relative](https://www.colophon-foundry.org/typefaces/relative/).
 
 {<>
+
   <Box sx={{ fontSize: [6], fontFamily: 'body', letterSpacing: '0em' }}>
     Relative Pro Book
   </Box>
@@ -69,7 +70,10 @@ Mono should generally only be used for numbers (e.g. in dashboards), axis labels
 When custom fonts aren't available (e.g., Google Docs, Mailchimp), we should use the following fallbacks:
 
 {<>
-  <style>{`@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');`}</style>
+
+{' '}
+<style>{`@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');`}</style>
+
   <Row columns={[6]} sx={{ mb: 3 }}>
     <Column start={[1]} width={[3]}>
       <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
